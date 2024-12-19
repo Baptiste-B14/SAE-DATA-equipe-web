@@ -3,7 +3,7 @@ import flask_cors
 import json
 
 from dotenv import dotenv_values
-from db import getdb, close_db, query
+from back.db import getdb, close_db, query
 
 
 
