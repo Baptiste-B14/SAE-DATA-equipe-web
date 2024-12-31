@@ -1,0 +1,23 @@
+<!--
+    - routerLinkActive="active-link" : la balise <a> prendra la classe active-link quand l'utilisateur est sur la route 
+        spécifiée dans routerLink
+      
+    TODO :
+    - verifier si routes marches 
+    - taille logo a ajuster dans css 
+    - logo clickable qui redirige vers page home (a faire en angular) -> selon modèle prof utilisation d'un href
+-->
+<header>
+    <div id="logoDiv">
+        <a href="/">
+            <img src="\..\..\assets\images\gsp_png.PNG" alt="Logo" id="logoImage">
+        </a>
+    </div>
+    <nav>
+      <!--<a class="navbar-brand" href="/">Home</a>-->
+      <a routerLink="/analyses" routerLinkActive="active-link">Nos Analyses</a>
+      <a routerLink="/presentation" routerLinkActive="active-link">Présentation</a>
+      <a routerLink="/recherche" routerLinkActive="active-link">Recherche</a>
+      <a routerLink="/dynamique" routerLinkActive="active-link">Pour aller plus loin</a>
+    </nav>
+</header>

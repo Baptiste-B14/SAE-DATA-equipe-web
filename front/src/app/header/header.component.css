@@ -1,0 +1,46 @@
+
+.active-link {
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white; /* couleur de fond */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* optionnel : pour un léger effet d'ombre */
+}
+  
+#logoDiv {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto; /* Le logo conserve sa taille initiale */
+}
+  
+#logoImage {
+    width: 100px; 
+    height: 100px;
+    object-fit: cover;
+}
+  
+nav {
+    display: flex;
+    gap: 20px; /* espacement entre les liens */
+    display: flex;
+    flex: 1; /* Prend tout l'espace disponible */
+    justify-content: space-evenly; /* Distribution égale entre les liens */
+}
+  
+nav > a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+    text-align: center; /* Centre le texte dans chaque lien */
+}
+
+nav > a:hover {
+    color: grey;
+}
