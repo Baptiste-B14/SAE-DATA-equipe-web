@@ -1,6 +1,10 @@
 <!--
+    - les fragments servent à indiquer une balise HTML par son id (qui est présente sur la nouvelle page) -> permet scroll auto 
+    (voir app.component.ts)
+
     TODO
     - faire route vers RGPD
+    - rajouter fragment visualisation ?
 -->
 <footer>
     <div id="footerTitle">
@@ -20,8 +24,8 @@
         <h3>L'équipe</h3>
         <ul>
             <li><a routerLink="/team">Equipe Visualisation</a></li>
-            <li><a routerLink="/team">Equipe Deploiment</a></li>
-            <li><a routerLink="/team">Equipe Extraction</a></li>
+            <li><a routerLink="/team" fragment="deploiement">Equipe Deploiement</a></li>
+            <li><a routerLink="/team" fragment="extraction">Equipe Extraction</a></li>
         </ul>
         </div>
         <div class="footerColumn">

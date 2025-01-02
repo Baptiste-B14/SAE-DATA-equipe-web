@@ -30,5 +30,5 @@ export const routes: Routes = [
       {
         path: 'team',
         component: TeamPageComponent,
-      },
+      }, 
 ];

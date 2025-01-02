@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {ActivatedRoute} from '@angular/router'; 
+
 
 @Component({
   selector: 'app-team-page',
@@ -8,5 +10,5 @@ import { Component } from '@angular/core';
   styleUrl: './team-page.component.scss'
 })
 export class TeamPageComponent {
-
+  
 }
