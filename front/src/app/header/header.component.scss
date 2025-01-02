@@ -1,20 +1,21 @@
 
-.active-link {
-    font-weight: bold;
-}
+/*.active-link {
+    
+}*/
 
 header {
     /*position: fixed;
     top: 0; 
     left: 0;
-    width: 100%;*/ /*à dé-commenter si header constamment sur ecran voulu */
+    width: 100%;*/ /*à dé-commenter si header constamment sur ecran voulu*/
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: white; /* couleur de fond */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* optionnel : pour un léger effet d'ombre */
+    background-color: white; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* pour effet d'ombre */
+    width: 100%;
 }
   
 #logoDiv {

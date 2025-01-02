@@ -5,6 +5,7 @@ import { RecherchePageComponent } from './recherche-page/recherche-page.componen
 import { PresentationPageComponent } from './presentation-page/presentation-page.component';
 import { DynamiquePageComponent } from './dynamique-page/dynamique-page.component';
 import { TeamPageComponent } from './team-page/team-page.component';
+import { LegalPageComponent } from './legal-page/legal-page.component';
 
 export const routes: Routes = [
     {
@@ -30,5 +31,9 @@ export const routes: Routes = [
       {
         path: 'team',
         component: TeamPageComponent,
+      },
+      {
+        path: 'legal',
+        component: LegalPageComponent,
       }, 
 ];
