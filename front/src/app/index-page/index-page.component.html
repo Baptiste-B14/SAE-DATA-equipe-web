@@ -1,4 +1,4 @@
-<div class="container">
+<div class="IndexPage">
     <section class="problematique">
         <h1>Comment la pandémie de la COVID-19 a-t-elle impactée les collaborations scientifiques ?</h1>
     </section>
@@ -46,10 +46,10 @@
           <div class="carouselInner" [style.transform]="getTransformStyle()">
             @for (axis of axes; track axis.title) {
               <div class="carouselItem">
-                <img [src]="axis.image" class="carouselImg" [alt]="axis.title" />
+                <img [src]="axis.image" class="carouselImg" [alt]="axis.title" routerLink="/analyses" />
                 <div class="carouselText">
                   <h5>{{ axis.title }}</h5>
-                  <p>{{ axis.description }}</p>
+                  <p class="carouselItemDescription">{{ axis.description }}</p>
                 </div>
               </div>
             }
