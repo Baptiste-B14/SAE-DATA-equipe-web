@@ -1,1 +1,85 @@
-<p>index-page works!</p>
+<div class="container">
+    <section class="header-section">
+        <h1>Comment la pandémie de la COVID-19 a-t-elle impactée les collaborations scientifiques ?</h1>
+    </section>
+
+    <section class="data-section">
+        <h2>Nos données</h2>
+        <div class="kpi-container">
+            <div class="kpi" >KPI</div>
+            <div class="kpi" >KPI</div>
+            <div class="kpi" >KPI</div>
+            <div class="kpi" >KPI</div>
+            <div class="kpi" >KPI</div>
+            <div class="kpi" >KPI</div>
+            <div class="kpi" >KPI</div>
+            <div class="kpi" >KPI</div>
+        </div>
+    </section>
+
+    <section class="project-presentation-section">
+        <div class="presentation-container">
+        <h2>Presentation du projet</h2>
+        <p>
+            La pandémie de COVID-19 a profondément influencé les mécanismes de collaboration scientifique.
+            Ce projet vise à comprendre ces impacts à travers différentes analyses de données recueillies
+            pendant cette période critique.
+        </p>
+        <a routerLink="/presentation">En savoir plus</a>
+        </div>
+    </section>
+
+    <section class="analysis-section">
+        <h2>Axes d’analyse</h2>
+        <div class="carousel-container">
+            <!-- Control Buttons -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              (click)="navigateCarousel('prev')"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+          
+            <!-- Carrousel Inner Content (Horizontal List) -->
+            <div class="carousel-content">
+              <div class="carousel-inner">
+                @for (axis of axes; track axis.title) {
+                  <div
+                    class="carousel-item"
+                    [class.active]="axes.indexOf(axis) === currentIndex"
+                  >
+                    <img [src]="axis.image" class="carousel-image" [alt]="axis.title" />
+                    <div class="carousel-caption">
+                      <h5>{{ axis.title }}</h5>
+                      <p>{{ axis.description }}</p>
+                    </div>
+                  </div>
+                }
+              </div>
+            </div>
+          
+            <!-- Indicators (Bottom) -->
+            <div class="carousel-indicators">
+              @for (axis of axes; track axis.title) {
+                <button
+                  type="button"
+                  [class.active]="axes.indexOf(axis) === currentIndex"
+                  (click)="navigateCarouselByIndex(axes.indexOf(axis))"
+                ></button>
+              }
+            </div>
+          
+            <!-- Control Buttons -->
+            <button
+              class="carousel-control-next"
+              type="button"
+              (click)="navigateCarousel('next')"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+</div>
