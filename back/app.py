@@ -1,12 +1,10 @@
 import flask
 import flask_cors
-import json
+from neo4j_conn import execute_query
+
 
 from dotenv import dotenv_values
-from back.db import getdb, close_db, query
-
-
-
+from db import getdb, close_db, query
 
 config = dotenv_values('.env')
 
@@ -27,9 +25,16 @@ flask_cors.CORS(app, resources={
 })
 
 
+@app.route('/neo4j', methods=['GET'])
+def get_all():
+    answer = execute_query("MATCH (n) RETURN n")
+    return {"message": "Réponse de neo4j", "test": answer}, 200
+
+
 @app.route('/')
 def home():
     answer = query("SELECT type, count(type) FROM records WHERE type='book' GROUP BY type;", False)
     return {"message": "Bonjour Monde !", "test": answer}, 200
+
 
 app.run()
