@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+/*
+  TODO
+  - générer les KPI dans ce composant
+*/
+
 
 @Component({
   selector: 'app-index-page',
@@ -29,17 +34,24 @@ export class IndexPageComponent {
 
   currentIndex = 0;
 
-  // Naviguer à l'élément précédent ou suivant
+  // va a l'élément suivant ou précédent
   navigateCarousel(direction: 'prev' | 'next') {
     if (direction === 'prev') {
-      this.currentIndex = (this.currentIndex === 0) ? this.axes.length - 1 : this.currentIndex - 1;
+      this.currentIndex =
+        this.currentIndex === 0 ? this.axes.length - 1 : this.currentIndex - 1;
     } else if (direction === 'next') {
-      this.currentIndex = (this.currentIndex === this.axes.length - 1) ? 0 : this.currentIndex + 1;
+      this.currentIndex =
+        this.currentIndex === this.axes.length - 1 ? 0 : this.currentIndex + 1;
     }
   }
 
-  // Naviguer directement à l'élément par son index
+  // va directement à un element 
   navigateCarouselByIndex(index: number) {
     this.currentIndex = index;
+  }
+
+  // Retourne le style transform basé sur currentIndex
+  getTransformStyle(): string {
+    return `translateX(-${this.currentIndex * 100}%)`;
   }
 }

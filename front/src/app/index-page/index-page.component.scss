@@ -4,24 +4,24 @@
     padding: 20px;
   }
   
-  .header-section h1 {
+  .problematique h1 {
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 20px;
   }
   
-  .data-section {
+  .kpiSection {
     background-color: #4e452f; /* Couleur Pantone 448 C */
     padding: 20px;
     text-align: center;
   }
   
-  .data-section h2 {
+  .kpiSection h2 {
     color: white;
     margin-bottom: 10px;
   }
   
-  .kpi-container {
+  .kpiContainer {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
@@ -36,7 +36,7 @@
     font-weight: bold;
   }
   
-  .presentation-container {
+  .presentationContainer {
     text-align: left;
     margin: 20px 0;
     border: 1px solid #ccc;
@@ -44,12 +44,12 @@
     background-color: #f9f9f9;
   }
   
-  .presentation-container h2 {
+  .presentationContainer h2 {
     text-align: center;
     margin-bottom: 10px;
   }
   
-  .presentation-container a {
+  .presentationContainer a {
     display: block;
     margin: 10px auto;
     padding: 10px 20px;
@@ -59,18 +59,18 @@
     cursor: pointer;
   }
   
-  .presentation-container a:hover {
+  .presentationContainer a:hover {
     background-color: #3e392a;
   }
   
-  .analysis-section h2 {
+  .axeSection h2 {
     text-align: center;
     margin-bottom: 20px;
   }
 
   /*--- carrousel ---*/
   
-  .carousel-container {
+  .carouselContainer {
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -78,21 +78,14 @@
     justify-content: center;
   }
   
-  .carousel-content {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .carousel-inner {
+  .carouselInner {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 100%;
   }
   
-  .carousel-item {
-    min-width: 100%; /* Chaque élément occupe toute la largeur de l'écran */
+  .carouselItem {
+    flex: 0 0 100%; /* Chaque slide occupe 100% de la largeur */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -100,12 +93,12 @@
     position: relative;
   }
   
-  .carousel-image {
+  .carouselImg {
     max-width: 50%; /* Taille réduite de l'image */
     height: auto; /* Conserve les proportions de l'image */
   }
   
-  .carousel-caption {
+  .carouselText {
     position: absolute;
     bottom: 10%;
     left: 50%;
@@ -113,29 +106,55 @@
     color: white;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
   }
+
+.carouselPrev,
+.carouselNext {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.carouselPrev-icon,
+.carouselNext-icon {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  padding: 5px;
+  transform: rotate(135deg); /* Par défaut, flèche pointant vers la gauche */
+}
+
+.carouselNext-icon {
+  transform: rotate(-45deg); /* Flèche pointant vers la droite */
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
   
-  .carousel-control-prev,
-  .carousel-control-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    padding: 10px;
-    color: white;
-    font-size: 20px;
-    z-index: 10;
-  }
-  
-  .carousel-control-prev {
+  .carouselPrev {
     left: 10px;
   }
   
-  .carousel-control-next {
+  .carouselNext {
     right: 10px;
   }
   
-  .carousel-indicators {
+  .carouselIndicators {
     position: absolute;
     bottom: 10px;
     display: flex;
@@ -144,7 +163,7 @@
     z-index: 10;
   }
   
-  .carousel-indicators button {
+  .carouselIndicators button {
     background-color: #bbb;
     border: none;
     border-radius: 50%;
@@ -155,10 +174,10 @@
     cursor: pointer;
   }
   
-  .carousel-indicators button.active {
+  .carouselIndicators button.active {
     background-color: #717171;
   }
   
-  .carousel-indicators button:hover {
+  .carouselIndicators button:hover {
     opacity: 1;
   }
