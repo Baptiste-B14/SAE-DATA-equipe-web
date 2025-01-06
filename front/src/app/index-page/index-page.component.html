@@ -37,7 +37,7 @@
           <div class="carouselInner" [style.transform]="getTransformStyle()">
             @for (axis of axes; track axis.title) {
               <div class="carouselItem">
-                <img [src]="axis.image" class="carouselImg" [alt]="axis.title" routerLink="/analyses" />
+                <img [src]="axis.image" class="carouselImg" [alt]="axis.title" [routerLink]="axis.route" />
                 <div class="carouselText">
                   <h5>{{ axis.title }}</h5>
                   <p class="carouselItemDescription">{{ axis.description }}</p>

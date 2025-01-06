@@ -13,9 +13,10 @@ export const routes: Routes = [
         component: IndexPageComponent,
       },
       {
-        path: 'analyses',
+        path: 'analyses/:id',
         component: AnalysePageComponent,
       },
+      { path: '', redirectTo: '/analyses/1', pathMatch: 'full' }, // Redirection par défaut vers Axe 1
       {
         path: 'recherche',
         component: RecherchePageComponent,
