@@ -16,16 +16,19 @@ export class IndexPageComponent {
       title: 'Axe 1',
       description: 'Explication sommaire de ce que l’Axe 1 présente',
       image: 'assets/images/gsp_png.PNG',
+      route: '/analyses/1',
     },
     {
       title: 'Axe 2',
       description: 'Explication sommaire de ce que l’Axe 2 présente',
       image: 'assets/images/gsp2_png.PNG',
+      route: '/analyses/2',
     },
     {
       title: 'Axe 3',
       description: 'Explication sommaire de ce que l’Axe 3 présente',
       image: 'assets/images/gsp3_png.PNG',
+      route: '/analyses/3',
     },
   ];
 
