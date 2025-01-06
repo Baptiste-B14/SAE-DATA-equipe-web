@@ -1,16 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-
-/*
-  TODO
-  - générer les KPI dans ce composant
-*/
+import { KPIComponent } from '../kpi/kpi.component';
 
 
 @Component({
   selector: 'app-index-page',
   standalone: true,
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive, KPIComponent],
   templateUrl: './index-page.component.html',
   styleUrl: './index-page.component.scss'
 })

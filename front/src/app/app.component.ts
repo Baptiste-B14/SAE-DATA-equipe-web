@@ -3,11 +3,13 @@ import { ActivatedRoute, NavigationEnd, Router, RouterLink, RouterOutlet } from 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { filter } from 'rxjs/operators';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, RouterLink],
+  imports: [NgxChartsModule, RouterOutlet, HeaderComponent, FooterComponent, RouterLink],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -41,3 +43,13 @@ export class AppComponent implements OnInit {
     }
   }
 }
+
+
+@NgModule({
+  imports: [
+    // autres modules
+    MatDialogModule,
+  ],
+})
+export class AppModule {}
+

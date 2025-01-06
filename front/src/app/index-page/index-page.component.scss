@@ -14,30 +14,19 @@
     background-color: #4A412A; /* Couleur Pantone 448 C */
     padding: 20px;
     text-align: center;
+    justify-content: center;
   }
   
   .kpiSection h2 {
     color: white;
     margin-bottom: 10px;
   }
-  
-  .kpiContainer {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
+
+  .ngx-charts {
+    color: white;
   }
   
-  .kpi {
-    background-color: #c4c4c4;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-  }
 
-
-  
   .presentationContainer {
     position: relative; /* Le conteneur parent doit être positionné relativement */
     height: 150px; 
