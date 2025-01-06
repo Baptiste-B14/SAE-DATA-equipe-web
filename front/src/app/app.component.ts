@@ -5,7 +5,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AncreComponent } from './ancre/ancre.component';
 import { filter } from 'rxjs/operators';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
-import { MatDialogModule } from '@angular/material/dialog';
+//import { MatDialogModule } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-root',
@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
   }
 }
 
-
+/*
 @NgModule({
   imports: [
     // autres modules
@@ -53,4 +53,4 @@ export class AppComponent implements OnInit {
   ],
 })
 export class AppModule {}
-
+*/
