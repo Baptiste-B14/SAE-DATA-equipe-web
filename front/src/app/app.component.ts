@@ -2,12 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterLink, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { AncreComponent } from './ancre/ancre.component';
 import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FooterComponent, RouterLink],
+  imports: [RouterOutlet, HeaderComponent, FooterComponent, RouterLink, AncreComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
