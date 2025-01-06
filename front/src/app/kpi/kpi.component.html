@@ -1,14 +1,21 @@
 <div class="kpi-bloc">
   <h2>Nos données</h2>
   <div class="kpi-container">
-    <ngx-charts-number-card
+    <ngx-charts-number-card (select)="onKpiSelect($event)"
       [view]="[700, 400]"
       [results]="result"
       [animations]="true"
       [cardColor]="cardColor"
       [bandColor]="cardColor">
-    </ngx-charts-number-card>
+    </ngx-charts-number-card >
   </div>
-    
+  <div class="modal" [class.show]="isModalOpen">
+    <div class="modal-content">
+      <span class="close" (click)="closeKpiModal()">&times;</span>
+      <h2>{{ selectedKpi?.name }}</h2>
+      <p>{{ selectedKpi?.info }}</p>
+    </div>
+  </div>
+
 </div>
-  
+
