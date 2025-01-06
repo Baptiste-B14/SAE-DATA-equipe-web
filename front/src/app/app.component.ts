@@ -17,7 +17,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
 export class AppComponent implements OnInit {
   title ='front';
 
-  
+
   /*Tout ce qui suit est utilisé pour faire un défilement auto sur certains element d'une page*/
 
   constructor(private route: ActivatedRoute, private router: Router) {}
