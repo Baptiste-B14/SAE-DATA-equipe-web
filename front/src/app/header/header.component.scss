@@ -3,25 +3,22 @@
     
 }*/
 
+/*
 header {
-    /*position: fixed;
-    top: 0; 
-    left: 0;
-    width: 100%;*/ /*à dé-commenter si header constamment sur ecran voulu*/
 
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
     background-color: white; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* pour effet d'ombre */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
     width: 100%;
 }
   
 #logoDiv {
     display: flex;
     align-items: center;
-    flex: 0 0 auto; /* Le logo conserve sa taille initiale */
+    flex: 0 0 auto; 
 }
   
 #logoImage {
@@ -32,9 +29,9 @@ header {
   
 nav {
     display: flex;
-    gap: 20px; /* espacement entre les liens */
-    flex: 1; /* prend tout l'espace disponible */
-    justify-content: space-evenly; /* espacement égale entre les liens */
+    gap: 20px; 
+    flex: 1; 
+    justify-content: space-evenly; 
 }
   
 nav > a{
@@ -43,9 +40,114 @@ nav > a{
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s;
-    text-align: center; /* Centre le texte dans chaque lien */
+    text-align: center; 
 }
 
 nav > a:hover {
     color: grey;
+}*/
+
+/* Header principal */
+header {
+    position: fixed; /* Header toujours en haut */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height :12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Effet d'ombre */
+    z-index: 1000; /* Toujours au-dessus des autres éléments */
+    transition: top 0.3s ease-in-out; /* Transition fluide pour le masquage */
+}
+
+/* Masquage du header lors du scroll */
+header.hidden {
+    top: -1000px; /* Déplacement hors de la vue */
+}
+
+/* Logo */
+#logoDiv {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto; /* Le logo conserve sa taille initiale */
+}
+
+#logoImage {
+    width: 100px; 
+    height: 100px;
+    object-fit: cover;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 20px; /* Espacement entre les liens */
+    flex: 1; /* Prend tout l'espace disponible */
+    justify-content: space-evenly; /* Espacement égal entre les liens */
+}
+
+/* Liens dans le menu */
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+    text-align: center; /* Centre le texte dans chaque lien */
+    cursor: pointer;
+}
+
+a:hover {
+    color: grey;
+}
+
+ul {
+    list-style: none; //pour les points
+    text-align: center;
+}
+
+.dropdown-menu li {
+    margin: 5px 0; /* Espacement vertical entre les axes */
+}
+
+/* Le parent de la dropdown doit avoir une position relative */
+.dropdown-trigger {
+    position: relative; /* Permet à la dropdown de se positionner par rapport à cet élément */
+    display: inline-block;
+}
+
+/* Le menu déroulant est positionné en bas de "Nos Analyses" */
+.dropdown-menu {
+    position: absolute; /* Position relative au parent */
+    top: 10%; /* Juste en dessous du parent */
+    left: -15%; /* Aligné sur la gauche */
+    transform: translateY(5px); /* Légère séparation visuelle */
+    display: none; /* Caché par défaut */
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    border-radius: 4px;
+    z-index: 999; /* Toujours au-dessus */
+    padding: 10px;
+    width: 100px;
+}
+
+/* Rendre visible lorsqu'ouvert */
+.dropdown-menu.open {
+    display: block;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
