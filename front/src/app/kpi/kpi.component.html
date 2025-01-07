@@ -9,8 +9,16 @@
       [bandColor]="cardColor">
     </ngx-charts-number-card >
   </div>
-  <div class="modal" [class.show]="isModalOpen">
-    <div class="modal-content">
+
+  <div
+    class="modal"
+    [class.show]="isModalOpen"
+    (click)="closeKpiModal()"
+  >
+    <div
+      class="modal-content"
+      (click)="stopPropagation($event)"
+    >
       <span class="close" (click)="closeKpiModal()">&times;</span>
       <h2>{{ selectedKpi?.name }}</h2>
       <p>{{ selectedKpi?.info }}</p>
