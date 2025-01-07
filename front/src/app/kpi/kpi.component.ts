@@ -45,6 +45,10 @@ export class KPIComponent implements OnInit {
       this.isModalOpen = true;
     }
   }
+  stopPropagation(event: Event) {
+    event.stopPropagation();
+  }
+
 
   closeKpiModal() {
     this.isModalOpen = false;
