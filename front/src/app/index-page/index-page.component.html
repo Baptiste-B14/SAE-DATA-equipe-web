@@ -1,4 +1,4 @@
-<div class="IndexPage">
+<div class="IndexPage page-content">
     <section class="problematique">
         <h1>Comment la pandémie de la COVID-19 a-t-elle impactée les collaborations scientifiques ?</h1>
     </section>
@@ -25,11 +25,10 @@
         <div class="carouselContainer">
           <!-- Control Buttons Prev -->
           <button
-          class="carouselPrev"
+          class="carouselPrev fas fa-arrow-left"
           type="button"
           (click)="navigateCarousel('prev')"
           >
-          <span class="carouselPrev-icon" aria-hidden="true"></span>
           <span class="visuallyHidden">Previous</span>
           </button>
         
@@ -59,12 +58,11 @@
         
           <!-- Control Buttons Next -->
           <button
-          class="carouselNext"
+          class="carouselNext fas fa-arrow-right"
           type="button"
           (click)="navigateCarousel('next')"
           >
-          <span class="carouselNext-icon" aria-hidden="true"></span>
-          <span class="visuallyHidden">Next</span>
+            <span class="visuallyHidden">Next</span>
           </button>
         </div>
     </section>
