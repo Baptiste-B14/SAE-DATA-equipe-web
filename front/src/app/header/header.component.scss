@@ -1,6 +1,6 @@
 
 /*.active-link {
-    
+
 }*/
 
 /*
@@ -10,37 +10,37 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: white; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
 }
-  
+
 #logoDiv {
     display: flex;
     align-items: center;
-    flex: 0 0 auto; 
+    flex: 0 0 auto;
 }
-  
+
 #logoImage {
-    width: 100px; 
+    width: 100px;
     height: 100px;
     object-fit: cover;
 }
-  
+
 nav {
     display: flex;
-    gap: 20px; 
-    flex: 1; 
-    justify-content: space-evenly; 
+    gap: 20px;
+    flex: 1;
+    justify-content: space-evenly;
 }
-  
+
 nav > a{
     text-decoration: none;
     color: black;
     font-size: 16px;
     font-weight: bold;
     transition: color 0.3s;
-    text-align: center; 
+    text-align: center;
 }
 
 nav > a:hover {
@@ -77,7 +77,7 @@ header.hidden {
 }
 
 #logoImage {
-    width: 100px; 
+    width: 100px;
     height: 100px;
     object-fit: cover;
 }
@@ -104,6 +104,7 @@ a {
 a:hover {
     color: grey;
 }
+
 
 ul {
     list-style: none; //pour les points
