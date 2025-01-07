@@ -10,6 +10,7 @@ config = dotenv_values('.env')
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
+app.config['FLASK_RUN_HOST'] = '0.0.0.0'
 app.config['DB_HOST'] = config['DB_HOST']
 app.config['DB_USER'] = config['DB_USER']
 app.config['DB_PASSWORD'] = config['DB_PWD']
@@ -36,5 +37,5 @@ def home():
     answer = query("SELECT type, count(type) FROM records WHERE type='book' GROUP BY type;", False)
     return {"message": "Bonjour Monde !", "test": answer}, 200
 
-
-app.run()
+if __name__ =='__main__':
+    app.run(host='0.0.0.0', port=5000, debug=True)
