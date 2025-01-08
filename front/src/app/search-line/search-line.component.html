@@ -1,0 +1,19 @@
+<div class="searchline" id="search-line-{{searchLineId}}">
+    <input type="text" name="column_name" id="column_name">
+    <input type="hidden" id="selected-operator-value-{{searchLineId}}" value="EQUALS">
+    
+    <div class="dropdown">
+        <i class="dropdown-button fa-solid fa-equals" id="selected-operator-visualization-{{searchLineId}}"></i>
+        <ul class="dropdown-content">
+            <li (click)="changeOperatorVisualization('EQUALS')">EQUALS</li>
+            <li (click)="changeOperatorVisualization('LIKE')">LIKE</li>
+            <li (click)="changeOperatorVisualization('GT')">GT</li>
+            <li (click)="changeOperatorVisualization('LT')">LT</li>
+            <li (click)="changeOperatorVisualization('GTE')">GTE</li>
+            <li (click)="changeOperatorVisualization('LTE')">LTE</li>
+        </ul>
+    </div>
+
+    <button (click)="addNew()" id=add-{{searchLineId}}>ADD</button>
+    <button (click)="remove()" id="remove-{{searchLineId}}">REMOVE</button>
+</div>
