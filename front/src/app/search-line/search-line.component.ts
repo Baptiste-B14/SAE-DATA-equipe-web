@@ -11,15 +11,23 @@ import { RecherchePageComponent } from '../recherche-page/recherche-page.compone
 })
 export class SearchLineComponent {
   @Input() searchLineId! : number;
+  public searchlines = RecherchePageComponent.searchlines
 
-  addNew(){
-    RecherchePageComponent.searchlines.push(new SearchLineComponent);  
+  addNew(){   
+    this.searchlines.push(new SearchLineComponent);  
   }
 
   remove(){
     if (this.searchLineId != 0) {
-      RecherchePageComponent.searchlines.splice(this.searchLineId, 1)
+      this.searchlines.splice(this.searchLineId, 1)
     }
+  }
+
+  getSelectedOperator(){
+    let actualValue = document.getElementById('selected-operator-value-'+this.searchLineId) as HTMLInputElement;
+    console.log(actualValue.value);
+    
+    return actualValue.value; 
   }
 
   changeOperatorVisualization(value:string) {    

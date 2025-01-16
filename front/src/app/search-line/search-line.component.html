@@ -13,7 +13,18 @@
             <li (click)="changeOperatorVisualization('LTE')">LTE</li>
         </ul>
     </div>
-
-    <button (click)="addNew()" id=add-{{searchLineId}}>ADD</button>
-    <button (click)="remove()" id="remove-{{searchLineId}}">REMOVE</button>
+    @if(getSelectedOperator() == "EQUALS" || getSelectedOperator() == "LIKE" ){
+        <input type="text" name="" id="">
+    }
+    @else{
+        <input type="number" name="" id="">
+    }
+    @if(searchLineId == searchlines.length - 1 && searchLineId < 4){
+        <i (click)="addNew()" id=add-{{searchLineId}} class="fa-solid fa-circle-plus"></i>
+        
+    }
+    @if(searchLineId > 0 && searchLineId == searchlines.length - 1){
+        <i (click)="remove()" id="remove-{{searchLineId}}" class="fa-solid fa-trash-can"></i>
+        }
+    
 </div>

@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { SearchLineComponent } from '../search-line/search-line.component'
+import { ResultatsPageRechercheComponent } from '../resultats-page-recherche/resultats-page-recherche.component'
 @Component({
   selector: 'app-recherche-page',
   standalone: true,
-  imports: [SearchLineComponent],
+  imports: [SearchLineComponent, ResultatsPageRechercheComponent],
   templateUrl: './recherche-page.component.html',
   styleUrl: './recherche-page.component.scss'
 })
@@ -18,6 +19,11 @@ export class RecherchePageComponent {
   
   get staticSearchlines() {
     return  RecherchePageComponent.searchlines;
+  }
+
+  request(){
+    console.log("submit");
+    
   }
   
 }
