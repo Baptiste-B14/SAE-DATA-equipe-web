@@ -1,1 +1,15 @@
-<p>recherche-page works!</p>
+<div class="container" id="page-recherche">
+    <div id="search" #searchContainer>
+            @for(line of staticSearchlines; track $index){
+                <app-search-line [searchLineId]=$index></app-search-line>
+            }
+            <input (click)="request()" type="submit" value="submit">
+    </div>
+    <div class="horizontal-bar"></div>
+    <div id="results">
+        <h3>Résultats</h3>
+        <app-resultats-page-recherche></app-resultats-page-recherche>
+    </div>
+</div>
+
+

@@ -1,24 +1,18 @@
 #page-recherche {
-    min-height: 40vh;
+    min-height: 500px;
     margin: 5%;
     padding: 5%;
 }
 
-.horizontal-bar {
-  left: 0;
-  width: 100%; /* S'étend sur toute la largeur */
-  height: 2px; /* Épaisseur de la ligne */
-  background-color: #000000; /* Couleur de la ligne */
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
 #search {
     min-height: 50%;
-  }
+    border: solid black 2px;
+    
+}
 
 #results {
     height: 50%;
+    border: solid black 2px;
     display: flex;
     justify-content: center;
 }
@@ -38,6 +32,17 @@
     font-size: 16px;
     border: none;
     cursor: pointer;
+  }
+
+  .searchline {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .searchline > * {
+    margin: 1%;
   }
 
   /* Contenu de la liste déroulante */
