@@ -1,0 +1,34 @@
+
+
+<div [formGroup]="form">
+  <div formArrayName="words">
+    @for(wordctrl of words.controls; track $index){
+
+
+    <div>
+      <input [formControlName]=$index placeholder="Entrez un mot" (keyup.enter)="loadChartData()"/>
+
+      <button type="button" (click)="removeWord($index); loadChartData()" [disabled]="words.length === 1">
+        Supprimer
+      </button>
+    </div>
+    }
+  </div>
+  <button type="button" (click)="addWord(); loadChartData()">Ajouter un mot</button>
+
+</div>
+
+
+
+<ngx-charts-line-chart
+  [results]="chartData"
+  [xAxis]="true"
+  [yAxis]="true"
+  [legend]="true"
+  [showXAxisLabel]="true"
+  [showYAxisLabel]="true"
+  [xAxisLabel]="'Année'"
+  [yAxisLabel]="'Fréquence'"
+>
+</ngx-charts-line-chart>
+

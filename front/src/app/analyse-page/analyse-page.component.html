@@ -1,24 +1,28 @@
 <div class="axis-page">
-      <h1>{{ axisData?.title }}</h1>
-      <p>{{ axisData?.intro }}</p>
-  
-    <section class="content">
-        @if (axisData?.content) {
-            @for (item of axisData.content; track item.text) {
-              <div class="content-item">
-                <img [src]="item.image" alt="Image de l'axe">
-                <p>{{ item.text }}</p>
-              </div>
-            }
-        }
-    </section>
-  
-    <div class="footer">
-        @if (axisId > 1) {
-          <button (click)="goToAxis(axisId - 1)">Vers l'Axe {{ axisId - 1 }}</button>
-        }
-        @if (axisId < axes.length) {
-          <button (click)="goToAxis(axisId + 1)">Vers l'Axe {{ axisId + 1 }}</button>
-        }
-      </div>
+  <h1>{{ axisData?.title }}</h1>
+  <p>{{ axisData?.intro }}</p>
+
+  <section class="content">
+
+          <!-- Conditionnel pour le type de graphique -->
+      @if (axisId == 1){
+        <app-axe1></app-axe1>
+      }
+      @if (axisId == 2){
+        <app-axe2></app-axe2>
+      }
+      @if (axisId == 3){
+        <app-axe3></app-axe3>
+      }
+
+  </section>
+
+  <div class="footer">
+    @if (axisId > 1) {
+      <button (click)="goToAxis(- 1)">Vers l'Axe {{ axisId -1 }}</button>
+    }
+    @if (axisId < axes.length) {
+      <button (click)="goToAxis( 1)">Vers l'Axe {{ axisId +1 }}</button>
+    }
   </div>
+</div>
