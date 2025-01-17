@@ -1,0 +1,26 @@
+<div class="word-container">
+
+  <select (change)="onYearChange($event)" [(ngModel)]="selectedYear">
+   @for (year of years; track year) {
+     <option [value]="year">{{ year }}</option>
+   }
+  </select>
+
+
+
+  <div class="word-cloud-container" #wordCloudContainer></div>
+  <div class="slider-bloc">
+    <label for="yearSlider">Year: {{ selectedYear }}</label>
+    <input
+      id="yearSlider"
+      type="range"
+      [min]="startYear"
+      [max]="endYear"
+      [(ngModel)]="selectedYear"
+      (input)="onYearChange($event)"
+    />
+  </div>
+
+</div>
+
+

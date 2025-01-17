@@ -6,6 +6,7 @@ import { PresentationPageComponent } from './presentation-page/presentation-page
 import { DynamiquePageComponent } from './dynamique-page/dynamique-page.component';
 import { TeamPageComponent } from './team-page/team-page.component';
 import { LegalPageComponent } from './legal-page/legal-page.component';
+import {WordCloudComponent} from "./word-cloud/word-cloud.component";
 
 export const routes: Routes = [
     {
@@ -16,7 +17,7 @@ export const routes: Routes = [
         path: 'analyses/:id',
         component: AnalysePageComponent,
       },
-      { path: '', redirectTo: '/analyses/1', pathMatch: 'full' }, // Redirection par défaut vers Axe 1
+      { path: '', redirectTo: '/analyses/1', pathMatch: 'full' },
       {
         path: 'recherche',
         component: RecherchePageComponent,
@@ -36,5 +37,5 @@ export const routes: Routes = [
       {
         path: 'legal',
         component: LegalPageComponent,
-      }, 
+      },
 ];
