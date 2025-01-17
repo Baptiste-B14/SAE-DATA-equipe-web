@@ -3,7 +3,7 @@ import re
 from flask import jsonify
 
 # Remplacez ces valeurs par vos informations de connexion
-URI = "bolt://192.168.1.47:7687"  # Adresse de votre instance Neo4j
+URI = "bolt://api.lliger.fr"  # Adresse de votre instance Neo4j
 USERNAME = "neo4j"             # Nom d'utilisateur
 PASSWORD = "motdepasse"          # Mot de passe
 
