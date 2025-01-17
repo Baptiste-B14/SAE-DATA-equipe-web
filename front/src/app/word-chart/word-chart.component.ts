@@ -1,10 +1,7 @@
 import {ChangeDetectorRef, Component, Input, OnInit} from '@angular/core';
 import {LineChartModule} from "@swimlane/ngx-charts";
 import { WordchartService} from "../services/wordchart.service";
-import {DomSanitizer} from "@angular/platform-browser";
 import {FormArray, FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
-import {index} from "d3";
-import {elementAt} from "rxjs";
 
 @Component({
   selector: 'app-word-chart',
@@ -101,7 +98,6 @@ export class WordChartComponent{
   }
 
   ngOnInit() {
-    // Ajouter un champ par défaut au chargement
     this.addWord();
   }
 
@@ -109,7 +105,6 @@ export class WordChartComponent{
     return this.form.get('words') as FormArray;
   }
 
-  // Ajouter un champ texte
   addWord(): void {
     this.words.push(this.fb.control(''));
   }
@@ -123,7 +118,6 @@ export class WordChartComponent{
     }
   }
 
-  // Méthode appelée pour envoyer les mots au backend et charger les données
   loadChartData(): void {
     const wordsList = this.words.value.filter((word: string) => word.trim() !== '');
 
@@ -143,7 +137,6 @@ export class WordChartComponent{
     );
   }
 
-  // Formater les données reçues du backend pour le graphique
   formatData(rawData: any): any[] {
     const { data, years } = rawData;
     return Object.keys(data).map((key) => {

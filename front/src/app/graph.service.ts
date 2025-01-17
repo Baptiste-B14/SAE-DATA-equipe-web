@@ -102,5 +102,7 @@ export class GraphService {
       // la fonction reduce demande à ce que vous retourniez l'accumulateur à chaque itération
       return acc;
     }, {});
+
+
   }
 }

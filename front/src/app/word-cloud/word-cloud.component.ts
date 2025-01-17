@@ -88,15 +88,12 @@ export class WordCloudComponent {
   startYear = 1937;
   endYear = 2024;
 
-
   ngOnInit(): void {
     this.generateYears();
     this.fetchData(this.selectedYear);
   }
 
   generateYears(): void {
-
-
     for (let i = this.endYear; i >= this.startYear; i--) {
       this.years.push(i);
     }
@@ -107,29 +104,23 @@ export class WordCloudComponent {
     this.fetchData(selectedYear);
   }
 
-
   fetchData(year: number): void {
-    //console.log('Fetching data...');
-
     this.worldCloudService.getWordcloudData(year).subscribe(
       (data) => {
-        //console.log('Data fetched:', data);
         this.createWordCloud(data);
       },
       (error) => {
         console.error('Error fetching data:', error);
       }
     );
-
-    //this.worldCloudService.getWordcloudData(this.year).subscribe((data)=>{this.createWordCloud(data)})
   }
 
   private createWordCloud(wordsData: { [key: string]: number }) {
-    //console.log('Creating word cloud...');
     if (!this.wordCloudContainer) {
       console.error('Container not ready!');
       return;
     }
+
     const values = Object.values(wordsData);
     const minValue = Math.min(...values);
     const maxValue = Math.max(...values);
@@ -137,7 +128,6 @@ export class WordCloudComponent {
       .domain([minValue, maxValue])
       .range([20, 90]); // Plage de tailles des mots en pixels
 
-    // Transformer les données pour D3-cloud
     this.words = Object.keys(wordsData).map((word) => ({
       text: word,
       size: scale(wordsData[word]) // Taille normalisée

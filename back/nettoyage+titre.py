@@ -23,19 +23,15 @@ df = pd.read_csv(csv_path, names=["title", "year"], quotechar='"')
 
 def clean_and_lemmatize_text(text):
     try:
-        # Vérifier si le texte est une chaîne de caractères
         if not isinstance(text, str) or not text.strip():
             return ""
 
-        # Nettoyage de base : suppression de la ponctuation et mise en minuscules
-        text = re.sub(r'[^\w\s]', '', text)
+        text = re.sub(r'[^a-zA-Z\s]', '', text)
         text = text.lower()
 
-        # Tokenisation et lemmatisation avec SpaCy
         doc = nlp(text)
         lemmatized_tokens = [token.lemma_ for token in doc if token.lemma_ not in ENGLISH_STOP_WORDS and not token.is_punct]
 
-        # Retourner le texte lemmatisé sous forme de chaîne
         return " ".join(lemmatized_tokens)
 
     except Exception as e:
@@ -43,35 +39,48 @@ def clean_and_lemmatize_text(text):
         print(e)
         return ""
 
+
+
+def clean_text(text):
+    if not isinstance(text, str) or not text.strip():
+        return ""
+
+    text = re.sub(r'[^a-zA-Z\s]', '', text)
+    text = text.lower()
+
+    doc = nlp(text)
+    lemmatized_tokens = [token.lemma_ for token in doc if token.lemma_ not in ENGLISH_STOP_WORDS]
+
+    return lemmatized_tokens
+
+
+
 tqdm.pandas()
 print("nettoyage")
 
-df['cleaned_title'] = df['title'].progress_2
-apply(clean_and_lemmatize_text)
 
-# Étape 3 : Entraîner un modèle Word2Vec sur les titres nettoyés
+df['cleaned_title'] = df['title'].progress_apply(clean_text)
+
 print("Entraînement du modèle Word2Vec")
 cleaned_titles = df['cleaned_title'].tolist()
-model = Word2Vec(sentences=cleaned_titles, vector_size=200, window=7, min_count=1, workers=4)
+print(cleaned_titles)
+model = Word2Vec(sentences=cleaned_titles, vector_size=100, window=7, min_count=1, workers=4)
 
-# Étape 4 : Extraire les mots uniques et leurs vecteurs
 print("Extraction des mots uniques")
+
 unique_words = list(model.wv.index_to_key)
+print(unique_words)
 word_vectors = model.wv[unique_words]
 
-# Étape 5 : Clustering des mots
 print("Clustering")
-num_clusters = 10  # Nombre de thèmes souhaités
+num_clusters = 30
 kmeans = KMeans(n_clusters=num_clusters, random_state=42)
 kmeans.fit(word_vectors)
 
-# Associer chaque mot à son cluster
 word_clusters = {word: kmeans.labels_[i] for i, word in enumerate(unique_words)}
 
-# Étape 6 : Définir les thèmes à partir d’un dictionnaire de thèmes
-# Dictionnaire de thèmes pré-définis (à enrichir selon vos besoins)
-
-
+print(word_clusters)
+'''
 # Associer chaque cluster à un thème en utilisant la similarité avec le dictionnaire
 def get_hypernyms(word):
     synsets = wn.synsets(word)
@@ -103,9 +112,46 @@ for cluster_id in range(num_clusters):
         cluster_themes[cluster_id] = "Thème inconnu"
 
     print(f"Cluster {cluster_id + 1} (Thème : {cluster_themes[cluster_id]}): {', '.join(cluster_words)}")
+'''
 
 
-output_path = "clusters_result_wordnet.csv"
+def get_hypernyms(word):
+
+    synsets = wn.synsets(word)
+    hypernyms = set()
+
+    for syn in synsets:
+        for hypernym in syn.hypernyms():
+            hypernyms.add(hypernym.lemmas()[0].name())
+
+    return hypernyms
+
+
+print("Définition des thèmes avec WordNet (pondération uniforme)")
+cluster_themes = {}
+top_n_hypernyms = 20
+
+for cluster_id in range(num_clusters):
+    cluster_words = [word for word, label in word_clusters.items() if label == cluster_id]
+
+
+    hypernym_counter = Counter()
+    for word in cluster_words:
+        hypernyms = get_hypernyms(word)
+        hypernym_counter.update(hypernyms)
+
+
+    most_common_hypernyms = [hypernym for hypernym, _ in hypernym_counter.most_common(top_n_hypernyms)]
+
+
+    if most_common_hypernyms:
+        cluster_themes[cluster_id] = ", ".join(most_common_hypernyms)
+    else:
+        cluster_themes[cluster_id] = "Thème inconnu"
+
+    print(f"Cluster {cluster_id + 1} (Thèmes : {cluster_themes[cluster_id]}): {', '.join(cluster_words)}")
+
+output_path = "clusters_result_wordnet3.csv"
 print(f"Sauvegarde des résultats dans {output_path}")
 with open(output_path, mode='w', newline='') as file:
     writer = csv.writer(file)
