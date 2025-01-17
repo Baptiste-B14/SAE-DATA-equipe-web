@@ -33,7 +33,7 @@ def top_collab() :
     limit = request.args.get('limit', default=50, type=int)
     answer = None
     if period == "all_time":
-        answer = execute_query("MATCH (a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) return a.person_name, count(r2) AS count ORDER BY count DESC LIMIT" + str(limit))
+        answer = execute_query("MATCH (a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) return a.person_name, count(r2) AS count ORDER BY count DESC LIMIT " + str(limit))
     elif period == "before":
         answer = execute_query(
             "MATCH (a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) AND p.year > 2015 AND p.year < 2019 return a.person_name, count(r2) AS count ORDER BY count DESC LIMIT " + str(limit))
@@ -45,7 +45,9 @@ def top_collab() :
         answer = execute_query(
             "MATCH (a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) AND p.year > 2022 return a.person_name, count(r2) AS count ORDER BY count DESC LIMIT " + str(
                 limit))
-
+    elif period == "fixed":
+        year = request.args.get('year', default=2024, type=int)
+        answer =execute_query("MATCH(a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) AND p.year=" + str(year) + " RETURN a.person_name, count(r2) AS count ORDER BY count DESC LIMIT " + str(limit))
     return {"message" : answer}, 200
 
 @app.route('/execute')

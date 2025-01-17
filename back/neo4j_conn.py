@@ -1,6 +1,5 @@
 from neo4j import GraphDatabase
 import re
-import tqdm
 from flask import jsonify
 
 # Remplacez ces valeurs par vos informations de connexion
