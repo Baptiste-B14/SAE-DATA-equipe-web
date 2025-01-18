@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BubbleChartComponent } from './bubble-chart-custom.component';
+import { BubbleChartCustomComponent } from './bubble-chart-custom.component';
 
-describe('BubbleChartComponent', () => {
-  let component: BubbleChartComponent;
-  let fixture: ComponentFixture<BubbleChartComponent>;
+describe('BubbleChartCustomComponent', () => {
+  let component: BubbleChartCustomComponent;
+  let fixture: ComponentFixture<BubbleChartCustomComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BubbleChartComponent]
+      imports: [BubbleChartCustomComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BubbleChartComponent);
+    fixture = TestBed.createComponent(BubbleChartCustomComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

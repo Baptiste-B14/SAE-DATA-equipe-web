@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {BubbleChartCustomComponent} from "../../../bubble-chart-custom/bubble-chart-custom.component";
 import { LinechartCustomComponent} from "../../../linechart-custom/linechart-custom.component";
 import {PiechartCustomComponent} from "../../../piechart-custom/piechart-custom.component";
+import { PiechartCustomSimpleComponent } from '../../../piechart-custom-simple/piechart-custom-simple.component';
 import { BarchartCustomComponent } from '../../../barchart-custom/barchart-custom.component';
 
 @Component({
@@ -11,7 +12,8 @@ import { BarchartCustomComponent } from '../../../barchart-custom/barchart-custo
     BubbleChartCustomComponent,
     LinechartCustomComponent,
     PiechartCustomComponent,
-    BarchartCustomComponent
+    BarchartCustomComponent,
+    PiechartCustomSimpleComponent
   ],
   templateUrl: './axe1.component.html',
   styleUrl: './axe1.component.scss'
