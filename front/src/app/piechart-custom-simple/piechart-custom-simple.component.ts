@@ -21,7 +21,7 @@ export class PiechartCustomSimpleComponent {
 
   ngOnInit(): void {
     this.piechartService.getDataSimple(this.route,).subscribe((data) => {
-      this.chartData = this.piechartService.formatData(data, this.route, 0, 'null');
+      this.chartData = this.piechartService.formatData(data, this.route);
     },
       (error)=> {
       console.log('Erreur lors de la récupération  des données :', error);
