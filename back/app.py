@@ -2,9 +2,10 @@ from flask import Flask, request
 import flask
 import flask_cors
 from flask import request
-import json
 
 from neo4j_conn import execute_query
+import json, csv
+from flask_caching import Cache
 
 
 from dotenv import dotenv_values
@@ -23,6 +24,13 @@ app.config['DB_PASSWORD'] = config['DB_PWD']
 app.config['DB_DATABASE'] = config['DB_NAME']
 app.teardown_appcontext(close_db)
 
+
+app.config['CACHE_TYPE'] = 'RedisCache'
+app.config['CACHE_REDIS_HOST'] = 'localhost'  # Vérifiez si Redis fonctionne localement
+app.config['CACHE_REDIS_PORT'] = 6379         # Assurez-vous que le port est correct
+app.config['CACHE_DEFAULT_TIMEOUT'] = 300
+cache = Cache(app)
+
 flask_cors.CORS(app, resources={
     r"/*":
         {
@@ -31,14 +39,8 @@ flask_cors.CORS(app, resources={
         }
 })
 
-
-
-
-@app.route('/')
-def home():
-    return "Bienvenue sur l'API!"
-
 @app.route('/top_collab', methods=['GET'])
+@cache.cached(query_string=True)
 def top_collab() :
     period = request.args.get('period', default='all_time', type=str)
     limit = request.args.get('limit', default=50, type=int)
@@ -62,11 +64,13 @@ def top_collab() :
     return {"message" : answer}, 200
 
 @app.route('/execute')
+@cache.cached(query_string=True)
 def execute():
     answer = execute_query(request.args.get('query', default="MATCH(n) RETURN COUNT(n), labels(n)", type=str))
     return {'message' : answer}, 200
 
 @app.route('/graph_collab', methods=['GET'])
+@cache.cached(query_string=True)
 def graph_collab():
     answer = execute_query("MATCH (a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) WITH p, a, b, p.year AS annee RETURN a.nom, b.nom, annee")
     nodes = []
@@ -79,6 +83,7 @@ def graph_collab():
 
 
 @app.route('/analyses/wordcloud/<year>')
+@cache.cached(query_string=True)
 def get_word_cloud_year(year):
     file = open('tendances_mots_par_annees_top_500.json')
     data = json.load(file)
@@ -88,6 +93,7 @@ def get_word_cloud_year(year):
 
 
 @app.route('/analyses/wordchart', methods=['GET'])
+@cache.cached(query_string=True)
 def get_word_chart():
     # Charger les données depuis le fichier JSON
     with open('tendances_mots_par_annees_toutes_les_donnees_sans_les_2_occ.json', 'r') as file:
@@ -109,6 +115,7 @@ def get_word_chart():
 
 
 @app.route('/neo4j')
+@cache.cached(query_string=True)
 def get_collaboration():
     with open('neo4jCollab.txt', 'r') as file:
         data = json.load(file)
@@ -117,23 +124,41 @@ def get_collaboration():
 
 
 @app.route('/pub_in_time')
+@cache.cached(query_string=True)
 def get_publi_in_time():
-    with open('./SqlLocal/Nombre_publications_année_periode.xlsx - Result 1.json') as file:
-        data = json.load(file)
-        return data
-  
+    requete = """
+        SELECT
+            Year AS annee,
+            COUNT(*) AS nombre_publications
+        FROM
+            Publication
+        GROUP BY
+            Year
+        ORDER BY
+            Year ASC;
+    """
+
+    # Exécuter la requête pour obtenir les résultats
+    data = query(requete)  # On suppose que query retourne des résultats sous forme de liste de dictionnaires
+
+    if not data:
+        return jsonify({"error": "Aucune donnée trouvée"}), 404
+
+    return jsonify([dict(row) for row in data])
+
+
+
 @app.route('/collab_by_categ')
 def get_collab_by_categ():
     with open('./SqlLocal/Nb_collaborations_par_categorie.xlsx - Result 1.json') as file:
         data = json.load(file)
         return data
 
-
 @app.route('/collab_in_time')
+@cache.cached(query_string=True)
 def get_collab_in_time():
     with open('./SqlLocal/Nombre_collaborations_année_periode.xlsx - Result 1.json') as file:
         data = json.load(file)
-        print(data)
         return data
 
 with open("cities_with_coordinates.json", "r", encoding="utf-8") as json_file:
@@ -141,6 +166,7 @@ with open("cities_with_coordinates.json", "r", encoding="utf-8") as json_file:
 
 
 @app.route('/coordinates', methods=['GET'])
+@cache.cached(query_string=True)
 def get_coordinates():
     """
     Récupère la latitude et la longitude d'une ville.
@@ -189,7 +215,3 @@ def csv_to_json():
 if __name__ =='__main__':
 
     app.run(host='0.0.0.0', port=5000, debug=True)
-
-
-
-

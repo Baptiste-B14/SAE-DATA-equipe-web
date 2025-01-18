@@ -29,8 +29,8 @@ export class PiechartCustomComponent {
   selectedPeriod : string = this.periods['before'];
 
   ngOnInit(): void {
-    this.piechartService.getData(this.route, this.limit, this.period).subscribe((data) => {
-      this.chartData = this.piechartService.formatData(data, this.route, this.limit, this.period);
+   this.piechartService.getData(this.route,).subscribe((data) => {
+      this.chartData = this.piechartService.formatData(data, this.route);
     },
       (error)=> {
       console.log('Erreur lors de la récupération  des données :', error);
@@ -43,8 +43,8 @@ export class PiechartCustomComponent {
   }
 
   fetchData(period: string): void {
-    this.piechartService.getData(this.route, this.limit, this.period).subscribe((data) => {
-        this.chartData = this.piechartService.formatData(data, this.route, this.limit, this.period);
+    this.piechartService.getData(this.route).subscribe((data) => {
+        this.chartData = this.piechartService.formatData(data, this.route);
       },
       (error)=> {
         console.log('Erreur lors de la récupération  des données :', error);
@@ -53,4 +53,8 @@ export class PiechartCustomComponent {
   }
 
   protected readonly Object = Object;
+
+
 }
+
+

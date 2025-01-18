@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {of, shareReplay, tap} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -7,19 +8,27 @@ import {HttpClient} from "@angular/common/http";
 export class PiechartService {
   private apiUrl = 'http://api.lliger.fr/';
   private apiUrlLocal = 'http://localhost:5000';
+  private cache = new Map<string, any>();
 
   constructor(private http: HttpClient) {}
 
-  getData(route: string, limit : number, period : string) {
-    return this.http.get(this.apiUrl + `top_collab?period=${period}&limit=${limit}`);
+  getData(route: string) {
+    const cacheKey = `${this.apiUrl}/${route}`;
+    if (this.cache.has(cacheKey)) {
+      console.log('Données récupérées du cache local');
+      return of(this.cache.get(cacheKey));
+    }else
+      return this.http.get(cacheKey).pipe(
+        tap(data => this.cache.set(cacheKey, data)),
+        shareReplay(1)
+      );
   }
 
   getDataSimple(route: string) {
     return this.http.get(`${this.apiUrlLocal}/${route}`);
   }
 
-  formatData(rawData: any, route : string, limit : number, period : string): any[] {
-
+  formatData(rawData: any, route : string): any[] {
     switch (route) {
       case 'top_collab':{
         return rawData.message
@@ -33,8 +42,8 @@ export class PiechartService {
       case 'collab_by_categ': {
         return rawData
           .map((item: any) => ({
-            name: item.Categorie,  
-            value: parseInt(item.nb_collaborations, 10)  
+            name: item.Categorie,
+            value: parseInt(item.nb_collaborations, 10)
           }))
           .sort((a: { value: number; }, b: { value: number; }) => b.value - a.value);  // Trier par ordre décroissant
       }
@@ -51,7 +60,6 @@ export class PiechartService {
 
       }
     }
-
   }
 
 }

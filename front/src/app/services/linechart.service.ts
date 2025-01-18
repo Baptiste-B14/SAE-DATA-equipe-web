@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs";
+import {Observable, of, shareReplay, tap} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -8,11 +8,20 @@ import {Observable} from "rxjs";
 export class LinechartService {
 
   private apiUrl = 'http://localhost:5000';
+  private cache = new Map<string, any>();
 
   constructor(private http: HttpClient) {}
 
   getData(route : string){
-    return this.http.get(`${this.apiUrl}/${route}`);
+    const cacheKey = `${this.apiUrl}/${route}`;
+    if (this.cache.has(cacheKey)) {
+      console.log('Données récupérées du cache local');
+      return of(this.cache.get(cacheKey));
+    }else
+      return this.http.get(`${this.apiUrl}/${route}`).pipe(
+        tap(data => this.cache.set(cacheKey, data)),
+        shareReplay(1)
+      );
   }
 
   formatData(rawData: any, route: string): any[] {
@@ -24,7 +33,7 @@ export class LinechartService {
             name: 'Publications',
             series: rawData.map((item: any) => ({
               name: item.annee, // La clé "name" correspond aux années
-              value: parseInt(item.nb_publications, 10)
+              value: parseInt(item.nombre_publications, 10)
             }))
           }
         ];

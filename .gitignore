@@ -1,6 +1,6 @@
 # Created by https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,pycharm,phpstorm,windows,macos,dotenv
 # Edit at https://www.toptal.com/developers/gitignore?templates=visualstudiocode,python,pycharm,phpstorm,windows,macos,dotenv
-
+back/Sqlite*
 tendances_mots_par_annees.json
 tendances_mots_par_annees_sans_2_occ.json
 tendances_mots_par_annees_top_500.json
