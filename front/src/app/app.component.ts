@@ -6,6 +6,7 @@ import { AncreComponent } from './ancre/ancre.component';
 import { filter } from 'rxjs/operators';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

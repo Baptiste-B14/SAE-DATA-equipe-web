@@ -115,6 +115,7 @@ def get_word_chart():
 
 
 @app.route('/neo4j')
+@cache.cached(query_string=True)
 def get_collaboration():
     with open('neo4jCollab.txt', 'r') as file:
         data = json.load(file)
@@ -123,6 +124,7 @@ def get_collaboration():
 
 
 @app.route('/pub_in_time')
+@cache.cached(query_string=True)
 def get_publi_in_time():
     requete = """
         SELECT
@@ -145,6 +147,7 @@ def get_publi_in_time():
     return jsonify([dict(row) for row in data])
 
 @app.route('/collab_in_time')
+@cache.cached(query_string=True)
 def get_collab_in_time():
     with open('./SqlLocal/Nombre_collaborations_année_periode.xlsx - Result 1.json') as file:
         data = json.load(file)
@@ -155,6 +158,7 @@ with open("cities_with_coordinates.json", "r", encoding="utf-8") as json_file:
 
 
 @app.route('/coordinates', methods=['GET'])
+@cache.cached(query_string=True)
 def get_coordinates():
     """
     Récupère la latitude et la longitude d'une ville.

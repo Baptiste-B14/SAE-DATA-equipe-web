@@ -12,6 +12,7 @@ export class WordchartService {
   constructor(private http: HttpClient) {}
 
   getWordchartData(words: string[]): Observable<any> {
+
     const params = { words };
     return this.http.get(this.apiUrl, { params });
   }
