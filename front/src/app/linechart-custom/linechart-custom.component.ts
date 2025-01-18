@@ -15,6 +15,7 @@ export class LinechartCustomComponent {
   constructor(private linechartService: LinechartService) {}
   chartData: any[] = [];
   @Input() route!: string;
+  
 
   ngOnInit(): void {
 

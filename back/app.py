@@ -2,6 +2,7 @@ from flask import Flask, request
 import flask
 import flask_cors
 from flask import request
+import json
 
 from neo4j_conn import execute_query
 
@@ -29,6 +30,13 @@ flask_cors.CORS(app, resources={
             "methods": ["GET", "POST"]
         }
 })
+
+
+
+
+@app.route('/')
+def home():
+    return "Bienvenue sur l'API!"
 
 @app.route('/top_collab', methods=['GET'])
 def top_collab() :
@@ -68,10 +76,6 @@ def graph_collab():
         links.append({'source': line['a.nom'], 'target': line['b.nom'],})
     return {"nodes" : nodes, "links": links}, 200
 
-
-if __name__ =='__main__':
-
-    app.run(host='0.0.0.0', port=5000, debug=True)
 
 
 @app.route('/analyses/wordcloud/<year>')
@@ -115,6 +119,12 @@ def get_collaboration():
 @app.route('/pub_in_time')
 def get_publi_in_time():
     with open('./SqlLocal/Nombre_publications_année_periode.xlsx - Result 1.json') as file:
+        data = json.load(file)
+        return data
+  
+@app.route('/collab_by_categ')
+def get_collab_by_categ():
+    with open('./SqlLocal/Nb_collaborations_par_categorie.xlsx - Result 1.json') as file:
         data = json.load(file)
         return data
 
@@ -174,6 +184,11 @@ def csv_to_json():
     except Exception as e:
         print(f"Erreur lors de la conversion : {e}")
 
+
+
+if __name__ =='__main__':
+
+    app.run(host='0.0.0.0', port=5000, debug=True)
 
 
 
