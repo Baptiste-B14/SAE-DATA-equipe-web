@@ -32,7 +32,7 @@ export class LinechartService {
           {
             name: 'Publications',
             series: rawData.map((item: any) => ({
-              name: item.annee, // La clé "name" correspond aux années
+              name: item.annee.toString(), // toString pour pallier bug d'affichage des années
               value: parseInt(item.nombre_publications, 10)
             }))
           }

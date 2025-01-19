@@ -14,11 +14,15 @@
   }
 
   /* Texte d'introduction */
-  .axis-page p {
+  /*intro*/
+  .axis-intro {
     text-align: center;
     font-size: 1.2em;
-    color: #555;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    background-color: #ded9ce;
+    padding: 10px;
+    border-radius: 8px;
+    color : black;
   }
 
   /* Section de contenu */

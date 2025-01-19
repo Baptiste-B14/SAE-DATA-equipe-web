@@ -1,11 +1,37 @@
-<app-bubble-chart ></app-bubble-chart>
-<div class="content-item">
-  <p>Petit texte dans une div</p>
+<div class="axis-page">
+
+  <div class="content">
+    <!-- Premier graphique avec une description -->
+    <div class="content-item-bubble-chart">
+      <app-bubble-chart></app-bubble-chart>
+      <p>Petit texte expliquant ce graphique</p>
+    </div>
+
+    <!-- Troisième graphique avec texte en dessous -->
+    <div class="content-item">
+      <app-piechart-custom
+        [route]="'top_collab'"
+        [limit]="10"
+        [period]="'during'"
+      ></app-piechart-custom>
+      <p>Petit texte expliquant ce graphique</p>
+    </div>
+
+    <!-- Quatrième graphique avec texte à droite -->
+    <div class="content-item grouped">
+      <div class="charts">
+        <app-linechart-custom [route]="'pub_in_time'"></app-linechart-custom>
+        <app-linechart-custom [route]="'collab_in_time'"></app-linechart-custom>
+      </div>
+      <div class="text">
+        <p>Explications des graphiques combinés.</p>
+      </div>
+    </div>
+
+    <!-- Cinquième graphique avec texte en dessous -->
+    <div class="content-item">
+      <app-barchart-custom [route]="'collab_by_categ'"></app-barchart-custom>
+      <p>Petit texte expliquant ce graphique</p>
+    </div>
+  </div>
 </div>
-
-<app-linechart-custom [route]="'pub_in_time'"></app-linechart-custom>
-<app-piechart-custom [route]="'top_collab'" [limit]="10" [period]="'during'"></app-piechart-custom>
-
-<app-linechart-custom [route]="'collab_in_time'"></app-linechart-custom>
-
-<app-barchart-custom [route]="'collab_by_categ'"></app-barchart-custom>
