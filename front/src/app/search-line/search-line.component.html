@@ -1,4 +1,4 @@
-<div class="searchline" id="search-line-{{searchLineId}}">
+<!--<div class="searchline" id="search-line-{{searchLineId}}">
     <input type="text" name="column_name" id="column_name">
     <input type="hidden" id="selected-operator-value-{{searchLineId}}" value="EQUALS">
     
@@ -27,4 +27,45 @@
         <i (click)="remove()" id="remove-{{searchLineId}}" class="fa-solid fa-trash-can"></i>
         }
     
-</div>
+</div>-->
+<div class="search-line">
+    <!-- Column Selection Dropdown -->
+    <select 
+      [value]="column"
+      (change)="updateColumn($event)"
+      class="column-select">
+      @if (columns.length === 0) {
+        <option value="">Loading columns...</option>
+      } @else {
+        @for (col of columns; track col) {
+          <option [value]="col">{{col}}</option>
+        }
+      }
+    </select>
+  
+    <!-- Operator Selection -->
+    <select 
+      [value]="operator" 
+      (change)="changeOperator($event)"
+      class="operator-select">
+      @for (op of operators; track op) {
+        <option [value]="op">{{op}}</option>
+      }
+    </select>
+  
+    <!-- Value Input -->
+    <input
+      type="text"
+      [value]="value"
+      (input)="updateValue($event)"
+      placeholder="Value"
+      class="value-input">
+  
+    <!-- Control Buttons -->
+    @if (!isFirst) {
+      <button (click)="removeSearchLine()" class="remove-button">Remove</button>
+    }
+    @if (!isLast) {
+      <button (click)="addSearchLine()" class="add-button">Add</button>
+    }
+  </div>

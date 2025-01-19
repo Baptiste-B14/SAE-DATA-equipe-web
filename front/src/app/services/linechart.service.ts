@@ -43,7 +43,7 @@ export class LinechartService {
           {
             name: 'Collaborations',
             series: rawData.map((item: any) => ({
-              name: item.annee, // La clé "name" correspond aux années
+              name: item.annee.toString(), // La clé "name" correspond aux années
               value: parseInt(item.nb_collaborations, 10)
             }))
           }

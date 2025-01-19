@@ -1,4 +1,91 @@
-import { Component, Input, ViewChild, ViewContainerRef, ComponentRef } from '@angular/core';
+
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+import { SearchService } from '../services/recherche.service';
+
+@Component({
+  selector: 'app-search-line',
+  standalone: true,
+  imports: [CommonModule, ReactiveFormsModule],
+  templateUrl: './search-line.component.html',
+  styleUrls: ['./search-line.component.scss']
+})
+export class SearchLineComponent implements OnChanges {
+  @Input() formGroup!: FormGroup;
+  @Input() searchLineId!: number;
+  @Input() isFirst: boolean = false;
+  @Input() isLast: boolean = false;
+  @Input() column: string = '';
+  @Input() operator: string = 'EQUALS';
+  @Input() value: string = '';
+  @Input() selectedTable: string = '';
+
+  @Output() onAdd = new EventEmitter<void>();
+  @Output() onRemove = new EventEmitter<number>();
+  @Output() onUpdate = new EventEmitter<any>();
+
+  columns: string[] = [];
+  operators = ['EQUALS', 'LIKE', 'GT', 'LT', 'GTE', 'LTE'];
+
+  constructor(private searchService: SearchService) {}
+
+  ngOnChanges(changes: SimpleChanges) {
+    if (changes['selectedTable'] && this.selectedTable) {
+      this.loadColumns();
+    }
+  }
+
+  loadColumns() {
+    this.searchService.getTableColumns(this.selectedTable).subscribe(
+      columns => {
+        this.columns = columns;
+        if (columns.length > 0 && !this.column) {
+          this.column = columns[0];
+          this.emitUpdate();
+        }
+      },
+      error => {
+        console.error('Error loading columns:', error);
+      }
+    );
+  }
+
+  changeOperator(event: Event) {
+    const select = event.target as HTMLSelectElement;
+    this.operator = select.value;
+    this.emitUpdate();
+  }
+
+  updateColumn(event: Event) {
+    const select = event.target as HTMLSelectElement;
+    this.column = select.value;
+    this.emitUpdate();
+  }
+
+  updateValue(event: Event) {
+    const input = event.target as HTMLInputElement;
+    this.value = input.value;
+    this.emitUpdate();
+  }
+
+  private emitUpdate() {
+    this.onUpdate.emit({
+      column: this.column,
+      operator: this.operator,
+      value: this.value
+    });
+  }
+
+  addSearchLine() {
+    this.onAdd.emit();
+  }
+
+  removeSearchLine() {
+    this.onRemove.emit(this.searchLineId);
+  }
+}
+/*import { Component, Input, ViewChild, ViewContainerRef, ComponentRef } from '@angular/core';
 import { RecherchePageComponent } from '../recherche-page/recherche-page.component';
 
 
@@ -67,4 +154,4 @@ export class SearchLineComponent {
       console.error("Pas d'objet input")
     }
   }
-}
+}*/

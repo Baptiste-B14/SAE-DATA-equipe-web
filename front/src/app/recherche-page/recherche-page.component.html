@@ -1,4 +1,52 @@
+<!-- recherche-page.component.html -->
 <div class="container" id="page-recherche">
+    <div id="search" #searchContainer>
+      <!-- Table Selection -->
+      <div class="table-selection">
+        <label for="table-select">Select Table:</label>
+        <select 
+          id="table-select" 
+          [value]="selectedTable" 
+          (change)="onTableChange($event)">
+          @for (table of availableTables; track table) {
+            <option [value]="table">{{table}}</option>
+          }
+        </select>
+      </div>
+  
+      <!-- Search Lines -->
+      @for (line of searchLines; track line.id) {
+        <app-search-line
+          [searchLineId]="line.id"
+          [column]="line.column"
+          [operator]="line.operator"
+          [value]="line.value"
+          [selectedTable]="selectedTable"
+          [isFirst]="$index === 0"
+          [isLast]="$index === searchLines.length - 1"
+          (onAdd)="addSearchLine()"
+          (onRemove)="removeSearchLine($index)"
+          (onUpdate)="updateSearchLine($index, $event)">
+        </app-search-line>
+      }
+  
+      <!-- Submit Button -->
+      <button 
+        (click)="request()" 
+        [disabled]="loading"
+        class="submit-button">
+        {{ loading ? 'Searching...' : 'Search' }}
+      </button>
+    </div>
+  
+    <!-- Results Section -->
+    <div class="horizontal-bar"></div>
+    <div id="results">
+      <h3>Résultats</h3>
+      <app-resultats-page-recherche [results]="searchResults"></app-resultats-page-recherche>
+    </div>
+  </div>
+<!--<div class="container" id="page-recherche">
     <div id="search" #searchContainer>
             @for(line of staticSearchlines; track $index){
                 <app-search-line [searchLineId]=$index></app-search-line>
@@ -10,6 +58,6 @@
         <h3>Résultats</h3>
         <app-resultats-page-recherche></app-resultats-page-recherche>
     </div>
-</div>
+</div>-->
 
 

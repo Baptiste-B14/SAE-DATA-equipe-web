@@ -12,6 +12,8 @@ from dotenv import dotenv_values
 from flask import jsonify
 
 from db import getdb, close_db, query
+import time
+
 
 config = dotenv_values('.env')
 
@@ -147,19 +149,64 @@ def get_publi_in_time():
     return jsonify([dict(row) for row in data])
 
 
-
+#temps execution : 3min environ
 @app.route('/collab_by_categ')
+@cache.cached(query_string=True)
 def get_collab_by_categ():
-    with open('./SqlLocal/Nb_collaborations_par_categorie.xlsx - Result 1.json') as file:
-        data = json.load(file)
-        return data
+    start = time.time()
+    requete = """
+        SELECT 
+            category_name AS Categorie, COUNT(*) AS nb_collaborations 
+        FROM 
+            Collaboration collab INNER JOIN Publication pub ON collab.publication_id = pub.key INNER JOIN Category cate ON pub.category_id = cate.category_id
+        GROUP BY 
+            category_name
+    """
+    # Exécuter la requête pour obtenir les résultats
+    data = query(requete)  # On suppose que query retourne des résultats sous forme de liste de dictionnaires
 
+    print("The time used to execute collab_by_categ is given below")
+    end = time.time()
+    print(end - start)
+
+    if not data:
+        return jsonify({"error": "Aucune donnée trouvée"}), 404
+
+    return jsonify([dict(row) for row in data])
+# OLD VER
+#def get_collab_by_categ():
+ #   with open('./SqlLocal/Nb_collaborations_par_categorie.xlsx - Result 1.json') as file:
+  #      data = json.load(file)
+  #      return data
+
+#temps execution : 3min environ
 @app.route('/collab_in_time')
 @cache.cached(query_string=True)
 def get_collab_in_time():
-    with open('./SqlLocal/Nombre_collaborations_année_periode.xlsx - Result 1.json') as file:
-        data = json.load(file)
-        return data
+    start = time.time()
+    requete = """
+        SELECT COUNT(*) AS nb_collaborations, pu.year AS annee, pe.label AS periode
+FROM Collaboration c
+INNER JOIN Publication pu ON c.publication_id = pu.key
+INNER JOIN period pe on pe.period_id = pu.period_id
+GROUP BY pu.year, pe.label
+    """
+    # Exécuter la requête pour obtenir les résultats
+    data = query(requete)  # On suppose que query retourne des résultats sous forme de liste de dictionnaires
+
+    print("The time used to execute collab_in_time is given below")
+    end = time.time()
+    print(end - start)
+
+    if not data:
+        return jsonify({"error": "Aucune donnée trouvée"}), 404
+
+    return jsonify([dict(row) for row in data])
+# OLD VER
+#def get_collab_in_time():
+#    with open('./SqlLocal/Nombre_collaborations_année_periode.xlsx - Result 1.json') as file:
+#        data = json.load(file)
+#        return data
 
 with open("cities_with_coordinates.json", "r", encoding="utf-8") as json_file:
     cities_data = json.load(json_file)
@@ -192,6 +239,102 @@ def get_coordinates():
     return {"error": f"Coordonnées non trouvées pour {city}, {country}."}, 404
 
 
+#TEST POUR PAGE RECHERCHE
+@app.route('/search', methods=['POST'])
+def dynamic_query():
+    try:
+        filters = request.json.get('filters', [])
+
+        # Construction dynamique de la requête SQL
+        where_clauses = []
+        params = []  # Pour les paramètres de la requête
+
+        for f in filters:
+            column = f.get('column')
+            operator = f.get('operator')
+            value = f.get('value')
+
+            # Protection contre l'injection SQL
+            if column and operator and value is not None:
+                if operator == "EQUALS":
+                    where_clauses.append(f"{column} = ?")
+                    params.append(value)
+                elif operator == "LIKE":
+                    where_clauses.append(f"{column} LIKE ?")
+                    params.append(f"%{value}%")
+                elif operator == "GT":
+                    where_clauses.append(f"{column} > ?")
+                    params.append(value)
+                elif operator == "LT":
+                    where_clauses.append(f"{column} < ?")
+                    params.append(value)
+                elif operator == "GTE":
+                    where_clauses.append(f"{column} >= ?")
+                    params.append(value)
+                elif operator == "LTE":
+                    where_clauses.append(f"{column} <= ?")
+                    params.append(value)
+        
+        # Construction de la requête SQL finale
+        where_clause = " AND ".join(where_clauses)
+        sql_query = f"SELECT * FROM Publication WHERE {where_clause}" if where_clauses else "SELECT * FROM Publication"
+
+        # Utilisation de votre fonction query pour exécuter la requête
+        results = query(sql_query, params=tuple(params))
+        
+        if results is None:
+            return jsonify({"error": "Database query failed"}), 500
+
+        # Conversion des résultats en liste de dictionnaires
+        data = []
+        for row in results:
+            data.append(dict(row))
+
+        return jsonify(data)
+    
+    except Exception as e:
+        print(f"Error in dynamic_query: {e}")
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/tables', methods=['GET'])
+def get_tables():
+    try:
+        # Query to get all table names from SQLite
+        sql = """
+            SELECT name 
+            FROM sqlite_master 
+            WHERE type='table' 
+            AND name NOT LIKE 'sqlite_%'
+        """
+        results = query(sql)
+        
+        if results is None:
+            return jsonify({"error": "Failed to fetch tables"}), 500
+            
+        tables = [dict(row)['name'] for row in results]
+        return jsonify(tables)
+        
+    except Exception as e:
+        print(f"Error fetching tables: {e}")
+        return jsonify({"error": str(e)}), 500
+
+@app.route('/columns/<table_name>', methods=['GET'])
+def get_columns(table_name):
+    try:
+        # Query to get column names from the specified table
+        sql = f"PRAGMA table_info({table_name})"
+        results = query(sql)
+        
+        if results is None:
+            return jsonify({"error": "Failed to fetch columns"}), 500
+            
+        # Extract column names from the PRAGMA results
+        columns = [dict(row)['name'] for row in results]
+        return jsonify(columns)
+        
+    except Exception as e:
+        print(f"Error fetching columns: {e}")
+        return jsonify({"error": str(e)}), 500
 
 
 def csv_to_json():
