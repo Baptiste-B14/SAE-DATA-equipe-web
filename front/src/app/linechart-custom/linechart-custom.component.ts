@@ -2,7 +2,6 @@ import {Component, ElementRef, Input} from '@angular/core';
 import {LineChartModule} from "@swimlane/ngx-charts";
 import {RouterLink} from "@angular/router";
 import {LinechartService} from "../services/linechart.service";
-import {catchError, map, Observable, of} from "rxjs";
 
 @Component({
   selector: 'app-linechart-custom',
@@ -17,7 +16,7 @@ export class LinechartCustomComponent {
   xAxisLabel = '';
   yAxisLabel = '';
   @Input() route!: string;
-  
+
 
   ngOnInit(): void {
 
