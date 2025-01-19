@@ -11,6 +11,7 @@ Result_2.csv
 ### dotenv ###
 .env
 .conf
+dump.rdb
 
 ### macOS ###
 # General
