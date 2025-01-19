@@ -19,8 +19,8 @@
         <app-search-line
           [searchLineId]="line.id"
           [column]="line.column"
-          [operator]="line.operator"
-          [value]="line.value"
+          [operator]="operator"
+          [value]="value"
           [selectedTable]="selectedTable"
           [isFirst]="$index === 0"
           [isLast]="$index === searchLines.length - 1"
@@ -40,9 +40,10 @@
     </div>
   
     <!-- Results Section -->
+     
     <div class="horizontal-bar"></div>
+    <h3>Résultats</h3>
     <div id="results">
-      <h3>Résultats</h3>
       <app-resultats-page-recherche [results]="searchResults"></app-resultats-page-recherche>
     </div>
   </div>

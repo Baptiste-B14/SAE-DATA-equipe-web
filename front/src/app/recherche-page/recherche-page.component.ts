@@ -35,14 +35,12 @@ export class RecherchePageComponent implements OnInit {
     
     this.addSearchLine();
     
-    // Optional: Fetch tables dynamically
     this.searchService.getTables().subscribe(
       tables => {
         this.availableTables = tables;
       },
       error => {
         console.error('Error fetching tables:', error);
-        // Keep using default table if fetch fails
       }
     );
   }
@@ -57,13 +55,13 @@ export class RecherchePageComponent implements OnInit {
       operator: ['EQUALS'],
       value: ['']
     });
-
+  
     this.searchLinesArray.push(searchLineGroup);
     this.searchLines.push({ 
       id: this.searchLines.length,
-      column: '', 
-      operator: 'EQUALS', 
-      value: '' 
+      column: '', // by default
+      operator: 'EQUALS',
+      value: ''
     });
   }
 
@@ -79,8 +77,11 @@ export class RecherchePageComponent implements OnInit {
   onTableChange(event: Event) {
     const select = event.target as HTMLSelectElement;
     this.selectedTable = select.value;
-    // Optionally fetch columns for the selected table
-    // this.searchService.getColumnsForTable(this.selectedTable).subscribe(...)
+    
+    // Reset all search lines when table changes
+    this.searchLines = [];
+    this.searchLinesArray.clear();
+    this.addSearchLine(); // Add one default search line
   }
 
   request() {
@@ -93,7 +94,7 @@ export class RecherchePageComponent implements OnInit {
       value: line.value
     }));
 
-    this.searchService.search(filters).subscribe(
+    this.searchService.search(filters, this.selectedTable).subscribe(
       results => {
         this.searchResults = results;
         this.loading = false;
