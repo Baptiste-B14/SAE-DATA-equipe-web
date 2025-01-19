@@ -121,7 +121,7 @@ def get_collaboration():
         return data
 
 
-@app.route('/pub_in_time')
+@app.route('/pub_in_time' ,methods=['GET'])
 @cache.cached(query_string=True)
 def get_publi_in_time():
     requete = """
@@ -144,7 +144,7 @@ def get_publi_in_time():
 
 
 #temps execution : 3min environ
-@app.route('/collab_by_categ')
+@app.route('/collab_by_categ', methods=['GET'])
 @cache.cached(query_string=True)
 def get_collab_by_categ():
 
@@ -166,7 +166,7 @@ def get_collab_by_categ():
 
 
 #temps execution : 3min environ
-@app.route('/collab_in_time')
+@app.route('/collab_in_time', methods=['GET'])
 @cache.cached(query_string=True)
 def get_collab_in_time():
     requete = """
