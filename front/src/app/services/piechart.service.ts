@@ -6,22 +6,29 @@ import {of, shareReplay, tap} from "rxjs";
   providedIn: 'root'
 })
 export class PiechartService {
-  private apiUrl = 'http://api.lliger.fr/';
+  private apiUrl = 'http://api.lliger.fr';
   private apiUrlLocal = 'http://localhost:5000';
-  private cache = new Map<string, any>();
 
   constructor(private http: HttpClient) {}
 
   getData(route: string) {
     const cacheKey = `${this.apiUrl}/${route}`;
-    if (this.cache.has(cacheKey)) {
-      console.log('Données récupérées du cache local');
-      return of(this.cache.get(cacheKey));
-    }else
-      return this.http.get(cacheKey).pipe(
-        tap(data => this.cache.set(cacheKey, data)),
-        shareReplay(1)
-      );
+    console.log("route : " + cacheKey)
+
+    const cachedData = localStorage.getItem(cacheKey);
+    if (cachedData) {
+      console.log('Données récupérées de localStorage');
+      const parsedData = JSON.parse(cachedData);
+      return of(parsedData);
+    }
+    console.log('Données non trouvées dans le cache. Requête API en cours...');
+    return this.http.get(cacheKey).pipe(
+      tap((data) => {
+        console.log('Données récupérées depuis l’API et stockées dans localStorage et la Map');
+        localStorage.setItem(cacheKey, JSON.stringify(data));
+      }),
+      shareReplay(1) // Assure que l'observable est partagé
+    );
   }
 
   getDataSimple(route: string) {
@@ -29,6 +36,7 @@ export class PiechartService {
   }
 
   formatData(rawData: any, route : string): any[] {
+    console.log(route)
     switch (route) {
       case 'top_collab':{
         return rawData.message
@@ -48,8 +56,6 @@ export class PiechartService {
           .sort((a: { value: number; }, b: { value: number; }) => b.value - a.value);  // Trier par ordre décroissant
       }
       default:{
-        console.log(rawData)
-        console.log(route)
         const {data, years} = rawData;
         return rawData.message
           .filter((item: any) => item['a.person_name'] && !isNaN(parseInt(item['count'], 10)))

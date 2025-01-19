@@ -28,7 +28,7 @@ app.teardown_appcontext(close_db)
 app.config['CACHE_TYPE'] = 'RedisCache'
 app.config['CACHE_REDIS_HOST'] = 'localhost'  # Vérifiez si Redis fonctionne localement
 app.config['CACHE_REDIS_PORT'] = 6379         # Assurez-vous que le port est correct
-app.config['CACHE_DEFAULT_TIMEOUT'] = 300
+app.config['CACHE_DEFAULT_TIMEOUT'] = None
 cache = Cache(app)
 
 flask_cors.CORS(app, resources={
@@ -41,7 +41,7 @@ flask_cors.CORS(app, resources={
 
 @app.route('/top_collab', methods=['GET'])
 @cache.cached(query_string=True)
-def top_collab() :
+def top_collab():
     period = request.args.get('period', default='all_time', type=str)
     limit = request.args.get('limit', default=50, type=int)
     answer = None
@@ -95,11 +95,9 @@ def get_word_cloud_year(year):
 @app.route('/analyses/wordchart', methods=['GET'])
 @cache.cached(query_string=True)
 def get_word_chart():
-    # Charger les données depuis le fichier JSON
     with open('tendances_mots_par_annees_toutes_les_donnees_sans_les_2_occ.json', 'r') as file:
         data = json.load(file)
 
-    # Récupérer les mots à tracer depuis les paramètres de la requête
     words_to_plot = request.args.getlist('words')
 
     if not words_to_plot:
@@ -138,9 +136,7 @@ def get_publi_in_time():
             Year ASC;
     """
 
-    # Exécuter la requête pour obtenir les résultats
-    data = query(requete)  # On suppose que query retourne des résultats sous forme de liste de dictionnaires
-
+    data = query(requete)
     if not data:
         return jsonify({"error": "Aucune donnée trouvée"}), 404
 
@@ -150,6 +146,15 @@ def get_publi_in_time():
 
 @app.route('/collab_by_categ')
 def get_collab_by_categ():
+    #requete = ""
+    '''
+    data = query(requete)
+
+    if not data:
+        return jsonify({"error": "Aucune donnée trouvée"}), 404
+
+    return jsonify([dict(row) for row in data])
+    '''
     with open('./SqlLocal/Nb_collaborations_par_categorie.xlsx - Result 1.json') as file:
         data = json.load(file)
         return data
@@ -157,6 +162,15 @@ def get_collab_by_categ():
 @app.route('/collab_in_time')
 @cache.cached(query_string=True)
 def get_collab_in_time():
+    #requete = ""
+    '''
+    data = query(requete)
+
+    if not data:
+        return jsonify({"error": "Aucune donnée trouvée"}), 404
+
+    return jsonify([dict(row) for row in data])
+    '''
     with open('./SqlLocal/Nombre_collaborations_année_periode.xlsx - Result 1.json') as file:
         data = json.load(file)
         return data
@@ -188,7 +202,6 @@ def get_coordinates():
                 "Longitude": record['Longitude']
             }, 200
 
-    # Si aucune correspondance trouvée
     return {"error": f"Coordonnées non trouvées pour {city}, {country}."}, 404
 
 

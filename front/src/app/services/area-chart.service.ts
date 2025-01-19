@@ -5,30 +5,31 @@ import {Observable, of, shareReplay, tap} from "rxjs";
 @Injectable({
   providedIn: 'root'
 })
-export class LinechartService {
+export class AreaChartService {
 
   private apiUrl = 'http://localhost:5000';
+  private cache = new Map<string, any>();
 
   constructor(private http: HttpClient) {}
 
   getData(route : string){
     const cacheKey = `${this.apiUrl}/${route}`;
-    console.log("route : " + cacheKey)
-
-    const cachedData = localStorage.getItem(cacheKey);
-    if (cachedData) {
-      console.log('Données récupérées de localStorage');
-      const parsedData = JSON.parse(cachedData);
-      return of(parsedData);
-    }
-    console.log('Données non trouvées dans le cache. Requête API en cours...');
-    return this.http.get(cacheKey).pipe(
+    if (this.cache.has(cacheKey)) {
+      console.log('Données récupérées du cache local');
+      return of(this.cache.get(cacheKey));
+    }else
+      /*
+      return this.http.get(`${this.apiUrl}/${route}`).pipe(
+        tap(data => this.cache.set(cacheKey, data)),
+        shareReplay(1)
+      );*/
+    return this.http.get(`${this.apiUrl}/${route}`).pipe(
       tap((data) => {
-        console.log('Données récupérées depuis l’API et stockées dans localStorage et la Map');
+        console.log('Données récupérées depuis l’API et stockées dans localStorage');
         localStorage.setItem(cacheKey, JSON.stringify(data));
-      }),
-      shareReplay(1) // Assure que l'observable est partagé
-    );
+      }
+      ))
+
   }
 
   formatData(rawData: any, route: string): any[] {
