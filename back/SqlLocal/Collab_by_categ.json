@@ -1,0 +1,34 @@
+[
+    {
+        "categorie": "article",
+        "nb_collaborations": "25597488"
+    },
+    {
+        "categorie": "book",
+        "nb_collaborations": "20906"
+    },
+    {
+        "categorie": "data",
+        "nb_collaborations": "766113"
+    },
+    {
+        "categorie": "incollection",
+        "nb_collaborations": "190457"
+    },
+    {
+        "categorie": "inproceedings",
+        "nb_collaborations": "21733182"
+    },
+    {
+        "categorie": "phdthesis",
+        "nb_collaborations": "153"
+    },
+    {
+        "categorie": "proceedings",
+        "nb_collaborations": "51"
+    },
+    {
+        "categorie": "www",
+        "nb_collaborations": "13"
+    }
+]

@@ -32,10 +32,6 @@ export class PiechartCustomComponent {
 
 
   ngOnInit(): void {
-    console.log(this.route)
-    console.log(this.period)
-    console.log(this.limit)
-    console.log(this.routeArgs)
     this.changeRoute(this.route, this.period)
     this.piechartService.getData(this.routeArgs!).subscribe((data) => {
       this.chartData = this.piechartService.formatData(data, this.route);

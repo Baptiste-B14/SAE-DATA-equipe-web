@@ -12,15 +12,7 @@ export class GroupedbarService {
   constructor(private http: HttpClient) {}
 
   getData(route : string){
-    const cacheKey = `${this.apiUrl}/${route}`;
-    if (this.cache.has(cacheKey)) {
-      console.log('Données récupérées du cache local');
-      return of(this.cache.get(cacheKey));
-    }else
-      return this.http.get(`${this.apiUrl}/${route}`).pipe(
-        tap(data => this.cache.set(cacheKey, data)),
-        shareReplay(1)
-      );
+    return this.http.get(`${this.apiUrl}/${route}`)
   }
 
   formatData(rawData: any, route: string): any[] {

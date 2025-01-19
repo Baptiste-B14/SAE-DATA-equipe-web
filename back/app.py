@@ -1,17 +1,14 @@
-from flask import Flask, request
 import flask
 import flask_cors
 from flask import request
-
 from neo4j_conn import execute_query
 import json, csv
-from flask_caching import Cache
 
 
 from dotenv import dotenv_values
 from flask import jsonify
 
-from db import getdb, close_db, query
+from db import close_db, query
 
 config = dotenv_values('.env')
 
@@ -25,52 +22,39 @@ app.config['DB_DATABASE'] = config['DB_NAME']
 app.teardown_appcontext(close_db)
 
 
-app.config['CACHE_TYPE'] = 'RedisCache'
-app.config['CACHE_REDIS_HOST'] = 'localhost'  # Vérifiez si Redis fonctionne localement
-app.config['CACHE_REDIS_PORT'] = 6379         # Assurez-vous que le port est correct
-app.config['CACHE_DEFAULT_TIMEOUT'] = None
-cache = Cache(app)
-
-flask_cors.CORS(app, resources={
-    r"/*":
-        {
-            "origins": ["*"],
-            "methods": ["GET", "POST"]
-        }
-})
+flask_cors.CORS(app)
 
 @app.route('/top_collab', methods=['GET'])
-@cache.cached(query_string=True)
 def top_collab():
     period = request.args.get('period', default='all_time', type=str)
-    limit = request.args.get('limit', default=50, type=int)
-    answer = None
+    limit = request.args.get('limit', default=10, type=int)
+    file = ""
     if period == "all_time":
-        answer = execute_query("MATCH (a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) return a.person_name, count(r2) AS count ORDER BY count DESC LIMIT " + str(limit))
+        file = open('SqlLocal/top_collaborateur_all_time.json')
+
     elif period == "before":
-        answer = execute_query(
-            "MATCH (a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) AND p.year > 2015 AND p.year < 2019 return a.person_name, count(r2) AS count ORDER BY count DESC LIMIT " + str(limit))
+        file = open('SqlLocal/top_collaborateur_before.json')
+
     elif period == "during":
-        answer = execute_query(
-            "MATCH (a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) AND p.year > 2018 AND p.year < 2023 return a.person_name, count(r2) AS count ORDER BY count DESC LIMIT " + str(
-                limit))
+        file = open('SqlLocal/top_collaborateur_during.json')
+
     elif period == "after":
-        answer = execute_query(
-            "MATCH (a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) AND p.year > 2022 return a.person_name, count(r2) AS count ORDER BY count DESC LIMIT " + str(
-                limit))
+        file = open('SqlLocal/top_collaborateur_after.json')
+
     elif period == "fixed":
         year = request.args.get('year', default=2024, type=int)
         answer =execute_query("MATCH(a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) AND p.year=" + str(year) + " RETURN a.person_name, count(r2) AS count ORDER BY count DESC LIMIT " + str(limit))
-    return {"message" : answer}, 200
+
+    data = json.load(file)
+    print(data)
+    return {"message" : data}, 200
 
 @app.route('/execute')
-@cache.cached(query_string=True)
 def execute():
     answer = execute_query(request.args.get('query', default="MATCH(n) RETURN COUNT(n), labels(n)", type=str))
     return {'message' : answer}, 200
 
 @app.route('/graph_collab', methods=['GET'])
-@cache.cached(query_string=True)
 def graph_collab():
     answer = execute_query("MATCH (a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) WITH p, a, b, p.year AS annee RETURN a.nom, b.nom, annee")
     nodes = []
@@ -83,7 +67,6 @@ def graph_collab():
 
 
 @app.route('/analyses/wordcloud/<year>')
-@cache.cached(query_string=True)
 def get_word_cloud_year(year):
     file = open('tendances_mots_par_annees_top_500.json')
     data = json.load(file)
@@ -93,7 +76,6 @@ def get_word_cloud_year(year):
 
 
 @app.route('/analyses/wordchart', methods=['GET'])
-@cache.cached(query_string=True)
 def get_word_chart():
     with open('tendances_mots_par_annees_toutes_les_donnees_sans_les_2_occ.json', 'r') as file:
         data = json.load(file)
@@ -113,7 +95,6 @@ def get_word_chart():
 
 
 @app.route('/neo4j')
-@cache.cached(query_string=True)
 def get_collaboration():
     with open('neo4jCollab.txt', 'r') as file:
         data = json.load(file)
@@ -122,74 +103,44 @@ def get_collaboration():
 
 
 @app.route('/pub_in_time' ,methods=['GET'])
-@cache.cached(query_string=True)
 def get_publi_in_time():
-    requete = """
-        SELECT
-            Year AS annee,
-            COUNT(*) AS nombre_publications
-        FROM
-            Publication
-        GROUP BY
-            Year
-        ORDER BY
-            Year ASC;
-    """
 
-    data = query(requete)
-    if not data:
-        return jsonify({"error": "Aucune donnée trouvée"}), 404
-
-    return jsonify([dict(row) for row in data])
+    file = open('SqlLocal/Pub_in_time.json')
+    data = json.load(file)
+    print(data)
+    return {"message" : data}, 200
 
 
-#temps execution : 3min environ
+
 @app.route('/collab_by_categ', methods=['GET'])
-@cache.cached(query_string=True)
 def get_collab_by_categ():
 
-    requete = """
-        SELECT 
-            category_name AS Categorie, COUNT(*) AS nb_collaborations 
-        FROM 
-            Collaboration collab INNER JOIN Publication pub ON collab.publication_id = pub.key INNER JOIN Category cate ON pub.category_id = cate.category_id
-        GROUP BY 
-            category_name
-    """
-    data = query(requete)
+    file = open('SqlLocal/Collab_by_categ.json')
+    data = json.load(file)
+    print(data)
+    return {"message" : data}, 200
 
 
-    if not data:
-        return jsonify({"error": "Aucune donnée trouvée"}), 404
-
-    return jsonify([dict(row) for row in data])
-
-
-#temps execution : 3min environ
 @app.route('/collab_in_time', methods=['GET'])
-@cache.cached(query_string=True)
 def get_collab_in_time():
-    requete = """
-        SELECT COUNT(*) AS nb_collaborations, pu.year AS annee, pe.label AS periode
-FROM Collaboration c
-INNER JOIN Publication pu ON c.publication_id = pu.key
-INNER JOIN period pe on pe.period_id = pu.period_id
-GROUP BY pu.year, pe.label
-    """
-    data = query(requete)
-
-    if not data:
-        return jsonify({"error": "Aucune donnée trouvée"}), 404
-
-    return jsonify([dict(row) for row in data])
+    file = open('SqlLocal/Collab_in_time.json')
+    data = json.load(file)
+    print(data)
+    return {"message" : data}, 200
 
 
 with open("cities_with_coordinates.json", "r", encoding="utf-8") as json_file:
     cities_data = json.load(json_file)
 
 
+
+
+
+
+
+
+
 @app.route('/coordinates', methods=['GET'])
-@cache.cached(query_string=True)
 def get_coordinates():
     """
     Récupère la latitude et la longitude d'une ville.

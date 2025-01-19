@@ -1,0 +1,22 @@
+[
+    {
+        "periode": "3 yrs Before",
+        "nb_publications_seules": "111047",
+        "nb_publications_collaboratives": "1017513"
+    },
+    {
+        "periode": "After",
+        "nb_publications_seules": "64590",
+        "nb_publications_collaboratives": "940341"
+    },
+    {
+        "periode": "Before",
+        "nb_publications_seules": "809406",
+        "nb_publications_collaboratives": "3258119"
+    },
+    {
+        "periode": "During",
+        "nb_publications_seules": "113166",
+        "nb_publications_collaboratives": "1262934"
+    }
+]

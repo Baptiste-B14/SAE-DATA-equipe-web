@@ -12,35 +12,19 @@ export class LinechartService {
   constructor(private http: HttpClient) {}
 
   getData(route : string){
-    const cacheKey = `${this.apiUrl}/${route}`;
-    console.log("route : " + cacheKey)
-
-    const cachedData = localStorage.getItem(cacheKey);
-    if (cachedData) {
-      console.log('Données récupérées de localStorage');
-      const parsedData = JSON.parse(cachedData);
-      return of(parsedData);
-    }
-    console.log('Données non trouvées dans le cache. Requête API en cours...');
-    return this.http.get(cacheKey).pipe(
-      tap((data) => {
-        console.log('Données récupérées depuis l’API et stockées dans localStorage et la Map');
-        localStorage.setItem(cacheKey, JSON.stringify(data));
-      }),
-      shareReplay(1) // Assure que l'observable est partagé
-    );
+    console.log(`${this.apiUrl}/${route}`)
+    return this.http.get(`${this.apiUrl}/${route}`)
   }
 
   formatData(rawData: any, route: string): any[] {
-    const {data, years} = rawData;
     switch (route){
       case 'pub_in_time': {
         return [
           {
             name: 'Publications',
-            series: rawData.map((item: any) => ({
-              name: item.annee.toString(), // toString pour pallier bug d'affichage des années
-              value: parseInt(item.nombre_publications, 10)
+            series: rawData.message.map((item: any) => ({
+              name: item.annee.toString(),
+              value: parseInt(item.nb_publications, 10)
             }))
           }
         ];
@@ -49,8 +33,8 @@ export class LinechartService {
         return [
           {
             name: 'Collaborations',
-            series: rawData.map((item: any) => ({
-              name: item.annee.toString(), // La clé "name" correspond aux années
+            series: rawData.message.map((item: any) => ({
+              name: item.annee.toString(),
               value: parseInt(item.nb_collaborations, 10)
             }))
           }
@@ -60,8 +44,8 @@ export class LinechartService {
         return [
           {
             name: 'Publications',
-            series: rawData.map((item: any) => ({
-              name: item.annee, // La clé "name" correspond aux années
+            series: rawData.message.map((item: any) => ({
+              name: item.annee,
               value: parseInt(item.nb_publications, 10)
             }))
           }
