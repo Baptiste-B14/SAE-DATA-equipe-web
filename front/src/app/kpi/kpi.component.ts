@@ -18,20 +18,24 @@ export class KPIComponent implements OnInit {
   result: SingleData = [];
 
   kpiData = [
-    { name: 'KPI 1', value: 40, info: 'Informations supplémentaires sur KPI 1' },
-    { name: 'KPI 2', value: 90, info: 'Informations supplémentaires sur KPI 2' },
-    { name: 'KPI 3', value: 50, info: 'Informations supplémentaires sur KPI 3' },
-    { name: 'KPI 4', value: 100, info: 'Informations supplémentaires sur KPI 4' },
-    { name: 'KPI 5', value: 75, info: 'Informations supplémentaires sur KPI 5' },
-    { name: 'KPI 6', value: 60, info: 'Informations supplémentaires sur KPI 6' },
-    { name: 'KPI 7', value: 85, info: 'Informations supplémentaires sur KPI 7' },
-    { name: 'KPI 8', value: 55, info: 'Informations supplémentaires sur KPI 8' },
+    { name: 'Publications', value: 7578943, info: 'nous avons du faire face à 7 millions de données' },
+    { name: 'Chercheurs', value: 4591275, info: 'qu\'ils soit auteurs ou éditeurs, il existe 4 millions de chercheurs inscrit dans la base' },
+    { name: 'Auteurs uniquement', value: 4534751, info: 'Informations supplémentaires sur KPI 3' },
+    { name: 'Editeurs uniquement', value: 2230, info: 'Informations supplémentaires sur KPI 4' },
+    { name: 'Auteurs et éditeurs', value: 54294, info: 'Informations supplémentaires sur KPI 5' },
+    { name: 'Universités', value: 94072, info: 'Informations supplémentaires sur KPI 6' },
+    { name: 'Collaborations par publication en moyenne', value: 7.5, info: 'Informations supplémentaires sur KPI 7' },
+    { name: 'Publications par auteur en moyenne', value: 5.5, info: 'Informations supplémentaires sur KPI 8' },
   ];
 
   constructor(private readonly graphService: GraphService) {}
 
   ngOnInit() {
     this.printResult();
+  }
+
+  truncateText(name: string): string {
+    return name.length > 12 ? name.substring(0, 12) + '...' : name;
   }
 
   private printResult() {
@@ -54,4 +58,6 @@ export class KPIComponent implements OnInit {
     this.isModalOpen = false;
     this.selectedKpi = null;
   }
+
+  
 }

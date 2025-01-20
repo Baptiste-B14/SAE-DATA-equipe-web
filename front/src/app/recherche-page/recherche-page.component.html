@@ -19,8 +19,8 @@
         <app-search-line
           [searchLineId]="line.id"
           [column]="line.column"
-          [operator]="operator"
-          [value]="value"
+          [operator]="line.operator"
+          [value]="line.value"
           [selectedTable]="selectedTable"
           [isFirst]="$index === 0"
           [isLast]="$index === searchLines.length - 1"
