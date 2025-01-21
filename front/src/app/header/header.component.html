@@ -9,12 +9,8 @@
     - quand on aura tout les axes : les mettres à jour ici
 -->
 <header id="main-header" [class.hidden]="isHidden">
-    <div id="logoDiv">
-      <a href="/">
-        <img src="\..\..\assets\images\gsp_png.PNG" alt="Logo" id="logoImage">
-      </a>
-    </div>
     <nav>
+      <a routerLink="/" routerLinkActive="active-link">Accueil</a>
         <div class="dropdown-trigger" (mouseenter)="toggleDropdown()">
             <a>Nos Analyses</a>
             <ul class="dropdown-menu" [class.open]="isDropdownOpen" (mouseenter)="toggleDropdown()" (mouseleave)="toggleDropdown()">

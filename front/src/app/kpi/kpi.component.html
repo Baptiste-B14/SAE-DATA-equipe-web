@@ -1,5 +1,5 @@
 <div class="kpi-bloc">
-  <h2>Les chiffres du projet</h2>
+  <h2>Indicateurs clés</h2>
   <div class="kpi-container">
     <ngx-charts-number-card (select)="onKpiSelect($event)"
       [view]="[1000, 400]"
@@ -7,6 +7,7 @@
       [animations]="true"
       [cardColor]="cardColor"
       [bandColor]="cardColor"
+      [valueFormatting]="formatValue"
       >
     </ngx-charts-number-card >
   </div>

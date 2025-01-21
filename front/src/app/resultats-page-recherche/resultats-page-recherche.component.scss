@@ -1,0 +1,76 @@
+
+
+/* Style pour le conteneur principal */
+div {
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Table générale */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+/* En-tête du tableau */
+table thead th {
+  background-color: #4CAF50;
+  color: white;
+  text-align: left;
+  padding: 12px;
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+/* Bordure et alternance des lignes */
+table tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+table tbody tr:hover {
+  background-color: #e9f5e9;
+  cursor: pointer;
+}
+
+/* Aucun résultat trouvé */
+p {
+  text-align: center;
+  color: #777;
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Responsivité */
+@media (max-width: 768px) {
+  table thead {
+    display: none;
+  }
+
+  table tbody tr {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  table tbody td {
+    display: block;
+    text-align: right;
+    font-size: 0.9rem;
+    padding: 10px 5px;
+  }
+
+  table tbody td:before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+}

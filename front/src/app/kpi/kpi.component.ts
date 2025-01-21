@@ -20,11 +20,11 @@ export class KPIComponent implements OnInit {
   kpiData = [
     { name: 'Publications', value: 7578943, info: 'nous avons du faire face à 7 millions de données' },
     { name: 'Chercheurs', value: 4591275, info: 'qu\'ils soit auteurs ou éditeurs, il existe 4 millions de chercheurs inscrit dans la base' },
-    { name: 'Auteurs uniquement', value: 4534751, info: 'Informations supplémentaires sur KPI 3' },
+    { name: 'Collaborations', value: 48308363, info: 'Informations supplémentaires sur KPI 5' },
+    { name: 'Villes', value: 16155, info: 'Informations supplémentaires sur KPI 3' },
     { name: 'Editeurs uniquement', value: 2230, info: 'Informations supplémentaires sur KPI 4' },
-    { name: 'Auteurs et éditeurs', value: 54294, info: 'Informations supplémentaires sur KPI 5' },
     { name: 'Universités', value: 94072, info: 'Informations supplémentaires sur KPI 6' },
-    { name: 'Collaborations par publication en moyenne', value: 7.5, info: 'Informations supplémentaires sur KPI 7' },
+    { name: 'Personnes par publication en moyenne', value: 7.5, info: 'Informations supplémentaires sur KPI 7' },
     { name: 'Publications par auteur en moyenne', value: 5.5, info: 'Informations supplémentaires sur KPI 8' },
   ];
 
@@ -34,8 +34,12 @@ export class KPIComponent implements OnInit {
     this.printResult();
   }
 
-  truncateText(name: string): string {
-    return name.length > 12 ? name.substring(0, 12) + '...' : name;
+  truncateText(name: any) {
+    return name.label;
+  }
+
+  formatValue(data: any){
+    return data.value.toLocaleString('fr-FR'); // Utilise le format français (séparateur des milliers = espace)
   }
 
   private printResult() {
