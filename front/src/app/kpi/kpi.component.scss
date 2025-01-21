@@ -3,6 +3,11 @@
     justify-items: center;
   }
 
+  title{
+    white-space: normal !important;
+    overflow-wrap: break-word !important; /* Alternative à word-wrap */
+  }
+
   .kpi-container {
     display: flex;
     flex-wrap: wrap;
@@ -56,4 +61,11 @@
     right: 20px;
     font-size: 1.5rem;
     cursor: pointer;
+  }
+
+  /*texte du modal*/
+  h2{
+    white-space: normal; /* Permet au texte de se décomposer sur plusieurs lignes */
+    word-wrap: break-word; /* Coupe le texte au mot le plus proche */
+    font-size: 0.9em; /* Ajustez la taille de la police pour un meilleur rendu */
   }

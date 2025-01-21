@@ -26,13 +26,23 @@ export class SearchLineComponent implements OnChanges {
   @Output() onUpdate = new EventEmitter<any>();
 
   columns: string[] = [];
-  operators = ['EQUALS', 'LIKE', 'GT', 'LT', 'GTE', 'LTE'];
+  operators = [
+    'EQUALS',
+    'LIKE',
+    'GT',
+    'LT',
+    'GTE',
+    'LTE'
+  ] as const;
 
   constructor(private searchService: SearchService) {}
 
   ngOnChanges(changes: SimpleChanges) {
     if (changes['selectedTable'] && this.selectedTable) {
       this.loadColumns();
+      // Reset column when table changes
+      this.column = '';
+      this.emitUpdate();
     }
   }
 

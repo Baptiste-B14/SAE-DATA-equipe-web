@@ -37,7 +37,8 @@
       @if (columns.length === 0) {
         <option value="">Loading columns...</option>
       } @else {
-        @for (col of columns; track col) {
+        <option value="">Select a column</option>
+        @for (col of columns; track col + '_col') {
           <option [value]="col">{{col}}</option>
         }
       }
@@ -48,7 +49,7 @@
       [value]="operator" 
       (change)="changeOperator($event)"
       class="operator-select">
-      @for (op of operators; track op) {
+      @for (op of operators; track op + '_op') {
         <option [value]="op">{{op}}</option>
       }
     </select>
