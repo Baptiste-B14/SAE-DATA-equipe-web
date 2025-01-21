@@ -1,11 +1,39 @@
   .kpi-bloc h2 {
     color: white;
     justify-items: center;
+    font-size: 1.5rem;
   }
 
   title{
-    white-space: normal !important;
-    overflow-wrap: break-word !important; /* Alternative à word-wrap */
+    white-space: normal!important; /* Permet le retour à la ligne */
+    word-wrap: break-word!important; /* Coupe les mots trop longs pour éviter le débordement */
+    overflow: visible!important; /* Assure que tout le contenu est visible */
+  }
+
+  .number-card-label {
+    white-space: normal!important; /* Permet le retour à la ligne */
+    word-wrap: break-word!important; /* Coupe les mots trop longs pour éviter le débordement */
+    overflow: visible!important; /* Assure que tout le contenu est visible */
+    text-align: center!important; /* Centre le texte (facultatif) */
+  }
+
+  text {
+    white-space: pre-wrap !important; /* Force les retours à la ligne */
+  }
+
+  g title{
+    white-space: normal!important; /* Permet le retour à la ligne */
+    word-wrap: break-word!important; /* Coupe les mots trop longs pour éviter le débordement */
+    overflow: visible!important; /* Assure que tout le contenu est visible */
+    text-overflow: unset !important; /* Désactive les "..." */
+
+  }
+
+  svg text {
+    white-space: pre-wrap !important; /* Autorise le retour à la ligne */
+    word-break: break-word !important; /* Coupe les mots longs */
+    text-overflow: unset !important; /* Désactive les "..." */
+    overflow: visible !important; /* Rend le texte complet visible */
   }
 
   .kpi-container {
@@ -15,7 +43,6 @@
     justify-content: center;
     align-items: center;
     padding: 1rem;
-
   }
 
 
@@ -46,7 +73,7 @@
 
   .modal-content {
     background-color: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     width: 80%;
     max-width: 500px;
@@ -68,4 +95,11 @@
     white-space: normal; /* Permet au texte de se décomposer sur plusieurs lignes */
     word-wrap: break-word; /* Coupe le texte au mot le plus proche */
     font-size: 0.9em; /* Ajustez la taille de la police pour un meilleur rendu */
+  }
+
+  // supprime le troncage des labels
+  ::ng-deep {
+    .cell .trimmed-label p{
+      white-space:unset !important;
+    }
   }

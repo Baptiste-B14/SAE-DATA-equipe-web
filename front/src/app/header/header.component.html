@@ -9,18 +9,14 @@
     - quand on aura tout les axes : les mettres à jour ici
 -->
 <header id="main-header" [class.hidden]="isHidden">
-    <div id="logoDiv">
-      <a href="/">
-        <img src="\..\..\assets\images\gsp_png.PNG" alt="Logo" id="logoImage">
-      </a>
-    </div>
     <nav>
+      <a routerLink="/" routerLinkActive="active-link">Accueil</a>
         <div class="dropdown-trigger" (mouseenter)="toggleDropdown()">
             <a>Nos Analyses</a>
             <ul class="dropdown-menu" [class.open]="isDropdownOpen" (mouseenter)="toggleDropdown()" (mouseleave)="toggleDropdown()">
-                <li><a routerLink="/analyses/1" routerLinkActive="active-link">Axe 1</a></li>
-                <li><a routerLink="/analyses/2" routerLinkActive="active-link">Axe 2</a></li>
-                <li><a routerLink="/analyses/3" routerLinkActive="active-link">Axe 3</a></li>
+                <li><a routerLink="/analyses/1" routerLinkActive="active-link">Publication</a></li>
+                <li><a routerLink="/analyses/2" routerLinkActive="active-link">Collaboration</a></li>
+                <li><a routerLink="/analyses/3" routerLinkActive="active-link">Affiliation</a></li>
             </ul>
         </div>
       <a routerLink="/presentation" routerLinkActive="active-link">Présentation</a>
