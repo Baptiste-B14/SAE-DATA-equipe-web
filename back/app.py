@@ -10,6 +10,7 @@ from flask import jsonify
 
 from db import close_db, query
 
+
 config = dotenv_values('.env')
 
 app = flask.Flask(__name__)
@@ -64,19 +65,18 @@ def graph_collab():
     return {"nodes" : nodes, "links": links}, 270
 
 
-
 @app.route('/analyses/wordcloud/<year>')
 def get_word_cloud_year(year):
-    file = open('tendances_mots_par_annees_top_500.json')
+    file = open('SqlLocal/tendances_mots_par_annees_top_500.json')
     data = json.load(file)
     limited_words = dict(list(data[year].items())[:20])
+    print(limited_words)
     return jsonify(limited_words)
-
 
 
 @app.route('/analyses/wordchart', methods=['GET'])
 def get_word_chart():
-    with open('tendances_mots_par_annees_toutes_les_donnees_sans_les_2_occ.json', 'r') as file:
+    with open('SqlLocal/tendances_mots_par_annees_toutes_les_donnees_sans_les_2_occ.json', 'r') as file:
         data = json.load(file)
 
     words_to_plot = request.args.getlist('words')
@@ -99,13 +99,12 @@ def get_collaboration():
         return data
 
 
-@app.route('/pub_in_time' ,methods=['GET'])
+@app.route('/pub_in_time', methods=['GET'])
 def get_publi_in_time():
 
     file = open('SqlLocal/Pub_in_time.json')
     data = json.load(file)
     return {"message" : data}, 270
-
 
 
 @app.route('/collab_by_categ', methods=['GET'])
@@ -122,44 +121,77 @@ def get_collab_in_time():
     data = json.load(file)
     return {"message" : data}, 270
 
-@app.route('/graph_commu')
+
+@app.route('/graph_commu', methods=['GET'])
 def get_graph_collab():
-    period = request.args.get('period', default='all_time', type=str)
-    limit = request.args.get('limit', default=10, type=int)
+    nodes = request.args.get('nodes', default='avant', type=str) if request.args.get('nodes') != "undefined" else 'avant'
+    period = request.args.get('period', default='avant', type=str) if request.args.get('period') != "undefined" else 'avant'
 
-    file = ""
-    if period == "all_time":
-        file = open('SqlLocal/avant-avant.json')
+    nodes_file = ""
+    links_file = ""
 
-    elif period == "before":
-        file = open('SqlLocal/top_collaborateur_before.json')
+    if nodes == "avant":
+        nodes_file = open('SqlLocal/commu/nodes-avant.json')
+        if period == "avant":
+            links_file = open('SqlLocal/commu/avant-avant.json')
+        elif period == "pendant":
+            links_file = open('SqlLocal/commu/avant-pendant.json')
+        elif period == "apres":
+            links_file = open('SqlLocal/commu/avant-apres.json')
 
-    elif period == "during":
-        file = open('SqlLocal/top_collaborateur_during.json')
+    elif nodes == "pendant":
+        nodes_file = open('SqlLocal/commu/nodes-pendant.json')
+        if period == "avant":
+            links_file = open('SqlLocal/commu/pendant-avant.json')
+        elif period == "pendant":
+            links_file = open('SqlLocal/commu/pendant-pendant.json')
+        elif period == "apres":
+            links_file = open('SqlLocal/commu/pendant-apres.json')
 
-    elif period == "after":
-        file = open('SqlLocal/top_collaborateur_after.json')
+    elif nodes == "apres":
+        nodes_file = open('SqlLocal/commu/nodes-apres.json')
+        if period == "pendant":
+            links_file = open('SqlLocal/commu/apres-pendant.json')
+        elif period == "apres":
+            links_file = open('SqlLocal/commu/apres-apres.json')
 
-    elif period == "fixed":
-        year = request.args.get('year', default=2024, type=int)
-        answer =execute_query("MATCH(a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) AND p.year=" + str(year) + " RETURN a.person_name, count(r2) AS count ORDER BY count DESC LIMIT " + str(limit))
+    file_mapping = {
+        "avant": {
+            "nodes": "SqlLocal/commu/nodes-avant.json",
+            "avant": "SqlLocal/commu/avant-avant.json",
+            "pendant": "SqlLocal/commu/avant-pendant.json",
+            "apres": "SqlLocal/commu/avant-apres.json",
+        },
+        "pendant": {
+            "nodes": "SqlLocal/commu/nodes-pendant.json",
+            "avant": "SqlLocal/commu/pendant-avant.json",
+            "pendant": "SqlLocal/commu/pendant-pendant.json",
+            "apres": "SqlLocal/commu/pendant-apres.json",
+        },
+        "apres": {
+            "nodes": "SqlLocal/commu/nodes-apres.json",
+            "pendant": "SqlLocal/commu/apres-pendant.json",
+            "apres": "SqlLocal/commu/apres-apres.json",
+        },
+    }
 
-    data = json.load(file)
-    return {"message" : data}, 200
+    return {"message" : nodes_file + links_file}, 270
 
-    return {"message" : data}, 270
+
 
 @app.route('/collab_seules_vs_collab')
 def get_collab_seules_vs_collab():
     file = open('SqlLocal/Nb_collab_seules_vs_nb_collab_coll.json')
     data = json.load(file)
-    return {"message" : data}, 270
+    return {"message": data}, 270
+
 
 @app.route('/page_in_time')
 def get_page_in_time():
     file = open('SqlLocal/Pages_in_time.json')
     data = json.load(file)
-    return {"message" : data}, 270
+    return {"message": data}, 270
+
 
 @app.route('/first_collab')
 def get_first_collab():
@@ -167,9 +199,9 @@ def get_first_collab():
     data = json.load(file)
     return {"message": data}, 270
 
+
 with open("cities_with_coordinates.json", "r", encoding="utf-8") as json_file:
     cities_data = json.load(json_file)
-
 
 
 @app.route('/coordinates', methods=['GET'])
@@ -254,6 +286,7 @@ def dynamic_query():
         print(f"Error in dynamic_query: {e}")
         return jsonify({"error": str(e)}), 500
 
+
 @app.route('/tables', methods=['GET'])
 def get_tables():
     try:
@@ -275,6 +308,7 @@ def get_tables():
     except Exception as e:
         print(f"Error fetching tables: {e}")
         return jsonify({"error": str(e)}), 500
+
 
 @app.route('/columns/<table_name>', methods=['GET'])
 def get_columns(table_name):
@@ -310,7 +344,6 @@ def csv_to_json():
         print(f"Conversion réussie ! Fichier JSON enregistré")
     except Exception as e:
         print(f"Erreur lors de la conversion : {e}")
-
 
 
 if __name__ =='__main__':

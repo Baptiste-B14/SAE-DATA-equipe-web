@@ -14,4 +14,5 @@ export class WordcloudService {
     const yearString = ""+ year;
     return this.http.get<{ [key: string]: number }>(`${this.apiUrl}/${yearString}`);
   }
+
 }

@@ -1,22 +1,59 @@
 import {Component, OnInit, Input, ElementRef} from '@angular/core';
 import * as d3 from 'd3';
 import { GraphService} from "../services/graph.service";
+import {PieChartModule} from "@swimlane/ngx-charts";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @Component({
   selector: 'app-graph',
   standalone: true,
-  imports: [],
+  imports: [
+    PieChartModule,
+    ReactiveFormsModule,
+    FormsModule
+  ],
   templateUrl: './graph.component.html',
   styleUrl: './graph.component.scss'
 })
 export class ForceGraphComponent implements OnInit {
   @Input() route! : string;
+  @Input() period! : string;
+  @Input() node! : string;
+
+  periodslist = {
+    'before' : "before",
+    'during' : "during",
+    'after' : "after",
+  }
+  nodeslist = {
+    'before' : "before",
+    'during' : "during",
+    'after' : "after",
+  }
+
+  selectedPeriod : string = this.periodslist['during'];
+  selectedNodes : string = this.nodeslist['during'];
+
+  routeArgs : string = "";
 
   constructor(private el: ElementRef, private graphService: GraphService) {}
 
   ngOnInit(): void {
-    this.graphService.getCollaboration(this.route).subscribe(data => this.createForceGraph(data))
+    this.changeRoute(this.route, this.node, this.period)
+    this.graphService.getCollaboration(this.routeArgs).subscribe(data => this.createForceGraph(data))
+  }
+
+  private changeRoute(route : string, node : string, period: string){
+    this.routeArgs = route +"?nodes=" + node + "&period=" + period
+  }
+
+  onPeriodChange(event: Event): void {
+    const selectedPeriod = +(event.target as HTMLSelectElement).value;
+  }
+
+  onNodeChange(event: Event): void {
+    const s = +(event.target as HTMLSelectElement).value;
   }
 
   private createForceGraph(data :any ): void {
@@ -144,6 +181,8 @@ export class ForceGraphComponent implements OnInit {
         event.subject.fy = null;
       });
   }
+
+  protected readonly Object = Object;
 }
 
 

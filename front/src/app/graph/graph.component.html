@@ -1,3 +1,18 @@
+<div class="piechart-container">
 
-<div class="graph-container" id="graph-container"></div>
+  <div>
+    <select (change)="onPeriodChange($event)" [(ngModel)]="selectedPeriod">
+      @for (period of Object.keys(periodslist); track period) {
+        <option [value]="period">{{ period }}</option>
+      }
+    </select>
+    <select (change)="onNodeChange($event)" [(ngModel)]="selectedNodes">
+      @for (node of Object.keys(nodeslist); track node) {
+        <option [value]="node">{{ node }}</option>
+      }
+    </select>
+  </div>
 
+  <div class="graph-container" id="graph-container"></div>
+
+</div>

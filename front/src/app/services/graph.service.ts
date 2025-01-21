@@ -14,8 +14,4 @@ export class GraphService {
     return this.http.get(`${this.apiUrl}/${route}`);
   }
 
-  getWordcloudData(year: number): Observable<{ [key: string]: number }> {
-    const yearString = ""+ year;
-    return this.http.get<{ [key: string]: number }>(`${this.apiUrl}/${yearString}`);
-  }
 }

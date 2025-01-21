@@ -1,0 +1,28 @@
+{
+  "links": [
+    {
+      "source": "Sario Angel Chamorro Quijano",
+      "target": "Frank William Zárate-Peña"
+    },
+    {
+      "source": "Carlos Coaquira Rojo",
+      "target": "Jason Alanya Villanueva"
+    },
+    {
+      "source": "Jason Alanya Villanueva",
+      "target": "Carlos Coaquira Rojo"
+    },
+    {
+      "source": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)",
+      "target": "Sario Angel Chamorro Quijano"
+    },
+    {
+      "source": "Frank William Zárate-Peña",
+      "target": "Sario Angel Chamorro Quijano"
+    },
+    {
+      "source": "Sario Angel Chamorro Quijano",
+      "target": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)"
+    }
+  ]
+}

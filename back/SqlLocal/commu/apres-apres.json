@@ -1,0 +1,3676 @@
+{
+    "links": [
+        {
+            "source": "Eduardo Vilcahuaman Morales",
+            "target": "Samuel Velasquez Caceres"
+        },
+        {
+            "source": "Frank William Zárate-Peña",
+            "target": "Samuel Velasquez Caceres"
+        },
+        {
+            "source": "Frank William Zárate-Peña",
+            "target": "Eduardo Vilcahuaman Morales"
+        },
+        {
+            "source": "Samuel Velasquez Caceres",
+            "target": "Eduardo Vilcahuaman Morales"
+        },
+        {
+            "source": "Angelo J. Palomino-Jaime",
+            "target": "Frank William Zárate-Peña"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "Frank William Zárate-Peña"
+        },
+        {
+            "source": "Lesly G. Castro-Osores",
+            "target": "Frank William Zárate-Peña"
+        },
+        {
+            "source": "María Felix-Torre",
+            "target": "Frank William Zárate-Peña"
+        },
+        {
+            "source": "Mittchel Gavancho-Alanya",
+            "target": "Frank William Zárate-Peña"
+        },
+        {
+            "source": "Juan Martinez-Carrillo",
+            "target": "Frank William Zárate-Peña"
+        },
+        {
+            "source": "Aroon Rodriguez-Rafael",
+            "target": "Frank William Zárate-Peña"
+        },
+        {
+            "source": "Karlo Revollar-Richle",
+            "target": "Frank William Zárate-Peña"
+        },
+        {
+            "source": "Anderson Granados-Ames",
+            "target": "Frank William Zárate-Peña"
+        },
+        {
+            "source": "Eduardo Vilcahuaman Morales",
+            "target": "Frank William Zárate-Peña"
+        },
+        {
+            "source": "Samuel Velasquez Caceres",
+            "target": "Frank William Zárate-Peña"
+        },
+        {
+            "source": "Rúben Darío Arzapalo-Bello",
+            "target": "Sofia Raymunda Aldana-Fernández"
+        },
+        {
+            "source": "Edgar Walter Menendez-Elguera",
+            "target": "Sofia Raymunda Aldana-Fernández"
+        },
+        {
+            "source": "Sebastian David Torres-Sanchez",
+            "target": "Sofia Raymunda Aldana-Fernández"
+        },
+        {
+            "source": "Nabilt Moggiano",
+            "target": "Sofia Raymunda Aldana-Fernández"
+        },
+        {
+            "source": "Sofia Raymunda Aldana-Fernández",
+            "target": "Edgar Walter Menendez-Elguera"
+        },
+        {
+            "source": "Rúben Darío Arzapalo-Bello",
+            "target": "Edgar Walter Menendez-Elguera"
+        },
+        {
+            "source": "Nabilt Moggiano",
+            "target": "Edgar Walter Menendez-Elguera"
+        },
+        {
+            "source": "Sebastian David Torres-Sanchez",
+            "target": "Edgar Walter Menendez-Elguera"
+        },
+        {
+            "source": "Nabilt Moggiano",
+            "target": "Sebastian David Torres-Sanchez"
+        },
+        {
+            "source": "Rúben Darío Arzapalo-Bello",
+            "target": "Sebastian David Torres-Sanchez"
+        },
+        {
+            "source": "Sofia Raymunda Aldana-Fernández",
+            "target": "Sebastian David Torres-Sanchez"
+        },
+        {
+            "source": "Edgar Walter Menendez-Elguera",
+            "target": "Sebastian David Torres-Sanchez"
+        },
+        {
+            "source": "Yordan Cesar Sullca-Mendoza",
+            "target": "Nabilt Moggiano"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)",
+            "target": "Nabilt Moggiano"
+        },
+        {
+            "source": "Cleo Alex Alarcón-Vasquez",
+            "target": "Nabilt Moggiano"
+        },
+        {
+            "source": "Carlos Coaquira Rojo",
+            "target": "Nabilt Moggiano"
+        },
+        {
+            "source": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)",
+            "target": "Nabilt Moggiano"
+        },
+        {
+            "source": "Jhon Eloy Quispe-Quispe",
+            "target": "Nabilt Moggiano"
+        },
+        {
+            "source": "Yakeline Sheila Galvan-Nina",
+            "target": "Nabilt Moggiano"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Nabilt Moggiano"
+        },
+        {
+            "source": "Iraiz Lucero Quintanilla Mosquera",
+            "target": "Nabilt Moggiano"
+        },
+        {
+            "source": "Alexandra Chuquillanqui-Mantari",
+            "target": "Nabilt Moggiano"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Nabilt Moggiano"
+        },
+        {
+            "source": "Sebastian David Torres-Sanchez",
+            "target": "Nabilt Moggiano"
+        },
+        {
+            "source": "Rúben Darío Arzapalo-Bello",
+            "target": "Nabilt Moggiano"
+        },
+        {
+            "source": "Edgar Walter Menendez-Elguera",
+            "target": "Nabilt Moggiano"
+        },
+        {
+            "source": "Sofia Raymunda Aldana-Fernández",
+            "target": "Nabilt Moggiano"
+        },
+        {
+            "source": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)",
+            "target": "Rúben Darío Arzapalo-Bello"
+        },
+        {
+            "source": "Nilton Javier Arzapalo-Marcelo",
+            "target": "Rúben Darío Arzapalo-Bello"
+        },
+        {
+            "source": "Carlos Coaquira Rojo",
+            "target": "Rúben Darío Arzapalo-Bello"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Rúben Darío Arzapalo-Bello"
+        },
+        {
+            "source": "Iraiz Lucero Quintanilla Mosquera",
+            "target": "Rúben Darío Arzapalo-Bello"
+        },
+        {
+            "source": "Yerson Taza-Aquino",
+            "target": "Rúben Darío Arzapalo-Bello"
+        },
+        {
+            "source": "Manuel Michael Beraún-Espíritu",
+            "target": "Rúben Darío Arzapalo-Bello"
+        },
+        {
+            "source": "Pamela Lucía Ricra Huamán",
+            "target": "Rúben Darío Arzapalo-Bello"
+        },
+        {
+            "source": "Nabilt Moggiano",
+            "target": "Rúben Darío Arzapalo-Bello"
+        },
+        {
+            "source": "Sofia Raymunda Aldana-Fernández",
+            "target": "Rúben Darío Arzapalo-Bello"
+        },
+        {
+            "source": "Sebastian David Torres-Sanchez",
+            "target": "Rúben Darío Arzapalo-Bello"
+        },
+        {
+            "source": "Edgar Walter Menendez-Elguera",
+            "target": "Rúben Darío Arzapalo-Bello"
+        },
+        {
+            "source": "Alvaro Ivan Nuñez-García",
+            "target": "Neil Richard Llaulli-Romero"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Neil Richard Llaulli-Romero"
+        },
+        {
+            "source": "Jaime Quispe-Perez",
+            "target": "Neil Richard Llaulli-Romero"
+        },
+        {
+            "source": "Alvaro Ivan Nuñez-García",
+            "target": "Jaime Quispe-Perez"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Jaime Quispe-Perez"
+        },
+        {
+            "source": "Neil Richard Llaulli-Romero",
+            "target": "Jaime Quispe-Perez"
+        },
+        {
+            "source": "Neil Richard Llaulli-Romero",
+            "target": "Alvaro Ivan Nuñez-García"
+        },
+        {
+            "source": "Jaime Quispe-Perez",
+            "target": "Alvaro Ivan Nuñez-García"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Alvaro Ivan Nuñez-García"
+        },
+        {
+            "source": "Jeiser Soto Llanco",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Husber Nicol Yalli Clemente",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Luis Ronaldo Ricra Ricaldi",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "David Steven Cuicapuza Curipaco",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Pedro Luis Godoy Jerónimo",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Angel Tacas Diaz",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Mohamed Mehdi Hadi Mohamed",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Heydi Karina Hinostroza-Maravi",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Jose Luis Nizama-Mallqui",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Romel Moisés Olivera-Pérez",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Lovell Wilder Torpoco-Lopez",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Ivan Enrique Sarmiento-Ñaupa",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Thalía Jackeline Cochachi-Rubio",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Evelin Ruth Mayta-Mercado",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Efrain Junior Dolorier-Flores",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Faifer Alanya-Almonacid",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Jesus Angel Huamán-Chavez",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Deyvid Froilán Matamoros-Paitán",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Jaime Quispe-Perez",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Neil Richard Llaulli-Romero",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Alvaro Ivan Nuñez-García",
+            "target": "Giovene Perez-Campomanes"
+        },
+        {
+            "source": "Xiomara Huaman Rojas",
+            "target": "Jason Alanya Villanueva"
+        },
+        {
+            "source": "Carlos Coaquira Rojo",
+            "target": "Jason Alanya Villanueva"
+        },
+        {
+            "source": "Jason Alanya Villanueva",
+            "target": "Xiomara Huaman Rojas"
+        },
+        {
+            "source": "Carlos Coaquira Rojo",
+            "target": "Xiomara Huaman Rojas"
+        },
+        {
+            "source": "Yordan Cesar Sullca-Mendoza",
+            "target": "Carlos Coaquira Rojo"
+        },
+        {
+            "source": "Rúben Darío Arzapalo-Bello",
+            "target": "Carlos Coaquira Rojo"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)",
+            "target": "Carlos Coaquira Rojo"
+        },
+        {
+            "source": "Manuel Michael Beraún-Espíritu",
+            "target": "Carlos Coaquira Rojo"
+        },
+        {
+            "source": "Nilton Javier Arzapalo-Marcelo",
+            "target": "Carlos Coaquira Rojo"
+        },
+        {
+            "source": "Iraiz Lucero Quintanilla Mosquera",
+            "target": "Carlos Coaquira Rojo"
+        },
+        {
+            "source": "Yerson Taza-Aquino",
+            "target": "Carlos Coaquira Rojo"
+        },
+        {
+            "source": "Nabilt Moggiano",
+            "target": "Carlos Coaquira Rojo"
+        },
+        {
+            "source": "Jhon Eloy Quispe-Quispe",
+            "target": "Carlos Coaquira Rojo"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Carlos Coaquira Rojo"
+        },
+        {
+            "source": "Cleo Alex Alarcón-Vasquez",
+            "target": "Carlos Coaquira Rojo"
+        },
+        {
+            "source": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)",
+            "target": "Carlos Coaquira Rojo"
+        },
+        {
+            "source": "Jason Alanya Villanueva",
+            "target": "Carlos Coaquira Rojo"
+        },
+        {
+            "source": "Xiomara Huaman Rojas",
+            "target": "Carlos Coaquira Rojo"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Jojan Valle-De La Cruz"
+        },
+        {
+            "source": "Luis Crisostomo-Soto",
+            "target": "Jojan Valle-De La Cruz"
+        },
+        {
+            "source": "Kener Velasquez-Colorado",
+            "target": "Jojan Valle-De La Cruz"
+        },
+        {
+            "source": "Hector Valcarcel-Castillo",
+            "target": "Jojan Valle-De La Cruz"
+        },
+        {
+            "source": "Gonzalo Sulca-Ramos",
+            "target": "Jojan Valle-De La Cruz"
+        },
+        {
+            "source": "Jojan Valle-De La Cruz",
+            "target": "Luis Crisostomo-Soto"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Luis Crisostomo-Soto"
+        },
+        {
+            "source": "Kener Velasquez-Colorado",
+            "target": "Luis Crisostomo-Soto"
+        },
+        {
+            "source": "Hector Valcarcel-Castillo",
+            "target": "Luis Crisostomo-Soto"
+        },
+        {
+            "source": "Gonzalo Sulca-Ramos",
+            "target": "Luis Crisostomo-Soto"
+        },
+        {
+            "source": "Luis Crisostomo-Soto",
+            "target": "Gonzalo Sulca-Ramos"
+        },
+        {
+            "source": "Hector Valcarcel-Castillo",
+            "target": "Gonzalo Sulca-Ramos"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Gonzalo Sulca-Ramos"
+        },
+        {
+            "source": "Jojan Valle-De La Cruz",
+            "target": "Gonzalo Sulca-Ramos"
+        },
+        {
+            "source": "Kener Velasquez-Colorado",
+            "target": "Gonzalo Sulca-Ramos"
+        },
+        {
+            "source": "Hector Valcarcel-Castillo",
+            "target": "Kener Velasquez-Colorado"
+        },
+        {
+            "source": "Luis Crisostomo-Soto",
+            "target": "Kener Velasquez-Colorado"
+        },
+        {
+            "source": "Jojan Valle-De La Cruz",
+            "target": "Kener Velasquez-Colorado"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Kener Velasquez-Colorado"
+        },
+        {
+            "source": "Gonzalo Sulca-Ramos",
+            "target": "Kener Velasquez-Colorado"
+        },
+        {
+            "source": "Shandi X. Aymar-Marticorena",
+            "target": "Hector Valcarcel-Castillo"
+        },
+        {
+            "source": "Adrián M. Gómez-Sánchez",
+            "target": "Hector Valcarcel-Castillo"
+        },
+        {
+            "source": "Deisy L. Acosta-Ticse",
+            "target": "Hector Valcarcel-Castillo"
+        },
+        {
+            "source": "José D. Rojas-Vargas",
+            "target": "Hector Valcarcel-Castillo"
+        },
+        {
+            "source": "Gabriel G. Guzmán-Ramos",
+            "target": "Hector Valcarcel-Castillo"
+        },
+        {
+            "source": "Juan A. Calderon-Saenz",
+            "target": "Hector Valcarcel-Castillo"
+        },
+        {
+            "source": "Ivan G. Delgado-Saavedra",
+            "target": "Hector Valcarcel-Castillo"
+        },
+        {
+            "source": "Antonny F. Corcino-Castillo",
+            "target": "Hector Valcarcel-Castillo"
+        },
+        {
+            "source": "Suni Escobar-Baquerizo",
+            "target": "Hector Valcarcel-Castillo"
+        },
+        {
+            "source": "Kener Velasquez-Colorado",
+            "target": "Hector Valcarcel-Castillo"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Hector Valcarcel-Castillo"
+        },
+        {
+            "source": "Luis Crisostomo-Soto",
+            "target": "Hector Valcarcel-Castillo"
+        },
+        {
+            "source": "Jojan Valle-De La Cruz",
+            "target": "Hector Valcarcel-Castillo"
+        },
+        {
+            "source": "Gonzalo Sulca-Ramos",
+            "target": "Hector Valcarcel-Castillo"
+        },
+        {
+            "source": "Kener Velasquez-Colorado",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Gonzalo Sulca-Ramos",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Luis Crisostomo-Soto",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Hector Valcarcel-Castillo",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Jojan Valle-De La Cruz",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Carlos Guevara-Chamorro",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Christoffer A. Vasquez-Chirito",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Alessandra P. Suarez-Paz",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "María X. Cruz-Cruz",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Maria L. Chavez-Avila",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Gonzalo Rivera-Paredes",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Alonso Delgado-Lorino",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Carlos M. Pajuelo-Ventocilla",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Sandro A. Seminario-Valdiviezo",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Joaquin Arrieta-Conde",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Eder Vilcacure-Camasca",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Sharon Uribe-Morales",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Dangelo Sanchez-Quispe",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Guillermo Díaz-Beltrán",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Jimena Malpartida-Paredes",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Albert Justiniano-Medina",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Aldo Calderón-Buendia",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Carlos D. Martinez-Ramirez",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Alvaro A. Alarcón-Vera",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Darybeth Nanquen-Bengoa",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Paolo Maldonado-Hurtado",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Anderson L. Torres-Taipe",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Jhon O. Arce-Cadillo",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Cristian Y. Pachacute-Flores",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Rodrigo Carrillo-Valverde",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Alvaro G. Trinidad-Palacios",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Jhossy Vargas-Saldaña",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Christopher Zarate-Quintanilla",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Shandi X. Aymar-Marticorena",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Suni Escobar-Baquerizo",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Antonny F. Corcino-Castillo",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Juan A. Calderon-Saenz",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "José D. Rojas-Vargas",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Ivan G. Delgado-Saavedra",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Deisy L. Acosta-Ticse",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Adrián M. Gómez-Sánchez",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Gabriel G. Guzmán-Ramos",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Erwin Justo-Veliz",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "John Ingaroca Ames",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Andony Gómez Pariona",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Anderson Moreno-Blanco",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Frank Vilcapoma-Silva",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "José Antonio Cruz Anchiraico",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Juan Diego Aguirre Cangalaya",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Yerson Taza-Aquino",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Rubenson Breña-Garcia",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Heather Pinto-Urrutia",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Rosario Quispe-Yauri",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Claudia Pacori-Palomino",
+            "target": "Deyby Huamanchahua"
+        },
+        {
+            "source": "Romel Moisés Olivera-Pérez",
+            "target": "Deyvid Froilán Matamoros-Paitán"
+        },
+        {
+            "source": "Heydi Karina Hinostroza-Maravi",
+            "target": "Deyvid Froilán Matamoros-Paitán"
+        },
+        {
+            "source": "Benjamin De La Cruz Taipe",
+            "target": "Deyvid Froilán Matamoros-Paitán"
+        },
+        {
+            "source": "Abel Max Julcarima Espiritu",
+            "target": "Deyvid Froilán Matamoros-Paitán"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Deyvid Froilán Matamoros-Paitán"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Deyvid Froilán Matamoros-Paitán"
+        },
+        {
+            "source": "Jesus Angel Huamán-Chavez",
+            "target": "Deyvid Froilán Matamoros-Paitán"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Deyvid Froilán Matamoros-Paitán"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "Deyvid Froilán Matamoros-Paitán"
+        },
+        {
+            "source": "Faifer Alanya-Almonacid",
+            "target": "Deyvid Froilán Matamoros-Paitán"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Deyvid Froilán Matamoros-Paitán"
+        },
+        {
+            "source": "Efrain Junior Dolorier-Flores",
+            "target": "Deyvid Froilán Matamoros-Paitán"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Efrain Junior Dolorier-Flores"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Efrain Junior Dolorier-Flores"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Efrain Junior Dolorier-Flores"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "Efrain Junior Dolorier-Flores"
+        },
+        {
+            "source": "Faifer Alanya-Almonacid",
+            "target": "Efrain Junior Dolorier-Flores"
+        },
+        {
+            "source": "Jesus Angel Huamán-Chavez",
+            "target": "Efrain Junior Dolorier-Flores"
+        },
+        {
+            "source": "Deyvid Froilán Matamoros-Paitán",
+            "target": "Efrain Junior Dolorier-Flores"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Faifer Alanya-Almonacid"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "Faifer Alanya-Almonacid"
+        },
+        {
+            "source": "Efrain Junior Dolorier-Flores",
+            "target": "Faifer Alanya-Almonacid"
+        },
+        {
+            "source": "Deyvid Froilán Matamoros-Paitán",
+            "target": "Faifer Alanya-Almonacid"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Faifer Alanya-Almonacid"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Faifer Alanya-Almonacid"
+        },
+        {
+            "source": "Jesus Angel Huamán-Chavez",
+            "target": "Faifer Alanya-Almonacid"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Rosali Ramos-Rojas",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Abel Max Julcarima Espiritu",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Luis Fernando Alania-Borja",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Heydi Karina Hinostroza-Maravi",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Benjamin De La Cruz Taipe",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Romel Moisés Olivera-Pérez",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Ivan Enrique Sarmiento-Ñaupa",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Jose Luis Nizama-Mallqui",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Evelin Ruth Mayta-Mercado",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Efrain Junior Dolorier-Flores",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Deyvid Froilán Matamoros-Paitán",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Faifer Alanya-Almonacid",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Jesus Angel Huamán-Chavez",
+            "target": "Albert Jorddy Valenzuela-Inga"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Heydi Karina Hinostroza-Maravi",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Evelin Ruth Mayta-Mercado",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Ivan Enrique Sarmiento-Ñaupa",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Jose Luis Nizama-Mallqui",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Efrain Junior Dolorier-Flores",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Jesus Angel Huamán-Chavez",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Deyvid Froilán Matamoros-Paitán",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Faifer Alanya-Almonacid",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Heydi Karina Hinostroza-Maravi",
+            "target": "Jesus Angel Huamán-Chavez"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Jesus Angel Huamán-Chavez"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Jesus Angel Huamán-Chavez"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "Jesus Angel Huamán-Chavez"
+        },
+        {
+            "source": "Deyvid Froilán Matamoros-Paitán",
+            "target": "Jesus Angel Huamán-Chavez"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Jesus Angel Huamán-Chavez"
+        },
+        {
+            "source": "Efrain Junior Dolorier-Flores",
+            "target": "Jesus Angel Huamán-Chavez"
+        },
+        {
+            "source": "Faifer Alanya-Almonacid",
+            "target": "Jesus Angel Huamán-Chavez"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Jesus Angel Huamán-Chavez"
+        },
+        {
+            "source": "Jose Luis Nizama-Mallqui",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "Evelin Ruth Mayta-Mercado",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "Ivan Enrique Sarmiento-Ñaupa",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "Efrain Junior Dolorier-Flores",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "Faifer Alanya-Almonacid",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "Jesus Angel Huamán-Chavez",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "Deyvid Froilán Matamoros-Paitán",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "Jose Luis Nizama-Mallqui"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Jose Luis Nizama-Mallqui"
+        },
+        {
+            "source": "Evelin Ruth Mayta-Mercado",
+            "target": "Jose Luis Nizama-Mallqui"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Jose Luis Nizama-Mallqui"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Jose Luis Nizama-Mallqui"
+        },
+        {
+            "source": "Ivan Enrique Sarmiento-Ñaupa",
+            "target": "Jose Luis Nizama-Mallqui"
+        },
+        {
+            "source": "Ivan Enrique Sarmiento-Ñaupa",
+            "target": "Evelin Ruth Mayta-Mercado"
+        },
+        {
+            "source": "Jose Luis Nizama-Mallqui",
+            "target": "Evelin Ruth Mayta-Mercado"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Evelin Ruth Mayta-Mercado"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "Evelin Ruth Mayta-Mercado"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Evelin Ruth Mayta-Mercado"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Evelin Ruth Mayta-Mercado"
+        },
+        {
+            "source": "Evelin Ruth Mayta-Mercado",
+            "target": "Ivan Enrique Sarmiento-Ñaupa"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Ivan Enrique Sarmiento-Ñaupa"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Ivan Enrique Sarmiento-Ñaupa"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "Ivan Enrique Sarmiento-Ñaupa"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Ivan Enrique Sarmiento-Ñaupa"
+        },
+        {
+            "source": "Jose Luis Nizama-Mallqui",
+            "target": "Ivan Enrique Sarmiento-Ñaupa"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Lovell Wilder Torpoco-Lopez"
+        },
+        {
+            "source": "Romel Moisés Olivera-Pérez",
+            "target": "Lovell Wilder Torpoco-Lopez"
+        },
+        {
+            "source": "Thalía Jackeline Cochachi-Rubio",
+            "target": "Lovell Wilder Torpoco-Lopez"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Lovell Wilder Torpoco-Lopez"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Lovell Wilder Torpoco-Lopez"
+        },
+        {
+            "source": "Romel Moisés Olivera-Pérez",
+            "target": "Thalía Jackeline Cochachi-Rubio"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Thalía Jackeline Cochachi-Rubio"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Thalía Jackeline Cochachi-Rubio"
+        },
+        {
+            "source": "Lovell Wilder Torpoco-Lopez",
+            "target": "Thalía Jackeline Cochachi-Rubio"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Thalía Jackeline Cochachi-Rubio"
+        },
+        {
+            "source": "Iraiz Lucero Quintanilla Mosquera",
+            "target": "Romel Moisés Olivera-Pérez"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)",
+            "target": "Romel Moisés Olivera-Pérez"
+        },
+        {
+            "source": "Johan James Hinostroza-Yucra",
+            "target": "Romel Moisés Olivera-Pérez"
+        },
+        {
+            "source": "Thalia Leticia Julcarima-Coca",
+            "target": "Romel Moisés Olivera-Pérez"
+        },
+        {
+            "source": "Deyvid Froilán Matamoros-Paitán",
+            "target": "Romel Moisés Olivera-Pérez"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Romel Moisés Olivera-Pérez"
+        },
+        {
+            "source": "Abel Max Julcarima Espiritu",
+            "target": "Romel Moisés Olivera-Pérez"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Romel Moisés Olivera-Pérez"
+        },
+        {
+            "source": "Heydi Karina Hinostroza-Maravi",
+            "target": "Romel Moisés Olivera-Pérez"
+        },
+        {
+            "source": "Benjamin De La Cruz Taipe",
+            "target": "Romel Moisés Olivera-Pérez"
+        },
+        {
+            "source": "Thalía Jackeline Cochachi-Rubio",
+            "target": "Romel Moisés Olivera-Pérez"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Romel Moisés Olivera-Pérez"
+        },
+        {
+            "source": "Lovell Wilder Torpoco-Lopez",
+            "target": "Romel Moisés Olivera-Pérez"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Romel Moisés Olivera-Pérez"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Romel Moisés Olivera-Pérez"
+        },
+        {
+            "source": "Yakeline Sheila Galvan-Nina",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Iraiz Lucero Quintanilla Mosquera",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Alexandra Chuquillanqui-Mantari",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Nabilt Moggiano",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Juan Diego Aguirre Cangalaya",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "José Antonio Cruz Anchiraico",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Jesus Angel Huamán-Chavez",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Heydi Karina Hinostroza-Maravi",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Thalía Jackeline Cochachi-Rubio",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Romel Moisés Olivera-Pérez",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Lovell Wilder Torpoco-Lopez",
+            "target": "Sliver Ivan Del Carpio Ramirez"
+        },
+        {
+            "source": "Yordan Cesar Sullca-Mendoza",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Rúben Darío Arzapalo-Bello",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Manuel Michael Beraún-Espíritu",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Nilton Javier Arzapalo-Marcelo",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Yerson Taza-Aquino",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Cleo Alex Alarcón-Vasquez",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Carlos Coaquira Rojo",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Johan James Hinostroza-Yucra",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Jhon Eloy Quispe-Quispe",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Thalia Leticia Julcarima-Coca",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Nabilt Moggiano",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Iraiz Lucero Quintanilla Mosquera",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Alexandra Chuquillanqui-Mantari",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Yakeline Sheila Galvan-Nina",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Thalía Jackeline Cochachi-Rubio",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Lovell Wilder Torpoco-Lopez",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Romel Moisés Olivera-Pérez",
+            "target": "Jhon Rodrigo Ortiz Zacarias"
+        },
+        {
+            "source": "Heydi Karina Hinostroza-Maravi",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Benjamin De La Cruz Taipe",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Romel Moisés Olivera-Pérez",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Abel Max Julcarima Espiritu",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Deyvid Froilán Matamoros-Paitán",
+            "target": "Juan Gabriel Benito-Zuñiga"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Benjamin De La Cruz Taipe"
+        },
+        {
+            "source": "Abel Max Julcarima Espiritu",
+            "target": "Benjamin De La Cruz Taipe"
+        },
+        {
+            "source": "Deyvid Froilán Matamoros-Paitán",
+            "target": "Benjamin De La Cruz Taipe"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Benjamin De La Cruz Taipe"
+        },
+        {
+            "source": "Heydi Karina Hinostroza-Maravi",
+            "target": "Benjamin De La Cruz Taipe"
+        },
+        {
+            "source": "Romel Moisés Olivera-Pérez",
+            "target": "Benjamin De La Cruz Taipe"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Abel Max Julcarima Espiritu"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Abel Max Julcarima Espiritu"
+        },
+        {
+            "source": "Benjamin De La Cruz Taipe",
+            "target": "Abel Max Julcarima Espiritu"
+        },
+        {
+            "source": "Romel Moisés Olivera-Pérez",
+            "target": "Abel Max Julcarima Espiritu"
+        },
+        {
+            "source": "Heydi Karina Hinostroza-Maravi",
+            "target": "Abel Max Julcarima Espiritu"
+        },
+        {
+            "source": "Deyvid Froilán Matamoros-Paitán",
+            "target": "Abel Max Julcarima Espiritu"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Heydi Karina Hinostroza-Maravi"
+        },
+        {
+            "source": "Jesus Angel Huamán-Chavez",
+            "target": "Heydi Karina Hinostroza-Maravi"
+        },
+        {
+            "source": "Juan Gabriel Benito-Zuñiga",
+            "target": "Heydi Karina Hinostroza-Maravi"
+        },
+        {
+            "source": "Deyvid Froilán Matamoros-Paitán",
+            "target": "Heydi Karina Hinostroza-Maravi"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Heydi Karina Hinostroza-Maravi"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Heydi Karina Hinostroza-Maravi"
+        },
+        {
+            "source": "Abel Max Julcarima Espiritu",
+            "target": "Heydi Karina Hinostroza-Maravi"
+        },
+        {
+            "source": "Benjamin De La Cruz Taipe",
+            "target": "Heydi Karina Hinostroza-Maravi"
+        },
+        {
+            "source": "Romel Moisés Olivera-Pérez",
+            "target": "Heydi Karina Hinostroza-Maravi"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Heydi Karina Hinostroza-Maravi"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Luis Fernando Alania-Borja"
+        },
+        {
+            "source": "Rosali Ramos-Rojas",
+            "target": "Luis Fernando Alania-Borja"
+        },
+        {
+            "source": "Albert Jorddy Valenzuela-Inga",
+            "target": "Rosali Ramos-Rojas"
+        },
+        {
+            "source": "Luis Fernando Alania-Borja",
+            "target": "Rosali Ramos-Rojas"
+        },
+        {
+            "source": "Deisy L. Acosta-Ticse",
+            "target": "Ivan G. Delgado-Saavedra"
+        },
+        {
+            "source": "Juan A. Calderon-Saenz",
+            "target": "Ivan G. Delgado-Saavedra"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Ivan G. Delgado-Saavedra"
+        },
+        {
+            "source": "Suni Escobar-Baquerizo",
+            "target": "Ivan G. Delgado-Saavedra"
+        },
+        {
+            "source": "Hector Valcarcel-Castillo",
+            "target": "Ivan G. Delgado-Saavedra"
+        },
+        {
+            "source": "Ivan G. Delgado-Saavedra",
+            "target": "Deisy L. Acosta-Ticse"
+        },
+        {
+            "source": "Gabriel G. Guzmán-Ramos",
+            "target": "Deisy L. Acosta-Ticse"
+        },
+        {
+            "source": "Adrián M. Gómez-Sánchez",
+            "target": "Deisy L. Acosta-Ticse"
+        },
+        {
+            "source": "Hector Valcarcel-Castillo",
+            "target": "Deisy L. Acosta-Ticse"
+        },
+        {
+            "source": "Suni Escobar-Baquerizo",
+            "target": "Deisy L. Acosta-Ticse"
+        },
+        {
+            "source": "José D. Rojas-Vargas",
+            "target": "Deisy L. Acosta-Ticse"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Deisy L. Acosta-Ticse"
+        },
+        {
+            "source": "Antonny F. Corcino-Castillo",
+            "target": "Deisy L. Acosta-Ticse"
+        },
+        {
+            "source": "Shandi X. Aymar-Marticorena",
+            "target": "Deisy L. Acosta-Ticse"
+        },
+        {
+            "source": "Juan A. Calderon-Saenz",
+            "target": "Deisy L. Acosta-Ticse"
+        },
+        {
+            "source": "Shandi X. Aymar-Marticorena",
+            "target": "Suni Escobar-Baquerizo"
+        },
+        {
+            "source": "José D. Rojas-Vargas",
+            "target": "Suni Escobar-Baquerizo"
+        },
+        {
+            "source": "Deisy L. Acosta-Ticse",
+            "target": "Suni Escobar-Baquerizo"
+        },
+        {
+            "source": "Juan A. Calderon-Saenz",
+            "target": "Suni Escobar-Baquerizo"
+        },
+        {
+            "source": "Antonny F. Corcino-Castillo",
+            "target": "Suni Escobar-Baquerizo"
+        },
+        {
+            "source": "Gabriel G. Guzmán-Ramos",
+            "target": "Suni Escobar-Baquerizo"
+        },
+        {
+            "source": "Adrián M. Gómez-Sánchez",
+            "target": "Suni Escobar-Baquerizo"
+        },
+        {
+            "source": "Ivan G. Delgado-Saavedra",
+            "target": "Suni Escobar-Baquerizo"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Suni Escobar-Baquerizo"
+        },
+        {
+            "source": "Hector Valcarcel-Castillo",
+            "target": "Suni Escobar-Baquerizo"
+        },
+        {
+            "source": "Ivan G. Delgado-Saavedra",
+            "target": "Juan A. Calderon-Saenz"
+        },
+        {
+            "source": "Suni Escobar-Baquerizo",
+            "target": "Juan A. Calderon-Saenz"
+        },
+        {
+            "source": "Deisy L. Acosta-Ticse",
+            "target": "Juan A. Calderon-Saenz"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Juan A. Calderon-Saenz"
+        },
+        {
+            "source": "Hector Valcarcel-Castillo",
+            "target": "Juan A. Calderon-Saenz"
+        },
+        {
+            "source": "José D. Rojas-Vargas",
+            "target": "Gabriel G. Guzmán-Ramos"
+        },
+        {
+            "source": "Deisy L. Acosta-Ticse",
+            "target": "Gabriel G. Guzmán-Ramos"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Gabriel G. Guzmán-Ramos"
+        },
+        {
+            "source": "Adrián M. Gómez-Sánchez",
+            "target": "Gabriel G. Guzmán-Ramos"
+        },
+        {
+            "source": "Suni Escobar-Baquerizo",
+            "target": "Gabriel G. Guzmán-Ramos"
+        },
+        {
+            "source": "Hector Valcarcel-Castillo",
+            "target": "Gabriel G. Guzmán-Ramos"
+        },
+        {
+            "source": "Shandi X. Aymar-Marticorena",
+            "target": "Gabriel G. Guzmán-Ramos"
+        },
+        {
+            "source": "Antonny F. Corcino-Castillo",
+            "target": "Gabriel G. Guzmán-Ramos"
+        },
+        {
+            "source": "Gabriel G. Guzmán-Ramos",
+            "target": "Adrián M. Gómez-Sánchez"
+        },
+        {
+            "source": "Hector Valcarcel-Castillo",
+            "target": "Adrián M. Gómez-Sánchez"
+        },
+        {
+            "source": "Shandi X. Aymar-Marticorena",
+            "target": "Adrián M. Gómez-Sánchez"
+        },
+        {
+            "source": "Deisy L. Acosta-Ticse",
+            "target": "Adrián M. Gómez-Sánchez"
+        },
+        {
+            "source": "Antonny F. Corcino-Castillo",
+            "target": "Adrián M. Gómez-Sánchez"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Adrián M. Gómez-Sánchez"
+        },
+        {
+            "source": "José D. Rojas-Vargas",
+            "target": "Adrián M. Gómez-Sánchez"
+        },
+        {
+            "source": "Suni Escobar-Baquerizo",
+            "target": "Adrián M. Gómez-Sánchez"
+        },
+        {
+            "source": "Adrián M. Gómez-Sánchez",
+            "target": "Antonny F. Corcino-Castillo"
+        },
+        {
+            "source": "Shandi X. Aymar-Marticorena",
+            "target": "Antonny F. Corcino-Castillo"
+        },
+        {
+            "source": "José D. Rojas-Vargas",
+            "target": "Antonny F. Corcino-Castillo"
+        },
+        {
+            "source": "Suni Escobar-Baquerizo",
+            "target": "Antonny F. Corcino-Castillo"
+        },
+        {
+            "source": "Deisy L. Acosta-Ticse",
+            "target": "Antonny F. Corcino-Castillo"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Antonny F. Corcino-Castillo"
+        },
+        {
+            "source": "Hector Valcarcel-Castillo",
+            "target": "Antonny F. Corcino-Castillo"
+        },
+        {
+            "source": "Gabriel G. Guzmán-Ramos",
+            "target": "Antonny F. Corcino-Castillo"
+        },
+        {
+            "source": "Hector Valcarcel-Castillo",
+            "target": "Shandi X. Aymar-Marticorena"
+        },
+        {
+            "source": "Suni Escobar-Baquerizo",
+            "target": "Shandi X. Aymar-Marticorena"
+        },
+        {
+            "source": "Adrián M. Gómez-Sánchez",
+            "target": "Shandi X. Aymar-Marticorena"
+        },
+        {
+            "source": "Antonny F. Corcino-Castillo",
+            "target": "Shandi X. Aymar-Marticorena"
+        },
+        {
+            "source": "José D. Rojas-Vargas",
+            "target": "Shandi X. Aymar-Marticorena"
+        },
+        {
+            "source": "Deisy L. Acosta-Ticse",
+            "target": "Shandi X. Aymar-Marticorena"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Shandi X. Aymar-Marticorena"
+        },
+        {
+            "source": "Gabriel G. Guzmán-Ramos",
+            "target": "Shandi X. Aymar-Marticorena"
+        },
+        {
+            "source": "Gabriel G. Guzmán-Ramos",
+            "target": "José D. Rojas-Vargas"
+        },
+        {
+            "source": "Suni Escobar-Baquerizo",
+            "target": "José D. Rojas-Vargas"
+        },
+        {
+            "source": "Hector Valcarcel-Castillo",
+            "target": "José D. Rojas-Vargas"
+        },
+        {
+            "source": "Shandi X. Aymar-Marticorena",
+            "target": "José D. Rojas-Vargas"
+        },
+        {
+            "source": "Antonny F. Corcino-Castillo",
+            "target": "José D. Rojas-Vargas"
+        },
+        {
+            "source": "Deisy L. Acosta-Ticse",
+            "target": "José D. Rojas-Vargas"
+        },
+        {
+            "source": "Adrián M. Gómez-Sánchez",
+            "target": "José D. Rojas-Vargas"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "José D. Rojas-Vargas"
+        },
+        {
+            "source": "Rúben Darío Arzapalo-Bello",
+            "target": "Pamela Lucía Ricra Huamán"
+        },
+        {
+            "source": "Paolo Maldonado-Hurtado",
+            "target": "Junior Fabian"
+        },
+        {
+            "source": "Eber Joseph Ballon Alvarez",
+            "target": "Junior Fabian"
+        },
+        {
+            "source": "Jeiser Soto Llanco",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Luis Ronaldo Ricra Ricaldi",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Husber Nicol Yalli Clemente",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Raul Oswaldo Meza Torres",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Luis Enrique Soto Otivo",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Roberto Belarmino Quispe Cabana",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Anthony Jesus Hinostroza Flores",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Humberto Diego Cardenas Acosta",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Mohamed Mehdi Hadi Mohamed",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Shirley Gabriela Cardenas Quispe",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Dick Bertony Romero Jimenez",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Paul Cristian Guerreros Abregu",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Jeremy Pool Ore Moran",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Leonel Alvaro Llanco Guardia",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Sander Erick Cayllahua De La Cruz",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Piero Alexander Mantari Mendoza",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Jeremy De La Cruz Cortez",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Carlos Alberto Coaquira Rojo",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Rafael De la Cruz Casaño",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Krhistians Enrique Chávez Cárdenas",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Joel Marlon Huamani Caballero",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Katerine Nayeli Raymundo Cardenas",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Lisbeth Rosmery Asto Huarocc",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Cleo Alex Alarcón-Vasquez",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Luiggie Wiliams Yallico Torres",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Angel Tacas Diaz",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "David Steven Cuicapuza Curipaco",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Mohamed Mehdi Hadi Mohamed",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Juan Diego Aguirre Cangalaya",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "José Antonio Cruz Anchiraico",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Pedro Luis Godoy Jerónimo",
+            "target": "Sario Angel Chamorro Quijano"
+        },
+        {
+            "source": "Frank William Zárate-Peña",
+            "target": "Aroon Rodriguez-Rafael"
+        },
+        {
+            "source": "Anderson Granados-Ames",
+            "target": "Aroon Rodriguez-Rafael"
+        },
+        {
+            "source": "Karlo Revollar-Richle",
+            "target": "Aroon Rodriguez-Rafael"
+        },
+        {
+            "source": "Anderson Granados-Ames",
+            "target": "Karlo Revollar-Richle"
+        },
+        {
+            "source": "Frank William Zárate-Peña",
+            "target": "Karlo Revollar-Richle"
+        },
+        {
+            "source": "Aroon Rodriguez-Rafael",
+            "target": "Karlo Revollar-Richle"
+        },
+        {
+            "source": "Karlo Revollar-Richle",
+            "target": "Anderson Granados-Ames"
+        },
+        {
+            "source": "Aroon Rodriguez-Rafael",
+            "target": "Anderson Granados-Ames"
+        },
+        {
+            "source": "Frank William Zárate-Peña",
+            "target": "Anderson Granados-Ames"
+        },
+        {
+            "source": "John Ingaroca Ames",
+            "target": "Andony Gómez Pariona"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Andony Gómez Pariona"
+        },
+        {
+            "source": "Andony Gómez Pariona",
+            "target": "John Ingaroca Ames"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "John Ingaroca Ames"
+        },
+        {
+            "source": "Anderson Moreno-Blanco",
+            "target": "Frank Vilcapoma-Silva"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Frank Vilcapoma-Silva"
+        },
+        {
+            "source": "Erwin Justo-Veliz",
+            "target": "Frank Vilcapoma-Silva"
+        },
+        {
+            "source": "Erwin Justo-Veliz",
+            "target": "Anderson Moreno-Blanco"
+        },
+        {
+            "source": "Frank Vilcapoma-Silva",
+            "target": "Anderson Moreno-Blanco"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Anderson Moreno-Blanco"
+        },
+        {
+            "source": "Anderson Moreno-Blanco",
+            "target": "Erwin Justo-Veliz"
+        },
+        {
+            "source": "Frank Vilcapoma-Silva",
+            "target": "Erwin Justo-Veliz"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Erwin Justo-Veliz"
+        },
+        {
+            "source": "Jean Carlos Pantoja Vega",
+            "target": "Marco Antonio Campos Contreras (ORCID: 0009-0007-3038-370X)"
+        },
+        {
+            "source": "Cristian AndréS Palomino Jaime",
+            "target": "Marco Antonio Campos Contreras (ORCID: 0009-0007-3038-370X)"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "Marco Antonio Campos Contreras (ORCID: 0009-0007-3038-370X)"
+        },
+        {
+            "source": "Jean Carlos Pantoja Vega",
+            "target": "Cristian AndréS Palomino Jaime"
+        },
+        {
+            "source": "Marco Antonio Campos Contreras (ORCID: 0009-0007-3038-370X)",
+            "target": "Cristian AndréS Palomino Jaime"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "Cristian AndréS Palomino Jaime"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "Jean Carlos Pantoja Vega"
+        },
+        {
+            "source": "Marco Antonio Campos Contreras (ORCID: 0009-0007-3038-370X)",
+            "target": "Jean Carlos Pantoja Vega"
+        },
+        {
+            "source": "Cristian AndréS Palomino Jaime",
+            "target": "Jean Carlos Pantoja Vega"
+        },
+        {
+            "source": "Mohamed Mehdi Hadi Mohamed",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "Shirley Gabriela Cardenas Quispe",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "Paul Cristian Guerreros Abregu",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "Luis Ronaldo Ricra Ricaldi",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "Jeiser Soto Llanco",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "Husber Nicol Yalli Clemente",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "Pedro Luis Godoy Jerónimo",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "David Steven Cuicapuza Curipaco",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "Mohamed Mehdi Hadi Mohamed",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "Angel Tacas Diaz",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "Jean Carlos Pantoja Vega",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "Cristian AndréS Palomino Jaime",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "Marco Antonio Campos Contreras (ORCID: 0009-0007-3038-370X)",
+            "target": "Diego Ricardo Cajachagua Guerreros"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "Juan Diego Aguirre Cangalaya"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Juan Diego Aguirre Cangalaya"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Juan Diego Aguirre Cangalaya"
+        },
+        {
+            "source": "José Antonio Cruz Anchiraico",
+            "target": "Juan Diego Aguirre Cangalaya"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Juan Diego Aguirre Cangalaya"
+        },
+        {
+            "source": "Joaquin Arrieta-Conde",
+            "target": "José Antonio Cruz Anchiraico"
+        },
+        {
+            "source": "Anderson L. Torres-Taipe",
+            "target": "José Antonio Cruz Anchiraico"
+        },
+        {
+            "source": "Albert Justiniano-Medina",
+            "target": "José Antonio Cruz Anchiraico"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "José Antonio Cruz Anchiraico"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "José Antonio Cruz Anchiraico"
+        },
+        {
+            "source": "Juan Diego Aguirre Cangalaya",
+            "target": "José Antonio Cruz Anchiraico"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "José Antonio Cruz Anchiraico"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "José Antonio Cruz Anchiraico"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "David Steven Cuicapuza Curipaco"
+        },
+        {
+            "source": "Angel Tacas Diaz",
+            "target": "David Steven Cuicapuza Curipaco"
+        },
+        {
+            "source": "Mohamed Mehdi Hadi Mohamed",
+            "target": "David Steven Cuicapuza Curipaco"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "David Steven Cuicapuza Curipaco"
+        },
+        {
+            "source": "Pedro Luis Godoy Jerónimo",
+            "target": "David Steven Cuicapuza Curipaco"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "David Steven Cuicapuza Curipaco"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "Pedro Luis Godoy Jerónimo"
+        },
+        {
+            "source": "Angel Tacas Diaz",
+            "target": "Pedro Luis Godoy Jerónimo"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Pedro Luis Godoy Jerónimo"
+        },
+        {
+            "source": "Mohamed Mehdi Hadi Mohamed",
+            "target": "Pedro Luis Godoy Jerónimo"
+        },
+        {
+            "source": "David Steven Cuicapuza Curipaco",
+            "target": "Pedro Luis Godoy Jerónimo"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Pedro Luis Godoy Jerónimo"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Angel Tacas Diaz"
+        },
+        {
+            "source": "David Steven Cuicapuza Curipaco",
+            "target": "Angel Tacas Diaz"
+        },
+        {
+            "source": "Pedro Luis Godoy Jerónimo",
+            "target": "Angel Tacas Diaz"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "Angel Tacas Diaz"
+        },
+        {
+            "source": "Mohamed Mehdi Hadi Mohamed",
+            "target": "Angel Tacas Diaz"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Angel Tacas Diaz"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "Mohamed Mehdi Hadi Mohamed"
+        },
+        {
+            "source": "David Steven Cuicapuza Curipaco",
+            "target": "Mohamed Mehdi Hadi Mohamed"
+        },
+        {
+            "source": "Pedro Luis Godoy Jerónimo",
+            "target": "Mohamed Mehdi Hadi Mohamed"
+        },
+        {
+            "source": "Angel Tacas Diaz",
+            "target": "Mohamed Mehdi Hadi Mohamed"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Mohamed Mehdi Hadi Mohamed"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Mohamed Mehdi Hadi Mohamed"
+        },
+        {
+            "source": "Frank William Zárate-Peña",
+            "target": "María Felix-Torre"
+        },
+        {
+            "source": "Mittchel Gavancho-Alanya",
+            "target": "María Felix-Torre"
+        },
+        {
+            "source": "Juan Martinez-Carrillo",
+            "target": "María Felix-Torre"
+        },
+        {
+            "source": "María Felix-Torre",
+            "target": "Juan Martinez-Carrillo"
+        },
+        {
+            "source": "Frank William Zárate-Peña",
+            "target": "Juan Martinez-Carrillo"
+        },
+        {
+            "source": "Mittchel Gavancho-Alanya",
+            "target": "Juan Martinez-Carrillo"
+        },
+        {
+            "source": "Frank William Zárate-Peña",
+            "target": "Mittchel Gavancho-Alanya"
+        },
+        {
+            "source": "María Felix-Torre",
+            "target": "Mittchel Gavancho-Alanya"
+        },
+        {
+            "source": "Juan Martinez-Carrillo",
+            "target": "Mittchel Gavancho-Alanya"
+        },
+        {
+            "source": "Juan Diego Aguirre Cangalaya",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "José Antonio Cruz Anchiraico",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "Angelo J. Palomino-Jaime",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "Lesly G. Castro-Osores",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "Frank William Zárate-Peña",
+            "target": "Lizbett Nattaly Mantari-Ramos"
+        },
+        {
+            "source": "Lesly G. Castro-Osores",
+            "target": "Angelo J. Palomino-Jaime"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "Angelo J. Palomino-Jaime"
+        },
+        {
+            "source": "Frank William Zárate-Peña",
+            "target": "Angelo J. Palomino-Jaime"
+        },
+        {
+            "source": "Angelo J. Palomino-Jaime",
+            "target": "Lesly G. Castro-Osores"
+        },
+        {
+            "source": "Lizbett Nattaly Mantari-Ramos",
+            "target": "Lesly G. Castro-Osores"
+        },
+        {
+            "source": "Frank William Zárate-Peña",
+            "target": "Lesly G. Castro-Osores"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "Luis Ronaldo Ricra Ricaldi"
+        },
+        {
+            "source": "Husber Nicol Yalli Clemente",
+            "target": "Luis Ronaldo Ricra Ricaldi"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Luis Ronaldo Ricra Ricaldi"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Luis Ronaldo Ricra Ricaldi"
+        },
+        {
+            "source": "Jeiser Soto Llanco",
+            "target": "Luis Ronaldo Ricra Ricaldi"
+        },
+        {
+            "source": "Luis Ronaldo Ricra Ricaldi",
+            "target": "Husber Nicol Yalli Clemente"
+        },
+        {
+            "source": "Jeiser Soto Llanco",
+            "target": "Husber Nicol Yalli Clemente"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Husber Nicol Yalli Clemente"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Husber Nicol Yalli Clemente"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "Husber Nicol Yalli Clemente"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "Jeiser Soto Llanco"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Jeiser Soto Llanco"
+        },
+        {
+            "source": "Giovene Perez-Campomanes",
+            "target": "Jeiser Soto Llanco"
+        },
+        {
+            "source": "Husber Nicol Yalli Clemente",
+            "target": "Jeiser Soto Llanco"
+        },
+        {
+            "source": "Luis Ronaldo Ricra Ricaldi",
+            "target": "Jeiser Soto Llanco"
+        },
+        {
+            "source": "Paolo Maldonado-Hurtado",
+            "target": "Eber Joseph Ballon Alvarez"
+        },
+        {
+            "source": "Junior Fabian",
+            "target": "Eber Joseph Ballon Alvarez"
+        },
+        {
+            "source": "Alonso Delgado-Lorino",
+            "target": "Paolo Maldonado-Hurtado"
+        },
+        {
+            "source": "Christopher Zarate-Quintanilla",
+            "target": "Paolo Maldonado-Hurtado"
+        },
+        {
+            "source": "Jhossy Vargas-Saldaña",
+            "target": "Paolo Maldonado-Hurtado"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Paolo Maldonado-Hurtado"
+        },
+        {
+            "source": "Rodrigo Carrillo-Valverde",
+            "target": "Paolo Maldonado-Hurtado"
+        },
+        {
+            "source": "Eder Vilcacure-Camasca",
+            "target": "Paolo Maldonado-Hurtado"
+        },
+        {
+            "source": "Darybeth Nanquen-Bengoa",
+            "target": "Paolo Maldonado-Hurtado"
+        },
+        {
+            "source": "Junior Fabian",
+            "target": "Paolo Maldonado-Hurtado"
+        },
+        {
+            "source": "Eber Joseph Ballon Alvarez",
+            "target": "Paolo Maldonado-Hurtado"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Rubenson Breña-Garcia"
+        },
+        {
+            "source": "Yerson Taza-Aquino",
+            "target": "Rubenson Breña-Garcia"
+        },
+        {
+            "source": "Iraiz Lucero Quintanilla Mosquera",
+            "target": "Yerson Taza-Aquino"
+        },
+        {
+            "source": "Manuel Michael Beraún-Espíritu",
+            "target": "Yerson Taza-Aquino"
+        },
+        {
+            "source": "Rúben Darío Arzapalo-Bello",
+            "target": "Yerson Taza-Aquino"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Yerson Taza-Aquino"
+        },
+        {
+            "source": "Carlos Coaquira Rojo",
+            "target": "Yerson Taza-Aquino"
+        },
+        {
+            "source": "Rubenson Breña-Garcia",
+            "target": "Yerson Taza-Aquino"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Yerson Taza-Aquino"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Krhistians Enrique Chávez Cárdenas"
+        },
+        {
+            "source": "Cleo Alex Alarcón-Vasquez",
+            "target": "Krhistians Enrique Chávez Cárdenas"
+        },
+        {
+            "source": "Rafael De la Cruz Casaño",
+            "target": "Krhistians Enrique Chávez Cárdenas"
+        },
+        {
+            "source": "Nabilt Moggiano",
+            "target": "Cleo Alex Alarcón-Vasquez"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Cleo Alex Alarcón-Vasquez"
+        },
+        {
+            "source": "Jhon Eloy Quispe-Quispe",
+            "target": "Cleo Alex Alarcón-Vasquez"
+        },
+        {
+            "source": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)",
+            "target": "Cleo Alex Alarcón-Vasquez"
+        },
+        {
+            "source": "Carlos Coaquira Rojo",
+            "target": "Cleo Alex Alarcón-Vasquez"
+        },
+        {
+            "source": "Rafael De la Cruz Casaño",
+            "target": "Cleo Alex Alarcón-Vasquez"
+        },
+        {
+            "source": "Krhistians Enrique Chávez Cárdenas",
+            "target": "Cleo Alex Alarcón-Vasquez"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Cleo Alex Alarcón-Vasquez"
+        },
+        {
+            "source": "Leonel Alvaro Llanco Guardia",
+            "target": "Rafael De la Cruz Casaño"
+        },
+        {
+            "source": "Humberto Diego Cardenas Acosta",
+            "target": "Rafael De la Cruz Casaño"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Rafael De la Cruz Casaño"
+        },
+        {
+            "source": "Cleo Alex Alarcón-Vasquez",
+            "target": "Rafael De la Cruz Casaño"
+        },
+        {
+            "source": "Krhistians Enrique Chávez Cárdenas",
+            "target": "Rafael De la Cruz Casaño"
+        },
+        {
+            "source": "Joel Marlon Huamani Caballero",
+            "target": "Rafael De la Cruz Casaño"
+        },
+        {
+            "source": "Luiggie Wiliams Yallico Torres",
+            "target": "Katerine Nayeli Raymundo Cardenas"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Katerine Nayeli Raymundo Cardenas"
+        },
+        {
+            "source": "Lisbeth Rosmery Asto Huarocc",
+            "target": "Katerine Nayeli Raymundo Cardenas"
+        },
+        {
+            "source": "Katerine Nayeli Raymundo Cardenas",
+            "target": "Luiggie Wiliams Yallico Torres"
+        },
+        {
+            "source": "Lisbeth Rosmery Asto Huarocc",
+            "target": "Luiggie Wiliams Yallico Torres"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Luiggie Wiliams Yallico Torres"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Lisbeth Rosmery Asto Huarocc"
+        },
+        {
+            "source": "Luiggie Wiliams Yallico Torres",
+            "target": "Lisbeth Rosmery Asto Huarocc"
+        },
+        {
+            "source": "Katerine Nayeli Raymundo Cardenas",
+            "target": "Lisbeth Rosmery Asto Huarocc"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Yakeline Sheila Galvan-Nina"
+        },
+        {
+            "source": "Nabilt Moggiano",
+            "target": "Yakeline Sheila Galvan-Nina"
+        },
+        {
+            "source": "Alexandra Chuquillanqui-Mantari",
+            "target": "Yakeline Sheila Galvan-Nina"
+        },
+        {
+            "source": "Iraiz Lucero Quintanilla Mosquera",
+            "target": "Yakeline Sheila Galvan-Nina"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Yakeline Sheila Galvan-Nina"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Alexandra Chuquillanqui-Mantari"
+        },
+        {
+            "source": "Yakeline Sheila Galvan-Nina",
+            "target": "Alexandra Chuquillanqui-Mantari"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Alexandra Chuquillanqui-Mantari"
+        },
+        {
+            "source": "Nabilt Moggiano",
+            "target": "Alexandra Chuquillanqui-Mantari"
+        },
+        {
+            "source": "Iraiz Lucero Quintanilla Mosquera",
+            "target": "Alexandra Chuquillanqui-Mantari"
+        },
+        {
+            "source": "Nilton Javier Arzapalo-Marcelo",
+            "target": "Iraiz Lucero Quintanilla Mosquera"
+        },
+        {
+            "source": "Yerson Taza-Aquino",
+            "target": "Iraiz Lucero Quintanilla Mosquera"
+        },
+        {
+            "source": "Rúben Darío Arzapalo-Bello",
+            "target": "Iraiz Lucero Quintanilla Mosquera"
+        },
+        {
+            "source": "Carlos Coaquira Rojo",
+            "target": "Iraiz Lucero Quintanilla Mosquera"
+        },
+        {
+            "source": "Manuel Michael Beraún-Espíritu",
+            "target": "Iraiz Lucero Quintanilla Mosquera"
+        },
+        {
+            "source": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)",
+            "target": "Iraiz Lucero Quintanilla Mosquera"
+        },
+        {
+            "source": "Thalia Leticia Julcarima-Coca",
+            "target": "Iraiz Lucero Quintanilla Mosquera"
+        },
+        {
+            "source": "Romel Moisés Olivera-Pérez",
+            "target": "Iraiz Lucero Quintanilla Mosquera"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)",
+            "target": "Iraiz Lucero Quintanilla Mosquera"
+        },
+        {
+            "source": "Johan James Hinostroza-Yucra",
+            "target": "Iraiz Lucero Quintanilla Mosquera"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Iraiz Lucero Quintanilla Mosquera"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez",
+            "target": "Iraiz Lucero Quintanilla Mosquera"
+        },
+        {
+            "source": "Nabilt Moggiano",
+            "target": "Iraiz Lucero Quintanilla Mosquera"
+        },
+        {
+            "source": "Yakeline Sheila Galvan-Nina",
+            "target": "Iraiz Lucero Quintanilla Mosquera"
+        },
+        {
+            "source": "Alexandra Chuquillanqui-Mantari",
+            "target": "Iraiz Lucero Quintanilla Mosquera"
+        },
+        {
+            "source": "Rafael De la Cruz Casaño",
+            "target": "Leonel Alvaro Llanco Guardia"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Leonel Alvaro Llanco Guardia"
+        },
+        {
+            "source": "Joel Marlon Huamani Caballero",
+            "target": "Leonel Alvaro Llanco Guardia"
+        },
+        {
+            "source": "Humberto Diego Cardenas Acosta",
+            "target": "Leonel Alvaro Llanco Guardia"
+        },
+        {
+            "source": "Humberto Diego Cardenas Acosta",
+            "target": "Joel Marlon Huamani Caballero"
+        },
+        {
+            "source": "Leonel Alvaro Llanco Guardia",
+            "target": "Joel Marlon Huamani Caballero"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Joel Marlon Huamani Caballero"
+        },
+        {
+            "source": "Rafael De la Cruz Casaño",
+            "target": "Joel Marlon Huamani Caballero"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Humberto Diego Cardenas Acosta"
+        },
+        {
+            "source": "Joel Marlon Huamani Caballero",
+            "target": "Humberto Diego Cardenas Acosta"
+        },
+        {
+            "source": "Rafael De la Cruz Casaño",
+            "target": "Humberto Diego Cardenas Acosta"
+        },
+        {
+            "source": "Leonel Alvaro Llanco Guardia",
+            "target": "Humberto Diego Cardenas Acosta"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Shirley Gabriela Cardenas Quispe"
+        },
+        {
+            "source": "Paul Cristian Guerreros Abregu",
+            "target": "Shirley Gabriela Cardenas Quispe"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "Shirley Gabriela Cardenas Quispe"
+        },
+        {
+            "source": "Mohamed Mehdi Hadi Mohamed",
+            "target": "Shirley Gabriela Cardenas Quispe"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Paul Cristian Guerreros Abregu"
+        },
+        {
+            "source": "Mohamed Mehdi Hadi Mohamed",
+            "target": "Paul Cristian Guerreros Abregu"
+        },
+        {
+            "source": "Shirley Gabriela Cardenas Quispe",
+            "target": "Paul Cristian Guerreros Abregu"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "Paul Cristian Guerreros Abregu"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Mohamed Mehdi Hadi Mohamed"
+        },
+        {
+            "source": "Paul Cristian Guerreros Abregu",
+            "target": "Mohamed Mehdi Hadi Mohamed"
+        },
+        {
+            "source": "Diego Ricardo Cajachagua Guerreros",
+            "target": "Mohamed Mehdi Hadi Mohamed"
+        },
+        {
+            "source": "Shirley Gabriela Cardenas Quispe",
+            "target": "Mohamed Mehdi Hadi Mohamed"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Carlos Guevara-Chamorro"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Jhon O. Arce-Cadillo"
+        },
+        {
+            "source": "Sandro A. Seminario-Valdiviezo",
+            "target": "Alvaro A. Alarcón-Vera"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Alvaro A. Alarcón-Vera"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Sandro A. Seminario-Valdiviezo"
+        },
+        {
+            "source": "Alvaro A. Alarcón-Vera",
+            "target": "Sandro A. Seminario-Valdiviezo"
+        },
+        {
+            "source": "Alonso Delgado-Lorino",
+            "target": "Rodrigo Carrillo-Valverde"
+        },
+        {
+            "source": "Jhossy Vargas-Saldaña",
+            "target": "Rodrigo Carrillo-Valverde"
+        },
+        {
+            "source": "Eder Vilcacure-Camasca",
+            "target": "Rodrigo Carrillo-Valverde"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Rodrigo Carrillo-Valverde"
+        },
+        {
+            "source": "Paolo Maldonado-Hurtado",
+            "target": "Rodrigo Carrillo-Valverde"
+        },
+        {
+            "source": "Christopher Zarate-Quintanilla",
+            "target": "Rodrigo Carrillo-Valverde"
+        },
+        {
+            "source": "Darybeth Nanquen-Bengoa",
+            "target": "Rodrigo Carrillo-Valverde"
+        },
+        {
+            "source": "Eder Vilcacure-Camasca",
+            "target": "Alonso Delgado-Lorino"
+        },
+        {
+            "source": "Paolo Maldonado-Hurtado",
+            "target": "Alonso Delgado-Lorino"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Alonso Delgado-Lorino"
+        },
+        {
+            "source": "Christopher Zarate-Quintanilla",
+            "target": "Alonso Delgado-Lorino"
+        },
+        {
+            "source": "Rodrigo Carrillo-Valverde",
+            "target": "Alonso Delgado-Lorino"
+        },
+        {
+            "source": "Jhossy Vargas-Saldaña",
+            "target": "Alonso Delgado-Lorino"
+        },
+        {
+            "source": "Darybeth Nanquen-Bengoa",
+            "target": "Alonso Delgado-Lorino"
+        },
+        {
+            "source": "Alonso Delgado-Lorino",
+            "target": "Eder Vilcacure-Camasca"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Eder Vilcacure-Camasca"
+        },
+        {
+            "source": "Christopher Zarate-Quintanilla",
+            "target": "Eder Vilcacure-Camasca"
+        },
+        {
+            "source": "Jhossy Vargas-Saldaña",
+            "target": "Eder Vilcacure-Camasca"
+        },
+        {
+            "source": "Rodrigo Carrillo-Valverde",
+            "target": "Eder Vilcacure-Camasca"
+        },
+        {
+            "source": "Darybeth Nanquen-Bengoa",
+            "target": "Eder Vilcacure-Camasca"
+        },
+        {
+            "source": "Paolo Maldonado-Hurtado",
+            "target": "Eder Vilcacure-Camasca"
+        },
+        {
+            "source": "Christopher Zarate-Quintanilla",
+            "target": "Darybeth Nanquen-Bengoa"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Darybeth Nanquen-Bengoa"
+        },
+        {
+            "source": "Jhossy Vargas-Saldaña",
+            "target": "Darybeth Nanquen-Bengoa"
+        },
+        {
+            "source": "Eder Vilcacure-Camasca",
+            "target": "Darybeth Nanquen-Bengoa"
+        },
+        {
+            "source": "Rodrigo Carrillo-Valverde",
+            "target": "Darybeth Nanquen-Bengoa"
+        },
+        {
+            "source": "Alonso Delgado-Lorino",
+            "target": "Darybeth Nanquen-Bengoa"
+        },
+        {
+            "source": "Paolo Maldonado-Hurtado",
+            "target": "Darybeth Nanquen-Bengoa"
+        },
+        {
+            "source": "Alonso Delgado-Lorino",
+            "target": "Jhossy Vargas-Saldaña"
+        },
+        {
+            "source": "Christopher Zarate-Quintanilla",
+            "target": "Jhossy Vargas-Saldaña"
+        },
+        {
+            "source": "Paolo Maldonado-Hurtado",
+            "target": "Jhossy Vargas-Saldaña"
+        },
+        {
+            "source": "Eder Vilcacure-Camasca",
+            "target": "Jhossy Vargas-Saldaña"
+        },
+        {
+            "source": "Rodrigo Carrillo-Valverde",
+            "target": "Jhossy Vargas-Saldaña"
+        },
+        {
+            "source": "Darybeth Nanquen-Bengoa",
+            "target": "Jhossy Vargas-Saldaña"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Jhossy Vargas-Saldaña"
+        },
+        {
+            "source": "Alonso Delgado-Lorino",
+            "target": "Christopher Zarate-Quintanilla"
+        },
+        {
+            "source": "Jhossy Vargas-Saldaña",
+            "target": "Christopher Zarate-Quintanilla"
+        },
+        {
+            "source": "Eder Vilcacure-Camasca",
+            "target": "Christopher Zarate-Quintanilla"
+        },
+        {
+            "source": "Darybeth Nanquen-Bengoa",
+            "target": "Christopher Zarate-Quintanilla"
+        },
+        {
+            "source": "Paolo Maldonado-Hurtado",
+            "target": "Christopher Zarate-Quintanilla"
+        },
+        {
+            "source": "Rodrigo Carrillo-Valverde",
+            "target": "Christopher Zarate-Quintanilla"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Christopher Zarate-Quintanilla"
+        },
+        {
+            "source": "Heather Pinto-Urrutia",
+            "target": "Aldo Calderón-Buendia"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Aldo Calderón-Buendia"
+        },
+        {
+            "source": "Gonzalo Rivera-Paredes",
+            "target": "Aldo Calderón-Buendia"
+        },
+        {
+            "source": "Jimena Malpartida-Paredes",
+            "target": "Aldo Calderón-Buendia"
+        },
+        {
+            "source": "Gonzalo Rivera-Paredes",
+            "target": "Jimena Malpartida-Paredes"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Jimena Malpartida-Paredes"
+        },
+        {
+            "source": "Aldo Calderón-Buendia",
+            "target": "Jimena Malpartida-Paredes"
+        },
+        {
+            "source": "Heather Pinto-Urrutia",
+            "target": "Jimena Malpartida-Paredes"
+        },
+        {
+            "source": "Aldo Calderón-Buendia",
+            "target": "Heather Pinto-Urrutia"
+        },
+        {
+            "source": "Gonzalo Rivera-Paredes",
+            "target": "Heather Pinto-Urrutia"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Heather Pinto-Urrutia"
+        },
+        {
+            "source": "Jimena Malpartida-Paredes",
+            "target": "Heather Pinto-Urrutia"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Gonzalo Rivera-Paredes"
+        },
+        {
+            "source": "Jimena Malpartida-Paredes",
+            "target": "Gonzalo Rivera-Paredes"
+        },
+        {
+            "source": "Aldo Calderón-Buendia",
+            "target": "Gonzalo Rivera-Paredes"
+        },
+        {
+            "source": "Heather Pinto-Urrutia",
+            "target": "Gonzalo Rivera-Paredes"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Guillermo Díaz-Beltrán"
+        },
+        {
+            "source": "Carlos M. Pajuelo-Ventocilla",
+            "target": "Guillermo Díaz-Beltrán"
+        },
+        {
+            "source": "Alvaro G. Trinidad-Palacios",
+            "target": "Guillermo Díaz-Beltrán"
+        },
+        {
+            "source": "Carlos M. Pajuelo-Ventocilla",
+            "target": "Alvaro G. Trinidad-Palacios"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Alvaro G. Trinidad-Palacios"
+        },
+        {
+            "source": "Guillermo Díaz-Beltrán",
+            "target": "Alvaro G. Trinidad-Palacios"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Carlos M. Pajuelo-Ventocilla"
+        },
+        {
+            "source": "Alvaro G. Trinidad-Palacios",
+            "target": "Carlos M. Pajuelo-Ventocilla"
+        },
+        {
+            "source": "Guillermo Díaz-Beltrán",
+            "target": "Carlos M. Pajuelo-Ventocilla"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Dick Bertony Romero Jimenez"
+        },
+        {
+            "source": "Carlos Alberto Coaquira Rojo",
+            "target": "Dick Bertony Romero Jimenez"
+        },
+        {
+            "source": "Dick Bertony Romero Jimenez",
+            "target": "Carlos Alberto Coaquira Rojo"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Carlos Alberto Coaquira Rojo"
+        },
+        {
+            "source": "Anderson L. Torres-Taipe",
+            "target": "Albert Justiniano-Medina"
+        },
+        {
+            "source": "Joaquin Arrieta-Conde",
+            "target": "Albert Justiniano-Medina"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Albert Justiniano-Medina"
+        },
+        {
+            "source": "José Antonio Cruz Anchiraico",
+            "target": "Albert Justiniano-Medina"
+        },
+        {
+            "source": "José Antonio Cruz Anchiraico",
+            "target": "Joaquin Arrieta-Conde"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Joaquin Arrieta-Conde"
+        },
+        {
+            "source": "Albert Justiniano-Medina",
+            "target": "Joaquin Arrieta-Conde"
+        },
+        {
+            "source": "Anderson L. Torres-Taipe",
+            "target": "Joaquin Arrieta-Conde"
+        },
+        {
+            "source": "Albert Justiniano-Medina",
+            "target": "Anderson L. Torres-Taipe"
+        },
+        {
+            "source": "José Antonio Cruz Anchiraico",
+            "target": "Anderson L. Torres-Taipe"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Anderson L. Torres-Taipe"
+        },
+        {
+            "source": "Joaquin Arrieta-Conde",
+            "target": "Anderson L. Torres-Taipe"
+        },
+        {
+            "source": "Sander Erick Cayllahua De La Cruz",
+            "target": "Jeremy Pool Ore Moran"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Jeremy Pool Ore Moran"
+        },
+        {
+            "source": "Jeremy De La Cruz Cortez",
+            "target": "Jeremy Pool Ore Moran"
+        },
+        {
+            "source": "Piero Alexander Mantari Mendoza",
+            "target": "Jeremy Pool Ore Moran"
+        },
+        {
+            "source": "Piero Alexander Mantari Mendoza",
+            "target": "Jeremy De La Cruz Cortez"
+        },
+        {
+            "source": "Sander Erick Cayllahua De La Cruz",
+            "target": "Jeremy De La Cruz Cortez"
+        },
+        {
+            "source": "Jeremy Pool Ore Moran",
+            "target": "Jeremy De La Cruz Cortez"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Jeremy De La Cruz Cortez"
+        },
+        {
+            "source": "Jeremy Pool Ore Moran",
+            "target": "Sander Erick Cayllahua De La Cruz"
+        },
+        {
+            "source": "Piero Alexander Mantari Mendoza",
+            "target": "Sander Erick Cayllahua De La Cruz"
+        },
+        {
+            "source": "Jeremy De La Cruz Cortez",
+            "target": "Sander Erick Cayllahua De La Cruz"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Sander Erick Cayllahua De La Cruz"
+        },
+        {
+            "source": "Sander Erick Cayllahua De La Cruz",
+            "target": "Piero Alexander Mantari Mendoza"
+        },
+        {
+            "source": "Jeremy De La Cruz Cortez",
+            "target": "Piero Alexander Mantari Mendoza"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Piero Alexander Mantari Mendoza"
+        },
+        {
+            "source": "Jeremy Pool Ore Moran",
+            "target": "Piero Alexander Mantari Mendoza"
+        },
+        {
+            "source": "Iraiz Lucero Quintanilla Mosquera",
+            "target": "Thalia Leticia Julcarima-Coca"
+        },
+        {
+            "source": "Johan James Hinostroza-Yucra",
+            "target": "Thalia Leticia Julcarima-Coca"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)",
+            "target": "Thalia Leticia Julcarima-Coca"
+        },
+        {
+            "source": "Romel Moisés Olivera-Pérez",
+            "target": "Thalia Leticia Julcarima-Coca"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Thalia Leticia Julcarima-Coca"
+        },
+        {
+            "source": "Carlos Coaquira Rojo",
+            "target": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)"
+        },
+        {
+            "source": "Nabilt Moggiano",
+            "target": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)"
+        },
+        {
+            "source": "Yordan Cesar Sullca-Mendoza",
+            "target": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)"
+        },
+        {
+            "source": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)",
+            "target": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)"
+        },
+        {
+            "source": "Romel Moisés Olivera-Pérez",
+            "target": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)"
+        },
+        {
+            "source": "Iraiz Lucero Quintanilla Mosquera",
+            "target": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)"
+        },
+        {
+            "source": "Johan James Hinostroza-Yucra",
+            "target": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)"
+        },
+        {
+            "source": "Thalia Leticia Julcarima-Coca",
+            "target": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)"
+        },
+        {
+            "source": "Iraiz Lucero Quintanilla Mosquera",
+            "target": "Johan James Hinostroza-Yucra"
+        },
+        {
+            "source": "Thalia Leticia Julcarima-Coca",
+            "target": "Johan James Hinostroza-Yucra"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)",
+            "target": "Johan James Hinostroza-Yucra"
+        },
+        {
+            "source": "Romel Moisés Olivera-Pérez",
+            "target": "Johan James Hinostroza-Yucra"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Johan James Hinostroza-Yucra"
+        },
+        {
+            "source": "Carlos D. Martinez-Ramirez",
+            "target": "Cristian Y. Pachacute-Flores"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Cristian Y. Pachacute-Flores"
+        },
+        {
+            "source": "Maria L. Chavez-Avila",
+            "target": "Cristian Y. Pachacute-Flores"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Maria L. Chavez-Avila"
+        },
+        {
+            "source": "Carlos D. Martinez-Ramirez",
+            "target": "Maria L. Chavez-Avila"
+        },
+        {
+            "source": "Cristian Y. Pachacute-Flores",
+            "target": "Maria L. Chavez-Avila"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Carlos D. Martinez-Ramirez"
+        },
+        {
+            "source": "Cristian Y. Pachacute-Flores",
+            "target": "Carlos D. Martinez-Ramirez"
+        },
+        {
+            "source": "Maria L. Chavez-Avila",
+            "target": "Carlos D. Martinez-Ramirez"
+        },
+        {
+            "source": "Dangelo Sanchez-Quispe",
+            "target": "Claudia Pacori-Palomino"
+        },
+        {
+            "source": "Rosario Quispe-Yauri",
+            "target": "Claudia Pacori-Palomino"
+        },
+        {
+            "source": "Sharon Uribe-Morales",
+            "target": "Claudia Pacori-Palomino"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Claudia Pacori-Palomino"
+        },
+        {
+            "source": "Claudia Pacori-Palomino",
+            "target": "Rosario Quispe-Yauri"
+        },
+        {
+            "source": "Dangelo Sanchez-Quispe",
+            "target": "Rosario Quispe-Yauri"
+        },
+        {
+            "source": "Sharon Uribe-Morales",
+            "target": "Rosario Quispe-Yauri"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Rosario Quispe-Yauri"
+        },
+        {
+            "source": "Claudia Pacori-Palomino",
+            "target": "Dangelo Sanchez-Quispe"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Dangelo Sanchez-Quispe"
+        },
+        {
+            "source": "Rosario Quispe-Yauri",
+            "target": "Dangelo Sanchez-Quispe"
+        },
+        {
+            "source": "Sharon Uribe-Morales",
+            "target": "Dangelo Sanchez-Quispe"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Sharon Uribe-Morales"
+        },
+        {
+            "source": "Claudia Pacori-Palomino",
+            "target": "Sharon Uribe-Morales"
+        },
+        {
+            "source": "Dangelo Sanchez-Quispe",
+            "target": "Sharon Uribe-Morales"
+        },
+        {
+            "source": "Rosario Quispe-Yauri",
+            "target": "Sharon Uribe-Morales"
+        },
+        {
+            "source": "Cleo Alex Alarcón-Vasquez",
+            "target": "Jhon Eloy Quispe-Quispe"
+        },
+        {
+            "source": "Carlos Coaquira Rojo",
+            "target": "Jhon Eloy Quispe-Quispe"
+        },
+        {
+            "source": "Nabilt Moggiano",
+            "target": "Jhon Eloy Quispe-Quispe"
+        },
+        {
+            "source": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)",
+            "target": "Jhon Eloy Quispe-Quispe"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Jhon Eloy Quispe-Quispe"
+        },
+        {
+            "source": "Rúben Darío Arzapalo-Bello",
+            "target": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)"
+        },
+        {
+            "source": "Nilton Javier Arzapalo-Marcelo",
+            "target": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)"
+        },
+        {
+            "source": "Iraiz Lucero Quintanilla Mosquera",
+            "target": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)",
+            "target": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)"
+        },
+        {
+            "source": "Yordan Cesar Sullca-Mendoza",
+            "target": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)"
+        },
+        {
+            "source": "Nabilt Moggiano",
+            "target": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)"
+        },
+        {
+            "source": "Cleo Alex Alarcón-Vasquez",
+            "target": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)"
+        },
+        {
+            "source": "Jhon Eloy Quispe-Quispe",
+            "target": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)"
+        },
+        {
+            "source": "Carlos Coaquira Rojo",
+            "target": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)"
+        },
+        {
+            "source": "Christoffer A. Vasquez-Chirito",
+            "target": "Alessandra P. Suarez-Paz"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Alessandra P. Suarez-Paz"
+        },
+        {
+            "source": "María X. Cruz-Cruz",
+            "target": "Alessandra P. Suarez-Paz"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "Christoffer A. Vasquez-Chirito"
+        },
+        {
+            "source": "Alessandra P. Suarez-Paz",
+            "target": "Christoffer A. Vasquez-Chirito"
+        },
+        {
+            "source": "María X. Cruz-Cruz",
+            "target": "Christoffer A. Vasquez-Chirito"
+        },
+        {
+            "source": "Deyby Huamanchahua",
+            "target": "María X. Cruz-Cruz"
+        },
+        {
+            "source": "Alessandra P. Suarez-Paz",
+            "target": "María X. Cruz-Cruz"
+        },
+        {
+            "source": "Christoffer A. Vasquez-Chirito",
+            "target": "María X. Cruz-Cruz"
+        },
+        {
+            "source": "Carlos Coaquira Rojo",
+            "target": "Manuel Michael Beraún-Espíritu"
+        },
+        {
+            "source": "Yerson Taza-Aquino",
+            "target": "Manuel Michael Beraún-Espíritu"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Manuel Michael Beraún-Espíritu"
+        },
+        {
+            "source": "Iraiz Lucero Quintanilla Mosquera",
+            "target": "Manuel Michael Beraún-Espíritu"
+        },
+        {
+            "source": "Rúben Darío Arzapalo-Bello",
+            "target": "Manuel Michael Beraún-Espíritu"
+        },
+        {
+            "source": "Luis Enrique Soto Otivo",
+            "target": "Raul Oswaldo Meza Torres"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Raul Oswaldo Meza Torres"
+        },
+        {
+            "source": "Roberto Belarmino Quispe Cabana",
+            "target": "Raul Oswaldo Meza Torres"
+        },
+        {
+            "source": "Anthony Jesus Hinostroza Flores",
+            "target": "Raul Oswaldo Meza Torres"
+        },
+        {
+            "source": "Luis Enrique Soto Otivo",
+            "target": "Anthony Jesus Hinostroza Flores"
+        },
+        {
+            "source": "Raul Oswaldo Meza Torres",
+            "target": "Anthony Jesus Hinostroza Flores"
+        },
+        {
+            "source": "Roberto Belarmino Quispe Cabana",
+            "target": "Anthony Jesus Hinostroza Flores"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Anthony Jesus Hinostroza Flores"
+        },
+        {
+            "source": "Raul Oswaldo Meza Torres",
+            "target": "Luis Enrique Soto Otivo"
+        },
+        {
+            "source": "Anthony Jesus Hinostroza Flores",
+            "target": "Luis Enrique Soto Otivo"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Luis Enrique Soto Otivo"
+        },
+        {
+            "source": "Roberto Belarmino Quispe Cabana",
+            "target": "Luis Enrique Soto Otivo"
+        },
+        {
+            "source": "Raul Oswaldo Meza Torres",
+            "target": "Roberto Belarmino Quispe Cabana"
+        },
+        {
+            "source": "Luis Enrique Soto Otivo",
+            "target": "Roberto Belarmino Quispe Cabana"
+        },
+        {
+            "source": "Sario Angel Chamorro Quijano",
+            "target": "Roberto Belarmino Quispe Cabana"
+        },
+        {
+            "source": "Anthony Jesus Hinostroza Flores",
+            "target": "Roberto Belarmino Quispe Cabana"
+        },
+        {
+            "source": "Rúben Darío Arzapalo-Bello",
+            "target": "Nilton Javier Arzapalo-Marcelo"
+        },
+        {
+            "source": "Iraiz Lucero Quintanilla Mosquera",
+            "target": "Nilton Javier Arzapalo-Marcelo"
+        },
+        {
+            "source": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)",
+            "target": "Nilton Javier Arzapalo-Marcelo"
+        },
+        {
+            "source": "Carlos Coaquira Rojo",
+            "target": "Nilton Javier Arzapalo-Marcelo"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Nilton Javier Arzapalo-Marcelo"
+        },
+        {
+            "source": "Carlos Coaquira Rojo",
+            "target": "Yordan Cesar Sullca-Mendoza"
+        },
+        {
+            "source": "Jhon Rodrigo Ortiz Zacarias",
+            "target": "Yordan Cesar Sullca-Mendoza"
+        },
+        {
+            "source": "Nabilt Moggiano",
+            "target": "Yordan Cesar Sullca-Mendoza"
+        },
+        {
+            "source": "Sliver Ivan Del Carpio Ramirez (ORCID: 0000-0002-2207-791X)",
+            "target": "Yordan Cesar Sullca-Mendoza"
+        },
+        {
+            "source": "Yadhira S. Valenzuela-Lino (ORCID: 0000-0002-8333-465X)",
+            "target": "Yordan Cesar Sullca-Mendoza"
+        }
+    ]
+}
