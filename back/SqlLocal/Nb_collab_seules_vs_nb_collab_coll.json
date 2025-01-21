@@ -1,22 +1,52 @@
 [
     {
-        "periode": "3 yrs Before",
-        "nb_publications_seules": "111047",
-        "nb_publications_collaboratives": "1017513"
+        "annee": 2015,
+        "nb_publications_seules": 36798,
+        "nb_publications_collaboratives": 265502
     },
     {
-        "periode": "After",
-        "nb_publications_seules": "64590",
-        "nb_publications_collaboratives": "940341"
+        "annee": 2016,
+        "nb_publications_seules": 36267,
+        "nb_publications_collaboratives": 278133
     },
     {
-        "periode": "Before",
-        "nb_publications_seules": "809406",
-        "nb_publications_collaboratives": "3258119"
+        "annee": 2017,
+        "nb_publications_seules": 36086,
+        "nb_publications_collaboratives": 300839
     },
     {
-        "periode": "During",
-        "nb_publications_seules": "113166",
-        "nb_publications_collaboratives": "1262934"
+        "annee": 2018,
+        "nb_publications_seules": 37361,
+        "nb_publications_collaboratives": 336496
+    },
+    {
+        "annee": 2019,
+        "nb_publications_seules": 37600,
+        "nb_publications_collaboratives": 380178
+    },
+    {
+        "annee": 2020,
+        "nb_publications_seules": 37284,
+        "nb_publications_collaboratives": 397270
+    },
+    {
+        "annee": 2021,
+        "nb_publications_seules": 39401,
+        "nb_publications_collaboratives": 421576
+    },
+    {
+        "annee": 2022,
+        "nb_publications_seules": 36481,
+        "nb_publications_collaboratives": 444088
+    },
+    {
+        "annee": 2023,
+        "nb_publications_seules": 35340,
+        "nb_publications_collaboratives": 481181
+    },
+    {
+        "annee": 2024,
+        "nb_publications_seules": 28759,
+        "nb_publications_collaboratives": 448541
     }
 ]

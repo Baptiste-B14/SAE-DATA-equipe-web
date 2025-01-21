@@ -1,358 +1,103 @@
 [
+
     {
-        "annee": "1936",
-        "moy_longueur_pages": "6.818181818181818"
+        "annee": 2000,
+        "moy_longueur_pages": 547.0381370328425
     },
     {
-        "annee": "1937",
-        "moy_longueur_pages": "9.2"
+        "annee": 2001,
+        "moy_longueur_pages": 541.4613999279626
     },
     {
-        "annee": "1938",
-        "moy_longueur_pages": "10.2"
+        "annee": 2002,
+        "moy_longueur_pages": 536.1747061689662
     },
     {
-        "annee": "1939",
-        "moy_longueur_pages": "4.944444444444445"
+        "annee": 2003,
+        "moy_longueur_pages": 629.4651160490897
     },
     {
-        "annee": "1940",
-        "moy_longueur_pages": "8.444444444444445"
+        "annee": 2004,
+        "moy_longueur_pages": 602.5171553763762
     },
     {
-        "annee": "1941",
-        "moy_longueur_pages": "8"
+        "annee": 2005,
+        "moy_longueur_pages": 635.5072611105752
     },
     {
-        "annee": "1942",
-        "moy_longueur_pages": "9.416666666666666"
+        "annee": 2006,
+        "moy_longueur_pages": 653.8909641839052
     },
     {
-        "annee": "1943",
-        "moy_longueur_pages": "13.285714285714286"
+        "annee": 2007,
+        "moy_longueur_pages": 679.4131913048864
     },
     {
-        "annee": "1944",
-        "moy_longueur_pages": "7.8"
+        "annee": 2008,
+        "moy_longueur_pages": 685.250387955993
     },
     {
-        "annee": "1945",
-        "moy_longueur_pages": "11.555555555555555"
+        "annee": 2009,
+        "moy_longueur_pages": 775.358130345436
     },
     {
-        "annee": "1946",
-        "moy_longueur_pages": "10.612903225806452"
+        "annee": 2010,
+        "moy_longueur_pages": 744.0791899052587
     },
     {
-        "annee": "1947",
-        "moy_longueur_pages": "7.2"
+        "annee": 2011,
+        "moy_longueur_pages": 828.2526159860291
     },
     {
-        "annee": "1948",
-        "moy_longueur_pages": "20.564102564102566"
+        "annee": 2012,
+        "moy_longueur_pages": 848.916161490626
     },
     {
-        "annee": "1949",
-        "moy_longueur_pages": "16.62"
+        "annee": 2013,
+        "moy_longueur_pages": 825.9347073762331
     },
     {
-        "annee": "1950",
-        "moy_longueur_pages": "19.416666666666668"
+        "annee": 2014,
+        "moy_longueur_pages": 815.3304109937651
     },
     {
-        "annee": "1951",
-        "moy_longueur_pages": "10"
+        "annee": 2015,
+        "moy_longueur_pages": 886.8867322826555
     },
     {
-        "annee": "1952",
-        "moy_longueur_pages": "6.466019417475728"
+        "annee": 2016,
+        "moy_longueur_pages": 786.1925801732498
     },
     {
-        "annee": "1953",
-        "moy_longueur_pages": "6.852348993288591"
+        "annee": 2017,
+        "moy_longueur_pages": 954.7964248490689
     },
     {
-        "annee": "1954",
-        "moy_longueur_pages": "7.484375"
+        "annee": 2018,
+        "moy_longueur_pages": 1858.9650543915673
     },
     {
-        "annee": "1955",
-        "moy_longueur_pages": "7.005434782608695"
+        "annee": 2019,
+        "moy_longueur_pages": 5957.146527055373
     },
     {
-        "annee": "1956",
-        "moy_longueur_pages": "6.5704918032786885"
+        "annee": 2020,
+        "moy_longueur_pages": 8788.391558255338
     },
     {
-        "annee": "1957",
-        "moy_longueur_pages": "6.472312703583062"
+        "annee": 2021,
+        "moy_longueur_pages": 5360.474097336966
     },
     {
-        "annee": "1958",
-        "moy_longueur_pages": "6.25065963060686"
+        "annee": 2022,
+        "moy_longueur_pages": 4054.7362505757715
     },
     {
-        "annee": "1959",
-        "moy_longueur_pages": "6.645161290322581"
+        "annee": 2023,
+        "moy_longueur_pages": 4620.203370911932
     },
     {
-        "annee": "1960",
-        "moy_longueur_pages": "8.817269076305221"
-    },
-    {
-        "annee": "1961",
-        "moy_longueur_pages": "8.079470198675496"
-    },
-    {
-        "annee": "1962",
-        "moy_longueur_pages": "6.749712973593571"
-    },
-    {
-        "annee": "1963",
-        "moy_longueur_pages": "7.895069532237674"
-    },
-    {
-        "annee": "1964",
-        "moy_longueur_pages": "7.734620024125452"
-    },
-    {
-        "annee": "1965",
-        "moy_longueur_pages": "7.873804971319312"
-    },
-    {
-        "annee": "1966",
-        "moy_longueur_pages": "8.084192439862543"
-    },
-    {
-        "annee": "1967",
-        "moy_longueur_pages": "9.194557823129252"
-    },
-    {
-        "annee": "1968",
-        "moy_longueur_pages": "8.368839427662957"
-    },
-    {
-        "annee": "1969",
-        "moy_longueur_pages": "8.731524249422632"
-    },
-    {
-        "annee": "1970",
-        "moy_longueur_pages": "9.480376766091052"
-    },
-    {
-        "annee": "1971",
-        "moy_longueur_pages": "8.67124773960217"
-    },
-    {
-        "annee": "1972",
-        "moy_longueur_pages": "9.379499694935937"
-    },
-    {
-        "annee": "1973",
-        "moy_longueur_pages": "8.660656620021529"
-    },
-    {
-        "annee": "1974",
-        "moy_longueur_pages": "8.60092485549133"
-    },
-    {
-        "annee": "1975",
-        "moy_longueur_pages": "9.083134360755372"
-    },
-    {
-        "annee": "1976",
-        "moy_longueur_pages": "8.724360265968164"
-    },
-    {
-        "annee": "1977",
-        "moy_longueur_pages": "8.80672911489199"
-    },
-    {
-        "annee": "1978",
-        "moy_longueur_pages": "9.084822934232715"
-    },
-    {
-        "annee": "1979",
-        "moy_longueur_pages": "9.528771131339402"
-    },
-    {
-        "annee": "1980",
-        "moy_longueur_pages": "10.700764256319811"
-    },
-    {
-        "annee": "1981",
-        "moy_longueur_pages": "14.03847174316795"
-    },
-    {
-        "annee": "1982",
-        "moy_longueur_pages": "14.925134301062979"
-    },
-    {
-        "annee": "1983",
-        "moy_longueur_pages": "14.69041011409189"
-    },
-    {
-        "annee": "1984",
-        "moy_longueur_pages": "14.65089618779001"
-    },
-    {
-        "annee": "1985",
-        "moy_longueur_pages": "14.398587776966155"
-    },
-    {
-        "annee": "1986",
-        "moy_longueur_pages": "11.891519143680528"
-    },
-    {
-        "annee": "1987",
-        "moy_longueur_pages": "13.1970607028754"
-    },
-    {
-        "annee": "1988",
-        "moy_longueur_pages": "12.078982323490344"
-    },
-    {
-        "annee": "1989",
-        "moy_longueur_pages": "13.144244935543279"
-    },
-    {
-        "annee": "1990",
-        "moy_longueur_pages": "12.977234869516934"
-    },
-    {
-        "annee": "1991",
-        "moy_longueur_pages": "13.495659782989149"
-    },
-    {
-        "annee": "1992",
-        "moy_longueur_pages": "13.569107746768228"
-    },
-    {
-        "annee": "1993",
-        "moy_longueur_pages": "13.688444792990616"
-    },
-    {
-        "annee": "1994",
-        "moy_longueur_pages": "13.203645858753477"
-    },
-    {
-        "annee": "1995",
-        "moy_longueur_pages": "13.37093699249182"
-    },
-    {
-        "annee": "1996",
-        "moy_longueur_pages": "12.409162201019475"
-    },
-    {
-        "annee": "1997",
-        "moy_longueur_pages": "13.50082564742841"
-    },
-    {
-        "annee": "1998",
-        "moy_longueur_pages": "11.12442858935518"
-    },
-    {
-        "annee": "1999",
-        "moy_longueur_pages": "12.416070553650172"
-    },
-    {
-        "annee": "2000",
-        "moy_longueur_pages": "10.736254246885617"
-    },
-    {
-        "annee": "2001",
-        "moy_longueur_pages": "10.664145355584903"
-    },
-    {
-        "annee": "2002",
-        "moy_longueur_pages": "10.333606664527553"
-    },
-    {
-        "annee": "2003",
-        "moy_longueur_pages": "10.788718465996183"
-    },
-    {
-        "annee": "2004",
-        "moy_longueur_pages": "9.904285214004458"
-    },
-    {
-        "annee": "2005",
-        "moy_longueur_pages": "9.930884022588472"
-    },
-    {
-        "annee": "2006",
-        "moy_longueur_pages": "9.847293258512275"
-    },
-    {
-        "annee": "2007",
-        "moy_longueur_pages": "9.873574038521088"
-    },
-    {
-        "annee": "2008",
-        "moy_longueur_pages": "9.293572669368848"
-    },
-    {
-        "annee": "2009",
-        "moy_longueur_pages": "9.34106721184171"
-    },
-    {
-        "annee": "2010",
-        "moy_longueur_pages": "9.37781053803569"
-    },
-    {
-        "annee": "2011",
-        "moy_longueur_pages": "9.259951632062926"
-    },
-    {
-        "annee": "2012",
-        "moy_longueur_pages": "9.181145311183839"
-    },
-    {
-        "annee": "2013",
-        "moy_longueur_pages": "9.332739737443474"
-    },
-    {
-        "annee": "2014",
-        "moy_longueur_pages": "9.638295796751072"
-    },
-    {
-        "annee": "2015",
-        "moy_longueur_pages": "9.64405860233834"
-    },
-    {
-        "annee": "2016",
-        "moy_longueur_pages": "9.744004470963395"
-    },
-    {
-        "annee": "2017",
-        "moy_longueur_pages": "9.897248824998526"
-    },
-    {
-        "annee": "2018",
-        "moy_longueur_pages": "10.282609905088291"
-    },
-    {
-        "annee": "2019",
-        "moy_longueur_pages": "5.2318593427582325"
-    },
-    {
-        "annee": "2020",
-        "moy_longueur_pages": "9.991720639555455"
-    },
-    {
-        "annee": "2021",
-        "moy_longueur_pages": "10.3861672520891"
-    },
-    {
-        "annee": "2022",
-        "moy_longueur_pages": "11.29263366757609"
-    },
-    {
-        "annee": "2023",
-        "moy_longueur_pages": "12.20774775323274"
-    },
-    {
-        "annee": "2024",
-        "moy_longueur_pages": "12.794892905908007"
+        "annee": 2024,
+        "moy_longueur_pages": 8401.634726609469
     }
 ]

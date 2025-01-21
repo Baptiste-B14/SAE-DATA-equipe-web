@@ -4,11 +4,12 @@
         "nb_premieres_collaborations": "5423722"
     },
     {
-        "periode": "After",
-        "nb_premieres_collaborations": "7991077"
-    },
-    {
         "periode": "During",
         "nb_premieres_collaborations": "8666441"
+    },
+    {
+        "periode": "After",
+        "nb_premieres_collaborations": "7991077"
     }
+
 ]

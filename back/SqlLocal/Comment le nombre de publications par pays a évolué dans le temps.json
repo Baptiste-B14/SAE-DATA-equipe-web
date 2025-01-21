@@ -1,0 +1,1717 @@
+[
+  {
+    "pays": null,
+    "period": "3 yrs Before",
+    "nb_publications": 3365579
+  },
+  {
+    "pays": null,
+    "period": "3 yrs Before",
+    "nb_publications": 3700041
+  },
+  {
+    "pays": null,
+    "period": "During",
+    "nb_publications": 4445361
+  },
+  {
+    "pays": null,
+    "period": "During",
+    "nb_publications": 4964666
+  },
+  {
+    "pays": "Afghanistan",
+    "period": "3 yrs Before",
+    "nb_publications": 6
+  },
+  {
+    "pays": "Afghanistan",
+    "period": "During",
+    "nb_publications": 37
+  },
+  {
+    "pays": "Albania",
+    "period": "3 yrs Before",
+    "nb_publications": 178
+  },
+  {
+    "pays": "Albania",
+    "period": "During",
+    "nb_publications": 117
+  },
+  {
+    "pays": "Algeria",
+    "period": "3 yrs Before",
+    "nb_publications": 1472
+  },
+  {
+    "pays": "Algeria",
+    "period": "During",
+    "nb_publications": 1818
+  },
+  {
+    "pays": "Andorra",
+    "period": "During",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Angola",
+    "period": "3 yrs Before",
+    "nb_publications": 12
+  },
+  {
+    "pays": "Angola",
+    "period": "During",
+    "nb_publications": 22
+  },
+  {
+    "pays": "Antarctica",
+    "period": "3 yrs Before",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Antarctica",
+    "period": "During",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Antigua and Barbuda",
+    "period": "3 yrs Before",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Argentina",
+    "period": "3 yrs Before",
+    "nb_publications": 1055
+  },
+  {
+    "pays": "Argentina",
+    "period": "During",
+    "nb_publications": 1274
+  },
+  {
+    "pays": "Armenia",
+    "period": "3 yrs Before",
+    "nb_publications": 48
+  },
+  {
+    "pays": "Armenia",
+    "period": "During",
+    "nb_publications": 63
+  },
+  {
+    "pays": "Australia",
+    "period": "3 yrs Before",
+    "nb_publications": 38958
+  },
+  {
+    "pays": "Australia",
+    "period": "During",
+    "nb_publications": 48088
+  },
+  {
+    "pays": "Austria",
+    "period": "3 yrs Before",
+    "nb_publications": 7661
+  },
+  {
+    "pays": "Austria",
+    "period": "During",
+    "nb_publications": 8917
+  },
+  {
+    "pays": "Azerbaijan",
+    "period": "3 yrs Before",
+    "nb_publications": 59
+  },
+  {
+    "pays": "Azerbaijan",
+    "period": "During",
+    "nb_publications": 75
+  },
+  {
+    "pays": "Bahamas",
+    "period": "During",
+    "nb_publications": 2
+  },
+  {
+    "pays": "Bahrain",
+    "period": "3 yrs Before",
+    "nb_publications": 61
+  },
+  {
+    "pays": "Bahrain",
+    "period": "During",
+    "nb_publications": 89
+  },
+  {
+    "pays": "Bangladesh",
+    "period": "3 yrs Before",
+    "nb_publications": 934
+  },
+  {
+    "pays": "Bangladesh",
+    "period": "During",
+    "nb_publications": 2645
+  },
+  {
+    "pays": "Barbados",
+    "period": "3 yrs Before",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Barbados",
+    "period": "During",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Belarus",
+    "period": "3 yrs Before",
+    "nb_publications": 77
+  },
+  {
+    "pays": "Belarus",
+    "period": "During",
+    "nb_publications": 87
+  },
+  {
+    "pays": "Belgium",
+    "period": "3 yrs Before",
+    "nb_publications": 8570
+  },
+  {
+    "pays": "Belgium",
+    "period": "During",
+    "nb_publications": 10707
+  },
+  {
+    "pays": "Belize",
+    "period": "3 yrs Before",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Benin",
+    "period": "3 yrs Before",
+    "nb_publications": 13
+  },
+  {
+    "pays": "Benin",
+    "period": "During",
+    "nb_publications": 27
+  },
+  {
+    "pays": "Bhutan",
+    "period": "3 yrs Before",
+    "nb_publications": 4
+  },
+  {
+    "pays": "Bhutan",
+    "period": "During",
+    "nb_publications": 16
+  },
+  {
+    "pays": "Bolivia",
+    "period": "3 yrs Before",
+    "nb_publications": 11
+  },
+  {
+    "pays": "Bolivia",
+    "period": "During",
+    "nb_publications": 23
+  },
+  {
+    "pays": "Bosnia and Herzegovina",
+    "period": "3 yrs Before",
+    "nb_publications": 184
+  },
+  {
+    "pays": "Bosnia and Herzegovina",
+    "period": "During",
+    "nb_publications": 225
+  },
+  {
+    "pays": "Botswana",
+    "period": "3 yrs Before",
+    "nb_publications": 24
+  },
+  {
+    "pays": "Botswana",
+    "period": "During",
+    "nb_publications": 51
+  },
+  {
+    "pays": "Brazil",
+    "period": "3 yrs Before",
+    "nb_publications": 16740
+  },
+  {
+    "pays": "Brazil",
+    "period": "During",
+    "nb_publications": 19454
+  },
+  {
+    "pays": "Brunei",
+    "period": "3 yrs Before",
+    "nb_publications": 38
+  },
+  {
+    "pays": "Brunei",
+    "period": "During",
+    "nb_publications": 61
+  },
+  {
+    "pays": "Bulgaria",
+    "period": "3 yrs Before",
+    "nb_publications": 902
+  },
+  {
+    "pays": "Bulgaria",
+    "period": "During",
+    "nb_publications": 996
+  },
+  {
+    "pays": "Burkina Faso",
+    "period": "3 yrs Before",
+    "nb_publications": 16
+  },
+  {
+    "pays": "Burkina Faso",
+    "period": "During",
+    "nb_publications": 34
+  },
+  {
+    "pays": "Burundi",
+    "period": "3 yrs Before",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Burundi",
+    "period": "During",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Cambodia",
+    "period": "3 yrs Before",
+    "nb_publications": 6
+  },
+  {
+    "pays": "Cambodia",
+    "period": "During",
+    "nb_publications": 21
+  },
+  {
+    "pays": "Cameroon",
+    "period": "3 yrs Before",
+    "nb_publications": 81
+  },
+  {
+    "pays": "Cameroon",
+    "period": "During",
+    "nb_publications": 224
+  },
+  {
+    "pays": "Canada",
+    "period": "3 yrs Before",
+    "nb_publications": 23842
+  },
+  {
+    "pays": "Canada",
+    "period": "During",
+    "nb_publications": 28487
+  },
+  {
+    "pays": "Cape Verde",
+    "period": "3 yrs Before",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Cape Verde",
+    "period": "During",
+    "nb_publications": 8
+  },
+  {
+    "pays": "Chad",
+    "period": "During",
+    "nb_publications": 2
+  },
+  {
+    "pays": "Chile",
+    "period": "3 yrs Before",
+    "nb_publications": 2157
+  },
+  {
+    "pays": "Chile",
+    "period": "During",
+    "nb_publications": 2850
+  },
+  {
+    "pays": "China",
+    "period": "3 yrs Before",
+    "nb_publications": 63947
+  },
+  {
+    "pays": "China",
+    "period": "During",
+    "nb_publications": 110598
+  },
+  {
+    "pays": "Colombia",
+    "period": "3 yrs Before",
+    "nb_publications": 1914
+  },
+  {
+    "pays": "Colombia",
+    "period": "During",
+    "nb_publications": 2368
+  },
+  {
+    "pays": "Comoros",
+    "period": "3 yrs Before",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Congo",
+    "period": "3 yrs Before",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Congo",
+    "period": "During",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Costa Rica",
+    "period": "3 yrs Before",
+    "nb_publications": 139
+  },
+  {
+    "pays": "Costa Rica",
+    "period": "During",
+    "nb_publications": 171
+  },
+  {
+    "pays": "Croatia",
+    "period": "3 yrs Before",
+    "nb_publications": 1574
+  },
+  {
+    "pays": "Croatia",
+    "period": "During",
+    "nb_publications": 2192
+  },
+  {
+    "pays": "Cuba",
+    "period": "3 yrs Before",
+    "nb_publications": 202
+  },
+  {
+    "pays": "Cuba",
+    "period": "During",
+    "nb_publications": 288
+  },
+  {
+    "pays": "Cyprus",
+    "period": "3 yrs Before",
+    "nb_publications": 882
+  },
+  {
+    "pays": "Cyprus",
+    "period": "During",
+    "nb_publications": 1075
+  },
+  {
+    "pays": "Czech Republic",
+    "period": "3 yrs Before",
+    "nb_publications": 4988
+  },
+  {
+    "pays": "Czech Republic",
+    "period": "During",
+    "nb_publications": 5245
+  },
+  {
+    "pays": "Democratic Republic of the Congo",
+    "period": "3 yrs Before",
+    "nb_publications": 6
+  },
+  {
+    "pays": "Democratic Republic of the Congo",
+    "period": "During",
+    "nb_publications": 17
+  },
+  {
+    "pays": "Denmark",
+    "period": "3 yrs Before",
+    "nb_publications": 8085
+  },
+  {
+    "pays": "Denmark",
+    "period": "During",
+    "nb_publications": 9665
+  },
+  {
+    "pays": "Dominican Republic",
+    "period": "3 yrs Before",
+    "nb_publications": 6
+  },
+  {
+    "pays": "Dominican Republic",
+    "period": "During",
+    "nb_publications": 24
+  },
+  {
+    "pays": "Ecuador",
+    "period": "3 yrs Before",
+    "nb_publications": 1333
+  },
+  {
+    "pays": "Ecuador",
+    "period": "During",
+    "nb_publications": 1466
+  },
+  {
+    "pays": "Egypt",
+    "period": "3 yrs Before",
+    "nb_publications": 2166
+  },
+  {
+    "pays": "Egypt",
+    "period": "During",
+    "nb_publications": 4077
+  },
+  {
+    "pays": "El Salvador",
+    "period": "3 yrs Before",
+    "nb_publications": 5
+  },
+  {
+    "pays": "El Salvador",
+    "period": "During",
+    "nb_publications": 10
+  },
+  {
+    "pays": "Eritrea",
+    "period": "3 yrs Before",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Estonia",
+    "period": "3 yrs Before",
+    "nb_publications": 859
+  },
+  {
+    "pays": "Estonia",
+    "period": "During",
+    "nb_publications": 1096
+  },
+  {
+    "pays": "Eswatini",
+    "period": "3 yrs Before",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Eswatini",
+    "period": "During",
+    "nb_publications": 14
+  },
+  {
+    "pays": "Ethiopia",
+    "period": "3 yrs Before",
+    "nb_publications": 121
+  },
+  {
+    "pays": "Ethiopia",
+    "period": "During",
+    "nb_publications": 494
+  },
+  {
+    "pays": "Fiji",
+    "period": "3 yrs Before",
+    "nb_publications": 52
+  },
+  {
+    "pays": "Fiji",
+    "period": "During",
+    "nb_publications": 147
+  },
+  {
+    "pays": "Finland",
+    "period": "3 yrs Before",
+    "nb_publications": 10667
+  },
+  {
+    "pays": "Finland",
+    "period": "During",
+    "nb_publications": 12781
+  },
+  {
+    "pays": "France",
+    "period": "3 yrs Before",
+    "nb_publications": 60455
+  },
+  {
+    "pays": "France",
+    "period": "During",
+    "nb_publications": 66501
+  },
+  {
+    "pays": "Gabon",
+    "period": "During",
+    "nb_publications": 4
+  },
+  {
+    "pays": "Gambia",
+    "period": "3 yrs Before",
+    "nb_publications": 2
+  },
+  {
+    "pays": "Gambia",
+    "period": "During",
+    "nb_publications": 9
+  },
+  {
+    "pays": "Georgia",
+    "period": "3 yrs Before",
+    "nb_publications": 22
+  },
+  {
+    "pays": "Georgia",
+    "period": "During",
+    "nb_publications": 46
+  },
+  {
+    "pays": "Germany",
+    "period": "3 yrs Before",
+    "nb_publications": 110399
+  },
+  {
+    "pays": "Germany",
+    "period": "During",
+    "nb_publications": 124484
+  },
+  {
+    "pays": "Ghana",
+    "period": "3 yrs Before",
+    "nb_publications": 188
+  },
+  {
+    "pays": "Ghana",
+    "period": "During",
+    "nb_publications": 539
+  },
+  {
+    "pays": "Greece",
+    "period": "3 yrs Before",
+    "nb_publications": 11957
+  },
+  {
+    "pays": "Greece",
+    "period": "During",
+    "nb_publications": 13709
+  },
+  {
+    "pays": "Grenada",
+    "period": "During",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Guatemala",
+    "period": "3 yrs Before",
+    "nb_publications": 21
+  },
+  {
+    "pays": "Guatemala",
+    "period": "During",
+    "nb_publications": 34
+  },
+  {
+    "pays": "Guinea",
+    "period": "3 yrs Before",
+    "nb_publications": 34
+  },
+  {
+    "pays": "Guinea",
+    "period": "During",
+    "nb_publications": 20
+  },
+  {
+    "pays": "Guinea-Bissau",
+    "period": "3 yrs Before",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Haiti",
+    "period": "During",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Honduras",
+    "period": "3 yrs Before",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Honduras",
+    "period": "During",
+    "nb_publications": 17
+  },
+  {
+    "pays": "Hungary",
+    "period": "3 yrs Before",
+    "nb_publications": 2414
+  },
+  {
+    "pays": "Hungary",
+    "period": "During",
+    "nb_publications": 2914
+  },
+  {
+    "pays": "Iceland",
+    "period": "3 yrs Before",
+    "nb_publications": 238
+  },
+  {
+    "pays": "Iceland",
+    "period": "During",
+    "nb_publications": 184
+  },
+  {
+    "pays": "India",
+    "period": "3 yrs Before",
+    "nb_publications": 23389
+  },
+  {
+    "pays": "India",
+    "period": "During",
+    "nb_publications": 39154
+  },
+  {
+    "pays": "Indonesia",
+    "period": "3 yrs Before",
+    "nb_publications": 1883
+  },
+  {
+    "pays": "Indonesia",
+    "period": "During",
+    "nb_publications": 3244
+  },
+  {
+    "pays": "Iran",
+    "period": "3 yrs Before",
+    "nb_publications": 6448
+  },
+  {
+    "pays": "Iran",
+    "period": "During",
+    "nb_publications": 8973
+  },
+  {
+    "pays": "Iraq",
+    "period": "3 yrs Before",
+    "nb_publications": 1014
+  },
+  {
+    "pays": "Iraq",
+    "period": "During",
+    "nb_publications": 1533
+  },
+  {
+    "pays": "Ireland",
+    "period": "3 yrs Before",
+    "nb_publications": 4403
+  },
+  {
+    "pays": "Ireland",
+    "period": "During",
+    "nb_publications": 4942
+  },
+  {
+    "pays": "Israel",
+    "period": "3 yrs Before",
+    "nb_publications": 8798
+  },
+  {
+    "pays": "Israel",
+    "period": "During",
+    "nb_publications": 10221
+  },
+  {
+    "pays": "Italy",
+    "period": "3 yrs Before",
+    "nb_publications": 45334
+  },
+  {
+    "pays": "Italy",
+    "period": "During",
+    "nb_publications": 54712
+  },
+  {
+    "pays": "Ivory Coast",
+    "period": "3 yrs Before",
+    "nb_publications": 10
+  },
+  {
+    "pays": "Ivory Coast",
+    "period": "During",
+    "nb_publications": 17
+  },
+  {
+    "pays": "Jamaica",
+    "period": "3 yrs Before",
+    "nb_publications": 6
+  },
+  {
+    "pays": "Jamaica",
+    "period": "During",
+    "nb_publications": 6
+  },
+  {
+    "pays": "Japan",
+    "period": "3 yrs Before",
+    "nb_publications": 17500
+  },
+  {
+    "pays": "Japan",
+    "period": "During",
+    "nb_publications": 19674
+  },
+  {
+    "pays": "Jordan",
+    "period": "3 yrs Before",
+    "nb_publications": 990
+  },
+  {
+    "pays": "Jordan",
+    "period": "During",
+    "nb_publications": 1460
+  },
+  {
+    "pays": "Kazakhstan",
+    "period": "3 yrs Before",
+    "nb_publications": 411
+  },
+  {
+    "pays": "Kazakhstan",
+    "period": "During",
+    "nb_publications": 659
+  },
+  {
+    "pays": "Kenya",
+    "period": "3 yrs Before",
+    "nb_publications": 104
+  },
+  {
+    "pays": "Kenya",
+    "period": "During",
+    "nb_publications": 202
+  },
+  {
+    "pays": "Kuwait",
+    "period": "3 yrs Before",
+    "nb_publications": 372
+  },
+  {
+    "pays": "Kuwait",
+    "period": "During",
+    "nb_publications": 506
+  },
+  {
+    "pays": "Kyrgyzstan",
+    "period": "3 yrs Before",
+    "nb_publications": 25
+  },
+  {
+    "pays": "Kyrgyzstan",
+    "period": "During",
+    "nb_publications": 11
+  },
+  {
+    "pays": "Laos",
+    "period": "3 yrs Before",
+    "nb_publications": 4
+  },
+  {
+    "pays": "Laos",
+    "period": "During",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Latvia",
+    "period": "3 yrs Before",
+    "nb_publications": 267
+  },
+  {
+    "pays": "Latvia",
+    "period": "During",
+    "nb_publications": 393
+  },
+  {
+    "pays": "Lebanon",
+    "period": "3 yrs Before",
+    "nb_publications": 608
+  },
+  {
+    "pays": "Lebanon",
+    "period": "During",
+    "nb_publications": 561
+  },
+  {
+    "pays": "Lesotho",
+    "period": "3 yrs Before",
+    "nb_publications": 4
+  },
+  {
+    "pays": "Lesotho",
+    "period": "During",
+    "nb_publications": 2
+  },
+  {
+    "pays": "Liberia",
+    "period": "3 yrs Before",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Liberia",
+    "period": "During",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Libya",
+    "period": "3 yrs Before",
+    "nb_publications": 56
+  },
+  {
+    "pays": "Libya",
+    "period": "During",
+    "nb_publications": 61
+  },
+  {
+    "pays": "Liechtenstein",
+    "period": "3 yrs Before",
+    "nb_publications": 30
+  },
+  {
+    "pays": "Liechtenstein",
+    "period": "During",
+    "nb_publications": 60
+  },
+  {
+    "pays": "Lithuania",
+    "period": "3 yrs Before",
+    "nb_publications": 597
+  },
+  {
+    "pays": "Lithuania",
+    "period": "During",
+    "nb_publications": 981
+  },
+  {
+    "pays": "Luxembourg",
+    "period": "3 yrs Before",
+    "nb_publications": 1854
+  },
+  {
+    "pays": "Luxembourg",
+    "period": "During",
+    "nb_publications": 2187
+  },
+  {
+    "pays": "Macedonia",
+    "period": "3 yrs Before",
+    "nb_publications": 322
+  },
+  {
+    "pays": "Macedonia",
+    "period": "During",
+    "nb_publications": 299
+  },
+  {
+    "pays": "Madagascar",
+    "period": "3 yrs Before",
+    "nb_publications": 15
+  },
+  {
+    "pays": "Madagascar",
+    "period": "During",
+    "nb_publications": 19
+  },
+  {
+    "pays": "Malawi",
+    "period": "3 yrs Before",
+    "nb_publications": 11
+  },
+  {
+    "pays": "Malawi",
+    "period": "During",
+    "nb_publications": 39
+  },
+  {
+    "pays": "Malaysia",
+    "period": "3 yrs Before",
+    "nb_publications": 3919
+  },
+  {
+    "pays": "Malaysia",
+    "period": "During",
+    "nb_publications": 5826
+  },
+  {
+    "pays": "Maldives",
+    "period": "3 yrs Before",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Mali",
+    "period": "3 yrs Before",
+    "nb_publications": 14
+  },
+  {
+    "pays": "Mali",
+    "period": "During",
+    "nb_publications": 22
+  },
+  {
+    "pays": "Malta",
+    "period": "3 yrs Before",
+    "nb_publications": 247
+  },
+  {
+    "pays": "Malta",
+    "period": "During",
+    "nb_publications": 294
+  },
+  {
+    "pays": "Marocco",
+    "period": "3 yrs Before",
+    "nb_publications": 4
+  },
+  {
+    "pays": "Marocco",
+    "period": "During",
+    "nb_publications": 11
+  },
+  {
+    "pays": "Marshall Islands",
+    "period": "During",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Mauritania",
+    "period": "3 yrs Before",
+    "nb_publications": 2
+  },
+  {
+    "pays": "Mauritania",
+    "period": "During",
+    "nb_publications": 6
+  },
+  {
+    "pays": "Mauritius",
+    "period": "3 yrs Before",
+    "nb_publications": 42
+  },
+  {
+    "pays": "Mauritius",
+    "period": "During",
+    "nb_publications": 58
+  },
+  {
+    "pays": "Mexico",
+    "period": "3 yrs Before",
+    "nb_publications": 5643
+  },
+  {
+    "pays": "Mexico",
+    "period": "During",
+    "nb_publications": 6417
+  },
+  {
+    "pays": "Micronesia",
+    "period": "During",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Moldova",
+    "period": "3 yrs Before",
+    "nb_publications": 23
+  },
+  {
+    "pays": "Moldova",
+    "period": "During",
+    "nb_publications": 38
+  },
+  {
+    "pays": "Mongolia",
+    "period": "3 yrs Before",
+    "nb_publications": 42
+  },
+  {
+    "pays": "Mongolia",
+    "period": "During",
+    "nb_publications": 62
+  },
+  {
+    "pays": "Montenegro",
+    "period": "3 yrs Before",
+    "nb_publications": 63
+  },
+  {
+    "pays": "Montenegro",
+    "period": "During",
+    "nb_publications": 67
+  },
+  {
+    "pays": "Morocco",
+    "period": "3 yrs Before",
+    "nb_publications": 1969
+  },
+  {
+    "pays": "Morocco",
+    "period": "During",
+    "nb_publications": 2179
+  },
+  {
+    "pays": "Mozambique",
+    "period": "3 yrs Before",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Mozambique",
+    "period": "During",
+    "nb_publications": 9
+  },
+  {
+    "pays": "Myanmar",
+    "period": "3 yrs Before",
+    "nb_publications": 11
+  },
+  {
+    "pays": "Myanmar",
+    "period": "During",
+    "nb_publications": 17
+  },
+  {
+    "pays": "Namibia",
+    "period": "3 yrs Before",
+    "nb_publications": 45
+  },
+  {
+    "pays": "Namibia",
+    "period": "During",
+    "nb_publications": 49
+  },
+  {
+    "pays": "Nepal",
+    "period": "3 yrs Before",
+    "nb_publications": 50
+  },
+  {
+    "pays": "Nepal",
+    "period": "During",
+    "nb_publications": 107
+  },
+  {
+    "pays": "Netherlands",
+    "period": "3 yrs Before",
+    "nb_publications": 16018
+  },
+  {
+    "pays": "Netherlands",
+    "period": "During",
+    "nb_publications": 19979
+  },
+  {
+    "pays": "New Zealand",
+    "period": "3 yrs Before",
+    "nb_publications": 4509
+  },
+  {
+    "pays": "New Zealand",
+    "period": "During",
+    "nb_publications": 4892
+  },
+  {
+    "pays": "Nicaragua",
+    "period": "3 yrs Before",
+    "nb_publications": 2
+  },
+  {
+    "pays": "Nicaragua",
+    "period": "During",
+    "nb_publications": 9
+  },
+  {
+    "pays": "Niger",
+    "period": "During",
+    "nb_publications": 11
+  },
+  {
+    "pays": "Nigeria",
+    "period": "3 yrs Before",
+    "nb_publications": 472
+  },
+  {
+    "pays": "Nigeria",
+    "period": "During",
+    "nb_publications": 1132
+  },
+  {
+    "pays": "North Korea",
+    "period": "3 yrs Before",
+    "nb_publications": 9
+  },
+  {
+    "pays": "North Korea",
+    "period": "During",
+    "nb_publications": 10
+  },
+  {
+    "pays": "Norway",
+    "period": "3 yrs Before",
+    "nb_publications": 4523
+  },
+  {
+    "pays": "Norway",
+    "period": "During",
+    "nb_publications": 5619
+  },
+  {
+    "pays": "Oman",
+    "period": "3 yrs Before",
+    "nb_publications": 284
+  },
+  {
+    "pays": "Oman",
+    "period": "During",
+    "nb_publications": 372
+  },
+  {
+    "pays": "Pakistan",
+    "period": "3 yrs Before",
+    "nb_publications": 3356
+  },
+  {
+    "pays": "Pakistan",
+    "period": "During",
+    "nb_publications": 6370
+  },
+  {
+    "pays": "Palau",
+    "period": "During",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Palestine",
+    "period": "3 yrs Before",
+    "nb_publications": 189
+  },
+  {
+    "pays": "Palestine",
+    "period": "During",
+    "nb_publications": 251
+  },
+  {
+    "pays": "Panama",
+    "period": "3 yrs Before",
+    "nb_publications": 52
+  },
+  {
+    "pays": "Panama",
+    "period": "During",
+    "nb_publications": 52
+  },
+  {
+    "pays": "Papua New Guinea",
+    "period": "3 yrs Before",
+    "nb_publications": 2
+  },
+  {
+    "pays": "Papua New Guinea",
+    "period": "During",
+    "nb_publications": 17
+  },
+  {
+    "pays": "Paraguay",
+    "period": "3 yrs Before",
+    "nb_publications": 69
+  },
+  {
+    "pays": "Paraguay",
+    "period": "During",
+    "nb_publications": 90
+  },
+  {
+    "pays": "Peru",
+    "period": "3 yrs Before",
+    "nb_publications": 940
+  },
+  {
+    "pays": "Peru",
+    "period": "During",
+    "nb_publications": 1575
+  },
+  {
+    "pays": "Philippines",
+    "period": "3 yrs Before",
+    "nb_publications": 449
+  },
+  {
+    "pays": "Philippines",
+    "period": "During",
+    "nb_publications": 635
+  },
+  {
+    "pays": "Poland",
+    "period": "3 yrs Before",
+    "nb_publications": 11360
+  },
+  {
+    "pays": "Poland",
+    "period": "During",
+    "nb_publications": 13641
+  },
+  {
+    "pays": "Portugal",
+    "period": "3 yrs Before",
+    "nb_publications": 14702
+  },
+  {
+    "pays": "Portugal",
+    "period": "During",
+    "nb_publications": 16170
+  },
+  {
+    "pays": "Qatar",
+    "period": "3 yrs Before",
+    "nb_publications": 1198
+  },
+  {
+    "pays": "Qatar",
+    "period": "During",
+    "nb_publications": 1589
+  },
+  {
+    "pays": "Romania",
+    "period": "3 yrs Before",
+    "nb_publications": 2439
+  },
+  {
+    "pays": "Romania",
+    "period": "During",
+    "nb_publications": 3202
+  },
+  {
+    "pays": "Russia",
+    "period": "3 yrs Before",
+    "nb_publications": 5781
+  },
+  {
+    "pays": "Russia",
+    "period": "During",
+    "nb_publications": 6850
+  },
+  {
+    "pays": "Rwanda",
+    "period": "3 yrs Before",
+    "nb_publications": 40
+  },
+  {
+    "pays": "Rwanda",
+    "period": "During",
+    "nb_publications": 101
+  },
+  {
+    "pays": "Saint Kitts and Nevis",
+    "period": "During",
+    "nb_publications": 1
+  },
+  {
+    "pays": "San Marino",
+    "period": "During",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Saudi Arabia",
+    "period": "3 yrs Before",
+    "nb_publications": 5849
+  },
+  {
+    "pays": "Saudi Arabia",
+    "period": "During",
+    "nb_publications": 8805
+  },
+  {
+    "pays": "Senegal",
+    "period": "3 yrs Before",
+    "nb_publications": 171
+  },
+  {
+    "pays": "Senegal",
+    "period": "During",
+    "nb_publications": 93
+  },
+  {
+    "pays": "Serbia",
+    "period": "3 yrs Before",
+    "nb_publications": 1630
+  },
+  {
+    "pays": "Serbia",
+    "period": "During",
+    "nb_publications": 1922
+  },
+  {
+    "pays": "Seychelles",
+    "period": "During",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Sierra Leone",
+    "period": "3 yrs Before",
+    "nb_publications": 12
+  },
+  {
+    "pays": "Sierra Leone",
+    "period": "During",
+    "nb_publications": 6
+  },
+  {
+    "pays": "Singapore",
+    "period": "3 yrs Before",
+    "nb_publications": 11976
+  },
+  {
+    "pays": "Singapore",
+    "period": "During",
+    "nb_publications": 16392
+  },
+  {
+    "pays": "Slovakia",
+    "period": "3 yrs Before",
+    "nb_publications": 1218
+  },
+  {
+    "pays": "Slovakia",
+    "period": "During",
+    "nb_publications": 1402
+  },
+  {
+    "pays": "Slovenia",
+    "period": "3 yrs Before",
+    "nb_publications": 1020
+  },
+  {
+    "pays": "Slovenia",
+    "period": "During",
+    "nb_publications": 1360
+  },
+  {
+    "pays": "Somalia",
+    "period": "3 yrs Before",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Somalia",
+    "period": "During",
+    "nb_publications": 4
+  },
+  {
+    "pays": "South Africa",
+    "period": "3 yrs Before",
+    "nb_publications": 2025
+  },
+  {
+    "pays": "South Africa",
+    "period": "During",
+    "nb_publications": 2605
+  },
+  {
+    "pays": "South Korea",
+    "period": "3 yrs Before",
+    "nb_publications": 9209
+  },
+  {
+    "pays": "South Korea",
+    "period": "During",
+    "nb_publications": 15716
+  },
+  {
+    "pays": "Spain",
+    "period": "3 yrs Before",
+    "nb_publications": 39189
+  },
+  {
+    "pays": "Spain",
+    "period": "During",
+    "nb_publications": 40083
+  },
+  {
+    "pays": "Sri Lanka",
+    "period": "3 yrs Before",
+    "nb_publications": 390
+  },
+  {
+    "pays": "Sri Lanka",
+    "period": "During",
+    "nb_publications": 525
+  },
+  {
+    "pays": "Sudan",
+    "period": "3 yrs Before",
+    "nb_publications": 37
+  },
+  {
+    "pays": "Sudan",
+    "period": "During",
+    "nb_publications": 56
+  },
+  {
+    "pays": "Sweden",
+    "period": "3 yrs Before",
+    "nb_publications": 13117
+  },
+  {
+    "pays": "Sweden",
+    "period": "During",
+    "nb_publications": 14934
+  },
+  {
+    "pays": "Switzerland",
+    "period": "3 yrs Before",
+    "nb_publications": 17057
+  },
+  {
+    "pays": "Switzerland",
+    "period": "During",
+    "nb_publications": 22545
+  },
+  {
+    "pays": "Syria",
+    "period": "3 yrs Before",
+    "nb_publications": 40
+  },
+  {
+    "pays": "Syria",
+    "period": "During",
+    "nb_publications": 78
+  },
+  {
+    "pays": "São Tomé and Príncipe",
+    "period": "During",
+    "nb_publications": 1
+  },
+  {
+    "pays": "Taiwan",
+    "period": "3 yrs Before",
+    "nb_publications": 6404
+  },
+  {
+    "pays": "Taiwan",
+    "period": "During",
+    "nb_publications": 8145
+  },
+  {
+    "pays": "Tajikistan",
+    "period": "3 yrs Before",
+    "nb_publications": 7
+  },
+  {
+    "pays": "Tajikistan",
+    "period": "During",
+    "nb_publications": 6
+  },
+  {
+    "pays": "Tanzania",
+    "period": "3 yrs Before",
+    "nb_publications": 110
+  },
+  {
+    "pays": "Tanzania",
+    "period": "During",
+    "nb_publications": 148
+  },
+  {
+    "pays": "Thailand",
+    "period": "3 yrs Before",
+    "nb_publications": 1441
+  },
+  {
+    "pays": "Thailand",
+    "period": "During",
+    "nb_publications": 2167
+  },
+  {
+    "pays": "Timor-Leste",
+    "period": "3 yrs Before",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Timor-Leste",
+    "period": "During",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Togo",
+    "period": "3 yrs Before",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Togo",
+    "period": "During",
+    "nb_publications": 3
+  },
+  {
+    "pays": "Trinidad and Tobago",
+    "period": "3 yrs Before",
+    "nb_publications": 21
+  },
+  {
+    "pays": "Trinidad and Tobago",
+    "period": "During",
+    "nb_publications": 20
+  },
+  {
+    "pays": "Tunisia",
+    "period": "3 yrs Before",
+    "nb_publications": 2004
+  },
+  {
+    "pays": "Tunisia",
+    "period": "During",
+    "nb_publications": 1767
+  },
+  {
+    "pays": "Turkey",
+    "period": "3 yrs Before",
+    "nb_publications": 8542
+  },
+  {
+    "pays": "Turkey",
+    "period": "During",
+    "nb_publications": 11013
+  },
+  {
+    "pays": "Turkmenistan",
+    "period": "During",
+    "nb_publications": 3
+  },
+  {
+    "pays": "UK",
+    "period": "3 yrs Before",
+    "nb_publications": 94286
+  },
+  {
+    "pays": "UK",
+    "period": "During",
+    "nb_publications": 112071
+  },
+  {
+    "pays": "USA",
+    "period": "3 yrs Before",
+    "nb_publications": 245713
+  },
+  {
+    "pays": "USA",
+    "period": "During",
+    "nb_publications": 330222
+  },
+  {
+    "pays": "Uganda",
+    "period": "3 yrs Before",
+    "nb_publications": 67
+  },
+  {
+    "pays": "Uganda",
+    "period": "During",
+    "nb_publications": 109
+  },
+  {
+    "pays": "Ukraine",
+    "period": "3 yrs Before",
+    "nb_publications": 2181
+  },
+  {
+    "pays": "Ukraine",
+    "period": "During",
+    "nb_publications": 3028
+  },
+  {
+    "pays": "United Arab Emirates",
+    "period": "3 yrs Before",
+    "nb_publications": 2950
+  },
+  {
+    "pays": "United Arab Emirates",
+    "period": "During",
+    "nb_publications": 4517
+  },
+  {
+    "pays": "Uruguay",
+    "period": "3 yrs Before",
+    "nb_publications": 241
+  },
+  {
+    "pays": "Uruguay",
+    "period": "During",
+    "nb_publications": 255
+  },
+  {
+    "pays": "Uzbekistan",
+    "period": "3 yrs Before",
+    "nb_publications": 92
+  },
+  {
+    "pays": "Uzbekistan",
+    "period": "During",
+    "nb_publications": 281
+  },
+  {
+    "pays": "Venezuela",
+    "period": "3 yrs Before",
+    "nb_publications": 76
+  },
+  {
+    "pays": "Venezuela",
+    "period": "During",
+    "nb_publications": 72
+  },
+  {
+    "pays": "Vietnam",
+    "period": "3 yrs Before",
+    "nb_publications": 2005
+  },
+  {
+    "pays": "Vietnam",
+    "period": "During",
+    "nb_publications": 3380
+  },
+  {
+    "pays": "Yemen",
+    "period": "3 yrs Before",
+    "nb_publications": 52
+  },
+  {
+    "pays": "Yemen",
+    "period": "During",
+    "nb_publications": 235
+  },
+  {
+    "pays": "Zambia",
+    "period": "3 yrs Before",
+    "nb_publications": 35
+  },
+  {
+    "pays": "Zambia",
+    "period": "During",
+    "nb_publications": 32
+  },
+  {
+    "pays": "Zimbabwe",
+    "period": "3 yrs Before",
+    "nb_publications": 23
+  },
+  {
+    "pays": "Zimbabwe",
+    "period": "During",
+    "nb_publications": 40
+  }
+]

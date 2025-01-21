@@ -46,13 +46,12 @@ def top_collab():
         answer =execute_query("MATCH(a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) AND p.year=" + str(year) + " RETURN a.person_name, count(r2) AS count ORDER BY count DESC LIMIT " + str(limit))
 
     data = json.load(file)
-    print(data)
-    return {"message" : data}, 200
+    return {"message" : data}, 270
 
 @app.route('/execute')
 def execute():
     answer = execute_query(request.args.get('query', default="MATCH(n) RETURN COUNT(n), labels(n)", type=str))
-    return {'message' : answer}, 200
+    return {'message' : answer}, 270
 
 @app.route('/graph_collab', methods=['GET'])
 def graph_collab():
@@ -62,7 +61,7 @@ def graph_collab():
     for line in answer :
         nodes.append({'id': line['a.nom']})
         links.append({'source': line['a.nom'], 'target': line['b.nom'],})
-    return {"nodes" : nodes, "links": links}, 200
+    return {"nodes" : nodes, "links": links}, 270
 
 
 
@@ -90,7 +89,6 @@ def get_word_chart():
         "years": years,
         "data": {word: [data[year].get(word, 0) for year in years] for word in words_to_plot}
     }
-    print(results)
     return jsonify(results)
 
 
@@ -98,7 +96,6 @@ def get_word_chart():
 def get_collaboration():
     with open('neo4jCollab.txt', 'r') as file:
         data = json.load(file)
-        print(data)
         return data
 
 
@@ -107,8 +104,7 @@ def get_publi_in_time():
 
     file = open('SqlLocal/Pub_in_time.json')
     data = json.load(file)
-    print(data)
-    return {"message" : data}, 200
+    return {"message" : data}, 270
 
 
 
@@ -117,26 +113,62 @@ def get_collab_by_categ():
 
     file = open('SqlLocal/Collab_by_categ.json')
     data = json.load(file)
-    print(data)
-    return {"message" : data}, 200
+    return {"message" : data}, 270
 
 
 @app.route('/collab_in_time', methods=['GET'])
 def get_collab_in_time():
     file = open('SqlLocal/Collab_in_time.json')
     data = json.load(file)
-    print(data)
+    return {"message" : data}, 270
+
+@app.route('/graph_commu')
+def get_graph_collab():
+    period = request.args.get('period', default='all_time', type=str)
+    limit = request.args.get('limit', default=10, type=int)
+
+    file = ""
+    if period == "all_time":
+        file = open('SqlLocal/avant-avant.json')
+
+    elif period == "before":
+        file = open('SqlLocal/top_collaborateur_before.json')
+
+    elif period == "during":
+        file = open('SqlLocal/top_collaborateur_during.json')
+
+    elif period == "after":
+        file = open('SqlLocal/top_collaborateur_after.json')
+
+    elif period == "fixed":
+        year = request.args.get('year', default=2024, type=int)
+        answer =execute_query("MATCH(a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) AND p.year=" + str(year) + " RETURN a.person_name, count(r2) AS count ORDER BY count DESC LIMIT " + str(limit))
+
+    data = json.load(file)
     return {"message" : data}, 200
 
+    return {"message" : data}, 270
+
+@app.route('/collab_seules_vs_collab')
+def get_collab_seules_vs_collab():
+    file = open('SqlLocal/Nb_collab_seules_vs_nb_collab_coll.json')
+    data = json.load(file)
+    return {"message" : data}, 270
+
+@app.route('/page_in_time')
+def get_page_in_time():
+    file = open('SqlLocal/Pages_in_time.json')
+    data = json.load(file)
+    return {"message" : data}, 270
+
+@app.route('/first_collab')
+def get_first_collab():
+    file = open('SqlLocal/Nb_premiere_collab_in_periode.json')
+    data = json.load(file)
+    return {"message": data}, 270
 
 with open("cities_with_coordinates.json", "r", encoding="utf-8") as json_file:
     cities_data = json.load(json_file)
-
-
-
-
-
-
 
 
 

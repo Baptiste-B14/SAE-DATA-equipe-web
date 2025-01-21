@@ -1,0 +1,817 @@
+[
+  {
+    "country": null,
+    "first_year": 2023,
+    "total_count": 3608931
+  },
+  {
+    "country": null,
+    "first_year": 2023,
+    "total_count": 3996697
+  },
+  {
+    "country": "Afghanistan",
+    "first_year": 2023,
+    "total_count": 51
+  },
+  {
+    "country": "Albania",
+    "first_year": 2023,
+    "total_count": 64
+  },
+  {
+    "country": "Algeria",
+    "first_year": 2023,
+    "total_count": 1006
+  },
+  {
+    "country": "Angola",
+    "first_year": 2023,
+    "total_count": 8
+  },
+  {
+    "country": "Argentina",
+    "first_year": 2023,
+    "total_count": 640
+  },
+  {
+    "country": "Armenia",
+    "first_year": 2023,
+    "total_count": 66
+  },
+  {
+    "country": "Australia",
+    "first_year": 2023,
+    "total_count": 35238
+  },
+  {
+    "country": "Austria",
+    "first_year": 2023,
+    "total_count": 6181
+  },
+  {
+    "country": "Azerbaijan",
+    "first_year": 2023,
+    "total_count": 37
+  },
+  {
+    "country": "Bahamas",
+    "first_year": 2023,
+    "total_count": 2
+  },
+  {
+    "country": "Bahrain",
+    "first_year": 2023,
+    "total_count": 68
+  },
+  {
+    "country": "Bangladesh",
+    "first_year": 2023,
+    "total_count": 1766
+  },
+  {
+    "country": "Barbados",
+    "first_year": 2023,
+    "total_count": 6
+  },
+  {
+    "country": "Belarus",
+    "first_year": 2023,
+    "total_count": 47
+  },
+  {
+    "country": "Belgium",
+    "first_year": 2023,
+    "total_count": 6064
+  },
+  {
+    "country": "Benin",
+    "first_year": 2023,
+    "total_count": 18
+  },
+  {
+    "country": "Bhutan",
+    "first_year": 2023,
+    "total_count": 4
+  },
+  {
+    "country": "Bolivia",
+    "first_year": 2023,
+    "total_count": 16
+  },
+  {
+    "country": "Bosnia and Herzegovina",
+    "first_year": 2023,
+    "total_count": 148
+  },
+  {
+    "country": "Botswana",
+    "first_year": 2023,
+    "total_count": 24
+  },
+  {
+    "country": "Brazil",
+    "first_year": 2023,
+    "total_count": 11182
+  },
+  {
+    "country": "Brunei",
+    "first_year": 2023,
+    "total_count": 33
+  },
+  {
+    "country": "Bulgaria",
+    "first_year": 2023,
+    "total_count": 536
+  },
+  {
+    "country": "Burkina Faso",
+    "first_year": 2023,
+    "total_count": 25
+  },
+  {
+    "country": "Cambodia",
+    "first_year": 2023,
+    "total_count": 14
+  },
+  {
+    "country": "Cameroon",
+    "first_year": 2023,
+    "total_count": 158
+  },
+  {
+    "country": "Canada",
+    "first_year": 2023,
+    "total_count": 20538
+  },
+  {
+    "country": "Cape Verde",
+    "first_year": 2023,
+    "total_count": 2
+  },
+  {
+    "country": "Chile",
+    "first_year": 2023,
+    "total_count": 1614
+  },
+  {
+    "country": "China",
+    "first_year": 2023,
+    "total_count": 113396
+  },
+  {
+    "country": "Colombia",
+    "first_year": 2023,
+    "total_count": 1309
+  },
+  {
+    "country": "Costa Rica",
+    "first_year": 2023,
+    "total_count": 84
+  },
+  {
+    "country": "Croatia",
+    "first_year": 2023,
+    "total_count": 1190
+  },
+  {
+    "country": "Cuba",
+    "first_year": 2023,
+    "total_count": 173
+  },
+  {
+    "country": "Cyprus",
+    "first_year": 2023,
+    "total_count": 782
+  },
+  {
+    "country": "Czech Republic",
+    "first_year": 2023,
+    "total_count": 2909
+  },
+  {
+    "country": "Democratic Republic of the Congo",
+    "first_year": 2023,
+    "total_count": 9
+  },
+  {
+    "country": "Denmark",
+    "first_year": 2023,
+    "total_count": 6032
+  },
+  {
+    "country": "Djibouti",
+    "first_year": 2023,
+    "total_count": 2
+  },
+  {
+    "country": "Dominican Republic",
+    "first_year": 2023,
+    "total_count": 6
+  },
+  {
+    "country": "Ecuador",
+    "first_year": 2023,
+    "total_count": 791
+  },
+  {
+    "country": "Egypt",
+    "first_year": 2023,
+    "total_count": 2356
+  },
+  {
+    "country": "El Salvador",
+    "first_year": 2023,
+    "total_count": 9
+  },
+  {
+    "country": "Eritrea",
+    "first_year": 2023,
+    "total_count": 6
+  },
+  {
+    "country": "Estonia",
+    "first_year": 2023,
+    "total_count": 738
+  },
+  {
+    "country": "Eswatini",
+    "first_year": 2023,
+    "total_count": 10
+  },
+  {
+    "country": "Ethiopia",
+    "first_year": 2023,
+    "total_count": 371
+  },
+  {
+    "country": "Fiji",
+    "first_year": 2023,
+    "total_count": 88
+  },
+  {
+    "country": "Finland",
+    "first_year": 2023,
+    "total_count": 7901
+  },
+  {
+    "country": "France",
+    "first_year": 2023,
+    "total_count": 41809
+  },
+  {
+    "country": "Gabon",
+    "first_year": 2023,
+    "total_count": 5
+  },
+  {
+    "country": "Gambia",
+    "first_year": 2023,
+    "total_count": 6
+  },
+  {
+    "country": "Georgia",
+    "first_year": 2023,
+    "total_count": 31
+  },
+  {
+    "country": "Germany",
+    "first_year": 2023,
+    "total_count": 81290
+  },
+  {
+    "country": "Ghana",
+    "first_year": 2023,
+    "total_count": 277
+  },
+  {
+    "country": "Greece",
+    "first_year": 2023,
+    "total_count": 7780
+  },
+  {
+    "country": "Guatemala",
+    "first_year": 2023,
+    "total_count": 6
+  },
+  {
+    "country": "Guinea",
+    "first_year": 2023,
+    "total_count": 10
+  },
+  {
+    "country": "Honduras",
+    "first_year": 2023,
+    "total_count": 17
+  },
+  {
+    "country": "Hungary",
+    "first_year": 2023,
+    "total_count": 1852
+  },
+  {
+    "country": "Iceland",
+    "first_year": 2023,
+    "total_count": 138
+  },
+  {
+    "country": "India",
+    "first_year": 2023,
+    "total_count": 27710
+  },
+  {
+    "country": "Indonesia",
+    "first_year": 2023,
+    "total_count": 2142
+  },
+  {
+    "country": "Iran",
+    "first_year": 2023,
+    "total_count": 5165
+  },
+  {
+    "country": "Iraq",
+    "first_year": 2023,
+    "total_count": 1131
+  },
+  {
+    "country": "Ireland",
+    "first_year": 2023,
+    "total_count": 3408
+  },
+  {
+    "country": "Israel",
+    "first_year": 2023,
+    "total_count": 6099
+  },
+  {
+    "country": "Italy",
+    "first_year": 2023,
+    "total_count": 37227
+  },
+  {
+    "country": "Ivory Coast",
+    "first_year": 2023,
+    "total_count": 11
+  },
+  {
+    "country": "Jamaica",
+    "first_year": 2023,
+    "total_count": 8
+  },
+  {
+    "country": "Japan",
+    "first_year": 2023,
+    "total_count": 14354
+  },
+  {
+    "country": "Jordan",
+    "first_year": 2023,
+    "total_count": 1144
+  },
+  {
+    "country": "Kazakhstan",
+    "first_year": 2023,
+    "total_count": 469
+  },
+  {
+    "country": "Kenya",
+    "first_year": 2023,
+    "total_count": 142
+  },
+  {
+    "country": "Kuwait",
+    "first_year": 2023,
+    "total_count": 311
+  },
+  {
+    "country": "Kyrgyzstan",
+    "first_year": 2023,
+    "total_count": 16
+  },
+  {
+    "country": "Laos",
+    "first_year": 2023,
+    "total_count": 4
+  },
+  {
+    "country": "Latvia",
+    "first_year": 2023,
+    "total_count": 163
+  },
+  {
+    "country": "Lebanon",
+    "first_year": 2023,
+    "total_count": 253
+  },
+  {
+    "country": "Lesotho",
+    "first_year": 2023,
+    "total_count": 4
+  },
+  {
+    "country": "Libya",
+    "first_year": 2023,
+    "total_count": 43
+  },
+  {
+    "country": "Liechtenstein",
+    "first_year": 2023,
+    "total_count": 30
+  },
+  {
+    "country": "Lithuania",
+    "first_year": 2023,
+    "total_count": 429
+  },
+  {
+    "country": "Luxembourg",
+    "first_year": 2023,
+    "total_count": 1549
+  },
+  {
+    "country": "Macedonia",
+    "first_year": 2023,
+    "total_count": 150
+  },
+  {
+    "country": "Madagascar",
+    "first_year": 2024,
+    "total_count": 4
+  },
+  {
+    "country": "Malawi",
+    "first_year": 2023,
+    "total_count": 13
+  },
+  {
+    "country": "Malaysia",
+    "first_year": 2023,
+    "total_count": 3086
+  },
+  {
+    "country": "Mali",
+    "first_year": 2023,
+    "total_count": 7
+  },
+  {
+    "country": "Malta",
+    "first_year": 2023,
+    "total_count": 165
+  },
+  {
+    "country": "Marocco",
+    "first_year": 2023,
+    "total_count": 4
+  },
+  {
+    "country": "Mauritania",
+    "first_year": 2023,
+    "total_count": 4
+  },
+  {
+    "country": "Mauritius",
+    "first_year": 2023,
+    "total_count": 40
+  },
+  {
+    "country": "Mexico",
+    "first_year": 2023,
+    "total_count": 3639
+  },
+  {
+    "country": "Moldova",
+    "first_year": 2023,
+    "total_count": 20
+  },
+  {
+    "country": "Mongolia",
+    "first_year": 2023,
+    "total_count": 20
+  },
+  {
+    "country": "Montenegro",
+    "first_year": 2023,
+    "total_count": 32
+  },
+  {
+    "country": "Morocco",
+    "first_year": 2023,
+    "total_count": 1232
+  },
+  {
+    "country": "Mozambique",
+    "first_year": 2023,
+    "total_count": 5
+  },
+  {
+    "country": "Myanmar",
+    "first_year": 2023,
+    "total_count": 19
+  },
+  {
+    "country": "Namibia",
+    "first_year": 2023,
+    "total_count": 72
+  },
+  {
+    "country": "Nepal",
+    "first_year": 2023,
+    "total_count": 82
+  },
+  {
+    "country": "Netherlands",
+    "first_year": 2023,
+    "total_count": 13596
+  },
+  {
+    "country": "New Zealand",
+    "first_year": 2023,
+    "total_count": 3070
+  },
+  {
+    "country": "Nicaragua",
+    "first_year": 2023,
+    "total_count": 2
+  },
+  {
+    "country": "Niger",
+    "first_year": 2023,
+    "total_count": 2
+  },
+  {
+    "country": "Nigeria",
+    "first_year": 2023,
+    "total_count": 624
+  },
+  {
+    "country": "North Korea",
+    "first_year": 2023,
+    "total_count": 13
+  },
+  {
+    "country": "Norway",
+    "first_year": 2023,
+    "total_count": 3884
+  },
+  {
+    "country": "Oman",
+    "first_year": 2023,
+    "total_count": 255
+  },
+  {
+    "country": "Pakistan",
+    "first_year": 2023,
+    "total_count": 3719
+  },
+  {
+    "country": "Palestine",
+    "first_year": 2023,
+    "total_count": 133
+  },
+  {
+    "country": "Panama",
+    "first_year": 2023,
+    "total_count": 46
+  },
+  {
+    "country": "Papua New Guinea",
+    "first_year": 2023,
+    "total_count": 5
+  },
+  {
+    "country": "Paraguay",
+    "first_year": 2023,
+    "total_count": 35
+  },
+  {
+    "country": "Peru",
+    "first_year": 2023,
+    "total_count": 1124
+  },
+  {
+    "country": "Philippines",
+    "first_year": 2023,
+    "total_count": 802
+  },
+  {
+    "country": "Poland",
+    "first_year": 2023,
+    "total_count": 6285
+  },
+  {
+    "country": "Portugal",
+    "first_year": 2023,
+    "total_count": 8326
+  },
+  {
+    "country": "Qatar",
+    "first_year": 2023,
+    "total_count": 957
+  },
+  {
+    "country": "Romania",
+    "first_year": 2023,
+    "total_count": 1550
+  },
+  {
+    "country": "Russia",
+    "first_year": 2023,
+    "total_count": 3350
+  },
+  {
+    "country": "Rwanda",
+    "first_year": 2023,
+    "total_count": 129
+  },
+  {
+    "country": "San Marino",
+    "first_year": 2023,
+    "total_count": 2
+  },
+  {
+    "country": "Saudi Arabia",
+    "first_year": 2023,
+    "total_count": 5993
+  },
+  {
+    "country": "Senegal",
+    "first_year": 2023,
+    "total_count": 56
+  },
+  {
+    "country": "Serbia",
+    "first_year": 2023,
+    "total_count": 1170
+  },
+  {
+    "country": "Sierra Leone",
+    "first_year": 2023,
+    "total_count": 3
+  },
+  {
+    "country": "Singapore",
+    "first_year": 2023,
+    "total_count": 14825
+  },
+  {
+    "country": "Slovakia",
+    "first_year": 2023,
+    "total_count": 789
+  },
+  {
+    "country": "Slovenia",
+    "first_year": 2023,
+    "total_count": 768
+  },
+  {
+    "country": "Somalia",
+    "first_year": 2023,
+    "total_count": 6
+  },
+  {
+    "country": "South Africa",
+    "first_year": 2023,
+    "total_count": 1407
+  },
+  {
+    "country": "South Korea",
+    "first_year": 2023,
+    "total_count": 11585
+  },
+  {
+    "country": "Spain",
+    "first_year": 2023,
+    "total_count": 23881
+  },
+  {
+    "country": "Sri Lanka",
+    "first_year": 2023,
+    "total_count": 388
+  },
+  {
+    "country": "Sudan",
+    "first_year": 2023,
+    "total_count": 42
+  },
+  {
+    "country": "Sweden",
+    "first_year": 2023,
+    "total_count": 10429
+  },
+  {
+    "country": "Switzerland",
+    "first_year": 2023,
+    "total_count": 14344
+  },
+  {
+    "country": "Syria",
+    "first_year": 2023,
+    "total_count": 31
+  },
+  {
+    "country": "Taiwan",
+    "first_year": 2023,
+    "total_count": 5318
+  },
+  {
+    "country": "Tajikistan",
+    "first_year": 2024,
+    "total_count": 2
+  },
+  {
+    "country": "Tanzania",
+    "first_year": 2023,
+    "total_count": 121
+  },
+  {
+    "country": "Thailand",
+    "first_year": 2023,
+    "total_count": 1428
+  },
+  {
+    "country": "Togo",
+    "first_year": 2023,
+    "total_count": 8
+  },
+  {
+    "country": "Trinidad and Tobago",
+    "first_year": 2023,
+    "total_count": 6
+  },
+  {
+    "country": "Tunisia",
+    "first_year": 2023,
+    "total_count": 883
+  },
+  {
+    "country": "Turkey",
+    "first_year": 2023,
+    "total_count": 7512
+  },
+  {
+    "country": "Turkmenistan",
+    "first_year": 2023,
+    "total_count": 4
+  },
+  {
+    "country": "UK",
+    "first_year": 2023,
+    "total_count": 75629
+  },
+  {
+    "country": "USA",
+    "first_year": 2023,
+    "total_count": 251173
+  },
+  {
+    "country": "Uganda",
+    "first_year": 2023,
+    "total_count": 72
+  },
+  {
+    "country": "Ukraine",
+    "first_year": 2023,
+    "total_count": 1133
+  },
+  {
+    "country": "United Arab Emirates",
+    "first_year": 2023,
+    "total_count": 3095
+  },
+  {
+    "country": "Uruguay",
+    "first_year": 2023,
+    "total_count": 150
+  },
+  {
+    "country": "Uzbekistan",
+    "first_year": 2023,
+    "total_count": 202
+  },
+  {
+    "country": "Venezuela",
+    "first_year": 2023,
+    "total_count": 36
+  },
+  {
+    "country": "Vietnam",
+    "first_year": 2023,
+    "total_count": 2279
+  },
+  {
+    "country": "Yemen",
+    "first_year": 2023,
+    "total_count": 127
+  },
+  {
+    "country": "Zambia",
+    "first_year": 2023,
+    "total_count": 25
+  },
+  {
+    "country": "Zimbabwe",
+    "first_year": 2023,
+    "total_count": 21
+  }
+]
