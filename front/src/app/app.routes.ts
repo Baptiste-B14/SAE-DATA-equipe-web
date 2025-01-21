@@ -7,7 +7,7 @@ import { DynamiquePageComponent } from './dynamique-page/dynamique-page.componen
 import { TeamPageComponent } from './team-page/team-page.component';
 import { LegalPageComponent } from './legal-page/legal-page.component';
 import {WordCloudComponent} from "./word-cloud/word-cloud.component";
-
+import {AdririenComponent} from "./adririen/adririen.component"
 export const routes: Routes = [
     {
         path: '',
@@ -38,4 +38,8 @@ export const routes: Routes = [
         path: 'legal',
         component: LegalPageComponent,
       },
+      {
+      path: 'adririen',
+        component: AdririenComponent,
+      }
 ];

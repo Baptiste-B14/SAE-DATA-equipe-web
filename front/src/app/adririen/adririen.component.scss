@@ -1,0 +1,29 @@
+#adririen {
+    width: 100vw;
+    height: 64vh;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+}
+
+audio {
+    display: none; /* Masque le lecteur */
+}
+
+#tumbleweed {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100px; /* Ajustez la taille de l'image */
+    animation: moveRight 10s linear infinite;
+  }
+  
+  @keyframes moveRight {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: 100%;
+    }
+  }
