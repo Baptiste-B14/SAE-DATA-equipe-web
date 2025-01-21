@@ -96,3 +96,18 @@
     word-wrap: break-word; /* Coupe le texte au mot le plus proche */
     font-size: 0.9em; /* Ajustez la taille de la police pour un meilleur rendu */
   }
+
+ .kpi-container ::ng-deep {
+    g.cell {
+      title {
+        color: red;
+      }
+    }
+  }
+
+  // supprime le troncage des labels
+  ::ng-deep {
+    .cell .trimmed-label p{
+      white-space:unset !important;
+    }
+  }

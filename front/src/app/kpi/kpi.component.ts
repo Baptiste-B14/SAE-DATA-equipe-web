@@ -35,7 +35,7 @@ export class KPIComponent implements OnInit {
   }
 
   truncateText(name: any) {
-    return name.label;
+    return name.label
   }
 
   formatValue(data: any){
