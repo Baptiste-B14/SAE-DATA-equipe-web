@@ -31,18 +31,18 @@ export class AnalysePageComponent implements OnInit{
   axes = [
     {
       id: 1,
-      title: "Titre de l'Axe 1",
-      intro: "Intro texte explicatif pour l'Axe 1",
+      title: "Publication",
+      intro: "Intro texte explicatif pour l'Axe Publication",
     },
     {
       id: 2,
-      title: "Titre de l'Axe 2",
-      intro: "Intro texte explicatif pour l'Axe 2",
+      title: "Collaboration",
+      intro: "Intro texte explicatif pour l'Axe Collaboration",
     },
     {
       id: 3,
-      title: "Titre de l'Axe 3",
-      intro: "Intro texte explicatif pour l'Axe 3",
+      title: "Affiliation",
+      intro: "Intro texte explicatif pour l'Axe Affiliation",
     },
   ];
 

@@ -13,19 +13,19 @@ import { KPIComponent } from '../kpi/kpi.component';
 export class IndexPageComponent {
   axes = [
     {
-      title: 'Axe 1',
+      title: 'Axe des Publications',
       description: 'Explication sommaire de ce que l’Axe 1 présente',
       image: 'assets/images/gsp_png.PNG',
       route: '/analyses/1',
     },
     {
-      title: 'Axe 2',
+      title: 'Axe des Collaborations',
       description: 'Explication sommaire de ce que l’Axe 2 présente',
-      image: 'assets/images/gsp2_png.PNG',
+      image: 'assets/images/AxeCollaboration.png',
       route: '/analyses/2',
     },
     {
-      title: 'Axe 3',
+      title: 'Axe des Affiliations',
       description: 'Explication sommaire de ce que l’Axe 3 présente',
       image: 'assets/images/gsp3_png.PNG',
       route: '/analyses/3',

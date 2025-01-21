@@ -73,7 +73,7 @@
 
   .modal-content {
     background-color: #fff;
-    padding: 20px;
+    padding: 10px;
     border-radius: 8px;
     width: 80%;
     max-width: 500px;
@@ -95,14 +95,6 @@
     white-space: normal; /* Permet au texte de se décomposer sur plusieurs lignes */
     word-wrap: break-word; /* Coupe le texte au mot le plus proche */
     font-size: 0.9em; /* Ajustez la taille de la police pour un meilleur rendu */
-  }
-
- .kpi-container ::ng-deep {
-    g.cell {
-      title {
-        color: red;
-      }
-    }
   }
 
   // supprime le troncage des labels
