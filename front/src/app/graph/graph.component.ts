@@ -1,6 +1,5 @@
-import {Component, OnInit, Input, ElementRef, ViewChild} from '@angular/core';
+import {Component, OnInit, Input, ElementRef} from '@angular/core';
 import * as d3 from 'd3';
-import force from 'd3-force';
 import { GraphService} from "../services/graph.service";
 
 
@@ -12,16 +11,16 @@ import { GraphService} from "../services/graph.service";
   styleUrl: './graph.component.scss'
 })
 export class ForceGraphComponent implements OnInit {
-  // @ViewChild('.graph-container')
-  // graphContainer: ElementRef;
+  @Input() route! : string;
 
   constructor(private el: ElementRef, private graphService: GraphService) {}
 
   ngOnInit(): void {
-    this.graphService.getCollaboration().subscribe(data => this.createForceGraph(data))
+    this.graphService.getCollaboration(this.route).subscribe(data => this.createForceGraph(data))
   }
 
   private createForceGraph(data :any ): void {
+
 
     const element = this.el.nativeElement;
     const width = 800;
@@ -35,8 +34,8 @@ export class ForceGraphComponent implements OnInit {
       .attr('viewBox', [-width / 2, -height / 2, width, height])
       .attr('style', 'max-width: 100%; height: auto; height: intrinsic;');
 
-    const simulation = d3.forceSimulation(data.nodes)
-      .force('link', d3.forceLink(data.links).id((d: any) => d.id))
+    const simulation = d3.forceSimulation(data.message.nodes)
+      .force('link', d3.forceLink(data.message.links).id((d: any) => d.name))
       .force('charge', d3.forceManyBody())
       .force('center', d3.forceCenter(0, 0));
 
@@ -44,7 +43,7 @@ export class ForceGraphComponent implements OnInit {
       .attr("stroke", "#999")
       .attr("stroke-opacity", 0.6)
       .selectAll()
-      .data(data.links)
+      .data(data.message.links)
       .join("line")
       .attr("stroke-width", 5);
 
@@ -53,7 +52,7 @@ export class ForceGraphComponent implements OnInit {
       .attr('stroke', '#fff')
       .attr('stroke-width', 1.5)
       .selectAll('circle')
-      .data(data.nodes)
+      .data(data.message.nodes)
       .join('circle')
       .attr('r', 1)
       .attr('fill', 'currentColor')
@@ -62,7 +61,7 @@ export class ForceGraphComponent implements OnInit {
       .on('mouseout', () => this.mouseout());
 
     node.append('title')
-      .text((d: any) => d.id);
+      .text((d: any) => d.name);
 
     const padding = 20;
 
@@ -149,7 +148,7 @@ export class ForceGraphComponent implements OnInit {
 
 
 interface CustomNodeDatum extends d3.SimulationNodeDatum {
-  id: string;
+  name: string;
   size: 1;
 
 }

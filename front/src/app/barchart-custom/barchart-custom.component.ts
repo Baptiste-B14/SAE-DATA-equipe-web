@@ -1,7 +1,7 @@
 import {Component, ElementRef, Input} from '@angular/core';
 import {BarChartModule} from "@swimlane/ngx-charts";
 import {RouterLink} from "@angular/router";
-import {BarchartService} from "../services/barchart.service"; 
+import {BarchartService} from "../services/barchart.service";
 import {catchError, map, Observable, of} from "rxjs";
 
 @Component({
@@ -17,6 +17,8 @@ export class BarchartCustomComponent {
   chartData: any[] = [];
   view : [number, number] = [600, 400];
   @Input() route!: string;
+  @Input() XLegend!: string;
+  @Input() YLegend!: string;
 
   ngOnInit(): void {
 

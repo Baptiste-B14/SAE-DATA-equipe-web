@@ -1,0 +1,15 @@
+::ng-deep .ngx-charts-outer {
+  width: 100% !important;
+}
+::ng-deep .chart-legend{
+  width: 100% !important;
+}
+
+::ng-deep .legend-labels {
+  width: calc(100% + 10px) !important;
+}
+
+::ng-deep .legend-label-text {
+  white-space: normal !important;
+  width: 100% !important;
+}

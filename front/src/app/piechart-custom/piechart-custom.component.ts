@@ -28,7 +28,7 @@ export class PiechartCustomComponent {
   @Input() period! : string;
 
   routeArgs : string = "";
-  selectedPeriod : string = this.periods['before'];
+  selectedPeriod : string = this.periods['during'];
 
 
   ngOnInit(): void {

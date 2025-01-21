@@ -13,9 +13,10 @@ import {LinechartService} from "../services/linechart.service";
 export class LinechartCustomComponent {
   constructor(private linechartService: LinechartService) {}
   chartData: any[] = [];
-  xAxisLabel = '';
-  yAxisLabel = '';
   @Input() route!: string;
+  @Input() XLegend!: string;
+  @Input() YLegend!: string;
+  view : [number, number] = [600, 400]
 
 
   ngOnInit(): void {
@@ -28,16 +29,16 @@ export class LinechartCustomComponent {
       (error) => {
         console.error('Erreur lors de la récupération des données :', error);
       }
-      
+
     );
 
     //meilleure méthode : modifier le service et le formet renvoyé pour inclure les axesLabel
     if (this.route === 'pub_in_time') {
-      this.xAxisLabel = 'Années';
-      this.yAxisLabel = 'Publications'}
+      this.XLegend = 'Années';
+      this.YLegend = 'Publications'}
     else if (this.route === 'collab_in_time') {
-      this.xAxisLabel = 'Années';
-      this.yAxisLabel = 'Collaborations'};
+      this.XLegend = 'Années';
+      this.YLegend = 'Collaborations'}
 
   }
 

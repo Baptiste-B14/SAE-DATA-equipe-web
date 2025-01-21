@@ -17,13 +17,22 @@ export class BarchartService {
     formatData(rawData: any, route: string): any[] {
         switch (route) {
           case 'collab_by_categ': {
-            return rawData
-              .map((item: any) => ({
+            return rawData.message.map((item: any) => ({
                 name: item.Categorie,
                 value: parseInt(item.nb_collaborations, 10)
               }))
               .sort((a: { value: number; }, b: { value: number; }) => b.value - a.value);  // Trier par ordre décroissant
           }
+
+          case 'first_collab': {
+
+            return rawData.message.map((item: any) => ({
+              name: item.periode,
+              value: item.nb_premieres_collaborations,
+            }))
+          }
+
+
           default: {
             return [];
           }

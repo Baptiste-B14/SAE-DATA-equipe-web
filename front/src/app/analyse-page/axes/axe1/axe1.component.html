@@ -20,8 +20,8 @@
     <!-- Quatrième graphique avec texte à droite -->
     <div class="content-item grouped">
       <div class="charts">
-        <app-linechart-custom [route]="'pub_in_time'"></app-linechart-custom>
-        <app-linechart-custom [route]="'collab_in_time'"></app-linechart-custom>
+        <app-linechart-color [route]="'pub_in_time'" [XLegend]="'Années'" [YLegend]="'Publications scientifiques'"></app-linechart-color>
+        <app-linechart-color [route]="'collab_in_time'" [XLegend]="'Années'" [YLegend]="'Collaborations scientifiques'"></app-linechart-color>
       </div>
       <div class="text">
         <p>Explications des graphiques combinés.</p>
@@ -30,8 +30,22 @@
 
     <!-- Cinquième graphique avec texte en dessous -->
     <div class="content-item">
-      <app-barchart-custom [route]="'collab_by_categ'"></app-barchart-custom>
+      <app-linechart-custom [route]="'page_in_time'" [XLegend]="'Années'" [YLegend]="'Nombres de pages moyen'"></app-linechart-custom>
       <p>Petit texte expliquant ce graphique</p>
     </div>
+
+
+    <div class="content-item">
+        <app-groupedbar-chart-custom [route]="'collab_seules_vs_collab'"></app-groupedbar-chart-custom>
+      <p>Petit texte expliquant ce graphique</p>
+    </div>
+
+    <div class="content-item">
+    <app-barchart-custom [route]="'first_collab'" [XLegend]="'Période'" [YLegend]="'Nombre de premières collaborations'"></app-barchart-custom>
+      <div class="col-md-6">
+
+      </div>
+    </div>
+
   </div>
 </div>

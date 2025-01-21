@@ -4,6 +4,8 @@ import { LinechartCustomComponent} from "../../../linechart-custom/linechart-cus
 import {PiechartCustomComponent} from "../../../piechart-custom/piechart-custom.component";
 import { PiechartCustomSimpleComponent } from '../../../piechart-custom-simple/piechart-custom-simple.component';
 import { BarchartCustomComponent } from '../../../barchart-custom/barchart-custom.component';
+import {LineChartComponent} from "../../../linechart-color/linechart-color.component";
+import {GroupedbarChartCustomComponent} from "../../../groupedbar-chart-custom/groupedbar-chart-custom.component";
 
 @Component({
   selector: 'app-axe1',
@@ -13,7 +15,9 @@ import { BarchartCustomComponent } from '../../../barchart-custom/barchart-custo
     LinechartCustomComponent,
     PiechartCustomComponent,
     BarchartCustomComponent,
-    PiechartCustomSimpleComponent
+    PiechartCustomSimpleComponent,
+    LineChartComponent,
+    GroupedbarChartCustomComponent,
   ],
   templateUrl: './axe1.component.html',
   styleUrl: './axe1.component.scss'

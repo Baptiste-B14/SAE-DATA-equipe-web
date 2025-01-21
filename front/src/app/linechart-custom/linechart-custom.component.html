@@ -1,7 +1,13 @@
-<ngx-charts-line-chart [results]="chartData" [xAxis]="true"
-[yAxis]="true"
-[xAxisLabel]="xAxisLabel"
-[yAxisLabel]="yAxisLabel"
-[showXAxisLabel]="true"
-[showYAxisLabel]="true"
-></ngx-charts-line-chart>
+
+<div class="linechart-container">
+  <ngx-charts-line-chart
+    [results]="chartData"
+    [xAxis]="true"
+    [yAxis]="true"
+    [xAxisLabel]="XLegend"
+    [yAxisLabel]="YLegend"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    [view]="view"
+  ></ngx-charts-line-chart>
+</div>

@@ -1,4 +1,4 @@
-import {BarChartModule} from "@swimlane/ngx-charts";
+import {BarChartModule, LineChartModule} from "@swimlane/ngx-charts";
 import { Component, Input } from '@angular/core';
 import { GroupedbarService} from "../services/groupedbar.service";
 
@@ -6,21 +6,18 @@ import { GroupedbarService} from "../services/groupedbar.service";
   selector: 'app-groupedbar-chart-custom',
   standalone: true,
   imports: [
-    BarChartModule
+    BarChartModule,
+    LineChartModule
   ],
   templateUrl: './groupedbar-chart-custom.component.html',
   styleUrl: './groupedbar-chart-custom.component.scss'
 })
 export class GroupedbarChartCustomComponent {
 
-}
-
-
-export class AreaChartCustomComponent {
-
   constructor(private groupedbarService: GroupedbarService) {}
   chartData: any[] = [];
   @Input() route!: string;
+  view : [number, number] = [1000, 400]
 
 
   ngOnInit(): void {

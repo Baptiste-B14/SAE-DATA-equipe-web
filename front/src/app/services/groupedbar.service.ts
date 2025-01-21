@@ -7,7 +7,6 @@ import {Observable, of, shareReplay, tap} from "rxjs";
 })
 export class GroupedbarService {
   private apiUrl = 'http://localhost:5000';
-  private cache = new Map<string, any>();
 
   constructor(private http: HttpClient) {}
 
@@ -16,36 +15,44 @@ export class GroupedbarService {
   }
 
   formatData(rawData: any, route: string): any[] {
-    const {data, years} = rawData;
     switch (route){
-      case 'pub_in_time': {
-        return [
-          {
-            name: 'Publications',
-            series: rawData.map((item: any) => ({
-              name: item.annee, // La clé "name" correspond aux années
-              value: parseInt(item.nombre_publications, 10)
-            }))
-          }
-        ];
+      case 'collab_seules_vs_collab': {
+          return rawData.message.map((item: any) => ({
+            name: item.annee.toString(), // La période devient le nom du groupe
+            series: [
+              {
+                name: 'Publications Seules',
+                value: parseInt(item.nb_publications_seules, 10) // Valeur des publications seules
+              },
+              {
+                name: 'Publications Collaboratives',
+                value: parseInt(item.nb_publications_collaboratives, 10) // Valeur des publications collaboratives
+              }
+            ]
+          }));
+        }
+      case 'first_collab': {
+        return rawData.message.map((item: any) => ({
+          name: item.annee.toString(), // La période devient le nom du groupe
+          series: [
+            {
+              name: 'Publications Seules',
+              value: parseInt(item.nb_publications_seules, 10) // Valeur des publications seules
+            },
+            {
+              name: 'Publications Collaboratives',
+              value: parseInt(item.nb_publications_collaboratives, 10) // Valeur des publications collaboratives
+            }
+          ]
+        }));
       }
-      case 'collab_in_time':{
-        return [
-          {
-            name: 'Collaborations',
-            series: rawData.map((item: any) => ({
-              name: item.annee, // La clé "name" correspond aux années
-              value: parseInt(item.nb_collaborations, 10)
-            }))
-          }
-        ];
-      }
+
       default: {
         return [
           {
             name: 'Publications',
             series: rawData.map((item: any) => ({
-              name: item.annee, // La clé "name" correspond aux années
+              name: item.annee,
               value: parseInt(item.nb_publications, 10)
             }))
           }

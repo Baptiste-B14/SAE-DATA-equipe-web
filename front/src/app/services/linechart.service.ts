@@ -24,21 +24,43 @@ export class LinechartService {
             name: 'Publications',
             series: rawData.message.map((item: any) => ({
               name: item.annee.toString(),
-              value: parseInt(item.nb_publications, 10)
+              value: parseInt(item.nb_publications, 10),
+              periode: item.periode
             }))
           }
         ];
       }
-      case 'collab_in_time':{
+      case 'collab_in_time': {
         return [
           {
             name: 'Collaborations',
             series: rawData.message.map((item: any) => ({
               name: item.annee.toString(),
-              value: parseInt(item.nb_collaborations, 10)
+              value: parseInt(item.nb_collaborations, 10),
+              periode: item.periode
             }))
           }
         ];
+      }
+      case 'page_in_time': {
+        console.log([
+          {
+            name: 'Page',
+            series: rawData.message.map((item: any) => ({
+              name: item.annee.toString(),
+              value: item.moy_longueur_pages,
+            }))
+          }
+        ])
+          return [
+            {
+              name: 'Page',
+              series: rawData.message.map((item: any) => ({
+                name: item.annee.toString(),
+                value: item.moy_longueur_pages,
+              }))
+            }
+          ];
       }
       default: {
         return [

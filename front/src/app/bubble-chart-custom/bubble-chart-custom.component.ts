@@ -16,13 +16,21 @@ import * as L from 'leaflet';
 export class BubbleChartCustomComponent implements AfterViewInit{
   private map: L.Map | undefined;
 
-  private locations = [
-    { lat: 40.7128, lng: -74.0060, population: 8419600 },
+  private locations =[
+      {city: "Kabul", lat:34, lng:69, population: 8419600},
+      {city: "Tirana", lat:41, lng:19, population: 8419600},
+      {city: "Algiers", lat:36, lng:3, population: 8419600},
+      {city: "Andorra la Vella", lat:42, lng:1, population: 8419600}
+    ]
+      /*[
+    { lat: 35.91516, lng:69, population: 8419600 },
     { lat: 34.0522, lng: -118.2437, population: 3980400 },
     { lat: 41.8781, lng: -87.6298, population: 2716000 }
-  ];
+  ];*/
 
-  ngAfterViewInit(): void {
+
+
+    ngAfterViewInit(): void {
     this.initMap();
     this.addCircles();
   }
