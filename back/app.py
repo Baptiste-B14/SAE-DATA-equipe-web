@@ -214,7 +214,8 @@ def dynamic_query():
             AND table_name = %s
         """
         table_exists = query(sql_check_table, params=(table_name,))
-        if not table_exists:
+        # Check if table_exists has any results
+        if not table_exists or len(table_exists) == 0:
             return jsonify({
                 "error": f"Invalid table name: {table_name}",
                 "message": "Table does not exist in the database"
@@ -226,9 +227,21 @@ def dynamic_query():
             FROM information_schema.columns 
             WHERE table_schema = 'public' 
             AND table_name = %s
+            ORDER BY ordinal_position
         """
         columns_result = query(sql_columns, params=(table_name,))
+        if not columns_result:
+            return jsonify({
+                "error": "Failed to fetch columns",
+                "message": f"Could not retrieve columns for table {table_name}"
+            }), 500
+            
         valid_columns = [dict(row)['column_name'] for row in columns_result]
+        if not valid_columns:
+            return jsonify({
+                "error": "No columns found",
+                "message": f"No columns found in table {table_name}"
+            }), 500
 
         # Construction of the dynamic query
         where_clauses = []
@@ -253,26 +266,26 @@ def dynamic_query():
 
             # Use %s instead of ? for PostgreSQL
             if operator == "EQUALS":
-                where_clauses.append(f"{column} = %s")
+                where_clauses.append(f"\"{column}\" = %s")
                 params.append(value)
             elif operator == "LIKE":
-                where_clauses.append(f"{column} ILIKE %s")  # ILIKE for case-insensitive search
+                where_clauses.append(f"\"{column}\" ILIKE %s")  # ILIKE for case-insensitive search
                 params.append(f"%{value}%")
             elif operator == "GT":
-                where_clauses.append(f"{column} > %s")
+                where_clauses.append(f"\"{column}\" > %s")
                 params.append(value)
             elif operator == "LT":
-                where_clauses.append(f"{column} < %s")
+                where_clauses.append(f"\"{column}\" < %s")
                 params.append(value)
             elif operator == "GTE":
-                where_clauses.append(f"{column} >= %s")
+                where_clauses.append(f"\"{column}\" >= %s")
                 params.append(value)
             elif operator == "LTE":
-                where_clauses.append(f"{column} <= %s")
+                where_clauses.append(f"\"{column}\" <= %s")
                 params.append(value)
 
         # Construction of the final SQL query
-        sql_query = f"SELECT * FROM {table_name}"
+        sql_query = f"SELECT * FROM \"{table_name}\""
         if where_clauses:
             sql_query += f" WHERE {' AND '.join(where_clauses)}"
 
@@ -297,7 +310,6 @@ def dynamic_query():
             "error": "Search error",
             "message": str(e)
         }), 500
-
 
 @app.route('/tables', methods=['GET'])
 def get_tables():
