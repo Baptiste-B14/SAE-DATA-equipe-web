@@ -1,3 +1,5 @@
+  @import '../../styles/mixins';
+
   .kpi-bloc h2 {
     color: white;
     justify-items: center;
@@ -51,6 +53,19 @@
     }
   }
 
+  .kpi-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 20px;
+  
+    @include mobile {
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 15px;
+    }
+  }
+
   .kpi-card {
     background: white;
     border-radius: 15px;
@@ -64,45 +79,36 @@
     transition: transform 0.3s ease;
 
     @include mobile {
-        padding: 20px;
-        min-height: 150px;
+      padding: 20px;
+      min-height: 150px;
     }
 
     &:hover {
-        transform: translateY(-5px);
+      transform: translateY(-5px);
     }
 
     .value {
-        font-size: 2.5rem;
-        font-weight: bold;
-        color: #4A412A;
-        margin: 10px 0;
-        line-height: 1.2;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #4A412A;
+      margin: 10px 0;
+      line-height: 1.2;
 
-        @include mobile {
-            font-size: 2rem;
-        }
+      @include mobile {
+        font-size: 2rem;
+      }
     }
 
     .label {
-        font-size: 1.1rem;
-        color: #666;
-        margin-top: 10px;
-        line-height: 1.4;
+      font-size: 1.1rem;
+      color: #666;
+      margin-top: 10px;
+      line-height: 1.4;
 
-        @include mobile {
-            font-size: 1rem;
-        }
+      @include mobile {
+        font-size: 1rem;
+      }
     }
-  }
-
-  .kpi-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
   }
 
   .kpi-value {

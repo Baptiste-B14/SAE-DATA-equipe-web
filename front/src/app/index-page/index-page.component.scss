@@ -1,172 +1,178 @@
+@import '../../styles/mixins';
+
 .IndexPage {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
   
-  .problematique {
-    margin: 40px 0;
+  @include mobile {
+    padding: 30px 15px;
+    margin: 20px 15px;
+    border-radius: 15px;
+  }
+}
+
+.problematique {
+  margin: 40px 0;
+  
+  .problematique-container {
+    background: linear-gradient(135deg, #4A412A 0%, #635A40 100%);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
     
-    .problematique-container {
-      background: linear-gradient(135deg, #4A412A 0%, #635A40 100%);
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    h1 {
+      color: white;
+      font-size: 2rem;
+      margin: 0;
+      line-height: 1.4;
+      font-weight: 600;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.problematique h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.kpiSection {
+  background: linear-gradient(135deg, #4A412A 0%, #635A40 100%);
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin: 40px auto;
+  max-width: 1200px;
+
+  @include mobile {
+    padding: 30px 15px;
+    margin: 20px 15px;
+    border-radius: 15px;
+  }
+
+  h2 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+    @include mobile {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+  }
+
+  ::ng-deep app-kpi {
+    display: block;
+    margin: 0 auto;
+    max-width: 1000px;
+  }
+}
+
+.ngx-charts {
+  color: white;
+}
+
+.presentationSection {
+  margin: 40px 0;
+  
+  .presentationContainer {
+    position: relative;
+    min-height: 200px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+
+    h2 {
       text-align: center;
-      
-      h1 {
-        color: white;
-        font-size: 2rem;
-        margin: 0;
-        line-height: 1.4;
-        font-weight: 600;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      margin-bottom: 20px;
+    }
+
+    p {
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    a {
+      align-self: center;
+      padding: 10px 25px;
+      background-color: #4A412A;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #635A40;
       }
     }
   }
-  
-  .problematique h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-  
-  .kpiSection {
-    background: linear-gradient(135deg, #4A412A 0%, #635A40 100%);
-    padding: 40px 20px;
-    text-align: center;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    margin: 40px auto;
-    max-width: 1200px;
+}
 
-    @include mobile {
-        padding: 30px 15px;
-        margin: 20px 15px;
-        border-radius: 15px;
-    }
+.axeSection h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
 
-    h2 {
-        color: white;
-        font-size: 1.8rem;
-        margin-bottom: 30px;
-        font-weight: 600;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+/*--- carrousel ---*/
 
-        @include mobile {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-    }
+.carouselContainer {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
 
-    ::ng-deep app-kpi {
-        display: block;
-        margin: 0 auto;
-        max-width: 1000px;
-    }
-  }
+.carouselInner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
+}
 
-  .ngx-charts {
-    color: white;
-  }
-  
+.carouselItem {
+  flex: 0 0 100%; /* Chaque slide occupe 100% de la largeur */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
 
-  .presentationSection {
-    margin: 40px 0;
-    
-    .presentationContainer {
-        position: relative;
-        min-height: 200px;
-        background-color: #f9f9f9;
-        border-radius: 12px;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
+.carouselItem h5 {
+  font-weight: bold;
+  font-size: larger;
+}
 
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+.carouselItemDescription {
+  background-color: white;
+  text-align: center;
+  color: black;
+}
 
-        p {
-            margin-bottom: 20px;
-            flex-grow: 1;
-        }
+.carouselImg {
+  max-width: 50%; /* Taille réduite de l'image */
+  height: auto; /* Conserve les proportions de l'image */
+  cursor: pointer;
+}
 
-        a {
-            align-self: center;
-            padding: 10px 25px;
-            background-color: #4A412A;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            margin-bottom: 10px;
-            transition: background-color 0.3s ease;
-
-            &:hover {
-                background-color: #635A40;
-            }
-        }
-    }
-  }
-  
-  .axeSection h2 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  /*--- carrousel ---*/
-  
-  .carouselContainer {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-  }
-  
-  .carouselInner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    width: 100%;
-  }
-  
-  .carouselItem {
-    flex: 0 0 100%; /* Chaque slide occupe 100% de la largeur */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    
-  }
-
-  .carouselItem h5 {
-    font-weight: bold;
-    font-size: larger;
-  }
-
-  .carouselItemDescription {
-    background-color: white;
-    text-align: center;
-    color: black;
-  }
-  
-  .carouselImg {
-    max-width: 50%; /* Taille réduite de l'image */
-    height: auto; /* Conserve les proportions de l'image */
-    cursor: pointer;
-  }
-  
-  .carouselText {
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
-  }
+.carouselText {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+}
 
 .carouselPrev,
 .carouselNext {
@@ -206,40 +212,40 @@
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-  
-  .carouselPrev {
-    left: 10px;
-  }
-  
-  .carouselNext {
-    right: 10px;
-  }
-  
-  .carouselIndicators {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
 
-    button {
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      border: none;
-      background-color: #4A412A;
-      opacity: 0.5;
-      padding: 0;
-      transition: all 0.3s ease;
-      cursor: pointer;
+.carouselPrev {
+  left: 10px;
+}
 
-      &.active {
-        opacity: 1;
-        transform: scale(1.2);
-      }
+.carouselNext {
+  right: 10px;
+}
 
-      &:hover {
-        opacity: 0.8;
-        transform: scale(1.1);
-      }
+.carouselIndicators {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+
+  button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: none;
+    background-color: #4A412A;
+    opacity: 0.5;
+    padding: 0;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &.active {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+
+    &:hover {
+      opacity: 0.8;
+      transform: scale(1.1);
     }
   }
+}

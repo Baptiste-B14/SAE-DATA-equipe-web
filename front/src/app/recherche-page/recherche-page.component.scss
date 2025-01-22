@@ -1,6 +1,19 @@
 /* Import des mixins */
 @import '../../styles.scss';
 
+// Mixins pour le responsive design
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
 .IndexPage {
     max-width: 1200px;
     margin: 0 auto;
@@ -39,6 +52,27 @@
             }
         }
     }
+}
+
+.problematique {
+  margin: 40px 0;
+  
+  .problematique-container {
+    background: linear-gradient(135deg, #4A412A 0%, #635A40 100%);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    
+    h2 {
+      color: white;
+      font-size: 2rem;
+      margin: 0;
+      line-height: 1.4;
+      font-weight: 600;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+  }
 }
 
 #search, #results {
@@ -155,124 +189,112 @@
 }
 
 .search-container {
-    max-width: 1000px;
-    margin: 40px auto;
-    padding: 0 20px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+
+  @include mobile {
+    padding: 0 15px;
+    margin: 20px auto;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 2em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
     @include mobile {
-        margin: 20px auto;
-        padding: 0 15px;
+      font-size: 1.5em;
+      margin-bottom: 20px;
     }
-
-    h2 {
-        color: #4A412A;
-        font-size: 2rem;
-        margin-bottom: 30px;
-        font-weight: 600;
-
-        @include mobile {
-            font-size: 1.6rem;
-            margin-bottom: 20px;
-        }
-    }
+  }
 }
 
 .search-form {
-    background: white;
-    padding: 30px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px;
+
+  @include mobile {
+    padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
 
-    @include mobile {
-        padding: 20px;
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: #333;
+      font-weight: 500;
     }
 
-    .form-group {
-        margin-bottom: 25px;
+    select, input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: border-color 0.3s;
 
-        label {
-            display: block;
-            margin-bottom: 10px;
-            color: #4A412A;
-            font-weight: 500;
-        }
-
-        select, input {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #4A412A;
-            border-radius: 8px;
-            font-size: 1rem;
-            background-color: white;
-            color: #4A412A;
-            transition: all 0.3s ease;
-
-            &:focus {
-                outline: none;
-                border-color: #635A40;
-                box-shadow: 0 0 0 3px rgba(74, 65, 42, 0.1);
-            }
-        }
+      &:focus {
+        outline: none;
+        border-color: #4A412A;
+        box-shadow: 0 0 0 2px rgba(74, 65, 42, 0.25);
+      }
     }
+  }
+}
 
-    .search-button {
-        background: linear-gradient(135deg, #4A412A 0%, #635A40 100%);
-        color: white;
-        padding: 12px 30px;
-        border: none;
-        border-radius: 8px;
-        font-size: 1rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        width: 100%;
-        max-width: 200px;
-        margin: 0 auto;
-        display: block;
+.search-button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #4A412A 0%, #635A40 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 
-        &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(74, 65, 42, 0.2);
-        }
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(74, 65, 42, 0.3);
+  }
 
-        @include mobile {
-            max-width: 100%;
-        }
-    }
+  &:active {
+    transform: translateY(0);
+  }
+
+  @include mobile {
+    padding: 12px;
+    font-size: 14px;
+  }
 }
 
 .results-section {
-    margin-top: 40px;
-    background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-    @include mobile {
-        margin-top: 20px;
-        padding: 20px;
-    }
+  h3 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.5em;
+  }
 
-    h3 {
-        color: #4A412A;
-        font-size: 1.5rem;
-        margin-bottom: 20px;
-        font-weight: 600;
-
-        @include mobile {
-            font-size: 1.3rem;
-        }
-    }
-
-    .no-results {
-        text-align: center;
-        color: #666;
-        padding: 30px;
-        font-size: 1.1rem;
-
-        @include mobile {
-            padding: 20px;
-            font-size: 1rem;
-        }
-    }
+  .no-results {
+    text-align: center;
+    color: #666;
+    padding: 20px;
+  }
 }

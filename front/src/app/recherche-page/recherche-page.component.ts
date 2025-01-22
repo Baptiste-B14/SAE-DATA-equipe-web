@@ -1,15 +1,15 @@
-
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 import { ResultatsPageRechercheComponent } from '../resultats-page-recherche/resultats-page-recherche.component';
 import { SearchLineComponent } from '../search-line/search-line.component';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { SearchService, SearchFilter } from '../services/recherche.service';
 
 @Component({
   selector: 'app-recherche-page',
   standalone: true,
-  imports: [CommonModule, ResultatsPageRechercheComponent, SearchLineComponent],
+  imports: [CommonModule, FormsModule, ResultatsPageRechercheComponent, SearchLineComponent],
   templateUrl: './recherche-page.component.html',
   styleUrls: ['./recherche-page.component.scss']
 })
@@ -19,6 +19,7 @@ export class RecherchePageComponent implements OnInit {
   searchResults: any[] = [];
   selectedTable: string = 'Publication'; // Default table
   availableTables: string[] = ['Publication']; // Default value
+  availableColumns: string[] = []; // Default value
   error: string = '';
   loading: boolean = false;
 
@@ -43,6 +44,8 @@ export class RecherchePageComponent implements OnInit {
         console.error('Error fetching tables:', error);
       }
     );
+    
+    this.loadColumns(this.selectedTable);
   }
 
   get searchLinesArray() {
@@ -82,6 +85,22 @@ export class RecherchePageComponent implements OnInit {
     this.searchLines = [];
     this.searchLinesArray.clear();
     this.addSearchLine(); // Add one default search line
+    
+    this.loadColumns(this.selectedTable);
+  }
+
+  loadColumns(tableName: string) {
+    this.searchService.getTableColumns(tableName).subscribe({
+      next: (columns) => {
+        this.availableColumns = columns;
+        if (columns.length > 0) {
+          this.searchLines[0].column = columns[0];
+        }
+      },
+      error: (error) => {
+        console.error('Erreur lors du chargement des colonnes:', error);
+      }
+    });
   }
 
   request() {
@@ -110,50 +129,3 @@ export class RecherchePageComponent implements OnInit {
     );
   }
 }
-/*@Component({
-  selector: 'app-recherche-page',
-  standalone: true,
-  imports: [SearchLineComponent, ResultatsPageRechercheComponent],
-  templateUrl: './recherche-page.component.html',
-  styleUrl: './recherche-page.component.scss'
-})
-export class RecherchePageComponent {
-  static searchlines : SearchLineComponent[];
-
-  constructor(){
-    RecherchePageComponent.searchlines = [];
-    RecherchePageComponent.searchlines.push(new SearchLineComponent);
-  }
-
-  
-  get staticSearchlines() {
-    return  RecherchePageComponent.searchlines;
-  }
-
-  request(){
-    console.log("submit");
-    
-  }
-
-  submit() {
-    console.log('Submitting search:', this.searchlines);
-
-    const queryParams = this.searchlines.map(line => ({
-      column: line.column,
-      operator: line.operator,
-      value: line.value,
-    }));
-
-    this.apiService.queryDatabase({ filters: queryParams }).subscribe({
-      next: (data) => {
-        console.log('Résultats reçus:', data);
-        this.results = data;
-      },
-      error: (error) => {
-        console.error('Erreur lors de la requête:', error);
-        this.results = [];
-      },
-    });
-  }
-  
-}*/

@@ -37,3 +37,28 @@
     color: #000;
     margin-bottom: 40px;
 }
+
+.navigation-links {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 0;
+
+    .next-link {
+        display: inline-block;
+        padding: 12px 24px;
+        background: linear-gradient(135deg, #4A412A 0%, #635A40 100%);
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+        &:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    }
+}
