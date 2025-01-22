@@ -13,12 +13,12 @@ export interface SearchFilter {
   providedIn: 'root'
 })
 export class SearchService {
-  private apiUrl = 'http://api.lliger.fr:5432';
+  private apiUrl = 'http://api.lliger.fr';
 
   constructor(private http: HttpClient) {}
 
   search(filters: SearchFilter[], table: string): Observable<any[]> {
-    return this.http.post<any[]>(`${this.apiUrl}/search`, { 
+    return this.http.post<any[]>(`${this.apiUrl}/search`, {
       filters,
       table
     }).pipe(

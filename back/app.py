@@ -220,7 +220,7 @@ def get_coordinates():
                 "Country": record['Country'],
                 "Latitude": record['Latitude'],
                 "Longitude": record['Longitude']
-            }, 200
+            }, 270
 
     return {"error": f"Coordonnées non trouvées pour {city}, {country}."}, 404
 
@@ -329,7 +329,7 @@ def dynamic_query():
         for row in results:
             data.append(dict(row))
 
-        return jsonify(data)
+        return jsonify(data), 270
 
     except Exception as e:
         print(f"Error in dynamic_query: {e}")
@@ -354,7 +354,7 @@ def get_tables():
             return jsonify({"error": "Failed to fetch tables"}), 500
 
         tables = [dict(row)['table_name'] for row in results]
-        return jsonify(tables)
+        return jsonify(tables), 270
 
     except Exception as e:
         print(f"Error fetching tables: {e}")
@@ -376,7 +376,7 @@ def get_columns(table_name):
             return jsonify({"error": "Failed to fetch columns"}), 500
 
         columns = [dict(row)['column_name'] for row in results]
-        return jsonify(columns)
+        return jsonify(columns), 270
 
     except Exception as e:
         print(f"Error fetching columns: {e}")

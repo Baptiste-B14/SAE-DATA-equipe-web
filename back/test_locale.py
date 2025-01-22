@@ -32,13 +32,13 @@ with open("cities_with_coordinates.json", "r", encoding="utf-8") as json_file:
 @app.route('/neo4j', methods=['GET'])
 def get_all():
     answer = execute_query("MATCH (n) RETURN n")
-    return {"message": "Réponse de neo4j", "test": answer}, 200
+    return {"message": "Réponse de neo4j", "test": answer}, 270
 
 '''
 @app.route('/')
 def home():
     answer = query("SELECT type, count(type) FROM records WHERE type='book' GROUP BY type;", False)
-    return {"message": "Bonjour Monde !", "test": answer}, 200
+    return {"message": "Bonjour Monde !", "test": answer}, 270
 
 
 @app.route('/coordinates', methods=['GET'])
@@ -61,7 +61,7 @@ def get_coordinates():
                 "Country": record['Country'],
                 "Latitude": record['Latitude'],
                 "Longitude": record['Longitude']
-            }, 200
+            }, 270
 
     # Si aucune correspondance trouvée
     return {"error": f"Coordonnées non trouvées pour {city}, {country}."}, 404
