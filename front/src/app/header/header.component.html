@@ -1,16 +1,17 @@
 <!--
-    - routerLinkActive="active-link" : la balise prendra la classe active-link quand l'utilisateur est sur la route 
+    - routerLinkActive="active-link" : la balise prendra la classe active-link quand l'utilisateur est sur la route
         spécifiée dans routerLink -> MARCHE SUR TOUTES LES BALISES (div, etc...)
     - logo clickable qui redirige vers page home (a faire en angular) -> selon modèle prof utilisation d'un href
-      
+
     TODO :
-    - taille logo a ajuster dans css 
+    - taille logo a ajuster dans css
     - header constamment sur ecran ? ou burger menu ?
     - quand on aura tout les axes : les mettres à jour ici
 -->
 <header id="main-header" [class.hidden]="isHidden">
     <nav>
       <a routerLink="/" routerLinkActive="active-link">Accueil</a>
+      <a routerLink="/presentation" routerLinkActive="active-link">Présentation</a>
         <div class="dropdown-trigger" (mouseenter)="toggleDropdown()">
             <a>Nos Analyses</a>
             <ul class="dropdown-menu" [class.open]="isDropdownOpen" (mouseenter)="toggleDropdown()" (mouseleave)="toggleDropdown()">
@@ -19,7 +20,7 @@
                 <li><a routerLink="/analyses/3" routerLinkActive="active-link">Thématiques</a></li>
             </ul>
         </div>
-      <a routerLink="/presentation" routerLinkActive="active-link">Présentation</a>
       <a routerLink="/recherche" routerLinkActive="active-link">Recherche</a>
+      <a routerLink="/loin" routerLinkActive="active-link">Pour aller plus loin</a>
     </nav>
   </header>

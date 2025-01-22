@@ -163,7 +163,7 @@ export class ForceGraphComponent implements OnInit {
 
     const node = this.svg
       .append('g')
-      .attr('stroke', '#fff')
+      .attr('stroke', '#000')
       .attr('stroke-width', 1.5)
       .selectAll('circle')
       .data(data.message.nodes)

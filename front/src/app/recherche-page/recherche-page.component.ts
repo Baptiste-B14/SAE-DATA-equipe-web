@@ -1,6 +1,6 @@
 
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
+import {FormBuilder, FormGroup, FormArray, FormsModule} from '@angular/forms';
 import { ResultatsPageRechercheComponent } from '../resultats-page-recherche/resultats-page-recherche.component';
 import { SearchLineComponent } from '../search-line/search-line.component';
 import { CommonModule } from '@angular/common';
@@ -9,7 +9,7 @@ import { SearchService, SearchFilter } from '../services/recherche.service';
 @Component({
   selector: 'app-recherche-page',
   standalone: true,
-  imports: [CommonModule, ResultatsPageRechercheComponent, SearchLineComponent],
+  imports: [CommonModule, ResultatsPageRechercheComponent, SearchLineComponent, FormsModule],
   templateUrl: './recherche-page.component.html',
   styleUrls: ['./recherche-page.component.scss']
 })
@@ -32,9 +32,9 @@ export class RecherchePageComponent implements OnInit {
       table: [this.selectedTable],
       searchLines: this.fb.array([])
     });
-    
+
     this.addSearchLine();
-    
+
     this.searchService.getTables().subscribe(
       tables => {
         this.availableTables = tables;
@@ -55,9 +55,9 @@ export class RecherchePageComponent implements OnInit {
       operator: ['EQUALS'],
       value: ['']
     });
-  
+
     this.searchLinesArray.push(searchLineGroup);
-    this.searchLines.push({ 
+    this.searchLines.push({
       id: this.searchLines.length,
       column: '', // by default
       operator: 'EQUALS',
@@ -77,7 +77,7 @@ export class RecherchePageComponent implements OnInit {
   onTableChange(event: Event) {
     const select = event.target as HTMLSelectElement;
     this.selectedTable = select.value;
-    
+
     // Reset all search lines when table changes
     this.searchLines = [];
     this.searchLinesArray.clear();
@@ -89,7 +89,7 @@ export class RecherchePageComponent implements OnInit {
     this.error = '';
 
     console.log(this.selectedTable)
-    
+
     const filters: SearchFilter[] = this.searchLines.map(line => ({
       column: line.column,
       operator: line.operator,
@@ -125,14 +125,14 @@ export class RecherchePageComponent {
     RecherchePageComponent.searchlines.push(new SearchLineComponent);
   }
 
-  
+
   get staticSearchlines() {
     return  RecherchePageComponent.searchlines;
   }
 
   request(){
     console.log("submit");
-    
+
   }
 
   submit() {
@@ -155,5 +155,5 @@ export class RecherchePageComponent {
       },
     });
   }
-  
+
 }*/

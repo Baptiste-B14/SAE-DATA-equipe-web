@@ -1,0 +1,11 @@
+
+<div>
+  <select (change)="onPeriodChange()" [(ngModel)]="selectedPeriod">
+    @for(period of Object.keys(periodslist); track period){
+      <option [value]="period">{{ period }}</option>
+    }
+  </select>
+  <div #mapContainer></div>
+</div>
+
+
