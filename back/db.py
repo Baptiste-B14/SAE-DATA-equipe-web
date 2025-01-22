@@ -10,12 +10,13 @@ def getdb():
     if 'db' not in flask.g:
         try:
             # Configuration de la connexion PostgreSQL
+            app = flask.current_app
             db_config = {
-                'dbname': 'dblp_data',  # Remplacez par le nom de votre base
-                'user': 'sae',        # Remplacez par votre nom d'utilisateur
-                'password': 'Cataldi123',    # Remplacez par votre mot de passe
-                'host': '192.168.1.37',            # Adresse de votre serveur PostgreSQL
-                'port': 5432                    # Port PostgreSQL par défaut
+                'dbname': app.config['DB_DATABASE'],
+                'user': app.config['DB_USER'],
+                'password': app.config['DB_PASSWORD'],
+                'host': app.config['DB_HOST'],
+                'port': 5432
             }
             # Connexion à la base PostgreSQL
             flask.g.db = psycopg2.connect(**db_config, cursor_factory=RealDictCursor)

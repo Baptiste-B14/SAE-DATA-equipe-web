@@ -1,25 +1,39 @@
 #PresentationPage {
-    /*padding: 20px;
-    font-family : Arial, sans-serif; */
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
+}
+
+.title-section {
+    margin-bottom: 40px;
     
+    .title-container {
+        background: linear-gradient(135deg, #4A412A 0%, #635A40 100%);
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        
+        h1 {
+            color: white;
+            font-size: 2rem;
+            margin: 0;
+            line-height: 1.4;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+    }
 }
-  
-.title { 
-    font-size: 2.5rem; 
-    font-weight: bold; 
-    text-align: center;
-    margin-bottom: 40px; 
-}
-  
-.PresentationDescription { 
-    background-color: #e0e0e0; 
-    padding: 20px; 
-    margin: 0 auto; 
-    width: 80%; 
-    border-radius: 8px; 
-    font-size: 1rem; 
-    text-align: left; 
-    color: #000; 
-    margin-bottom: 40px; 
+
+.PresentationDescription {
+    background-color: #e0e0e0;
+    padding: 20px;
+    margin: 0 auto;
+    width: 80%;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: left;
+    color: #000;
+    margin-bottom: 40px;
 }

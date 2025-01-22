@@ -1,7 +1,257 @@
 /* You can add global styles to this file, and also import other style files */
-html {
-    font-family: "Roboto";
-    background-color: #4a412a70;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* Variables pour les breakpoints */
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+/* Mixins pour les media queries */
+@mixin mobile {
+    @media (max-width: #{$breakpoint-mobile}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: #{$breakpoint-mobile + 1}) and (max-width: #{$breakpoint-tablet}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$breakpoint-tablet + 1}) {
+        @content;
+    }
+}
+
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    
+    @include mobile {
+        font-size: 14px;
+    }
+}
+
+/* Classes utilitaires responsives */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+    @include mobile {
+        padding: 0 15px;
+    }
+}
+
+/* Style commun pour tous les boutons */
+button {
+    background: linear-gradient(135deg, #4A412A 0%, #373121 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    @include mobile {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    &:hover {
+        background: linear-gradient(135deg, #373121 0%, #4A412A 100%);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    &:disabled {
+        background: #cccccc;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+/* Style pour les inputs */
+input[type="text"],
+input[type="number"],
+input[type="search"],
+select {
+    width: 100%;
+    padding: 8px 16px;
+    border: 2px solid #4A412A;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+    
+    @include mobile {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+    
+    &:focus {
+        border-color: #373121;
+        box-shadow: 0 0 0 2px rgba(74, 65, 42, 0.1);
+    }
+}
+
+/* Style pour les boutons de type "select" */
+select {
+    background-color: white;
+    border: 2px solid #4A412A;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #4A412A;
+    transition: all 0.3s ease;
+    outline: none;
+    
+    &:hover {
+        border-color: #373121;
+        background-color: #f8f8f8;
+    }
+    
+    &:focus {
+        border-color: #373121;
+        box-shadow: 0 0 0 2px rgba(74, 65, 42, 0.1);
+    }
+}
+
+/* Styles responsifs pour les titres */
+h1 {
+    font-size: 2.5rem;
+    
+    @include mobile {
+        font-size: 1.8rem;
+    }
+    
+    @include tablet {
+        font-size: 2rem;
+    }
+}
+
+h2 {
+    font-size: 2rem;
+    
+    @include mobile {
+        font-size: 1.5rem;
+    }
+    
+    @include tablet {
+        font-size: 1.8rem;
+    }
+}
+
+h3 {
+    font-size: 1.5rem;
+    
+    @include mobile {
+        font-size: 1.2rem;
+    }
+    
+    @include tablet {
+        font-size: 1.3rem;
+    }
+}
+
+/* Classes utilitaires pour les espacements responsifs */
+.section-padding {
+    padding: 40px 0;
+    
+    @include mobile {
+        padding: 20px 0;
+    }
+    
+    @include tablet {
+        padding: 30px 0;
+    }
+}
+
+.margin-bottom {
+    margin-bottom: 30px;
+    
+    @include mobile {
+        margin-bottom: 20px;
+    }
+}
+
+/* Grille responsive */
+.grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    
+    @include mobile {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+    
+    @include tablet {
+        grid-template-columns: repeat(8, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Style pour les sliders */
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 4px;
+    background: #4A412A;
+    border-radius: 2px;
+    outline: none;
+    
+    &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 20px;
+        height: 20px;
+        background: #4A412A;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    
+    &::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        background: #4A412A;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
 }
 
 .container {
@@ -26,39 +276,6 @@ body {
     padding: 1%;
 }
 
-button {
-  background-color: #4CAF50; /* Vert */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 8px; /* Pour des coins arrondis */
-}
-
-button:hover {
-  background-color: #45a049; /* Couleur au survol */
-}
-
-select {
-  background-color: white;
-  color: black;
-  padding: 10px;
-  font-size: 16px;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  outline: none;
-}
-
-select:focus {
-  border-color: #4CAF50;
-}
-
-
 ::ng-deep .mat-select {
   background-color: white;
   border: 2px solid #4CAF50;
@@ -68,23 +285,3 @@ select:focus {
 ::ng-deep .mat-select:hover {
   border-color: #3e8e41;
 }
-
-
-
-input[type="text"] {
-  width: 100%; /* S'adapte à la largeur de son conteneur */
-  padding: 10px; /* Espace intérieur */
-  margin: 8px 0; /* Espace extérieur */
-  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
-  border: 2px solid #4CAF50; /* Bordure verte */
-  border-radius: 5px; /* Coins arrondis */
-  font-size: 16px; /* Taille de la police */
-  outline: none; /* Supprime le contour bleu par défaut */
-  transition: border-color 0.3s ease; /* Animation fluide */
-}
-
-input[type="text"]:focus {
-  border-color: #45a049; /* Couleur de bordure au focus */
-  box-shadow: 0 0 5px rgba(72, 239, 128, 0.7); /* Effet lumineux */
-}
-

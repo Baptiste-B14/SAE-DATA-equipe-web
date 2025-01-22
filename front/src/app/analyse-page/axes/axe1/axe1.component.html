@@ -1,54 +1,58 @@
 <div class="axis-page">
+    <section class="title-section">
+        <div class="title-container">
+            <h1>Analyse de la collaboration scientifique mondiale</h1>
+        </div>
+    </section>
 
-  <div class="content">
-    <!-- Premier graphique avec une description -->
-    <div class="content-item-bubble-chart">
-      <app-bubble-chart></app-bubble-chart>
-      <p>Petit texte expliquant ce graphique</p>
+    <div class="content">
+        <!-- Premier graphique avec une description -->
+        <div class="content-item-bubble-chart">
+          <app-bubble-chart></app-bubble-chart>
+          <p>Petit texte expliquant ce graphique</p>
+        </div>
+
+        <!-- Troisième graphique avec texte en dessous -->
+        <div class="content-item">
+          <div class="chart-box">
+              <app-barchart-custom [route]="'top_collab'"  [period]="'during'" [legendTitle]="'Top des Collaborateurs'"></app-barchart-custom>
+            <p>Petit texte expliquant ce graphique</p>
+          </div>
+        </div>
+
+        <!-- Quatrième graphique avec texte à droite -->
+        <div class="content-item">
+          <div class="chart-box">
+            <app-linechart-color [route]="'pub_in_time'" [XLegend]="'Années'" [YLegend]="'Publications scientifiques'"></app-linechart-color>
+            <app-linechart-color [route]="'collab_in_time'" [XLegend]="'Années'" [YLegend]="'Collaborations scientifiques'"></app-linechart-color>
+          </div>
+          <div class="text">
+            <p>Explications des graphiques combinés.</p>
+          </div>
+        </div>
+
+        <!-- Cinquième graphique avec texte en dessous -->
+        <div class="content-item">
+          <div class="chart-box">
+            <app-linechart-custom [route]="'page_in_time'" [XLegend]="'Années'" [YLegend]="'Nombres de pages moyen'"></app-linechart-custom>
+            <p>Petit texte expliquant ce graphique</p>
+          </div>
+        </div>
+
+        <div class="content-item">
+          <div class="chart-box">
+            <app-groupedbar-chart-custom [route]="'collab_seules_vs_collab'"></app-groupedbar-chart-custom>
+            <p>Petit texte expliquant ce graphique</p>
+          </div>
+        </div>
+
+        <div class="content-item">
+          <div class="chart-box">
+        <app-barchart-custom  [route]="'first_collab'" [XLegend]="'Période'" [period]="'during'" [YLegend]="'Nombre de premières collaborations'" [legendTitle]="''"></app-barchart-custom>
+          <div class="col-md-6">
+          </div>
+          </div>
+        </div>
+
     </div>
-
-    <!-- Troisième graphique avec texte en dessous -->
-    <div class="content-item">
-      <div class="chart-box">
-          <app-barchart-custom [route]="'top_collab'"  [period]="'during'" [legendTitle]="'Top des Collaborateurs'"></app-barchart-custom>
-        <p>Petit texte expliquant ce graphique</p>
-      </div>
-    </div>
-
-    <!-- Quatrième graphique avec texte à droite -->
-    <div class="content-item">
-      <div class="chart-box">
-        <app-linechart-color [route]="'pub_in_time'" [XLegend]="'Années'" [YLegend]="'Publications scientifiques'"></app-linechart-color>
-        <app-linechart-color [route]="'collab_in_time'" [XLegend]="'Années'" [YLegend]="'Collaborations scientifiques'"></app-linechart-color>
-      </div>
-      <div class="text">
-        <p>Explications des graphiques combinés.</p>
-      </div>
-    </div>
-
-    <!-- Cinquième graphique avec texte en dessous -->
-    <div class="content-item">
-      <div class="chart-box">
-        <app-linechart-custom [route]="'page_in_time'" [XLegend]="'Années'" [YLegend]="'Nombres de pages moyen'"></app-linechart-custom>
-        <p>Petit texte expliquant ce graphique</p>
-      </div>
-    </div>
-
-
-    <div class="content-item">
-      <div class="chart-box">
-        <app-groupedbar-chart-custom [route]="'collab_seules_vs_collab'"></app-groupedbar-chart-custom>
-        <p>Petit texte expliquant ce graphique</p>
-      </div>
-    </div>
-
-    <div class="content-item">
-      <div class="chart-box">
-    <app-barchart-custom  [route]="'first_collab'" [XLegend]="'Période'" [period]="'during'" [YLegend]="'Nombre de premières collaborations'" [legendTitle]="''"></app-barchart-custom>
-      <div class="col-md-6">
-      </div>
-      </div>
-    </div>
-
-  </div>
 </div>

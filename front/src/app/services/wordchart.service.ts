@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class WordchartService {
 
-  private apiUrl = 'http://localhost:5000/analyses/wordchart';
+  private apiUrl = 'http://localhost:5001/analyses/wordchart';
 
   constructor(private http: HttpClient) {}
 

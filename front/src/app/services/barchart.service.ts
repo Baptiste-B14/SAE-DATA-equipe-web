@@ -6,7 +6,7 @@ import {Observable, of, shareReplay, startWith, tap} from 'rxjs';
   providedIn: 'root',
 })
 export class BarchartService {
-    private apiUrl = 'http://localhost:5000';
+    private apiUrl = 'http://localhost:5001';
 
     constructor(private http: HttpClient) {}
 

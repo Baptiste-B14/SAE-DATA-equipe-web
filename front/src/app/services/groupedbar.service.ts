@@ -6,7 +6,7 @@ import {Observable, of, shareReplay, tap} from "rxjs";
   providedIn: 'root'
 })
 export class GroupedbarService {
-  private apiUrl = 'http://localhost:5000';
+  private apiUrl = 'http://localhost:5001';
 
   constructor(private http: HttpClient) {}
 

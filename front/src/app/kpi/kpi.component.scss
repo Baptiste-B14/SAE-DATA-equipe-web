@@ -36,6 +36,66 @@
     overflow: visible !important; /* Rend le texte complet visible */
   }
 
+  .kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 15px;
+    }
+  }
+
+  .kpi-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 180px;
+    transition: transform 0.3s ease;
+
+    @include mobile {
+        padding: 20px;
+        min-height: 150px;
+    }
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    .value {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #4A412A;
+        margin: 10px 0;
+        line-height: 1.2;
+
+        @include mobile {
+            font-size: 2rem;
+        }
+    }
+
+    .label {
+        font-size: 1.1rem;
+        color: #666;
+        margin-top: 10px;
+        line-height: 1.4;
+
+        @include mobile {
+            font-size: 1rem;
+        }
+    }
+  }
+
   .kpi-container {
     display: flex;
     flex-wrap: wrap;
@@ -45,13 +105,10 @@
     padding: 1rem;
   }
 
-
   .kpi-value {
     font-size: 1.2rem;
     color: black;
   }
-
-
 
   .modal {
     display: none;

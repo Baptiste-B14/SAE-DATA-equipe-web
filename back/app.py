@@ -15,6 +15,16 @@ config = dotenv_values('.env')
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
+
+# Configuration CORS plus permissive
+cors = flask_cors.CORS(app, resources={
+    r"/*": {
+        "origins": ["http://localhost:4200"],
+        "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        "allow_headers": ["Content-Type", "Authorization"]
+    }
+})
+
 app.config['FLASK_RUN_HOST'] = '0.0.0.0'
 app.config['DB_HOST'] = config['DB_HOST']
 app.config['DB_USER'] = config['DB_USER']
@@ -22,8 +32,6 @@ app.config['DB_PASSWORD'] = config['DB_PWD']
 app.config['DB_DATABASE'] = config['DB_NAME']
 app.teardown_appcontext(close_db)
 
-
-flask_cors.CORS(app)
 
 @app.route('/top_collab', methods=['GET'])
 def top_collab():
@@ -67,10 +75,31 @@ def graph_collab():
 
 @app.route('/analyses/wordcloud/<year>')
 def get_word_cloud_year(year):
-    file = open('SqlLocal/tendances_mots_par_annees_top_500.json')
-    data = json.load(file)
-    limited_words = dict(list(data[year].items())[:50])
-    return jsonify(limited_words)
+    try:
+        file_path = 'SqlLocal/tendances_mots_par_annees_top_500.json'
+        try:
+            with open(file_path, 'r', encoding='utf-8') as file:
+                data = json.load(file)
+                
+                # Convertir year en string car les clés JSON sont toujours des strings
+                year_str = str(year)
+                
+                if year_str not in data:
+                    return jsonify({"error": f"No data available for year {year}"}), 404
+                    
+                # Limiter à 50 mots et trier par fréquence
+                year_data = data[year_str]
+                sorted_words = dict(sorted(year_data.items(), key=lambda x: x[1], reverse=True)[:50])
+                
+                return jsonify(sorted_words)
+                
+        except FileNotFoundError:
+            return jsonify({"error": f"Data file not found: {file_path}"}), 500
+        except json.JSONDecodeError:
+            return jsonify({"error": "Invalid JSON format in data file"}), 500
+            
+    except Exception as e:
+        return jsonify({"error": f"An unexpected error occurred: {str(e)}"}), 500
 
 
 @app.route('/analyses/wordchart', methods=['GET'])
@@ -100,10 +129,13 @@ def get_collaboration():
 
 @app.route('/pub_in_time', methods=['GET'])
 def get_publi_in_time():
-
-    file = open('SqlLocal/Pub_in_time.json')
-    data = json.load(file)
-    return {"message" : data}, 270
+    try:
+        file = open('SqlLocal/Pub_in_time.json')
+        data = json.load(file)
+        file.close()
+        return jsonify(data), 200
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 @app.route('/collab_by_categ', methods=['GET'])
@@ -401,5 +433,4 @@ def csv_to_json():
 
 
 if __name__ =='__main__':
-
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5001, debug=True)

@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class WordcloudService {
-  private apiUrl = 'http://localhost:5000/analyses/wordcloud';
+  private apiUrl = 'http://localhost:5001/analyses/wordcloud';
 
   constructor(private http: HttpClient) {}
 

@@ -77,34 +77,24 @@
 
   /* Ajout pour s'assurer que les boutons occupent leur espace même si l'un est masqué */
   .footer button {
-    flex: 1; /* Chaque bouton prend un espace égal */
-    max-width: 200px; /* Limite la largeur maximale du bouton */
-    text-align: center;
+    min-width: 120px;
     padding: 10px 20px;
     font-size: 1em;
     color: white;
-    background-color: #007BFF;
+    background-color: #373121;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
   }
 
-  .footer button:first-child {
-    margin-right: auto; /* Pousse le bouton précédent à gauche */
-  }
-
-  .footer button:last-child {
-    margin-left: auto; /* Pousse le bouton suivant à droite */
-  }
-
   .footer button:hover {
-    background-color: #0056b3;
+    background-color: #2f2a24;
     transform: translateY(-2px);
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
   }
 
   .footer button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
   }
-

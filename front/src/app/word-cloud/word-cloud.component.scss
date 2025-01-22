@@ -1,21 +1,60 @@
-
 .word-cloud-container {
   height: 450px;
   text-align: center;
   border: #333333;
   border-style: solid;
   margin: 15px;
-
-
 }
-.word-container {
 
-  text-align: center;
+.word-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  .word-cloud-container {
+    width: 100%;
+    height: 500px;
+    border: 2px solid #4A412A;
+    border-radius: 12px;
+    margin: 20px 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .slider-bloc {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin-top: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: 500;
+      color: #4A412A;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      margin: 10px 0;
+
+      &::-webkit-slider-thumb {
+        background: #4A412A;
+      }
+
+      &::-moz-range-thumb {
+        background: #4A412A;
+      }
+    }
+  }
 }
 
 .slider-bloc {
   text-align: center;
 }
-
-
-

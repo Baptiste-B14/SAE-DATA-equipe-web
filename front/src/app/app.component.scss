@@ -1,3 +1,16 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 main {
-     margin-top: 45px; /* A FAIRE SI HEADER EN POSITION FIXED -> marge égale à la hauteur du header */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 45px; /* A FAIRE SI HEADER EN POSITION FIXED -> marge égale à la hauteur du header */
+}
+
+app-footer {
+    margin-top: auto;
 }

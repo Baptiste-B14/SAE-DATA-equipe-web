@@ -4,6 +4,27 @@
     padding: 20px;
   }
   
+  .problematique {
+    margin: 40px 0;
+    
+    .problematique-container {
+      background: linear-gradient(135deg, #4A412A 0%, #635A40 100%);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      text-align: center;
+      
+      h1 {
+        color: white;
+        font-size: 2rem;
+        margin: 0;
+        line-height: 1.4;
+        font-weight: 600;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+  
   .problematique h1 {
     text-align: center;
     font-size: 2rem;
@@ -11,15 +32,38 @@
   }
   
   .kpiSection {
-    background-color: #4A412A; /* Couleur Pantone 448 C */
-    padding: 20px;
+    background: linear-gradient(135deg, #4A412A 0%, #635A40 100%);
+    padding: 40px 20px;
     text-align: center;
-    justify-content: center;
-  }
-  
-  .kpiSection h2 {
-    color: white;
-    margin-bottom: 10px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    margin: 40px auto;
+    max-width: 1200px;
+
+    @include mobile {
+        padding: 30px 15px;
+        margin: 20px 15px;
+        border-radius: 15px;
+    }
+
+    h2 {
+        color: white;
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+        font-weight: 600;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+        @include mobile {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+    }
+
+    ::ng-deep app-kpi {
+        display: block;
+        margin: 0 auto;
+        max-width: 1000px;
+    }
   }
 
   .ngx-charts {
@@ -27,44 +71,44 @@
   }
   
 
-  .presentationContainer {
-    position: relative; /* Le conteneur parent doit être positionné relativement */
-    height: 150px; 
-    text-align: left;
-    margin: 20px 0;
-    border: 1px solid #ccc;
-    padding: 20px;
-    background-color: #f9f9f9;
-  }
-  
-  .presentationContainer h2 {
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  
-  .presentationContainer a {
-    position: absolute; /* Permet un positionnement précis par rapport au conteneur parent */
-    bottom: 10px; /* Distance par rapport au bas */
-    right: 10px; /* Distance par rapport à la droite */
+  .presentationSection {
+    margin: 40px 0;
+    
+    .presentationContainer {
+        position: relative;
+        min-height: 200px;
+        background-color: #f9f9f9;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
 
-    /*position: relative;
-    top: 18px; 
-    left: 90%;*/
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-    text-decoration: none;
-    display: block;
-    /*margin-left: 90%;*/
-    width: 99px;
-    padding: 10px 20px;
-    background-color: #4A412A;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s; /*pour hover*/
-  }
-  
-  .presentationContainer a:hover {
-    background-color: #3e392a;
+        p {
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        a {
+            align-self: center;
+            padding: 10px 25px;
+            background-color: #4A412A;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #635A40;
+            }
+        }
+    }
   }
   
   .axeSection h2 {
@@ -172,29 +216,30 @@
   }
   
   .carouselIndicators {
-    position: absolute;
-    bottom: 10px;
     display: flex;
     justify-content: center;
-    width: 100%;
-    z-index: 10;
-  }
-  
-  .carouselIndicators button {
-    background-color: #bbb;
-    border: none;
-    border-radius: 50%;
-    width: 10px;
-    height: 10px;
-    margin: 0 5px;
-    opacity: 0.7;
-    cursor: pointer;
-  }
-  
-  .carouselIndicators button.active {
-    background-color: #717171;
-  }
-  
-  .carouselIndicators button:hover {
-    opacity: 1;
+    gap: 10px;
+    margin-top: 20px;
+
+    button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: none;
+      background-color: #4A412A;
+      opacity: 0.5;
+      padding: 0;
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &.active {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+
+      &:hover {
+        opacity: 0.8;
+        transform: scale(1.1);
+      }
+    }
   }

@@ -6,7 +6,7 @@ import {of, shareReplay, tap} from "rxjs";
   providedIn: 'root'
 })
 export class PiechartService {
-  private apiUrlLocal = 'http://localhost:5000';
+  private apiUrlLocal = 'http://localhost:5001';
 
   constructor(private http: HttpClient) {}
 
