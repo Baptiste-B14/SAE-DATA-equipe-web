@@ -9,17 +9,15 @@
 
     <!-- Troisième graphique avec texte en dessous -->
     <div class="content-item">
-      <app-piechart-custom
-        [route]="'top_collab'"
-        [limit]="10"
-        [period]="'during'"
-      ></app-piechart-custom>
-      <p>Petit texte expliquant ce graphique</p>
+      <div class="chart-box">
+          <app-barchart-custom [route]="'top_collab'"  [period]="'during'" [legendTitle]="'Top des Collaborateurs'"></app-barchart-custom>
+        <p>Petit texte expliquant ce graphique</p>
+      </div>
     </div>
 
     <!-- Quatrième graphique avec texte à droite -->
-    <div class="content-item grouped">
-      <div class="charts">
+    <div class="content-item">
+      <div class="chart-box">
         <app-linechart-color [route]="'pub_in_time'" [XLegend]="'Années'" [YLegend]="'Publications scientifiques'"></app-linechart-color>
         <app-linechart-color [route]="'collab_in_time'" [XLegend]="'Années'" [YLegend]="'Collaborations scientifiques'"></app-linechart-color>
       </div>
@@ -30,20 +28,25 @@
 
     <!-- Cinquième graphique avec texte en dessous -->
     <div class="content-item">
-      <app-linechart-custom [route]="'page_in_time'" [XLegend]="'Années'" [YLegend]="'Nombres de pages moyen'"></app-linechart-custom>
-      <p>Petit texte expliquant ce graphique</p>
+      <div class="chart-box">
+        <app-linechart-custom [route]="'page_in_time'" [XLegend]="'Années'" [YLegend]="'Nombres de pages moyen'"></app-linechart-custom>
+        <p>Petit texte expliquant ce graphique</p>
+      </div>
     </div>
 
 
     <div class="content-item">
+      <div class="chart-box">
         <app-groupedbar-chart-custom [route]="'collab_seules_vs_collab'"></app-groupedbar-chart-custom>
-      <p>Petit texte expliquant ce graphique</p>
+        <p>Petit texte expliquant ce graphique</p>
+      </div>
     </div>
 
     <div class="content-item">
-    <app-barchart-custom [route]="'first_collab'" [XLegend]="'Période'" [YLegend]="'Nombre de premières collaborations'"></app-barchart-custom>
+      <div class="chart-box">
+    <app-barchart-custom  [route]="'first_collab'" [XLegend]="'Période'" [period]="'during'" [YLegend]="'Nombre de premières collaborations'" [legendTitle]="''"></app-barchart-custom>
       <div class="col-md-6">
-
+      </div>
       </div>
     </div>
 

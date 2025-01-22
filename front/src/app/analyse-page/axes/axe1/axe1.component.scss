@@ -129,3 +129,37 @@
   text-align: justify;
   margin: 0;
 }
+
+
+.content-item {
+  display: flex;
+  flex-wrap: wrap; /* Permet de s'adapter à différentes tailles d'écran */
+  gap: 20px; /* Espace entre les conteneurs */
+  justify-content: center; /* Centre les conteneurs dans la page */
+  padding: 20px;
+  background-color: #f9f9f9; /* Arrière-plan pour le conteneur principal */
+}
+
+.chart-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  text-align: center; /* Centrage du texte descriptif */
+}
+
+.chart-box app-chart {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.chart-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin-top: 10px;
+}

@@ -6,8 +6,12 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "all": "concurrently \"npm run serve\" \"npm run api\"",
+    "serve": "ng serve",
+    "api": "cd ../back && python -m flask run --debug"
   },
+
   "private": true,
   "dependencies": {
     "@angular/animations": "^18.2.13",

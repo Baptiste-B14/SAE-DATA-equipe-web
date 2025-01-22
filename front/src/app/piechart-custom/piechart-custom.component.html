@@ -1,7 +1,7 @@
 
 <div class="piechart-container">
 
-  <select (change)="onPeriodChange($event)" [(ngModel)]="selectedPeriod">
+  <select (change)="onPeriodChange()" [(ngModel)]="selectedPeriod">
     @for (period of Object.keys(periods); track period) {
       <option [value]="period">{{ period }}</option>
     }

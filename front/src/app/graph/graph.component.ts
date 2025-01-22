@@ -1,9 +1,8 @@
-import {Component, OnInit, Input, ElementRef} from '@angular/core';
+import { Component, OnInit, Input, ElementRef } from '@angular/core';
 import * as d3 from 'd3';
-import { GraphService} from "../services/graph.service";
-import {PieChartModule} from "@swimlane/ngx-charts";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-
+import { GraphService } from '../services/graph.service';
+import { PieChartModule } from '@swimlane/ngx-charts';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-graph',
@@ -11,97 +10,175 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
   imports: [
     PieChartModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
   ],
   templateUrl: './graph.component.html',
-  styleUrl: './graph.component.scss'
+  styleUrls: ['./graph.component.scss'],
 })
 export class ForceGraphComponent implements OnInit {
-  @Input() route! : string;
-  @Input() period! : string;
-  @Input() node! : string;
 
   periodslist = {
-    'before' : "before",
-    'during' : "during",
-    'after' : "after",
-  }
+    "avant": 'avant',
+    "pendant": 'pendant',
+    "apres": 'apres',
+  };
   nodeslist = {
-    'before' : "before",
-    'during' : "during",
-    'after' : "after",
-  }
+    "avant": 'avant',
+    "pendant": 'pendant',
+    "apres": 'apres',
+  };
 
-  selectedPeriod : string = this.periodslist['during'];
-  selectedNodes : string = this.nodeslist['during'];
+  selectedPeriod: string = this.periodslist['pendant'];
+  selectedNodes: string = this.nodeslist['pendant'];
+  @Input() route!: string;
+  @Input() period: string =this.selectedPeriod;
+  @Input() node: string = this.selectedNodes;
 
-  routeArgs : string = "";
+
+
+
+  routeArgs: string = '';
+  svg: any;
 
   constructor(private el: ElementRef, private graphService: GraphService) {}
 
   ngOnInit(): void {
-    this.changeRoute(this.route, this.node, this.period)
-    this.graphService.getCollaboration(this.routeArgs).subscribe(data => this.createForceGraph(data))
+    this.updateGraph();
   }
 
-  private changeRoute(route : string, node : string, period: string){
-    this.routeArgs = route +"?nodes=" + node + "&period=" + period
+  private changeRoute(route: string, node: string, period: string): void {
+    this.routeArgs = `${route}?nodes=${node}&period=${period}`;
   }
 
-  onPeriodChange(event: Event): void {
-    const selectedPeriod = +(event.target as HTMLSelectElement).value;
+  onPeriodChange(): void {
+    if (!this.getFilteredNodes().includes(this.selectedNodes)) {
+      this.selectedNodes = this.getFilteredNodes()[0];
+    }
+    this.period = this.selectedPeriod;
+    this.updateGraph();
   }
 
-  onNodeChange(event: Event): void {
-    const s = +(event.target as HTMLSelectElement).value;
+  onNodeChange(): void {
+
+    if (!this.getFilteredPeriods().includes(this.selectedPeriod)) {
+      this.selectedPeriod = this.getFilteredPeriods()[0];
+    }
+    this.node = this.selectedNodes;
+    this.updateGraph();
   }
 
-  private createForceGraph(data :any ): void {
 
 
-    const element = this.el.nativeElement;
+  getFilteredPeriods(): string[] {
+    if (this.selectedNodes === 'apres') {
+      return Object.keys(this.periodslist).filter(period => period !== 'avant');
+    }
+    return Object.keys(this.periodslist);
+  }
+
+  getFilteredNodes(): string[] {
+    if (this.selectedPeriod === 'avant') {
+      return Object.keys(this.nodeslist).filter(node => node !== 'apres');
+    }
+    return Object.keys(this.nodeslist);
+  }
+
+  private updateGraph(): void {
+    this.changeRoute(this.route, this.node, this.period);
+
+    if (this.svg) {
+      this.svg.selectAll('*').remove(); // Clear the old graph
+    }
+
+    this.graphService.getCollaboration(this.routeArgs).subscribe((data) => {
+      this.createForceGraph(data);
+    });
+  }
+
+  private createForceGraph(data: any): void {
+    const element = this.el.nativeElement.querySelector('.graph-container');
     const width = 800;
     const height = 500;
 
-    const svg = d3.select(element)
-      .select('.graph-container')
+    d3.select(element).select('svg').remove();
+
+    this.svg = d3
+      .select(element)
       .append('svg')
       .attr('width', width)
       .attr('height', height)
       .attr('viewBox', [-width / 2, -height / 2, width, height])
-      .attr('style', 'max-width: 100%; height: auto; height: intrinsic;');
+      .attr('style', 'max-width: 100%; height: auto;');
 
-    const simulation = d3.forceSimulation(data.message.nodes)
-      .force('link', d3.forceLink(data.message.links).id((d: any) => d.name))
-      .force('charge', d3.forceManyBody())
-      .force('center', d3.forceCenter(0, 0));
+    const nodeDegrees = new Map();
+    data.message.links.forEach((link: any) => {
+      nodeDegrees.set(link.source, (nodeDegrees.get(link.source) || 0) + 1);
+    });
 
-    const link = svg.append("g")
-      .attr("stroke", "#999")
-      .attr("stroke-opacity", 0.6)
-      .selectAll()
+    const sizeScale = d3
+      .scaleLinear()
+      .domain([0, d3.max([...nodeDegrees.values()]) || 1])
+      .range([5, 20]);
+
+    const simulation = d3
+      .forceSimulation(data.message.nodes)
+      .force(
+        'link',
+        d3
+          .forceLink(data.message.links)
+          .id((d: any) => d.name)
+          .distance((link: any) => {
+            const sourceWeight = nodeDegrees.get(link.source.name) || 1;
+            const targetWeight = nodeDegrees.get(link.target.name) || 1;
+            return 100 / Math.sqrt(sourceWeight + targetWeight);
+          })
+      )
+      .force(
+        'charge',
+        d3.forceManyBody().strength((d: any) => {
+          const weight = nodeDegrees.get(d.name) || 1;
+          return -50 * Math.sqrt(weight);
+        })
+      )
+      .force('center', d3.forceCenter(0, 0))
+      .force('x', d3.forceX(0).strength((d: any) => {
+        const weight = nodeDegrees.get(d.name) || 1;
+        return 0.1 + weight * 0.01;
+      }))
+      .force('y', d3.forceY(0).strength((d: any) => {
+        const weight = nodeDegrees.get(d.name) || 1;
+        return 0.1 + weight * 0.01;
+      }));
+
+
+
+    const link = this.svg
+      .append('g')
+      .attr('stroke', '#999')
+      .attr('stroke-opacity', 0.6)
+      .selectAll('line')
       .data(data.message.links)
-      .join("line")
-      .attr("stroke-width", 5);
+      .join('line')
+      .attr('stroke-width', 2);
 
-
-    const node = svg.append('g')
+    const node = this.svg
+      .append('g')
       .attr('stroke', '#fff')
       .attr('stroke-width', 1.5)
       .selectAll('circle')
       .data(data.message.nodes)
       .join('circle')
-      .attr('r', 1)
-      .attr('fill', 'currentColor')
-      .call(this.drag(simulation))
-      .on('mouseover', (event, d) => this.mouseover(d))
-      .on('mouseout', () => this.mouseout());
+      .attr('r', (d: any) => sizeScale(nodeDegrees.get(d.name) || 0))
+      .attr('fill', (d: any) =>
+        (nodeDegrees.get(d.name) || 0) === 0 ? 'red' : 'steelblue'
+      )
+      .call(this.drag(simulation));
 
-    node.append('title')
-      .text((d: any) => d.name);
+    node.append('title').text(
+      (d: any) => `${d.name} (${nodeDegrees.get(d.name) || 0} links)`
+    );
 
-    const padding = 20;
-
+    const padding = 7;
     simulation.on('tick', () => {
       link
         .attr('x1', (d: any) => d.source.x)
@@ -110,62 +187,64 @@ export class ForceGraphComponent implements OnInit {
         .attr('y2', (d: any) => d.target.y);
 
       node
-        .attr('cx', (d: any) => d.x = Math.max(-width / 2 + padding, Math.min(width / 2 - padding, d.x)))
-        .attr('cy', (d: any) => d.y = Math.max(-height / 2 + padding, Math.min(height / 2 - padding, d.y)));
+        .attr('cx', (d: any) =>
+          (d.x = Math.max(-width / 2 + padding, Math.min(width / 2 - padding, d.x)))
+        )
+        .attr('cy', (d: any) =>
+          (d.y = Math.max(-height / 2 + padding, Math.min(height / 2 - padding, d.y)))
+        );
     });
 
-    const zoom = d3.zoom()
-      .scaleExtent([0.5, 5])
-      .on('zoom', (event) => {
-        svg.attr('transform', event.transform);
-      });
+
+    node.on('mouseover', (event: any, d: any) => {
+      const connectedNodes = new Set(
+        data.message.links
+          .filter((link: any) => link.source === d || link.target === d)
+          .flatMap((link: any) => [link.source, link.target])
+      );
+
+      node
+        .transition()
+        .duration(200)
+        .attr('r', (n: any) =>
+          connectedNodes.has(n)
+            ? sizeScale(nodeDegrees.get(n.name) || 0) * 1.5
+            : sizeScale(nodeDegrees.get(n.name) || 0)
+        )
+        .attr('opacity', (n: any) => (connectedNodes.has(n) ? 1 : 0.3));
+
+      link
+        .transition()
+        .duration(200)
+        .attr('stroke-opacity', (l: any) =>
+          l.source === d || l.target === d ? 1 : 0.2
+        )
+        .attr('stroke-width', (l: any) =>
+          l.source === d || l.target === d ? 4 : 2
+        );
+    });
+
+    node.on('mouseout', () => {
+      node
+        .transition()
+        .duration(200)
+        .attr('r', (d: any) => sizeScale(nodeDegrees.get(d.name) || 0))
+        .attr('opacity', 1);
+
+      link
+        .transition()
+        .duration(200)
+        .attr('stroke-opacity', 0.6)
+        .attr('stroke-width', 2);
+    });
 
   }
 
-
-
-
-  private linkedByIndex: { [key: string]: boolean } = {};
-
-// Vérifie si deux nœuds sont liés
-  private neighboring(a: any, b: any): boolean {
-    return a.index === b.index || this.linkedByIndex[`${a.index},${b.index}`];
-  }
-
-  private mouseover(d: any): void {
-    d3.selectAll('circle').attr('r', 10);
-
-    d3.selectAll('line')
-      .style('stroke', 'black')
-      .style('stroke-width', 4)
-      .transition().duration(500)
-      .style('opacity', (o: any) => (o.source === d || o.target === d ? 1 : 0.1));
-
-    d3.selectAll('circle')
-      .transition().duration(500)
-      .style('opacity', (o: any) => (this.neighboring(d, o) ? 1 : 0.1));
-  }
-
-  private mouseout(): void {
-    d3.selectAll('circle') .attr('stroke', '#fff')
-      .attr('stroke-width', 1.5)
-      .selectAll('circle')
-      .join('circle')
-      .attr('r', 1)
-      .attr('fill', 'currentColor')
-
-    d3.selectAll('line')
-      .style('stroke', 'grey')
-      .style('stroke-width', 1)
-      .transition().duration(500)
-      .style('opacity', 1);
-
-    d3.selectAll('circle').transition().duration(500).style('opacity', 1);
-  }
 
 
   private drag(simulation: any): any {
-    return d3.drag()
+    return d3
+      .drag()
       .on('start', (event: any) => {
         if (!event.active) simulation.alphaTarget(0.3).restart();
         event.subject.fx = event.subject.x;
@@ -182,12 +261,8 @@ export class ForceGraphComponent implements OnInit {
       });
   }
 
+
+
+
   protected readonly Object = Object;
-}
-
-
-interface CustomNodeDatum extends d3.SimulationNodeDatum {
-  name: string;
-  size: 1;
-
 }

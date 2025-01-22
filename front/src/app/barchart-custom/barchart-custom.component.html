@@ -1,10 +1,23 @@
-<ngx-charts-bar-vertical
-[results]="chartData"
-[view]="view"
-[xAxis]="true"
-[yAxis]="true"
-[legend]="true"
-[showXAxisLabel]="true"
-[showYAxisLabel]="true"
-[xAxisLabel]="XLegend"
-[yAxisLabel]="YLegend"></ngx-charts-bar-vertical>
+
+
+<div class="piechart-container">
+  @if (route == 'top_collab'){
+  <select (change)="onPeriodChange()" [(ngModel)]="selectedPeriod">
+    @for (period of Object.keys(periods); track period) {
+      <option [value]="period">{{ period }}</option>
+    }
+  </select>
+  }
+  <div class="chart-wrapper">
+    <ngx-charts-bar-vertical
+      [results]="chartData"
+      [view]="view"
+      [xAxis]="true"
+      [yAxis]="true"
+      [legend]="true"
+      [legendTitle]="legendTitle"
+      [xAxisLabel]="XLegend"
+      [yAxisLabel]="YLegend">
+    </ngx-charts-bar-vertical>
+  </div>
+</div>

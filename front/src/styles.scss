@@ -25,3 +25,66 @@ body {
     animation: fade-in 0.8s ease-in-out;
     padding: 1%;
 }
+
+button {
+  background-color: #4CAF50; /* Vert */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 8px; /* Pour des coins arrondis */
+}
+
+button:hover {
+  background-color: #45a049; /* Couleur au survol */
+}
+
+select {
+  background-color: white;
+  color: black;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+select:focus {
+  border-color: #4CAF50;
+}
+
+
+::ng-deep .mat-select {
+  background-color: white;
+  border: 2px solid #4CAF50;
+  border-radius: 4px;
+}
+
+::ng-deep .mat-select:hover {
+  border-color: #3e8e41;
+}
+
+
+
+input[type="text"] {
+  width: 100%; /* S'adapte à la largeur de son conteneur */
+  padding: 10px; /* Espace intérieur */
+  margin: 8px 0; /* Espace extérieur */
+  box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur */
+  border: 2px solid #4CAF50; /* Bordure verte */
+  border-radius: 5px; /* Coins arrondis */
+  font-size: 16px; /* Taille de la police */
+  outline: none; /* Supprime le contour bleu par défaut */
+  transition: border-color 0.3s ease; /* Animation fluide */
+}
+
+input[type="text"]:focus {
+  border-color: #45a049; /* Couleur de bordure au focus */
+  box-shadow: 0 0 5px rgba(72, 239, 128, 0.7); /* Effet lumineux */
+}
+

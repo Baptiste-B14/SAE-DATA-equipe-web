@@ -1,13 +1,13 @@
 <div class="piechart-container">
 
   <div>
-    <select (change)="onPeriodChange($event)" [(ngModel)]="selectedPeriod">
-      @for (period of Object.keys(periodslist); track period) {
+    <select (change)="onPeriodChange()" [(ngModel)]="selectedPeriod">
+      @for (period of getFilteredPeriods(); track period) {
         <option [value]="period">{{ period }}</option>
       }
     </select>
-    <select (change)="onNodeChange($event)" [(ngModel)]="selectedNodes">
-      @for (node of Object.keys(nodeslist); track node) {
+    <select (change)="onNodeChange()" [(ngModel)]="selectedNodes">
+      @for (node of getFilteredNodes(); track node) {
         <option [value]="node">{{ node }}</option>
       }
     </select>

@@ -49,7 +49,6 @@ export class AnalysePageComponent implements OnInit{
   constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit() {
-    // Récupérer l'ID de l'axe depuis l'URL
     this.route.params.subscribe(params => {
       this.axisId = +params['id']; // Convertit en entier
       this.axisData = this.axes.find(axis => axis.id === this.axisId);
@@ -57,7 +56,6 @@ export class AnalysePageComponent implements OnInit{
   }
 
   goToAxis(id: number) {
-    console.log(this.axisId);
     this.router.navigate(['/analyses', this.axisId + id]);
   }
 }

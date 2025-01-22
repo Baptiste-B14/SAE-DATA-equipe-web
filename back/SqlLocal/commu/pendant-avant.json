@@ -1,0 +1,284 @@
+{
+    "links": [
+        {
+            "source": "Leontiy K. Samoilov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Evgeny M. Savchenko",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Alexander I. Serebryakov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Petr S. Budyakov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Nikolay I. Chernov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Ilya V. Pakhomov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Anna V. Bugakova",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Olga N. Manaenkova",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Nikolay V. Butyrlagin",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Vladimir A. Tchekhovski",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Vitaly M. Porksheyan",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Boris A. Akishin",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Ilya V. Pakhomov",
+            "target": "Nikolay V. Butyrlagin"
+        },
+        {
+            "source": "Nikolay I. Chernov",
+            "target": "Nikolay V. Butyrlagin"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Nikolay V. Butyrlagin"
+        },
+        {
+            "source": "Nikolay V. Butyrlagin",
+            "target": "Ilya V. Pakhomov"
+        },
+        {
+            "source": "Alexey E. Titov",
+            "target": "Ilya V. Pakhomov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Ilya V. Pakhomov"
+        },
+        {
+            "source": "Ilya V. Pakhomov",
+            "target": "Alexey E. Titov"
+        },
+        {
+            "source": "Petr S. Budyakov",
+            "target": "Anna V. Bugakova"
+        },
+        {
+            "source": "Vladimir A. Tchekhovski",
+            "target": "Anna V. Bugakova"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Anna V. Bugakova"
+        },
+        {
+            "source": "Anna V. Bugakova",
+            "target": "Vladimir A. Tchekhovski"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Vladimir A. Tchekhovski"
+        },
+        {
+            "source": "Marina V. Byrdina",
+            "target": "Lema A. Bekmurzaev"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Lema A. Bekmurzaev"
+        },
+        {
+            "source": "Marina V. Byrdina",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Lema A. Bekmurzaev",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Marina V. Byrdina"
+        },
+        {
+            "source": "Lema A. Bekmurzaev",
+            "target": "Marina V. Byrdina"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Olga N. Manaenkova",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Boris A. Akishin",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Vitaly M. Porksheyan",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Irina S. Trubchik",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Boris A. Akishin"
+        },
+        {
+            "source": "Irina S. Trubchik",
+            "target": "Boris A. Akishin"
+        },
+        {
+            "source": "Vitaly M. Porksheyan",
+            "target": "Boris A. Akishin"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Boris A. Akishin"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Vitaly M. Porksheyan"
+        },
+        {
+            "source": "Boris A. Akishin",
+            "target": "Vitaly M. Porksheyan"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Vitaly M. Porksheyan"
+        },
+        {
+            "source": "Irina S. Trubchik",
+            "target": "Vitaly M. Porksheyan"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Irina S. Trubchik"
+        },
+        {
+            "source": "Boris A. Akishin",
+            "target": "Irina S. Trubchik"
+        },
+        {
+            "source": "Vitaly M. Porksheyan",
+            "target": "Irina S. Trubchik"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Olga N. Manaenkova"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Olga N. Manaenkova"
+        },
+        {
+            "source": "Nikolay V. Butyrlagin",
+            "target": "Nikolay I. Chernov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Nikolay I. Chernov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Evgeny M. Savchenko"
+        },
+        {
+            "source": "Zh. A. Sukhinets",
+            "target": "A. I. Gulin"
+        },
+        {
+            "source": "Nikolay M. Safyannikov",
+            "target": "A. I. Gulin"
+        },
+        {
+            "source": "Olga Bureneva (ORCID: 0000-0002-6169-454X)",
+            "target": "A. I. Gulin"
+        },
+        {
+            "source": "A. I. Gulin",
+            "target": "Nikolay M. Safyannikov"
+        },
+        {
+            "source": "Olga Bureneva (ORCID: 0000-0002-6169-454X)",
+            "target": "Nikolay M. Safyannikov"
+        },
+        {
+            "source": "Nikolay M. Safyannikov",
+            "target": "Olga Bureneva (ORCID: 0000-0002-6169-454X)"
+        },
+        {
+            "source": "A. I. Gulin",
+            "target": "Olga Bureneva (ORCID: 0000-0002-6169-454X)"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Alexander I. Serebryakov"
+        },
+        {
+            "source": "Petr S. Budyakov",
+            "target": "Alexander I. Serebryakov"
+        },
+        {
+            "source": "Leontiy K. Samoilov",
+            "target": "Petr S. Budyakov"
+        },
+        {
+            "source": "Anna V. Bugakova",
+            "target": "Petr S. Budyakov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Petr S. Budyakov"
+        },
+        {
+            "source": "Alexander I. Serebryakov",
+            "target": "Petr S. Budyakov"
+        },
+        {
+            "source": "Maksim N. Moskovskiy",
+            "target": "Maksim A. Litvinov"
+        },
+        {
+            "source": "Maksim A. Litvinov",
+            "target": "Maksim N. Moskovskiy"
+        },
+        {
+            "source": "A. I. Gulin",
+            "target": "Zh. A. Sukhinets"
+        },
+        {
+            "source": "Petr S. Budyakov",
+            "target": "Leontiy K. Samoilov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Leontiy K. Samoilov"
+        }
+    ]
+}

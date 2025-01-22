@@ -19,8 +19,6 @@ export class PiechartCustomComponent {
     'after': "after"
     };
 
-
-
   view : [number, number] = [600, 400];
   chartData: any[] = [];
   @Input() route!: string;
@@ -33,7 +31,7 @@ export class PiechartCustomComponent {
 
   ngOnInit(): void {
     this.changeRoute(this.route, this.period)
-    this.piechartService.getData(this.routeArgs!).subscribe((data) => {
+    this.piechartService.getData(this.routeArgs).subscribe((data) => {
       this.chartData = this.piechartService.formatData(data, this.route);
     },
       (error)=> {
@@ -46,8 +44,7 @@ export class PiechartCustomComponent {
     this.routeArgs = route +"?period=" + period + "&limit=" + this.limit
   }
 
-  onPeriodChange(event: Event): void {
-    const selectedPeriod = +(event.target as HTMLSelectElement).value;
+  onPeriodChange(): void {
     this.fetchData(this.selectedPeriod);
   }
 

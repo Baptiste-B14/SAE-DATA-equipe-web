@@ -69,8 +69,7 @@ def graph_collab():
 def get_word_cloud_year(year):
     file = open('SqlLocal/tendances_mots_par_annees_top_500.json')
     data = json.load(file)
-    limited_words = dict(list(data[year].items())[:20])
-    print(limited_words)
+    limited_words = dict(list(data[year].items())[:50])
     return jsonify(limited_words)
 
 
@@ -127,55 +126,51 @@ def get_graph_collab():
     nodes = request.args.get('nodes', default='avant', type=str) if request.args.get('nodes') != "undefined" else 'avant'
     period = request.args.get('period', default='avant', type=str) if request.args.get('period') != "undefined" else 'avant'
 
-    nodes_file = ""
-    links_file = ""
+    nodes_path = None
+    links_path = None
 
     if nodes == "avant":
-        nodes_file = open('SqlLocal/commu/nodes-avant.json')
+        nodes_path = 'SqlLocal/commu/nodes-avant.json'
         if period == "avant":
-            links_file = open('SqlLocal/commu/avant-avant.json')
+            links_path = 'SqlLocal/commu/avant-avant.json'
         elif period == "pendant":
-            links_file = open('SqlLocal/commu/avant-pendant.json')
+            links_path = 'SqlLocal/commu/avant-pendant.json'
         elif period == "apres":
-            links_file = open('SqlLocal/commu/avant-apres.json')
+            links_path = 'SqlLocal/commu/avant-apres.json'
 
     elif nodes == "pendant":
-        nodes_file = open('SqlLocal/commu/nodes-pendant.json')
+        nodes_path = 'SqlLocal/commu/nodes-pendant.json'
         if period == "avant":
-            links_file = open('SqlLocal/commu/pendant-avant.json')
+            links_path = 'SqlLocal/commu/pendant-avant.json'
         elif period == "pendant":
-            links_file = open('SqlLocal/commu/pendant-pendant.json')
+            links_path = 'SqlLocal/commu/pendant-pendant.json'
         elif period == "apres":
-            links_file = open('SqlLocal/commu/pendant-apres.json')
+            links_path = 'SqlLocal/commu/pendant-apres.json'
 
     elif nodes == "apres":
-        nodes_file = open('SqlLocal/commu/nodes-apres.json')
+        nodes_path = 'SqlLocal/commu/nodes-apres.json'
         if period == "pendant":
-            links_file = open('SqlLocal/commu/apres-pendant.json')
+            links_path = 'SqlLocal/commu/apres-pendant.json'
         elif period == "apres":
-            links_file = open('SqlLocal/commu/apres-apres.json')
+            links_path = 'SqlLocal/commu/apres-apres.json'
 
-    file_mapping = {
-        "avant": {
-            "nodes": "SqlLocal/commu/nodes-avant.json",
-            "avant": "SqlLocal/commu/avant-avant.json",
-            "pendant": "SqlLocal/commu/avant-pendant.json",
-            "apres": "SqlLocal/commu/avant-apres.json",
-        },
-        "pendant": {
-            "nodes": "SqlLocal/commu/nodes-pendant.json",
-            "avant": "SqlLocal/commu/pendant-avant.json",
-            "pendant": "SqlLocal/commu/pendant-pendant.json",
-            "apres": "SqlLocal/commu/pendant-apres.json",
-        },
-        "apres": {
-            "nodes": "SqlLocal/commu/nodes-apres.json",
-            "pendant": "SqlLocal/commu/apres-pendant.json",
-            "apres": "SqlLocal/commu/apres-apres.json",
-        },
-    }
 
-    return {"message" : nodes_file + links_file}, 270
+    try:
+        with open(nodes_path, 'r') as nf, open(links_path, 'r') as lf:
+            nodes_data = json.load(nf)
+            links_data = json.load(lf)
+
+            combined_data = {
+                "links": links_data.get("links", []),
+                "nodes": nodes_data.get("nodes", [])
+            }
+
+
+        return jsonify({"message": combined_data}), 270
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 
 
 
@@ -193,8 +188,9 @@ def get_page_in_time():
     return {"message": data}, 270
 
 
-@app.route('/first_collab')
+@app.route('/first_collab', methods=['GET'])
 def get_first_collab():
+    period = request.args.get('period', default='none', type=str)
     file = open('SqlLocal/Nb_premiere_collab_in_periode.json')
     data = json.load(file)
     return {"message": data}, 270

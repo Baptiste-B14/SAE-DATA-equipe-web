@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Observable, of, shareReplay, tap} from 'rxjs';
+import {Observable, of, shareReplay, startWith, tap} from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -30,6 +30,15 @@ export class BarchartService {
               name: item.periode,
               value: item.nb_premieres_collaborations,
             }))
+          }
+          case 'top_collab': {
+            return rawData.message
+              .filter((item: any) => item['a.person_name'] && !isNaN(parseInt(item['count'], 10)))
+              .map((item: any) => ({
+                name: item['a.person_name'],
+                value: parseInt(item['count'], 10),
+              }));
+
           }
 
 

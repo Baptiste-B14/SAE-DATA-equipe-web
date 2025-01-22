@@ -110,7 +110,6 @@ export class WordChartComponent{
   }
 
   removeWord(index: number): void {
-    console.log(index)
     if (this.words.length > 1) {
       this.words.removeAt(index);
     } else {

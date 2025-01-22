@@ -10,3 +10,14 @@
   white-space: normal !important;
   width: 100% !important;
 }
+
+ .chart-wrapper {
+   display: flex;
+   flex-direction: column;
+ }
+
+ .chart-wrapper .legend {
+   max-width: 150px; /* Limitez la largeur */
+   overflow: hidden;
+   text-overflow: ellipsis;
+ }

@@ -1,0 +1,2684 @@
+{
+    "links": [
+        {
+            "source": "Anna V. Bugakova",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "V. G. Rodin",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Dmitry G. Drozdov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Nikolay I. Chernov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Anatoly R. Gaiduk",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Elena V. Ovsepian",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Nikolay M. Safyannikov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Olga Bureneva (ORCID: 0000-0002-6169-454X)",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Zh. A. Sukhinets",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "A. I. Gulin",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "O. O. Valiamova",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Andrei A. Ignashin",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Fedor A. Tsvetkov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Maxim V. Liashov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Alexandr M. Pilipenko",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Petr S. Budyakov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Leontiy K. Samoilov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Vadim N. Biryukov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Alexey A. Zhuk",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Valentin Dziatlau",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Yuriy I. Ivanov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Andrey I. Grushin",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Pavel A. Dukanov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Nikolay V. Butyrlagin",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Ilya V. Pakhomov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Dmitry G. Drozdov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Evgeny M. Savchenko",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Vladimir A. Tchekhovski",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Yaroslav D. Galkin",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Alexei V. Kunz",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Oleg V. Dvornikov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Alexey E. Titov",
+            "target": "Nikolay N. Prokopenko"
+        },
+        {
+            "source": "Nikolay I. Chernov",
+            "target": "Nikolay V. Butyrlagin"
+        },
+        {
+            "source": "A. I. Gulin",
+            "target": "Nikolay V. Butyrlagin"
+        },
+        {
+            "source": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)",
+            "target": "Nikolay V. Butyrlagin"
+        },
+        {
+            "source": "Alexey E. Titov",
+            "target": "Nikolay V. Butyrlagin"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Nikolay V. Butyrlagin"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Nikolay V. Butyrlagin"
+        },
+        {
+            "source": "Anna V. Bugakova",
+            "target": "Nikolay V. Butyrlagin"
+        },
+        {
+            "source": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)",
+            "target": "Ilya V. Pakhomov"
+        },
+        {
+            "source": "Alexey E. Titov",
+            "target": "Ilya V. Pakhomov"
+        },
+        {
+            "source": "Maksim N. Moskovskiy",
+            "target": "Ilya V. Pakhomov"
+        },
+        {
+            "source": "Anatoly A. Gulyaev",
+            "target": "Ilya V. Pakhomov"
+        },
+        {
+            "source": "Maksim A. Litvinov",
+            "target": "Ilya V. Pakhomov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Ilya V. Pakhomov"
+        },
+        {
+            "source": "Yuriy I. Ivanov",
+            "target": "Ilya V. Pakhomov"
+        },
+        {
+            "source": "Alexey A. Zhuk",
+            "target": "Alexey E. Titov"
+        },
+        {
+            "source": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)",
+            "target": "Alexey E. Titov"
+        },
+        {
+            "source": "Ilya V. Pakhomov",
+            "target": "Alexey E. Titov"
+        },
+        {
+            "source": "Petr S. Budyakov",
+            "target": "Alexey E. Titov"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Alexey E. Titov"
+        },
+        {
+            "source": "Vladimir A. Tchekhovski",
+            "target": "Alexey E. Titov"
+        },
+        {
+            "source": "Nikolay V. Butyrlagin",
+            "target": "Alexey E. Titov"
+        },
+        {
+            "source": "Oleg V. Dvornikov",
+            "target": "Alexey E. Titov"
+        },
+        {
+            "source": "Yaroslav D. Galkin",
+            "target": "Alexey E. Titov"
+        },
+        {
+            "source": "Anna V. Bugakova",
+            "target": "Alexey E. Titov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Alexey E. Titov"
+        },
+        {
+            "source": "Elena V. Ovsepian",
+            "target": "Anna V. Bugakova"
+        },
+        {
+            "source": "Anatoly R. Gaiduk",
+            "target": "Anna V. Bugakova"
+        },
+        {
+            "source": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)",
+            "target": "Anna V. Bugakova"
+        },
+        {
+            "source": "Nikolay V. Butyrlagin",
+            "target": "Anna V. Bugakova"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Anna V. Bugakova"
+        },
+        {
+            "source": "Valentin Dziatlau",
+            "target": "Anna V. Bugakova"
+        },
+        {
+            "source": "Yaroslav D. Galkin",
+            "target": "Anna V. Bugakova"
+        },
+        {
+            "source": "Alexei V. Kunz",
+            "target": "Anna V. Bugakova"
+        },
+        {
+            "source": "Oleg V. Dvornikov",
+            "target": "Anna V. Bugakova"
+        },
+        {
+            "source": "Vladimir A. Tchekhovski",
+            "target": "Anna V. Bugakova"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Anna V. Bugakova"
+        },
+        {
+            "source": "Alexey E. Titov",
+            "target": "Anna V. Bugakova"
+        },
+        {
+            "source": "Alexey A. Zhuk",
+            "target": "Oleg V. Dvornikov"
+        },
+        {
+            "source": "Maxim V. Liashov",
+            "target": "Oleg V. Dvornikov"
+        },
+        {
+            "source": "Andrei A. Ignashin",
+            "target": "Oleg V. Dvornikov"
+        },
+        {
+            "source": "Valentin Dziatlau",
+            "target": "Oleg V. Dvornikov"
+        },
+        {
+            "source": "Alexey E. Titov",
+            "target": "Oleg V. Dvornikov"
+        },
+        {
+            "source": "Anna V. Bugakova",
+            "target": "Oleg V. Dvornikov"
+        },
+        {
+            "source": "Vladimir A. Tchekhovski",
+            "target": "Oleg V. Dvornikov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Oleg V. Dvornikov"
+        },
+        {
+            "source": "Yaroslav D. Galkin",
+            "target": "Oleg V. Dvornikov"
+        },
+        {
+            "source": "Alexei V. Kunz",
+            "target": "Oleg V. Dvornikov"
+        },
+        {
+            "source": "Alexey E. Titov",
+            "target": "Vladimir A. Tchekhovski"
+        },
+        {
+            "source": "Valentin Dziatlau",
+            "target": "Vladimir A. Tchekhovski"
+        },
+        {
+            "source": "Yaroslav D. Galkin",
+            "target": "Vladimir A. Tchekhovski"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Vladimir A. Tchekhovski"
+        },
+        {
+            "source": "Alexei V. Kunz",
+            "target": "Vladimir A. Tchekhovski"
+        },
+        {
+            "source": "Oleg V. Dvornikov",
+            "target": "Vladimir A. Tchekhovski"
+        },
+        {
+            "source": "Anna V. Bugakova",
+            "target": "Vladimir A. Tchekhovski"
+        },
+        {
+            "source": "Alexey E. Titov",
+            "target": "Yaroslav D. Galkin"
+        },
+        {
+            "source": "Vladimir A. Tchekhovski",
+            "target": "Yaroslav D. Galkin"
+        },
+        {
+            "source": "Alexei V. Kunz",
+            "target": "Yaroslav D. Galkin"
+        },
+        {
+            "source": "Anna V. Bugakova",
+            "target": "Yaroslav D. Galkin"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Yaroslav D. Galkin"
+        },
+        {
+            "source": "Oleg V. Dvornikov",
+            "target": "Yaroslav D. Galkin"
+        },
+        {
+            "source": "Yaroslav D. Galkin",
+            "target": "Alexei V. Kunz"
+        },
+        {
+            "source": "Anna V. Bugakova",
+            "target": "Alexei V. Kunz"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Alexei V. Kunz"
+        },
+        {
+            "source": "Vladimir A. Tchekhovski",
+            "target": "Alexei V. Kunz"
+        },
+        {
+            "source": "Oleg V. Dvornikov",
+            "target": "Alexei V. Kunz"
+        },
+        {
+            "source": "Victor N. Kokhanenko",
+            "target": "Lema A. Bekmurzaev"
+        },
+        {
+            "source": "Olga A. Aleynikova",
+            "target": "Lema A. Bekmurzaev"
+        },
+        {
+            "source": "Anatoly I. Kondratenko",
+            "target": "Lema A. Bekmurzaev"
+        },
+        {
+            "source": "Marina V. Byrdina",
+            "target": "Lema A. Bekmurzaev"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Lema A. Bekmurzaev"
+        },
+        {
+            "source": "Dmitry B. Kelekhsaev",
+            "target": "Lema A. Bekmurzaev"
+        },
+        {
+            "source": "Svetlana V. Rubtsova",
+            "target": "Lema A. Bekmurzaev"
+        },
+        {
+            "source": "Dmitry B. Kelekhsaev",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Olga A. Aleynikova",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Victor N. Kokhanenko",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Igor M. Maltsev",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Alexey E. Titov",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Nikolay V. Butyrlagin",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Anatoly I. Kondratenko",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Svetlana V. Rubtsova",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Svetlana V. Kurenova",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Anna V. Bugakova",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Anastasiya A. Movchun",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Lema A. Bekmurzaev",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Dmitry B. Kelekhsaev",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Marina V. Byrdina",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Mikhail F. Mitsik"
+        },
+        {
+            "source": "Igor M. Maltsev",
+            "target": "Marina V. Byrdina"
+        },
+        {
+            "source": "Victor N. Kokhanenko",
+            "target": "Marina V. Byrdina"
+        },
+        {
+            "source": "Dmitry B. Kelekhsaev",
+            "target": "Marina V. Byrdina"
+        },
+        {
+            "source": "Olga A. Aleynikova",
+            "target": "Marina V. Byrdina"
+        },
+        {
+            "source": "Anatoly I. Kondratenko",
+            "target": "Marina V. Byrdina"
+        },
+        {
+            "source": "Svetlana V. Kurenova",
+            "target": "Marina V. Byrdina"
+        },
+        {
+            "source": "Svetlana V. Rubtsova",
+            "target": "Marina V. Byrdina"
+        },
+        {
+            "source": "Dmitry B. Kelekhsaev",
+            "target": "Marina V. Byrdina"
+        },
+        {
+            "source": "Lema A. Bekmurzaev",
+            "target": "Marina V. Byrdina"
+        },
+        {
+            "source": "Anastasiya A. Movchun",
+            "target": "Marina V. Byrdina"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Marina V. Byrdina"
+        },
+        {
+            "source": "Evgeniy V. Palekha",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Ivan A. Sakharov",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Ivan A. Smirnov",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Irina I. Drozdova",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Nickolay V. Boldyrikhin",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Pavel V. Razumov",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Yelena A. Revyakina",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Victor V. Zhilin",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Alexander I. Zhukov",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Nikita I. Chesnokov",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Nikita Ye. Myzdrikov",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Ivan A. Smirnov",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Alexandr I. Gavlicky",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Evgenia V. Roshchina",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Irina V. Reshetnikova",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Sergey A. Morozov",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Elena V. Pinevich",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Boris A. Akishin",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Ivan Ye. Semeonov",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Irina S. Trubchik",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Sergey A. Klyokta",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Vasiliy I. Yukhnov",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Olga N. Manaenkova",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Sergey A. Morozov",
+            "target": "Boris A. Akishin"
+        },
+        {
+            "source": "Elena V. Pinevich",
+            "target": "Boris A. Akishin"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Boris A. Akishin"
+        },
+        {
+            "source": "Olga N. Manaenkova",
+            "target": "Boris A. Akishin"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Boris A. Akishin"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Boris A. Akishin"
+        },
+        {
+            "source": "Evgenia V. Roshchina",
+            "target": "Boris A. Akishin"
+        },
+        {
+            "source": "Irina S. Trubchik",
+            "target": "Boris A. Akishin"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Boris A. Akishin"
+        },
+        {
+            "source": "Evgeniy V. Palekha",
+            "target": "Boris A. Akishin"
+        },
+        {
+            "source": "Nikita G. Lyashenko",
+            "target": "Vitaly M. Porksheyan"
+        },
+        {
+            "source": "Veronica O. Kravchenko",
+            "target": "Vitaly M. Porksheyan"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Vitaly M. Porksheyan"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Vitaly M. Porksheyan"
+        },
+        {
+            "source": "Alexander A. Zelensky",
+            "target": "Vitaly M. Porksheyan"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Vitaly M. Porksheyan"
+        },
+        {
+            "source": "Nickolay V. Boldyrikhin",
+            "target": "Vitaly M. Porksheyan"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Vitaly M. Porksheyan"
+        },
+        {
+            "source": "Pavel V. Razumov",
+            "target": "Vitaly M. Porksheyan"
+        },
+        {
+            "source": "Olga N. Manaenkova",
+            "target": "Irina S. Trubchik"
+        },
+        {
+            "source": "Sergey A. Morozov",
+            "target": "Irina S. Trubchik"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Irina S. Trubchik"
+        },
+        {
+            "source": "Boris A. Akishin",
+            "target": "Irina S. Trubchik"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Irina S. Trubchik"
+        },
+        {
+            "source": "Evgeniy V. Palekha",
+            "target": "Irina S. Trubchik"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Irina S. Trubchik"
+        },
+        {
+            "source": "Irina S. Trubchik",
+            "target": "Olga N. Manaenkova"
+        },
+        {
+            "source": "Sergey A. Morozov",
+            "target": "Olga N. Manaenkova"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Olga N. Manaenkova"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Olga N. Manaenkova"
+        },
+        {
+            "source": "Boris A. Akishin",
+            "target": "Olga N. Manaenkova"
+        },
+        {
+            "source": "Evgeniy V. Palekha",
+            "target": "Olga N. Manaenkova"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Olga N. Manaenkova"
+        },
+        {
+            "source": "Alexander I. Serebryakov",
+            "target": "Alexandr M. Pilipenko"
+        },
+        {
+            "source": "Vadim N. Biryukov",
+            "target": "Alexandr M. Pilipenko"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Alexandr M. Pilipenko"
+        },
+        {
+            "source": "Fedor A. Tsvetkov",
+            "target": "Alexandr M. Pilipenko"
+        },
+        {
+            "source": "A. I. Gulin",
+            "target": "Nikolay I. Chernov"
+        },
+        {
+            "source": "Nikolay V. Butyrlagin",
+            "target": "Nikolay I. Chernov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Nikolay I. Chernov"
+        },
+        {
+            "source": "Marina V. Byrdina",
+            "target": "Dmitry B. Kelekhsaev"
+        },
+        {
+            "source": "Anatoly I. Kondratenko",
+            "target": "Dmitry B. Kelekhsaev"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Dmitry B. Kelekhsaev"
+        },
+        {
+            "source": "Lema A. Bekmurzaev",
+            "target": "Dmitry B. Kelekhsaev"
+        },
+        {
+            "source": "Lema A. Bekmurzaev",
+            "target": "Anatoly I. Kondratenko"
+        },
+        {
+            "source": "Marina V. Byrdina",
+            "target": "Anatoly I. Kondratenko"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Anatoly I. Kondratenko"
+        },
+        {
+            "source": "Dmitry B. Kelekhsaev",
+            "target": "Anatoly I. Kondratenko"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Svetlana V. Rubtsova"
+        },
+        {
+            "source": "Marina V. Byrdina",
+            "target": "Svetlana V. Rubtsova"
+        },
+        {
+            "source": "Lema A. Bekmurzaev",
+            "target": "Svetlana V. Rubtsova"
+        },
+        {
+            "source": "Dmitry B. Kelekhsaev",
+            "target": "Svetlana V. Kurenova"
+        },
+        {
+            "source": "Marina V. Byrdina",
+            "target": "Svetlana V. Kurenova"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Svetlana V. Kurenova"
+        },
+        {
+            "source": "Anastasiya A. Movchun",
+            "target": "Svetlana V. Kurenova"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Anastasiya A. Movchun"
+        },
+        {
+            "source": "Marina V. Byrdina",
+            "target": "Anastasiya A. Movchun"
+        },
+        {
+            "source": "Svetlana V. Kurenova",
+            "target": "Anastasiya A. Movchun"
+        },
+        {
+            "source": "Sergey A. Klyokta",
+            "target": "Nikita I. Chesnokov"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Nikita I. Chesnokov"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Nikita I. Chesnokov"
+        },
+        {
+            "source": "Alexander I. Zhukov",
+            "target": "Nikita I. Chesnokov"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Nikita I. Chesnokov"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Nikita I. Chesnokov"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Nikita I. Chesnokov"
+        },
+        {
+            "source": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)",
+            "target": "Nikita I. Chesnokov"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Nikita I. Chesnokov"
+        },
+        {
+            "source": "Alexandr I. Gavlicky",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Ivan A. Smirnov",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Nikita I. Chesnokov",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Veronica O. Kravchenko",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Alexander A. Zelensky",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Vitaly M. Porksheyan",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Nikita G. Lyashenko",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Pavel V. Razumov",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Irina I. Drozdova",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Ivan A. Smirnov",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Victor V. Zhilin",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Nickolay V. Boldyrikhin",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Ivan A. Sakharov",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Yelena A. Revyakina",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Alexander I. Zhukov",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Sergey A. Klyokta",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Elena V. Pinevich",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Nikita Ye. Myzdrikov",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Evgenia V. Roshchina",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Ivan Ye. Semeonov",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Boris A. Akishin",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Sergey A. Morozov",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Irina S. Trubchik",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Ivan A. Smirnov",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Olga N. Manaenkova",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Evgeniy V. Palekha",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Irina V. Reshetnikova",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Vasiliy I. Yukhnov",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Alexandr I. Gavlicky",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Nikita I. Chesnokov",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "source": "Nikolay V. Butyrlagin",
+            "target": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)"
+        },
+        {
+            "source": "Ilya V. Pakhomov",
+            "target": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)"
+        },
+        {
+            "source": "Alexey E. Titov",
+            "target": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)"
+        },
+        {
+            "source": "Ivan A. Smirnov",
+            "target": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)"
+        },
+        {
+            "source": "Alexandr I. Gavlicky",
+            "target": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)"
+        },
+        {
+            "source": "Anna V. Bugakova",
+            "target": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)"
+        },
+        {
+            "source": "Nikita I. Chesnokov",
+            "target": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)"
+        },
+        {
+            "source": "Alexander I. Zhukov",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Sergey A. Klyokta",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Nikita I. Chesnokov",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Yuriy I. Ivanov"
+        },
+        {
+            "source": "Ilya V. Pakhomov",
+            "target": "Yuriy I. Ivanov"
+        },
+        {
+            "source": "Pavel A. Dukanov",
+            "target": "Dmitry G. Drozdov"
+        },
+        {
+            "source": "Andrey I. Grushin",
+            "target": "Dmitry G. Drozdov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Dmitry G. Drozdov"
+        },
+        {
+            "source": "Evgeny M. Savchenko",
+            "target": "Dmitry G. Drozdov"
+        },
+        {
+            "source": "Dmitry G. Drozdov",
+            "target": "Evgeny M. Savchenko"
+        },
+        {
+            "source": "V. G. Rodin",
+            "target": "Evgeny M. Savchenko"
+        },
+        {
+            "source": "Pavel A. Dukanov",
+            "target": "Evgeny M. Savchenko"
+        },
+        {
+            "source": "Andrey I. Grushin",
+            "target": "Evgeny M. Savchenko"
+        },
+        {
+            "source": "Dmitry G. Drozdov",
+            "target": "Evgeny M. Savchenko"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Evgeny M. Savchenko"
+        },
+        {
+            "source": "V. G. Rodin",
+            "target": "Andrey I. Grushin"
+        },
+        {
+            "source": "Dmitry G. Drozdov",
+            "target": "Andrey I. Grushin"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Andrey I. Grushin"
+        },
+        {
+            "source": "Pavel A. Dukanov",
+            "target": "Andrey I. Grushin"
+        },
+        {
+            "source": "Dmitry G. Drozdov",
+            "target": "Andrey I. Grushin"
+        },
+        {
+            "source": "Evgeny M. Savchenko",
+            "target": "Andrey I. Grushin"
+        },
+        {
+            "source": "Dmitry G. Drozdov",
+            "target": "Pavel A. Dukanov"
+        },
+        {
+            "source": "V. G. Rodin",
+            "target": "Pavel A. Dukanov"
+        },
+        {
+            "source": "Evgeny M. Savchenko",
+            "target": "Pavel A. Dukanov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Pavel A. Dukanov"
+        },
+        {
+            "source": "Dmitry G. Drozdov",
+            "target": "Pavel A. Dukanov"
+        },
+        {
+            "source": "Andrey I. Grushin",
+            "target": "Pavel A. Dukanov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Valentin Dziatlau"
+        },
+        {
+            "source": "Oleg V. Dvornikov",
+            "target": "Valentin Dziatlau"
+        },
+        {
+            "source": "Vladimir A. Tchekhovski",
+            "target": "Valentin Dziatlau"
+        },
+        {
+            "source": "Anna V. Bugakova",
+            "target": "Valentin Dziatlau"
+        },
+        {
+            "source": "Nikolay I. Chernov",
+            "target": "A. I. Gulin"
+        },
+        {
+            "source": "Nikolay V. Butyrlagin",
+            "target": "A. I. Gulin"
+        },
+        {
+            "source": "O. O. Valiamova",
+            "target": "A. I. Gulin"
+        },
+        {
+            "source": "Nikolay M. Safyannikov",
+            "target": "A. I. Gulin"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "A. I. Gulin"
+        },
+        {
+            "source": "Olga Bureneva (ORCID: 0000-0002-6169-454X)",
+            "target": "A. I. Gulin"
+        },
+        {
+            "source": "Zh. A. Sukhinets",
+            "target": "A. I. Gulin"
+        },
+        {
+            "source": "Aleksandr Chepasov",
+            "target": "Nikolay M. Safyannikov"
+        },
+        {
+            "source": "Olga Bureneva",
+            "target": "Nikolay M. Safyannikov"
+        },
+        {
+            "source": "Pavel Bondarenko",
+            "target": "Nikolay M. Safyannikov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Nikolay M. Safyannikov"
+        },
+        {
+            "source": "A. I. Gulin",
+            "target": "Nikolay M. Safyannikov"
+        },
+        {
+            "source": "Olga Bureneva (ORCID: 0000-0002-6169-454X)",
+            "target": "Nikolay M. Safyannikov"
+        },
+        {
+            "source": "O. O. Valiamova",
+            "target": "Nikolay M. Safyannikov"
+        },
+        {
+            "source": "Zh. A. Sukhinets",
+            "target": "Nikolay M. Safyannikov"
+        },
+        {
+            "source": "Nikolay M. Safyannikov",
+            "target": "Olga Bureneva (ORCID: 0000-0002-6169-454X)"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Olga Bureneva (ORCID: 0000-0002-6169-454X)"
+        },
+        {
+            "source": "Nikolay M. Safyannikov",
+            "target": "Olga Bureneva (ORCID: 0000-0002-6169-454X)"
+        },
+        {
+            "source": "O. O. Valiamova",
+            "target": "Olga Bureneva (ORCID: 0000-0002-6169-454X)"
+        },
+        {
+            "source": "Zh. A. Sukhinets",
+            "target": "Olga Bureneva (ORCID: 0000-0002-6169-454X)"
+        },
+        {
+            "source": "A. I. Gulin",
+            "target": "Olga Bureneva (ORCID: 0000-0002-6169-454X)"
+        },
+        {
+            "source": "Alexandr M. Pilipenko",
+            "target": "Alexander I. Serebryakov"
+        },
+        {
+            "source": "Vadim N. Biryukov",
+            "target": "Alexander I. Serebryakov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Petr S. Budyakov"
+        },
+        {
+            "source": "Alexey A. Zhuk",
+            "target": "Petr S. Budyakov"
+        },
+        {
+            "source": "Alexey E. Titov",
+            "target": "Petr S. Budyakov"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Sergey A. Klyokta"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Sergey A. Klyokta"
+        },
+        {
+            "source": "Alexander I. Zhukov",
+            "target": "Sergey A. Klyokta"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Sergey A. Klyokta"
+        },
+        {
+            "source": "Nikita I. Chesnokov",
+            "target": "Sergey A. Klyokta"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Sergey A. Klyokta"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Sergey A. Klyokta"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Alexander I. Zhukov"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Alexander I. Zhukov"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Alexander I. Zhukov"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Alexander I. Zhukov"
+        },
+        {
+            "source": "Sergey A. Klyokta",
+            "target": "Alexander I. Zhukov"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Alexander I. Zhukov"
+        },
+        {
+            "source": "Nikita I. Chesnokov",
+            "target": "Alexander I. Zhukov"
+        },
+        {
+            "source": "Nickolay V. Boldyrikhin",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Yelena A. Revyakina",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Pavel V. Razumov",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Ivan A. Smirnov",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Ivan A. Sakharov",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Sergey A. Morozov",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Irina I. Drozdova",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Victor V. Zhilin",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Alexander I. Zhukov",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Nikita Ye. Myzdrikov",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Boris A. Akishin",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Evgenia V. Roshchina",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Sergey A. Klyokta",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Elena V. Pinevich",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Ivan Ye. Semeonov",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Irina V. Reshetnikova",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Nikita I. Chesnokov",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Vasiliy I. Yukhnov",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Andrey G. Lobodenko"
+        },
+        {
+            "source": "Victor V. Zhilin",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Irina I. Drozdova",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Yelena A. Revyakina",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Ivan A. Sakharov",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Ivan A. Smirnov",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Nickolay V. Boldyrikhin",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Pavel V. Razumov",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Alexander I. Zhukov",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Olga N. Manaenkova",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Evgeniy V. Palekha",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Boris A. Akishin",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Nikita Ye. Myzdrikov",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Vasiliy I. Yukhnov",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Sergey A. Klyokta",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Irina V. Reshetnikova",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Sergey A. Morozov",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Nikita I. Chesnokov",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Irina S. Trubchik",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Ivan Ye. Semeonov",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Vitaliy M. Porksheyan"
+        },
+        {
+            "source": "Andrei A. Ignashin",
+            "target": "Maxim V. Liashov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Maxim V. Liashov"
+        },
+        {
+            "source": "Oleg V. Dvornikov",
+            "target": "Maxim V. Liashov"
+        },
+        {
+            "source": "Alexey A. Zhuk",
+            "target": "Maxim V. Liashov"
+        },
+        {
+            "source": "Maxim V. Liashov",
+            "target": "Andrei A. Ignashin"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Andrei A. Ignashin"
+        },
+        {
+            "source": "Alexey A. Zhuk",
+            "target": "Andrei A. Ignashin"
+        },
+        {
+            "source": "Oleg V. Dvornikov",
+            "target": "Andrei A. Ignashin"
+        },
+        {
+            "source": "Oleg V. Dvornikov",
+            "target": "Alexey A. Zhuk"
+        },
+        {
+            "source": "Alexey E. Titov",
+            "target": "Alexey A. Zhuk"
+        },
+        {
+            "source": "Andrei A. Ignashin",
+            "target": "Alexey A. Zhuk"
+        },
+        {
+            "source": "Petr S. Budyakov",
+            "target": "Alexey A. Zhuk"
+        },
+        {
+            "source": "Maxim V. Liashov",
+            "target": "Alexey A. Zhuk"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Alexey A. Zhuk"
+        },
+        {
+            "source": "Maksim N. Moskovskiy",
+            "target": "Maksim A. Litvinov"
+        },
+        {
+            "source": "Anatoly A. Gulyaev",
+            "target": "Maksim A. Litvinov"
+        },
+        {
+            "source": "Ilya V. Pakhomov",
+            "target": "Maksim A. Litvinov"
+        },
+        {
+            "source": "Anatoly A. Gulyaev",
+            "target": "Maksim N. Moskovskiy"
+        },
+        {
+            "source": "Maksim A. Litvinov",
+            "target": "Maksim N. Moskovskiy"
+        },
+        {
+            "source": "Ilya V. Pakhomov",
+            "target": "Maksim N. Moskovskiy"
+        },
+        {
+            "source": "Maksim N. Moskovskiy",
+            "target": "Anatoly A. Gulyaev"
+        },
+        {
+            "source": "Maksim A. Litvinov",
+            "target": "Anatoly A. Gulyaev"
+        },
+        {
+            "source": "Ilya V. Pakhomov",
+            "target": "Anatoly A. Gulyaev"
+        },
+        {
+            "source": "Lema A. Bekmurzaev",
+            "target": "Olga A. Aleynikova"
+        },
+        {
+            "source": "Victor N. Kokhanenko",
+            "target": "Olga A. Aleynikova"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Olga A. Aleynikova"
+        },
+        {
+            "source": "Marina V. Byrdina",
+            "target": "Olga A. Aleynikova"
+        },
+        {
+            "source": "Igor M. Maltsev",
+            "target": "Olga A. Aleynikova"
+        },
+        {
+            "source": "Lema A. Bekmurzaev",
+            "target": "Victor N. Kokhanenko"
+        },
+        {
+            "source": "Marina V. Byrdina",
+            "target": "Victor N. Kokhanenko"
+        },
+        {
+            "source": "Olga A. Aleynikova",
+            "target": "Victor N. Kokhanenko"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Victor N. Kokhanenko"
+        },
+        {
+            "source": "Svetlana V. Kurenova",
+            "target": "Dmitry B. Kelekhsaev"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Dmitry B. Kelekhsaev"
+        },
+        {
+            "source": "Marina V. Byrdina",
+            "target": "Dmitry B. Kelekhsaev"
+        },
+        {
+            "source": "Marina V. Byrdina",
+            "target": "Igor M. Maltsev"
+        },
+        {
+            "source": "Olga A. Aleynikova",
+            "target": "Igor M. Maltsev"
+        },
+        {
+            "source": "Mikhail F. Mitsik",
+            "target": "Igor M. Maltsev"
+        },
+        {
+            "source": "Vasiliy I. Yukhnov",
+            "target": "Nikita Ye. Myzdrikov"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Nikita Ye. Myzdrikov"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Nikita Ye. Myzdrikov"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Nikita Ye. Myzdrikov"
+        },
+        {
+            "source": "Ivan Ye. Semeonov",
+            "target": "Nikita Ye. Myzdrikov"
+        },
+        {
+            "source": "Irina V. Reshetnikova",
+            "target": "Nikita Ye. Myzdrikov"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Nikita Ye. Myzdrikov"
+        },
+        {
+            "source": "Irina V. Reshetnikova",
+            "target": "Ivan Ye. Semeonov"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Ivan Ye. Semeonov"
+        },
+        {
+            "source": "Nikita Ye. Myzdrikov",
+            "target": "Ivan Ye. Semeonov"
+        },
+        {
+            "source": "Vasiliy I. Yukhnov",
+            "target": "Ivan Ye. Semeonov"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Ivan Ye. Semeonov"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Ivan Ye. Semeonov"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Ivan Ye. Semeonov"
+        },
+        {
+            "source": "Nikita Ye. Myzdrikov",
+            "target": "Vasiliy I. Yukhnov"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Vasiliy I. Yukhnov"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Vasiliy I. Yukhnov"
+        },
+        {
+            "source": "Ivan Ye. Semeonov",
+            "target": "Vasiliy I. Yukhnov"
+        },
+        {
+            "source": "Irina V. Reshetnikova",
+            "target": "Vasiliy I. Yukhnov"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Vasiliy I. Yukhnov"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Vasiliy I. Yukhnov"
+        },
+        {
+            "source": "Ivan Ye. Semeonov",
+            "target": "Irina V. Reshetnikova"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Irina V. Reshetnikova"
+        },
+        {
+            "source": "Vasiliy I. Yukhnov",
+            "target": "Irina V. Reshetnikova"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Irina V. Reshetnikova"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Irina V. Reshetnikova"
+        },
+        {
+            "source": "Nikita Ye. Myzdrikov",
+            "target": "Irina V. Reshetnikova"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Irina V. Reshetnikova"
+        },
+        {
+            "source": "Sergey A. Morozov",
+            "target": "Evgeniy V. Palekha"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Evgeniy V. Palekha"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Evgeniy V. Palekha"
+        },
+        {
+            "source": "Olga N. Manaenkova",
+            "target": "Evgeniy V. Palekha"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Evgeniy V. Palekha"
+        },
+        {
+            "source": "Irina S. Trubchik",
+            "target": "Evgeniy V. Palekha"
+        },
+        {
+            "source": "Boris A. Akishin",
+            "target": "Evgeniy V. Palekha"
+        },
+        {
+            "source": "Irina I. Drozdova",
+            "target": "Sergey A. Morozov"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Sergey A. Morozov"
+        },
+        {
+            "source": "Victor V. Zhilin",
+            "target": "Sergey A. Morozov"
+        },
+        {
+            "source": "Ivan A. Sakharov",
+            "target": "Sergey A. Morozov"
+        },
+        {
+            "source": "Evgeniy V. Palekha",
+            "target": "Sergey A. Morozov"
+        },
+        {
+            "source": "Olga N. Manaenkova",
+            "target": "Sergey A. Morozov"
+        },
+        {
+            "source": "Irina S. Trubchik",
+            "target": "Sergey A. Morozov"
+        },
+        {
+            "source": "Boris A. Akishin",
+            "target": "Sergey A. Morozov"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Sergey A. Morozov"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Sergey A. Morozov"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Sergey A. Morozov"
+        },
+        {
+            "source": "Alexandr M. Pilipenko",
+            "target": "Vadim N. Biryukov"
+        },
+        {
+            "source": "Alexander I. Serebryakov",
+            "target": "Vadim N. Biryukov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Vadim N. Biryukov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Fedor A. Tsvetkov"
+        },
+        {
+            "source": "Alexandr M. Pilipenko",
+            "target": "Fedor A. Tsvetkov"
+        },
+        {
+            "source": "O. O. Valiamova",
+            "target": "Zh. A. Sukhinets"
+        },
+        {
+            "source": "Olga Bureneva (ORCID: 0000-0002-6169-454X)",
+            "target": "Zh. A. Sukhinets"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Zh. A. Sukhinets"
+        },
+        {
+            "source": "Nikolay M. Safyannikov",
+            "target": "Zh. A. Sukhinets"
+        },
+        {
+            "source": "A. I. Gulin",
+            "target": "Zh. A. Sukhinets"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Evgenia V. Roshchina"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Evgenia V. Roshchina"
+        },
+        {
+            "source": "Boris A. Akishin",
+            "target": "Evgenia V. Roshchina"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Evgenia V. Roshchina"
+        },
+        {
+            "source": "Elena V. Pinevich",
+            "target": "Evgenia V. Roshchina"
+        },
+        {
+            "source": "Boris A. Akishin",
+            "target": "Elena V. Pinevich"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Elena V. Pinevich"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Elena V. Pinevich"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Elena V. Pinevich"
+        },
+        {
+            "source": "Evgenia V. Roshchina",
+            "target": "Elena V. Pinevich"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Leontiy K. Samoilov"
+        },
+        {
+            "source": "Alexandr I. Gavlicky",
+            "target": "Ivan A. Smirnov"
+        },
+        {
+            "source": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)",
+            "target": "Ivan A. Smirnov"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Ivan A. Smirnov"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Ivan A. Smirnov"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Ivan A. Smirnov"
+        },
+        {
+            "source": "Ivan A. Smirnov",
+            "target": "Alexandr I. Gavlicky"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Alexandr I. Gavlicky"
+        },
+        {
+            "source": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)",
+            "target": "Alexandr I. Gavlicky"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Alexandr I. Gavlicky"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Alexandr I. Gavlicky"
+        },
+        {
+            "source": "Yelena A. Revyakina",
+            "target": "Ivan A. Smirnov"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Ivan A. Smirnov"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Ivan A. Smirnov"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Ivan A. Smirnov"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Ivan A. Smirnov"
+        },
+        {
+            "source": "Pavel V. Razumov",
+            "target": "Ivan A. Smirnov"
+        },
+        {
+            "source": "Nickolay V. Boldyrikhin",
+            "target": "Ivan A. Smirnov"
+        },
+        {
+            "source": "Veronica O. Kravchenko",
+            "target": "Pavel V. Razumov"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Pavel V. Razumov"
+        },
+        {
+            "source": "Nikita G. Lyashenko",
+            "target": "Pavel V. Razumov"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Pavel V. Razumov"
+        },
+        {
+            "source": "Alexander A. Zelensky",
+            "target": "Pavel V. Razumov"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Pavel V. Razumov"
+        },
+        {
+            "source": "Vitaly M. Porksheyan",
+            "target": "Pavel V. Razumov"
+        },
+        {
+            "source": "Nickolay V. Boldyrikhin",
+            "target": "Pavel V. Razumov"
+        },
+        {
+            "source": "Yelena A. Revyakina",
+            "target": "Pavel V. Razumov"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Pavel V. Razumov"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Pavel V. Razumov"
+        },
+        {
+            "source": "Ivan A. Smirnov",
+            "target": "Pavel V. Razumov"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Pavel V. Razumov"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Pavel V. Razumov"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Nickolay V. Boldyrikhin"
+        },
+        {
+            "source": "Nikita G. Lyashenko",
+            "target": "Nickolay V. Boldyrikhin"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Nickolay V. Boldyrikhin"
+        },
+        {
+            "source": "Alexander A. Zelensky",
+            "target": "Nickolay V. Boldyrikhin"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Nickolay V. Boldyrikhin"
+        },
+        {
+            "source": "Vitaly M. Porksheyan",
+            "target": "Nickolay V. Boldyrikhin"
+        },
+        {
+            "source": "Veronica O. Kravchenko",
+            "target": "Nickolay V. Boldyrikhin"
+        },
+        {
+            "source": "Pavel V. Razumov",
+            "target": "Nickolay V. Boldyrikhin"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Nickolay V. Boldyrikhin"
+        },
+        {
+            "source": "Yelena A. Revyakina",
+            "target": "Nickolay V. Boldyrikhin"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Nickolay V. Boldyrikhin"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Nickolay V. Boldyrikhin"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Nickolay V. Boldyrikhin"
+        },
+        {
+            "source": "Ivan A. Smirnov",
+            "target": "Nickolay V. Boldyrikhin"
+        },
+        {
+            "source": "Ivan A. Smirnov",
+            "target": "Yelena A. Revyakina"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Yelena A. Revyakina"
+        },
+        {
+            "source": "Pavel V. Razumov",
+            "target": "Yelena A. Revyakina"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Yelena A. Revyakina"
+        },
+        {
+            "source": "Nickolay V. Boldyrikhin",
+            "target": "Yelena A. Revyakina"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Yelena A. Revyakina"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Yelena A. Revyakina"
+        },
+        {
+            "source": "A. I. Gulin",
+            "target": "O. O. Valiamova"
+        },
+        {
+            "source": "Nikolay M. Safyannikov",
+            "target": "O. O. Valiamova"
+        },
+        {
+            "source": "Zh. A. Sukhinets",
+            "target": "O. O. Valiamova"
+        },
+        {
+            "source": "Olga Bureneva (ORCID: 0000-0002-6169-454X)",
+            "target": "O. O. Valiamova"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "O. O. Valiamova"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Victor V. Zhilin"
+        },
+        {
+            "source": "Irina I. Drozdova",
+            "target": "Victor V. Zhilin"
+        },
+        {
+            "source": "Ivan A. Sakharov",
+            "target": "Victor V. Zhilin"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Victor V. Zhilin"
+        },
+        {
+            "source": "Sergey A. Morozov",
+            "target": "Victor V. Zhilin"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Victor V. Zhilin"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Victor V. Zhilin"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Irina I. Drozdova"
+        },
+        {
+            "source": "Victor V. Zhilin",
+            "target": "Irina I. Drozdova"
+        },
+        {
+            "source": "Sergey A. Morozov",
+            "target": "Irina I. Drozdova"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Irina I. Drozdova"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Irina I. Drozdova"
+        },
+        {
+            "source": "Ivan A. Sakharov",
+            "target": "Irina I. Drozdova"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Irina I. Drozdova"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Ivan A. Sakharov"
+        },
+        {
+            "source": "Victor V. Zhilin",
+            "target": "Ivan A. Sakharov"
+        },
+        {
+            "source": "Vitaliy M. Porksheyan",
+            "target": "Ivan A. Sakharov"
+        },
+        {
+            "source": "Andrey G. Lobodenko",
+            "target": "Ivan A. Sakharov"
+        },
+        {
+            "source": "Irina I. Drozdova",
+            "target": "Ivan A. Sakharov"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Ivan A. Sakharov"
+        },
+        {
+            "source": "Sergey A. Morozov",
+            "target": "Ivan A. Sakharov"
+        },
+        {
+            "source": "Nikita G. Lyashenko",
+            "target": "Alexander A. Zelensky"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Alexander A. Zelensky"
+        },
+        {
+            "source": "Veronica O. Kravchenko",
+            "target": "Alexander A. Zelensky"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Alexander A. Zelensky"
+        },
+        {
+            "source": "Pavel V. Razumov",
+            "target": "Alexander A. Zelensky"
+        },
+        {
+            "source": "Nickolay V. Boldyrikhin",
+            "target": "Alexander A. Zelensky"
+        },
+        {
+            "source": "Vitaly M. Porksheyan",
+            "target": "Alexander A. Zelensky"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Alexander A. Zelensky"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Alexander A. Zelensky"
+        },
+        {
+            "source": "Nikita G. Lyashenko",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Nickolay V. Boldyrikhin",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Veronica O. Kravchenko",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Pavel V. Razumov",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Vitaly M. Porksheyan",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Alexander A. Zelensky",
+            "target": "Larissa V. Cherckesova"
+        },
+        {
+            "source": "Nickolay V. Boldyrikhin",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Pavel V. Razumov",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Alexander A. Zelensky",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Vitaly M. Porksheyan",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Nikita G. Lyashenko",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Veronica O. Kravchenko",
+            "target": "Denis A. Korochentsev"
+        },
+        {
+            "source": "Veronica O. Kravchenko",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Nickolay V. Boldyrikhin",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Alexander A. Zelensky",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Nikita G. Lyashenko",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Vitaly M. Porksheyan",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Pavel V. Razumov",
+            "target": "Irina A. Pilipenko"
+        },
+        {
+            "source": "Pavel V. Razumov",
+            "target": "Veronica O. Kravchenko"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Veronica O. Kravchenko"
+        },
+        {
+            "source": "Nikita G. Lyashenko",
+            "target": "Veronica O. Kravchenko"
+        },
+        {
+            "source": "Vitaly M. Porksheyan",
+            "target": "Veronica O. Kravchenko"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Veronica O. Kravchenko"
+        },
+        {
+            "source": "Alexander A. Zelensky",
+            "target": "Veronica O. Kravchenko"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Veronica O. Kravchenko"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Veronica O. Kravchenko"
+        },
+        {
+            "source": "Nickolay V. Boldyrikhin",
+            "target": "Veronica O. Kravchenko"
+        },
+        {
+            "source": "Larissa V. Cherckesova",
+            "target": "Nikita G. Lyashenko"
+        },
+        {
+            "source": "Vitaly M. Porksheyan",
+            "target": "Nikita G. Lyashenko"
+        },
+        {
+            "source": "Nickolay V. Boldyrikhin",
+            "target": "Nikita G. Lyashenko"
+        },
+        {
+            "source": "Alexander A. Zelensky",
+            "target": "Nikita G. Lyashenko"
+        },
+        {
+            "source": "Veronica O. Kravchenko",
+            "target": "Nikita G. Lyashenko"
+        },
+        {
+            "source": "Pavel V. Razumov",
+            "target": "Nikita G. Lyashenko"
+        },
+        {
+            "source": "Denis A. Korochentsev",
+            "target": "Nikita G. Lyashenko"
+        },
+        {
+            "source": "Irina A. Pilipenko",
+            "target": "Nikita G. Lyashenko"
+        },
+        {
+            "source": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)",
+            "target": "Nikita G. Lyashenko"
+        },
+        {
+            "source": "Elena V. Ovsepian",
+            "target": "Anatoly R. Gaiduk"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Anatoly R. Gaiduk"
+        },
+        {
+            "source": "Anna V. Bugakova",
+            "target": "Anatoly R. Gaiduk"
+        },
+        {
+            "source": "Anna V. Bugakova",
+            "target": "Elena V. Ovsepian"
+        },
+        {
+            "source": "Anatoly R. Gaiduk",
+            "target": "Elena V. Ovsepian"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Elena V. Ovsepian"
+        },
+        {
+            "source": "Nikolay M. Safyannikov",
+            "target": "Olga Bureneva"
+        },
+        {
+            "source": "Alena Pustovoitova",
+            "target": "Olga Bureneva"
+        },
+        {
+            "source": "Daniil Sobolev",
+            "target": "Olga Bureneva"
+        },
+        {
+            "source": "Alena Pustovoitova",
+            "target": "Daniil Sobolev"
+        },
+        {
+            "source": "Olga Bureneva",
+            "target": "Daniil Sobolev"
+        },
+        {
+            "source": "Olga Bureneva",
+            "target": "Alena Pustovoitova"
+        },
+        {
+            "source": "Daniil Sobolev",
+            "target": "Alena Pustovoitova"
+        },
+        {
+            "source": "Nikolay M. Safyannikov",
+            "target": "Aleksandr Chepasov"
+        },
+        {
+            "source": "Pavel Bondarenko",
+            "target": "Aleksandr Chepasov"
+        },
+        {
+            "source": "Aleksandr Chepasov",
+            "target": "Pavel Bondarenko"
+        },
+        {
+            "source": "Nikolay M. Safyannikov",
+            "target": "Pavel Bondarenko"
+        },
+        {
+            "source": "Olga Bureneva (ORCID: 0000-0002-6169-454X)",
+            "target": "Nikolay M. Safyannikov"
+        },
+        {
+            "source": "Evgeny M. Savchenko",
+            "target": "Dmitry G. Drozdov"
+        },
+        {
+            "source": "Pavel A. Dukanov",
+            "target": "Dmitry G. Drozdov"
+        },
+        {
+            "source": "V. G. Rodin",
+            "target": "Dmitry G. Drozdov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "Dmitry G. Drozdov"
+        },
+        {
+            "source": "Andrey I. Grushin",
+            "target": "Dmitry G. Drozdov"
+        },
+        {
+            "source": "Nikolay N. Prokopenko",
+            "target": "V. G. Rodin"
+        },
+        {
+            "source": "Evgeny M. Savchenko",
+            "target": "V. G. Rodin"
+        },
+        {
+            "source": "Andrey I. Grushin",
+            "target": "V. G. Rodin"
+        },
+        {
+            "source": "Dmitry G. Drozdov",
+            "target": "V. G. Rodin"
+        },
+        {
+            "source": "Pavel A. Dukanov",
+            "target": "V. G. Rodin"
+        }
+    ]
+}

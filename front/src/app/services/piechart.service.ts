@@ -11,7 +11,6 @@ export class PiechartService {
   constructor(private http: HttpClient) {}
 
   getData(route: string) {
-    console.log(`${this.apiUrlLocal}/${route}`)
     return this.http.get(`${this.apiUrlLocal}/${route}`)
   }
 

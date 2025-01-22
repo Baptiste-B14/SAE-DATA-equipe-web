@@ -18,69 +18,6 @@ export class WordCloudComponent {
 
   @ViewChild('wordCloudContainer', { static: false }) wordCloudContainer!: ElementRef;
 
-/*
-    WordCloud(text, {
-    size = group => group.length, // Given a grouping of words, returns the size factor for that word
-    word = d => d, // Given an item of the data array, returns the word
-    marginTop = 0, // top margin, in pixels
-    marginRight = 0, // right margin, in pixels
-    marginBottom = 0, // bottom margin, in pixels
-    marginLeft = 0, // left margin, in pixels
-    width = 640, // outer width, in pixels
-    height = 400, // outer height, in pixels
-    maxWords = 250, // maximum number of words to extract from the text
-    fontFamily = "sans-serif", // font family
-    fontScale = 15, // base font size
-    fill = null, // text color, can be a constant or a function of the word
-    padding = 0, // amount of padding between the words (in pixels)
-    rotate = 0, // a constant or function to rotate the words
-    invalidation // when this promise resolves, stop the simulation
-  } = {}) {
-    const words = typeof text === "string" ? text.split(/\W+/g) : Array.from(text);
-
-    const data = d3.rollups(words, size, w => w)
-      .sort(([, a], [, b]) => d3.descending(a, b))
-      .slice(0, maxWords)
-      .map(([key, size]) => ({text: word(key), size}));
-
-    const svg = d3.create("svg")
-      .attr("viewBox", [0, 0, width, height])
-      .attr("width", width)
-      .attr("font-family", fontFamily)
-      .attr("text-anchor", "middle")
-      .attr("style", "max-width: 100%; height: auto; height: intrinsic;");
-
-    const g = svg.append("g").attr("transform", `translate(${marginLeft},${marginTop})`);
-
-    const cloud = cloud()
-      .size([width - marginLeft - marginRight, height - marginTop - marginBottom])
-      .words(data)
-      .padding(padding)
-      .rotate(rotate)
-      .font(fontFamily)
-      .fontSize(d => Math.sqrt(d.size) * fontScale)
-      .on("word", ({size, x, y, rotate, text}) => {
-        g.append("text")
-          .datum(text)
-          .attr("font-size", size)
-          .attr("fill", fill)
-          .attr("transform", `translate(${x},${y}) rotate(${rotate})`)
-          .text(text);
-      });
-
-    cloud.start();
-    invalidation && invalidation.then(() => cloud.stop());
-    return svg.node();
-  }
-
-  words = [
-    { text: 'Angular', size: 40 },
-    { text: 'D3.js', size: 30 },
-    { text: 'TypeScript', size: 25 },
-    { text: 'JavaScript', size: 20 },
-    { text: 'SVG', size: 15 },
-    { text: 'WordCloud', size: 50 },
-  ];*/
   years: number[] = [];
   selectedYear: number = 2024;
   words : { text: string, size: number }[] | undefined
@@ -161,15 +98,25 @@ export class WordCloudComponent {
     const group = svg.append('g')
       .attr('transform', `translate(${width / 2},${height / 2})`);
 
+    // Calculer une échelle de couleur en fonction de la distance
+    const maxDistance = Math.sqrt(Math.pow(width / 2, 2) + Math.pow(height / 2, 2));
+    const colorScale = d3.scaleLinear<string>()
+      .domain([0, maxDistance])
+      .range(['#ff0000', '#0000ff']); // Dégradé du rouge au bleu
+
     group.selectAll('text')
       .data(words)
       .enter()
       .append('text')
       .style('font-size', (d: any) => `${d.size}px`)
-      .style('fill', () => d3.schemeCategory10[Math.floor(Math.random() * 10)])
+      .style('fill', (d: any) => {
+        const distance = Math.sqrt(Math.pow(d.x, 2) + Math.pow(d.y, 2));
+        return colorScale(distance);
+      })
       .attr('text-anchor', 'middle')
       .attr('transform', (d: any) => `translate(${d.x},${d.y}) rotate(${d.rotate})`)
       .text((d: any) => d.text);
   }
+
 
 }

@@ -1,0 +1,372 @@
+{
+    "nodes": [
+        {
+            "id": 1334747,
+            "name": "Anna V. Bugakova"
+        },
+        {
+            "id": 4281176,
+            "name": "V. G. Rodin"
+        },
+        {
+            "id": 4281175,
+            "name": "Dmitry G. Drozdov"
+        },
+        {
+            "id": 1514671,
+            "name": "Nikolay I. Chernov"
+        },
+        {
+            "id": 2058799,
+            "name": "Anatoly R. Gaiduk"
+        },
+        {
+            "id": 2099545,
+            "name": "Elena V. Ovsepian"
+        },
+        {
+            "id": 1514909,
+            "name": "Nikolay M. Safyannikov"
+        },
+        {
+            "id": 1514910,
+            "name": "Olga Bureneva (ORCID: 0000-0002-6169-454X)"
+        },
+        {
+            "id": 1515569,
+            "name": "Zh. A. Sukhinets"
+        },
+        {
+            "id": 1514908,
+            "name": "A. I. Gulin"
+        },
+        {
+            "id": 1515725,
+            "name": "O. O. Valiamova"
+        },
+        {
+            "id": 1515244,
+            "name": "Andrei A. Ignashin"
+        },
+        {
+            "id": 1515546,
+            "name": "Fedor A. Tsvetkov"
+        },
+        {
+            "id": 1514701,
+            "name": "Vladislav E. Chumakov (ORCID: 0000-0002-3446-743X)"
+        },
+        {
+            "id": 1515243,
+            "name": "Maxim V. Liashov"
+        },
+        {
+            "id": 1514627,
+            "name": "Alexandr M. Pilipenko"
+        },
+        {
+            "id": 1514999,
+            "name": "Petr S. Budyakov"
+        },
+        {
+            "id": 1515623,
+            "name": "Leontiy K. Samoilov"
+        },
+        {
+            "id": 1515545,
+            "name": "Vadim N. Biryukov"
+        },
+        {
+            "id": 1515245,
+            "name": "Alexey A. Zhuk"
+        },
+        {
+            "id": 1514761,
+            "name": "Valentin Dziatlau"
+        },
+        {
+            "id": 1514726,
+            "name": "Yuriy I. Ivanov"
+        },
+        {
+            "id": 1514755,
+            "name": "Andrey I. Grushin"
+        },
+        {
+            "id": 1514756,
+            "name": "Pavel A. Dukanov"
+        },
+        {
+            "id": 1036748,
+            "name": "Nikolay V. Butyrlagin"
+        },
+        {
+            "id": 1036906,
+            "name": "Ilya V. Pakhomov"
+        },
+        {
+            "id": 1514753,
+            "name": "Dmitry G. Drozdov"
+        },
+        {
+            "id": 1514754,
+            "name": "Evgeny M. Savchenko"
+        },
+        {
+            "id": 1514577,
+            "name": "Mikhail F. Mitsik"
+        },
+        {
+            "id": 1462838,
+            "name": "Vladimir A. Tchekhovski"
+        },
+        {
+            "id": 1462839,
+            "name": "Yaroslav D. Galkin"
+        },
+        {
+            "id": 1462840,
+            "name": "Alexei V. Kunz"
+        },
+        {
+            "id": 1462837,
+            "name": "Oleg V. Dvornikov"
+        },
+        {
+            "id": 1271888,
+            "name": "Alexey E. Titov"
+        },
+        {
+            "id": 1036746,
+            "name": "Nikolay N. Prokopenko"
+        },
+        {
+            "id": 1515251,
+            "name": "Maksim N. Moskovskiy"
+        },
+        {
+            "id": 1515252,
+            "name": "Anatoly A. Gulyaev"
+        },
+        {
+            "id": 1515250,
+            "name": "Maksim A. Litvinov"
+        },
+        {
+            "id": 1515428,
+            "name": "Victor N. Kokhanenko"
+        },
+        {
+            "id": 1515427,
+            "name": "Olga A. Aleynikova"
+        },
+        {
+            "id": 1514678,
+            "name": "Anatoly I. Kondratenko"
+        },
+        {
+            "id": 1514578,
+            "name": "Marina V. Byrdina"
+        },
+        {
+            "id": 1514677,
+            "name": "Dmitry B. Kelekhsaev"
+        },
+        {
+            "id": 1514679,
+            "name": "Svetlana V. Rubtsova"
+        },
+        {
+            "id": 1515429,
+            "name": "Dmitry B. Kelekhsaev"
+        },
+        {
+            "id": 1515430,
+            "name": "Igor M. Maltsev"
+        },
+        {
+            "id": 1514680,
+            "name": "Svetlana V. Kurenova"
+        },
+        {
+            "id": 1514681,
+            "name": "Anastasiya A. Movchun"
+        },
+        {
+            "id": 1514576,
+            "name": "Lema A. Bekmurzaev"
+        },
+        {
+            "id": 1515493,
+            "name": "Evgeniy V. Palekha"
+        },
+        {
+            "id": 1515854,
+            "name": "Ivan A. Sakharov"
+        },
+        {
+            "id": 1515678,
+            "name": "Ivan A. Smirnov"
+        },
+        {
+            "id": 1515853,
+            "name": "Irina I. Drozdova"
+        },
+        {
+            "id": 1515680,
+            "name": "Nickolay V. Boldyrikhin"
+        },
+        {
+            "id": 1515679,
+            "name": "Pavel V. Razumov"
+        },
+        {
+            "id": 1515681,
+            "name": "Yelena A. Revyakina"
+        },
+        {
+            "id": 1515852,
+            "name": "Victor V. Zhilin"
+        },
+        {
+            "id": 1515115,
+            "name": "Alexander I. Zhukov"
+        },
+        {
+            "id": 1514700,
+            "name": "Olga A. Safaryan (ORCID: 0000-0002-7508-913X)"
+        },
+        {
+            "id": 1514702,
+            "name": "Irina A. Pilipenko"
+        },
+        {
+            "id": 1514699,
+            "name": "Denis A. Korochentsev"
+        },
+        {
+            "id": 1514698,
+            "name": "Nikita I. Chesnokov"
+        },
+        {
+            "id": 1515445,
+            "name": "Nikita Ye. Myzdrikov"
+        },
+        {
+            "id": 1515676,
+            "name": "Ivan A. Smirnov"
+        },
+        {
+            "id": 1515677,
+            "name": "Alexandr I. Gavlicky"
+        },
+        {
+            "id": 1515613,
+            "name": "Evgenia V. Roshchina"
+        },
+        {
+            "id": 1515116,
+            "name": "Andrey G. Lobodenko"
+        },
+        {
+            "id": 1515448,
+            "name": "Irina V. Reshetnikova"
+        },
+        {
+            "id": 1515117,
+            "name": "Vitaliy M. Porksheyan"
+        },
+        {
+            "id": 1515494,
+            "name": "Sergey A. Morozov"
+        },
+        {
+            "id": 1515614,
+            "name": "Elena V. Pinevich"
+        },
+        {
+            "id": 1514611,
+            "name": "Boris A. Akishin"
+        },
+        {
+            "id": 1515446,
+            "name": "Ivan Ye. Semeonov"
+        },
+        {
+            "id": 1514614,
+            "name": "Irina S. Trubchik"
+        },
+        {
+            "id": 1515114,
+            "name": "Sergey A. Klyokta"
+        },
+        {
+            "id": 1515447,
+            "name": "Vasiliy I. Yukhnov"
+        },
+        {
+            "id": 1514619,
+            "name": "Olga N. Manaenkova"
+        },
+        {
+            "id": 1514610,
+            "name": "Larissa V. Cherckesova"
+        },
+        {
+            "id": 1944112,
+            "name": "Nikita G. Lyashenko"
+        },
+        {
+            "id": 1944111,
+            "name": "Veronica O. Kravchenko"
+        },
+        {
+            "id": 1944109,
+            "name": "Denis A. Korochentsev"
+        },
+        {
+            "id": 1944107,
+            "name": "Alexander A. Zelensky"
+        },
+        {
+            "id": 1944108,
+            "name": "Larissa V. Cherckesova"
+        },
+        {
+            "id": 1944110,
+            "name": "Irina A. Pilipenko"
+        },
+        {
+            "id": 1514997,
+            "name": "Alexander I. Serebryakov"
+        },
+        {
+            "id": 1514613,
+            "name": "Vitaly M. Porksheyan"
+        },
+        {
+            "id": 2497945,
+            "name": "Aleksandr Chepasov"
+        },
+        {
+            "id": 2497043,
+            "name": "Olga Bureneva"
+        },
+        {
+            "id": 2497946,
+            "name": "Pavel Bondarenko"
+        },
+        {
+            "id": 3048883,
+            "name": "Nikolay M. Safyannikov"
+        },
+        {
+            "id": 2497046,
+            "name": "Alena Pustovoitova"
+        },
+        {
+            "id": 2497045,
+            "name": "Daniil Sobolev"
+        }
+    ]
+}

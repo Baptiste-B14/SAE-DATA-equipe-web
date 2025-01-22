@@ -39,9 +39,9 @@ export class LineChartComponent implements OnInit {
     const width = element.offsetWidth || 928;
     const height = 500;
     const marginTop = 20;
-    const marginRight = 40; // Augmenté pour l'espace de la légende droite
-    const marginBottom = 60; // Augmenté pour l'espace de la légende X
-    const marginLeft = 70; // Augmenté pour l'espace de la légende Y
+    const marginRight = 150; // Espace pour la légende
+    const marginBottom = 60;
+    const marginLeft = 70;
 
     const parseDate = d3.utcParse('%Y');
     const parsedData = this.chartData.flatMap(d =>
@@ -122,13 +122,13 @@ export class LineChartComponent implements OnInit {
       .attr('transform', `translate(0,${height - marginBottom})`)
       .call(
         d3.axisBottom(x)
-          .ticks(10) // Nombre de lignes verticales
-          .tickSize(-(height - marginTop - marginBottom)) // Longueur des lignes
-          .tickFormat(() => '') // Pas de texte
+          .ticks(10)
+          .tickSize(-(height - marginTop - marginBottom))
+          .tickFormat(() => '')
       )
       .selectAll('line')
       .attr('stroke', '#e0e0e0')
-      .attr('stroke-dasharray', '4,2'); // Style pointillé
+      .attr('stroke-dasharray', '4,2');
 
     // Axes
     svg.append('g')
@@ -147,24 +147,31 @@ export class LineChartComponent implements OnInit {
       .attr('transform', `translate(${marginLeft},0)`)
       .call(d3.axisLeft(y));
 
-    // Légende X
+    // Légendes des axes
     svg.append('text')
       .attr('x', (width - marginLeft - marginRight) / 2 + marginLeft)
-      .attr('y', height - marginBottom + 40) // Plus éloigné de l'axe
+      .attr('y', height - marginBottom + 40)
       .style('text-anchor', 'middle')
-      .style('font-size', '14px') // Taille de police augmentée
-      .text(this.XLegend)
+      .style('font-size', '14px')
+      .text(this.XLegend);
 
-
-    // Légende Y
     svg.append('text')
       .attr('x', -(height - marginTop - marginBottom) / 2 - marginTop)
-      .attr('y', marginLeft - 50) // Plus éloigné de l'axe
+      .attr('y', marginLeft - 50)
       .attr('transform', 'rotate(-90)')
       .style('text-anchor', 'middle')
-      .style('font-size', '14px') // Taille de police augmentée
-      .text(this.YLegend)
-      .attr('y', 10);
+      .style('font-size', '14px')
+      .text(this.YLegend);
+
+    const tooltip = d3.select(element)
+      .append('div')
+      .style('position', 'absolute')
+      .style('visibility', 'hidden')
+      .style('background', 'rgba(0, 0, 0, 0.7)')
+      .style('color', 'white')
+      .style('padding', '5px 10px')
+      .style('border-radius', '4px')
+      .style('font-size', '12px');
 
     const groupedData = d3.group(connectedData, d => d.periode);
 
@@ -175,26 +182,25 @@ export class LineChartComponent implements OnInit {
         .attr('stroke', color(key as string))
         .attr('stroke-width', 2)
         .attr('d', line);
-    });
 
-    const legend = svg.append('g')
-      .attr('transform', `translate(${width - marginRight - 120},${marginTop})`); // Position ajustée
-
-    [...color.domain()].forEach((d, i) => {
-      legend.append('rect')
-        .attr('x', 0)
-        .attr('y', i * 25) // Espacement augmenté
-        .attr('width', 15)
-        .attr('height', 15)
-        .attr('fill', color(d));
-
-      legend.append('text')
-        .attr('x', 20)
-        .attr('y', i * 25 + 12) // Espacement augmenté
-        .text(d)
-        .style('font-size', '12px')
-        .attr('alignment-baseline', 'middle');
+      svg.selectAll(`circle-${key}`)
+        .data(values)
+        .join('circle')
+        .attr('cx', d => x(d.date))
+        .attr('cy', d => y(d.nb_collaborations))
+        .attr('r', 5)
+        .attr('fill', color(key as string))
+        .on('mouseover', (event, d) => {
+          tooltip.style('visibility', 'visible').text(`${d.annee}: ${d.nb_collaborations}`);
+        })
+        .on('mousemove', (event) => {
+          tooltip.style('top', `${event.pageY - 20}px`).style('left', `${event.pageX + 10}px`);
+        })
+        .on('mouseout', () => tooltip.style('visibility', 'hidden'));
     });
   }
+
+
+
 
 }
