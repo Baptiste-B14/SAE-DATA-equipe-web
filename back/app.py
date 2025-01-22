@@ -203,7 +203,8 @@ def dynamic_query():
     try:
         data = request.json
         filters = data.get('filters', [])
-        table_name = data.get('table', 'Publication')  # Get table name from request
+        table_name = filters[0]['table']  # Get table name from request
+        print(filters[0]['table'])
         
         # Validate table exists (PostgreSQL syntax)
         sql_check_table = """

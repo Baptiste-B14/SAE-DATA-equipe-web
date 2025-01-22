@@ -86,11 +86,14 @@ export class RecherchePageComponent implements OnInit {
   request() {
     this.loading = true;
     this.error = '';
+
+    console.log(this.selectedTable)
     
     const filters: SearchFilter[] = this.searchLines.map(line => ({
       column: line.column,
       operator: line.operator,
-      value: line.value
+      value: line.value,
+      table : this.selectedTable
     }));
 
     this.searchService.search(filters).subscribe(
