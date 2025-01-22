@@ -1,69 +1,59 @@
 <div class="IndexPage page-content">
-    <section class="problematique">
-        <h1>Comment la pandémie de la COVID-19 a-t-elle impactée les collaborations scientifiques ?</h1>
-    </section>
+  <section class="problematique">
+    <h1>Comment la pandémie de la COVID-19 a-t-elle impactée les collaborations scientifiques ?</h1>
+  </section>
 
-    <section class="kpiSection">
-      <app-kpi></app-kpi>
+  <section class="kpiSection">
+    <app-kpi></app-kpi>
 
-    </section>
+  </section>
 
-    <section class="presentationSection">
-        <div class="presentationContainer">
-        <h2>Presentation du projet</h2>
-        <p>
-            La pandémie de COVID-19 a profondément influencé les mécanismes de collaboration scientifique.
-            Ce projet vise à comprendre ces impacts à travers différentes analyses de données recueillies
-            pendant cette période critique, et à les mettres en parallèle avec l'avant covid et l'après covid
-        </p>
-        <a routerLink="/presentation">En savoir plus</a>
-        </div>
-    </section>
+  <section class="presentationSection">
+    <div class="presentationContainer">
+      <h2>Presentation du projet</h2>
+      <p>
+        La pandémie a complètement redéfini les collaborations scientifiques à l'échelle mondiale. A travers ce site
+        web, plongez dans l’analyse de la base de données DBLP (Digital Bibliography and Library Project), une base de
+        données bibliographiques dans le domaine de l’informatique, qui recense plus de 7 millions de publications
+        scientifiques et plus de trois millions d’auteurs.
+      </p>
+      <a routerLink="/presentation">En savoir plus</a>
+    </div>
+  </section>
 
-    <section class="axeSection">
-        <h2>Axes d’analyse</h2>
-        <div class="carouselContainer">
-          <!-- Control Buttons Prev -->
-          <button
-          class="carouselPrev fas fa-arrow-left"
-          type="button"
-          (click)="navigateCarousel('prev')"
-          >
-          <span class="visuallyHidden">Previous</span>
-          </button>
-        
-          <!-- Carrousel Content -->
-          <div class="carouselInner" [style.transform]="getTransformStyle()">
-            @for (axis of axes; track axis.title) {
-              <div class="carouselItem">
-                <img [src]="axis.image" class="carouselImg" [alt]="axis.title" [routerLink]="axis.route" />
-                <div class="carouselText">
-                  <h5>{{ axis.title }}</h5>
-                  <p class="carouselItemDescription">{{ axis.description }}</p>
-                </div>
-              </div>
-            }
+  <section class="axeSection">
+    <h2>Axes d’analyse</h2>
+    <div class="carouselContainer">
+      <!-- Control Buttons Prev -->
+      <button class="carouselPrev fas fa-arrow-left" type="button" (click)="navigateCarousel('prev')">
+        <span class="visuallyHidden">Previous</span>
+      </button>
+
+      <!-- Carrousel Content -->
+      <div class="carouselInner" [style.transform]="getTransformStyle()">
+        @for (axis of axes; track axis.title) {
+        <div class="carouselItem">
+          <img [src]="axis.image" class="carouselImg" [alt]="axis.title" [routerLink]="axis.route" />
+          <div class="carouselText">
+            <h5>{{ axis.title }}</h5>
+            <p class="carouselItemDescription">{{ axis.description }}</p>
           </div>
-        
-          <!-- Indicators (Bottom) -->
-          <div class="carouselIndicators">
-            @for (axis of axes; track axis.title) {
-              <button
-                type="button"
-                [class.active]="axes.indexOf(axis) === currentIndex"
-                (click)="navigateCarouselByIndex(axes.indexOf(axis))"
-              ></button>
-            }
-          </div>
-        
-          <!-- Control Buttons Next -->
-          <button
-          class="carouselNext fas fa-arrow-right"
-          type="button"
-          (click)="navigateCarousel('next')"
-          >
-            <span class="visuallyHidden">Next</span>
-          </button>
         </div>
-    </section>
+        }
+      </div>
+
+      <!-- Indicators (Bottom) -->
+      <div class="carouselIndicators">
+        @for (axis of axes; track axis.title) {
+        <button type="button" [class.active]="axes.indexOf(axis) === currentIndex"
+          (click)="navigateCarouselByIndex(axes.indexOf(axis))"></button>
+        }
+      </div>
+
+      <!-- Control Buttons Next -->
+      <button class="carouselNext fas fa-arrow-right" type="button" (click)="navigateCarousel('next')">
+        <span class="visuallyHidden">Next</span>
+      </button>
+    </div>
+  </section>
 </div>
