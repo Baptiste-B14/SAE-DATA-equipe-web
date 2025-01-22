@@ -47,7 +47,7 @@ export class BarchartCustomComponent {
 
   changeRoute(route : string, period: string){
 
-    if(route != "first_collab" ){
+    if(route != "first_collab" && route != "author_by_country"){
       this.routeArgs = route +"?period=" + period
     }
     else this.routeArgs = route

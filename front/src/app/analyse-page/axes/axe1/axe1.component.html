@@ -44,7 +44,15 @@
 
     <div class="content-item">
       <div class="chart-box">
-    <app-barchart-custom  [route]="'first_collab'" [XLegend]="'Période'" [period]="'during'" [YLegend]="'Nombre de premières collaborations'" [legendTitle]="''"></app-barchart-custom>
+    <app-barchart-custom  [route]="'first_collab'" [XLegend]="'Période'" [period]="'during'" [YLegend]="'Nombre de premières collaborations'" [legendTitle]="''" ></app-barchart-custom>
+      <div class="col-md-6">
+      </div>
+      </div>
+    </div>
+
+    <div class="content-item">
+      <div class="chart-box">
+    <app-barchart-custom  [route]="'author_by_country'" [XLegend]="'Country'" [period]="'during'" [YLegend]="'Nombre Auteurs'" [legendTitle]="''" ></app-barchart-custom>
       <div class="col-md-6">
       </div>
       </div>

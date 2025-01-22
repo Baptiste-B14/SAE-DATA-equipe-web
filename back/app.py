@@ -187,6 +187,12 @@ def get_page_in_time():
     data = json.load(file)
     return {"message": data}, 270
 
+@app.route('/author_by_country')
+def get_author_by_country():
+    file = open('SqlLocal/author_by_country.json')
+    data = json.load(file)
+    return {"message": data}, 270
+
 
 @app.route('/first_collab', methods=['GET'])
 def get_first_collab():
@@ -386,12 +392,12 @@ def csv_to_json():
 
     try:
 
-        with open('./SqlLocal/Nb_collaborations_par_categorie.xlsx - Result 1.csv', mode='r', encoding='utf-8') as csv_file:
+        with open('./SqlLocal/nb_publi_by_country_and_periode.csv', mode='r', encoding='utf-8') as csv_file:
             csv_reader = csv.DictReader(csv_file)
 
             data = [row for row in csv_reader]
 
-        with open('./SqlLocal/Nb_collaborations_par_categorie.xlsx - Result 1.json', mode='w', encoding='utf-8') as json_file:
+        with open('./SqlLocal/nb_publi_by_country_and_periode.json', mode='w', encoding='utf-8') as json_file:
             json.dump(data, json_file, indent=4, ensure_ascii=False)
 
         print(f"Conversion réussie ! Fichier JSON enregistré")
@@ -401,5 +407,6 @@ def csv_to_json():
 
 
 if __name__ =='__main__':
+
 
     app.run(host='0.0.0.0', port=5000, debug=True)

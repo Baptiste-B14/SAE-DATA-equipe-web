@@ -1,0 +1,72 @@
+[
+    {
+        "pays": "USA",
+        "ville": "New York",
+        "university": "Elsevier Inc.",
+        "nb_publications": "168662",
+        "percent_production": "11.57"
+    },
+    {
+        "pays": "USA",
+        "ville": "New York",
+        "university": "Springer Nature",
+        "nb_publications": "118819",
+        "percent_production": "8.15"
+    },
+    {
+        "pays": "USA",
+        "ville": "Urbana",
+        "university": "University of Illinois Urbana-Champaign",
+        "nb_publications": "103158",
+        "percent_production": "7.08"
+    },
+    {
+        "pays": "USA",
+        "ville": "Cambridge",
+        "university": "MIT",
+        "nb_publications": "71470",
+        "percent_production": "4.9"
+    },
+    {
+        "pays": "USA",
+        "ville": "Stanford",
+        "university": "Stanford University",
+        "nb_publications": "52312",
+        "percent_production": "3.59"
+    },
+    {
+        "pays": "Singapore",
+        "ville": "Singapore",
+        "university": "Nanyang Technological University",
+        "nb_publications": "41544",
+        "percent_production": "2.85"
+    },
+    {
+        "pays": "USA",
+        "ville": "Atlanta",
+        "university": "Georgia Institute of Technology",
+        "nb_publications": "41162",
+        "percent_production": "2.82"
+    },
+    {
+        "pays": "Germany",
+        "ville": "Karlsruhe",
+        "university": "Karlsruhe University",
+        "nb_publications": "39700",
+        "percent_production": "2.72"
+    },
+    {
+        "pays": "UK",
+        "ville": "London",
+        "university": "Clarivate PLC",
+        "nb_publications": "34225",
+        "percent_production": "2.35"
+    },
+    {
+        "pays": "Canada",
+        "ville": "Toronto",
+        "university": "University of Toronto",
+        "nb_publications": "33341",
+        "percent_production": "2.29"
+    }
+]
