@@ -1,7 +1,15 @@
-import {Component, ElementRef, Input} from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {GraphService} from "../services/graph.service";
-import {AyoubMapDuringComponent} from "../ayoub-map-during/ayoub-map-during.component";
+import {
+  AfterViewInit,
+  Component,
+  ComponentFactoryResolver,
+  Input,
+  ViewChild,
+  ViewContainerRef
+} from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { AyoubMapDuringComponent } from "../ayoub-map-during/ayoub-map-during.component";
+import { AyoubMapAfterComponent } from "../ayoub-map-after/ayoub-map-after.component";
+import { AyoubMapBeforeComponent } from "../ayoub-map-before/ayoub-map-before.component";
 
 @Component({
   selector: 'app-map-selector',
@@ -9,35 +17,61 @@ import {AyoubMapDuringComponent} from "../ayoub-map-during/ayoub-map-during.comp
   imports: [
     ReactiveFormsModule,
     FormsModule,
-    AyoubMapDuringComponent
+    AyoubMapDuringComponent,
+    AyoubMapAfterComponent,
+    AyoubMapBeforeComponent
   ],
   templateUrl: './map-selector.component.html',
-  styleUrl: './map-selector.component.scss'
+  styleUrls: ['./map-selector.component.scss']
 })
-export class MapSelectorComponent {
-
+export class MapSelectorComponent implements AfterViewInit {
+  // Liste des périodes
   periodslist = {
     "avant": 'avant',
     "pendant": 'pendant',
     "apres": 'apres',
   };
-  selectedPeriod: string = this.periodslist['pendant'];
-  @Input() period: string =this.selectedPeriod;
-  routeArgs: string = '';
 
-  constructor(private el: ElementRef) {}
+  selectedPeriod: string = this.periodslist['avant']; // Période par défaut
+  @Input() period: string = this.selectedPeriod;
 
-  ngOnInit(): void {
+  // Conteneur pour charger dynamiquement les composants
+  @ViewChild('mapContainer', { read: ViewContainerRef }) container: ViewContainerRef | undefined;
+
+  constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
+
+  ngAfterViewInit() {
+    this.updateComponent(); // Charger le composant initial
   }
 
-  private changeRoute(route: string, period: string): void {
-    this.routeArgs = `${route}?period=${period}`;
-  }
-
+  // Méthode appelée lorsqu'on change la période
   onPeriodChange(): void {
-    //this.changeRoute()
     this.period = this.selectedPeriod;
+    this.updateComponent(); // Recharger le composant correspondant
   }
 
-  protected readonly Object = Object;
+  // Méthode pour mettre à jour le composant
+  private updateComponent() {
+    if (!this.container) {
+      console.error("Container is undefined");
+      return;
+    }
+
+    this.container.clear(); // Vider le conteneur avant de charger un nouveau composant
+
+    let componentToLoad: any;
+    if (this.selectedPeriod === this.periodslist['avant']) {
+      componentToLoad = AyoubMapBeforeComponent;
+    } else if (this.selectedPeriod === this.periodslist['pendant']) {
+      componentToLoad = AyoubMapDuringComponent;
+    } else if (this.selectedPeriod === this.periodslist['apres']) {
+      componentToLoad = AyoubMapAfterComponent;
+    }
+
+    if (componentToLoad) {
+      const factory = this.componentFactoryResolver.resolveComponentFactory(componentToLoad);
+      const ref = this.container.createComponent(factory);
+      ref.changeDetectorRef.detectChanges(); // Appliquer les changements
+    }
+  }
 }
