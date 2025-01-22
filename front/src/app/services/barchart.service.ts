@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Observable, of, shareReplay, startWith, tap} from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -21,7 +20,7 @@ export class BarchartService {
                 name: item.Categorie,
                 value: parseInt(item.nb_collaborations, 10)
               }))
-              .sort((a: { value: number; }, b: { value: number; }) => b.value - a.value);  // Trier par ordre décroissant
+              .sort((a: { value: number; }, b: { value: number; }) => b.value - a.value);
           }
 
           case 'first_collab': {

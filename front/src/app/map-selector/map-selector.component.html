@@ -1,0 +1,22 @@
+<div>
+  <select (change)="onPeriodChange()" [(ngModel)]="selectedPeriod">
+    @for (period of Object.keys(periodslist); track period) {
+      <option [value]="period">{{ period }}</option>
+    }
+  </select>
+
+  <div>
+    @if (selectedPeriod == 'during'){
+      <app-ayoub-map-during></app-ayoub-map-during>
+    }
+
+    @if (selectedPeriod == 'before'){
+      <app-ayoub-map-during></app-ayoub-map-during>
+    }
+
+    @if (selectedPeriod == 'after'){
+      <app-ayoub-map-during></app-ayoub-map-during>
+    }
+  </div>
+
+</div>
