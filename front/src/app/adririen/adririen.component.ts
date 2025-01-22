@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './adririen.component.scss'
 })
 export class AdririenComponent {
-
+  ngOnInit() {
+    let audio = document.getElementById('audio_adririen')
+    console.log(audio)
+  }
 }

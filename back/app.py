@@ -248,7 +248,7 @@ def dynamic_query():
         for row in results:
             data.append(dict(row))
 
-        return jsonify(data)
+        return jsonify(data), 270
 
     except Exception as e:
         print(f"Error in dynamic_query: {e}")
@@ -259,18 +259,20 @@ def get_tables():
     try:
         # Query to get all table names from SQLite
         sql = """
-            SELECT name 
-            FROM sqlite_master 
-            WHERE type='table' 
-            AND name NOT LIKE 'sqlite_%'
+            SET search_path TO pg_catalog;
+            SELECT schemaname, tablename
+            FROM pg_catalog.pg_tables
+            WHERE schemaname NOT IN ('pg_catalog', 'information_schema')
+            ORDER BY schemaname, tablename;
         """
         results = query(sql)
+        print(results)
 
         if results is None:
             return jsonify({"error": "Failed to fetch tables"}), 500
 
-        tables = [dict(row)['name'] for row in results]
-        return jsonify(tables)
+        tables = [dict(row)['schemaname'] for row in results]
+        return jsonify(tables), 270
 
     except Exception as e:
         print(f"Error fetching tables: {e}")
@@ -279,15 +281,19 @@ def get_tables():
 @app.route('/columns/<table_name>', methods=['GET'])
 def get_columns(table_name):
     try:
-        # Query to get column names from the specified table
-        sql = f"PRAGMA table_info({table_name})"
-        results = query(sql)
+        # Query to get column names from PostgreSQL
+        sql = """
+            SELECT column_name 
+            FROM information_schema.columns 
+            WHERE table_schema = 'public' 
+            AND table_name = %s
+        """
+        results = query(sql, params=(table_name,))
 
         if results is None:
             return jsonify({"error": "Failed to fetch columns"}), 500
 
-        # Extract column names from the PRAGMA results
-        columns = [dict(row)['name'] for row in results]
+        columns = [dict(row)['column_name'] for row in results]
         return jsonify(columns)
 
     except Exception as e:
