@@ -201,82 +201,126 @@ def get_coordinates():
 @app.route('/search', methods=['POST'])
 def dynamic_query():
     try:
-        filters = request.json.get('filters', [])
+        data = request.json
+        filters = data.get('filters', [])
+        table_name = data.get('table', 'Publication')  # Get table name from request
+        
+        # Validate table exists (PostgreSQL syntax)
+        sql_check_table = """
+            SELECT table_name 
+            FROM information_schema.tables 
+            WHERE table_schema = 'public' 
+            AND table_type = 'BASE TABLE'
+            AND table_name = %s
+        """
+        table_exists = query(sql_check_table, params=(table_name,))
+        if not table_exists:
+            return jsonify({
+                "error": f"Invalid table name: {table_name}",
+                "message": "Table does not exist in the database"
+            }), 400
 
-        # Construction dynamique de la requête SQL
+        # Get valid columns for the table (PostgreSQL syntax)
+        sql_columns = """
+            SELECT column_name 
+            FROM information_schema.columns 
+            WHERE table_schema = 'public' 
+            AND table_name = %s
+        """
+        columns_result = query(sql_columns, params=(table_name,))
+        valid_columns = [dict(row)['column_name'] for row in columns_result]
+
+        # Construction of the dynamic query
         where_clauses = []
-        params = []  # Pour les paramètres de la requête
+        params = []
 
         for f in filters:
             column = f.get('column')
             operator = f.get('operator')
             value = f.get('value')
 
-            # Protection contre l'injection SQL
-            if column and operator and value is not None:
-                if operator == "EQUALS":
-                    where_clauses.append(f"{column} = ?")
-                    params.append(value)
-                elif operator == "LIKE":
-                    where_clauses.append(f"{column} LIKE ?")
-                    params.append(f"%{value}%")
-                elif operator == "GT":
-                    where_clauses.append(f"{column} > ?")
-                    params.append(value)
-                elif operator == "LT":
-                    where_clauses.append(f"{column} < ?")
-                    params.append(value)
-                elif operator == "GTE":
-                    where_clauses.append(f"{column} >= ?")
-                    params.append(value)
-                elif operator == "LTE":
-                    where_clauses.append(f"{column} <= ?")
-                    params.append(value)
+            # Skip empty filters
+            if not column or not operator or value is None or value == '':
+                continue
 
-        # Construction de la requête SQL finale
-        where_clause = " AND ".join(where_clauses)
-        sql_query = f"SELECT * FROM Publication WHERE {where_clause}" if where_clauses else "SELECT * FROM Publication"
+            # Validate column exists in table
+            if column not in valid_columns:
+                return jsonify({
+                    "error": f"Invalid column: {column}",
+                    "valid_columns": valid_columns,
+                    "message": f"Column does not exist in table {table_name}"
+                }), 400
 
-        # Utilisation de votre fonction query pour exécuter la requête
+            # Use %s instead of ? for PostgreSQL
+            if operator == "EQUALS":
+                where_clauses.append(f"{column} = %s")
+                params.append(value)
+            elif operator == "LIKE":
+                where_clauses.append(f"{column} ILIKE %s")  # ILIKE for case-insensitive search
+                params.append(f"%{value}%")
+            elif operator == "GT":
+                where_clauses.append(f"{column} > %s")
+                params.append(value)
+            elif operator == "LT":
+                where_clauses.append(f"{column} < %s")
+                params.append(value)
+            elif operator == "GTE":
+                where_clauses.append(f"{column} >= %s")
+                params.append(value)
+            elif operator == "LTE":
+                where_clauses.append(f"{column} <= %s")
+                params.append(value)
+
+        # Construction of the final SQL query
+        sql_query = f"SELECT * FROM {table_name}"
+        if where_clauses:
+            sql_query += f" WHERE {' AND '.join(where_clauses)}"
+
+        print(f"Executing query: {sql_query} with params: {params}")  # Debug log
+        
+        # Execute query with parameters
         results = query(sql_query, params=tuple(params))
 
         if results is None:
-            return jsonify({"error": "Database query failed"}), 500
+            return jsonify({
+                "error": "Database query failed",
+                "message": "Failed to execute the search query"
+            }), 500
 
-        # Conversion des résultats en liste de dictionnaires
-        data = []
-        for row in results:
-            data.append(dict(row))
-
-        return jsonify(data), 270
+        # Convert results to list of dictionaries
+        data = [dict(row) for row in results]
+        return jsonify(data)
 
     except Exception as e:
         print(f"Error in dynamic_query: {e}")
-        return jsonify({"error": str(e)}), 500
+        return jsonify({
+            "error": "Search error",
+            "message": str(e)
+        }), 500
+
 
 @app.route('/tables', methods=['GET'])
 def get_tables():
     try:
-        # Query to get all table names from SQLite
+        # Query to get all table names from PostgreSQL
         sql = """
-            SET search_path TO pg_catalog;
-            SELECT schemaname, tablename
-            FROM pg_catalog.pg_tables
-            WHERE schemaname NOT IN ('pg_catalog', 'information_schema')
-            ORDER BY schemaname, tablename;
+            SELECT table_name 
+            FROM information_schema.tables 
+            WHERE table_schema = 'public' 
+            AND table_type = 'BASE TABLE'
         """
         results = query(sql)
-        print(results)
 
         if results is None:
             return jsonify({"error": "Failed to fetch tables"}), 500
 
-        tables = [dict(row)['schemaname'] for row in results]
-        return jsonify(tables), 270
+        tables = [dict(row)['table_name'] for row in results]
+        return jsonify(tables)
 
     except Exception as e:
         print(f"Error fetching tables: {e}")
         return jsonify({"error": str(e)}), 500
+
 
 @app.route('/columns/<table_name>', methods=['GET'])
 def get_columns(table_name):
@@ -299,7 +343,6 @@ def get_columns(table_name):
     except Exception as e:
         print(f"Error fetching columns: {e}")
         return jsonify({"error": str(e)}), 500
-
 
 def csv_to_json():
 
