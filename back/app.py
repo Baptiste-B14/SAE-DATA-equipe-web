@@ -231,31 +231,50 @@ def dynamic_query():
     try:
         data = request.json
         filters = data.get('filters', [])
-        table_name = data.get('table', 'Publication')  # Get table name from request
-        
-        # Validate table exists
+        table_name = filters[0]['table']  # Get table name from request
+        print(filters[0]['table'])
+
+        # Validate table exists (PostgreSQL syntax)
         sql_check_table = """
-            SELECT name 
-            FROM sqlite_master 
-            WHERE type='table' 
-            AND name NOT LIKE 'sqlite_%'
-            AND name = ?
+            SELECT table_name 
+            FROM information_schema.tables 
+            WHERE table_schema = 'public' 
+            AND table_type = 'BASE TABLE'
+            AND table_name = %s
         """
         table_exists = query(sql_check_table, params=(table_name,))
-        if not table_exists:
+        # Check if table_exists has any results
+        if not table_exists or len(table_exists) == 0:
             return jsonify({
                 "error": f"Invalid table name: {table_name}",
                 "message": "Table does not exist in the database"
             }), 400
 
-        # Get valid columns for the table
-        sql_columns = f"PRAGMA table_info({table_name})"
-        columns_result = query(sql_columns)
-        valid_columns = [dict(row)['name'] for row in columns_result]
+        # Get valid columns for the table (PostgreSQL syntax)
+        sql_columns = """
+            SELECT column_name 
+            FROM information_schema.columns 
+            WHERE table_schema = 'public' 
+            AND table_name = %s
+            ORDER BY ordinal_position
+        """
+        columns_result = query(sql_columns, params=(table_name,))
+        if not columns_result:
+            return jsonify({
+                "error": "Failed to fetch columns",
+                "message": f"Could not retrieve columns for table {table_name}"
+            }), 500
+
+        valid_columns = [dict(row)['column_name'] for row in columns_result]
+        if not valid_columns:
+            return jsonify({
+                "error": "No columns found",
+                "message": f"No columns found in table {table_name}"
+            }), 500
 
         # Construction of the dynamic query
         where_clauses = []
-        params = []
+        params = []  # Pour les paramètres de la requête
 
         for f in filters:
             column = f.get('column')
@@ -274,43 +293,42 @@ def dynamic_query():
                     "message": f"Column does not exist in table {table_name}"
                 }), 400
 
+            # Use %s instead of ? for PostgreSQL
             if operator == "EQUALS":
-                where_clauses.append(f"{column} = ?")
+                where_clauses.append(f"\"{column}\" = %s")
                 params.append(value)
             elif operator == "LIKE":
-                where_clauses.append(f"{column} LIKE ?")
+                where_clauses.append(f"\"{column}\" ILIKE %s")  # ILIKE for case-insensitive search
                 params.append(f"%{value}%")
             elif operator == "GT":
-                where_clauses.append(f"{column} > ?")
+                where_clauses.append(f"\"{column}\" > %s")
                 params.append(value)
             elif operator == "LT":
-                where_clauses.append(f"{column} < ?")
+                where_clauses.append(f"\"{column}\" < %s")
                 params.append(value)
             elif operator == "GTE":
-                where_clauses.append(f"{column} >= ?")
+                where_clauses.append(f"\"{column}\" >= %s")
                 params.append(value)
             elif operator == "LTE":
-                where_clauses.append(f"{column} <= ?")
+                where_clauses.append(f"\"{column}\" <= %s")
                 params.append(value)
 
         # Construction of the final SQL query
-        sql_query = f"SELECT * FROM {table_name}"
+        sql_query = f"SELECT * FROM \"{table_name}\""
         if where_clauses:
             sql_query += f" WHERE {' AND '.join(where_clauses)}"
 
-        print(f"Executing query: {sql_query} with params: {params}")  # Debug log
-        
-        # Execute query with parameters
+        # Utilisation de votre fonction query pour exécuter la requête
         results = query(sql_query, params=tuple(params))
 
         if results is None:
-            return jsonify({
-                "error": "Database query failed",
-                "message": "Failed to execute the search query"
-            }), 500
+            return jsonify({"error": "Database query failed"}), 500
 
-        # Convert results to list of dictionaries
-        data = [dict(row) for row in results]
+        # Conversion des résultats en liste de dictionnaires
+        data = []
+        for row in results:
+            data.append(dict(row))
+
         return jsonify(data)
 
     except Exception as e:
@@ -320,48 +338,49 @@ def dynamic_query():
             "message": str(e)
         }), 500
 
-
 @app.route('/tables', methods=['GET'])
 def get_tables():
     try:
-        # Query to get all table names from SQLite
+        # Query to get all table names from PostgreSQL
         sql = """
-            SELECT name 
-            FROM sqlite_master 
-            WHERE type='table' 
-            AND name NOT LIKE 'sqlite_%'
+            SELECT table_name 
+            FROM information_schema.tables 
+            WHERE table_schema = 'public' 
+            AND table_type = 'BASE TABLE'
         """
         results = query(sql)
 
         if results is None:
             return jsonify({"error": "Failed to fetch tables"}), 500
 
-        tables = [dict(row)['name'] for row in results]
+        tables = [dict(row)['table_name'] for row in results]
         return jsonify(tables)
 
     except Exception as e:
         print(f"Error fetching tables: {e}")
         return jsonify({"error": str(e)}), 500
 
-
 @app.route('/columns/<table_name>', methods=['GET'])
 def get_columns(table_name):
     try:
-        # Query to get column names from the specified table
-        sql = f"PRAGMA table_info({table_name})"
-        results = query(sql)
+        # Query to get column names from PostgreSQL
+        sql = """
+            SELECT column_name 
+            FROM information_schema.columns 
+            WHERE table_schema = 'public' 
+            AND table_name = %s
+        """
+        results = query(sql, params=(table_name,))
 
         if results is None:
             return jsonify({"error": "Failed to fetch columns"}), 500
 
-        # Extract column names from the PRAGMA results
-        columns = [dict(row)['name'] for row in results]
+        columns = [dict(row)['column_name'] for row in results]
         return jsonify(columns)
 
     except Exception as e:
         print(f"Error fetching columns: {e}")
         return jsonify({"error": str(e)}), 500
-
 
 def csv_to_json():
 
@@ -378,6 +397,7 @@ def csv_to_json():
         print(f"Conversion réussie ! Fichier JSON enregistré")
     except Exception as e:
         print(f"Erreur lors de la conversion : {e}")
+
 
 
 if __name__ =='__main__':
