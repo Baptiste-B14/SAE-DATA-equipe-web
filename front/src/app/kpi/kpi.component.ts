@@ -20,8 +20,8 @@ export class KPIComponent implements OnInit {
   kpiData = [
     { name: 'Publications', value: 7578943, info: 'Nous avons dû faire face à plus de 7 millions de publications enregistrées dans DBLP' },
     { name: 'Chercheurs', value: 4591275, info: 'Qu\'ils soient auteurs ou éditeurs, il existe 4 millions de chercheurs différents ayant contribué aux publications' },
-    { name: 'Universités', value: 94072, info: 'Il existe plus de 94 mille universités réparties dans le monde ayant hébergé des travaux de recherche' },
     { name: 'Collaborations', value: 48308363, info: 'Une collaboration étant définie comme une association de deux personnes à un moment donné, plus de 48 millions de collaborations ont été enregistrées' },
+    { name: 'Catégories de publication', value: 9, info: 'Il existe 9 catégories de publication, à savoir : les articles, inproceedings, proceedings, incollection, data, book, mastersthesis et phdthesis' },
     { name: 'Personnes par publication en moyenne', value: 7, info: 'La recherche collaborative étant très fréquente, une publication est en moyenne réalisée par 7 personnes' },
     { name: 'Publications par auteur en moyenne', value: 5, info: 'Avec 5 publications par auteur en moyenne, le domaine de la recherche s\'inscrit comme un milieu très actif' },
     { name: 'Pages par publication en moyenne', value: 9, info: 'En dehors de la production élevée de publications, celles-ci sont également conséquentes avec 9 pages en moyenne' },
