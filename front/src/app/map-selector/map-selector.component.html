@@ -1,9 +1,11 @@
+
 <div>
   <select (change)="onPeriodChange()" [(ngModel)]="selectedPeriod">
-    <option *ngFor="let period of Object.keys(periodslist)" [value]="period">
-      {{ periodslist[period] }}
-    </option>
+    @for(period of Object.keys(periodslist); track period){
+      <option [value]="period">{{ period }}</option>
+    }
   </select>
+  <div #mapContainer></div>
 </div>
 
-<div #mapContainer></div>
+

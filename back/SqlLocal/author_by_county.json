@@ -1,0 +1,62 @@
+[
+    {
+        "country": "USA",
+        "nb_author": "161268",
+        "unknown": "3.51",
+        "percent": "23.11"
+    },
+    {
+        "country": "UK",
+        "nb_author": "60445",
+        "unknown": "1.32",
+        "percent": "8.66"
+    },
+    {
+        "country": "Germany",
+        "nb_author": "60400",
+        "unknown": "1.32",
+        "percent": "8.66"
+    },
+    {
+        "country": "China",
+        "nb_author": "56556",
+        "unknown": "1.23",
+        "percent": "8.1"
+    },
+    {
+        "country": "France",
+        "nb_author": "34332",
+        "unknown": "0.75",
+        "percent": "4.92"
+    },
+    {
+        "country": "India",
+        "nb_author": "29779",
+        "unknown": "0.65",
+        "percent": "4.27"
+    },
+    {
+        "country": "Spain",
+        "nb_author": "27071",
+        "unknown": "0.59",
+        "percent": "3.88"
+    },
+    {
+        "country": "Italy",
+        "nb_author": "25182",
+        "unknown": "0.55",
+        "percent": "3.61"
+    },
+    {
+        "country": "Australia",
+        "nb_author": "17801",
+        "unknown": "0.39",
+        "percent": "2.55"
+    },
+    {
+        "country": "Brazil",
+        "nb_author": "17688",
+        "unknown": "0.39",
+        "percent": "2.53"
+    }
+]

@@ -25,6 +25,7 @@ app.teardown_appcontext(close_db)
 
 flask_cors.CORS(app)
 
+
 @app.route('/top_collab', methods=['GET'])
 def top_collab():
     period = request.args.get('period', default='all_time', type=str)
@@ -49,10 +50,12 @@ def top_collab():
     data = json.load(file)
     return {"message" : data}, 270
 
+
 @app.route('/execute')
 def execute():
     answer = execute_query(request.args.get('query', default="MATCH(n) RETURN COUNT(n), labels(n)", type=str))
     return {'message' : answer}, 270
+
 
 @app.route('/graph_collab', methods=['GET'])
 def graph_collab():
@@ -154,7 +157,6 @@ def get_graph_collab():
         elif period == "apres":
             links_path = 'SqlLocal/commu/apres-apres.json'
 
-
     try:
         with open(nodes_path, 'r') as nf, open(links_path, 'r') as lf:
             nodes_data = json.load(nf)
@@ -165,13 +167,9 @@ def get_graph_collab():
                 "nodes": nodes_data.get("nodes", [])
             }
 
-
         return jsonify({"message": combined_data}), 270
     except Exception as e:
         return jsonify({"error": str(e)}), 500
-
-
-
 
 
 @app.route('/collab_seules_vs_collab')

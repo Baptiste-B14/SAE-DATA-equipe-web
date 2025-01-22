@@ -1,0 +1,19 @@
+:host {
+  display: block;
+  width: 100%; /* Limite la largeur au conteneur parent */
+  height: 100%; /* Limite la hauteur au conteneur parent */
+  box-sizing: border-box; /* Gère les marges et les bordures correctement */
+}
+
+#mapContainer {
+  position: relative;
+  width: 600px; /* Occupe toute la largeur disponible */
+  height: 400px; /* Ajustez en fonction de vos besoins */
+  border: 1px solid #ccc; /* Ajout pour débogage visuel */
+  overflow: auto; /* Empêche le dépassement en activant des barres de défilement si nécessaire */
+  display: flex;
+  justify-content: center; /* Centrer les composants horizontalement */
+  align-items: center; /* Centrer les composants verticalement */
+}
+
+

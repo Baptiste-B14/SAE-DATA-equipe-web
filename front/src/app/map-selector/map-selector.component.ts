@@ -25,39 +25,36 @@ import { AyoubMapBeforeComponent } from "../ayoub-map-before/ayoub-map-before.co
   styleUrls: ['./map-selector.component.scss']
 })
 export class MapSelectorComponent implements AfterViewInit {
-  // Liste des périodes
+
   periodslist = {
     "avant": 'avant',
     "pendant": 'pendant',
     "apres": 'apres',
   };
 
-  selectedPeriod: string = this.periodslist['avant']; // Période par défaut
+  selectedPeriod: string = this.periodslist['avant'];
   @Input() period: string = this.selectedPeriod;
 
-  // Conteneur pour charger dynamiquement les composants
   @ViewChild('mapContainer', { read: ViewContainerRef }) container: ViewContainerRef | undefined;
 
   constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
 
-  ngAfterViewInit() {
-    this.updateComponent(); // Charger le composant initial
-  }
 
-  // Méthode appelée lorsqu'on change la période
+  ngAfterViewInit() {
+    this.updateComponent()
+  }
   onPeriodChange(): void {
     this.period = this.selectedPeriod;
     this.updateComponent(); // Recharger le composant correspondant
   }
 
-  // Méthode pour mettre à jour le composant
   private updateComponent() {
     if (!this.container) {
       console.error("Container is undefined");
       return;
     }
 
-    this.container.clear(); // Vider le conteneur avant de charger un nouveau composant
+    this.container.clear();
 
     let componentToLoad: any;
     if (this.selectedPeriod === this.periodslist['avant']) {
@@ -71,7 +68,9 @@ export class MapSelectorComponent implements AfterViewInit {
     if (componentToLoad) {
       const factory = this.componentFactoryResolver.resolveComponentFactory(componentToLoad);
       const ref = this.container.createComponent(factory);
-      ref.changeDetectorRef.detectChanges(); // Appliquer les changements
+      ref.changeDetectorRef.detectChanges();
     }
   }
+
+  protected readonly Object = Object;
 }

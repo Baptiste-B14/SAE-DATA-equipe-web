@@ -12,9 +12,23 @@
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
   gap: 20px;
 }
 
+.content-item-bubble-chart{
+  align-items: center;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
 
 .axis-page {
   padding: 20px;
@@ -35,16 +49,24 @@
 }
 
 .content-item > p {
+  max-width: 400px;
   font-size: 1em;
   line-height: 1.5em;
   text-align: justify;
 }
 
+.content-item-bubble-chart > p {
+  max-width: 400px;
+  font-size: 1em;
+  line-height: 1.5em;
+  text-align: justify;
+}
 
 .content-item > app-linechart-custom,
 .content-item > app-piechart-custom,
 .content-item > app-barchart-custom {
   flex: 1;
+  max-width: 600px; /* Limite la largeur des graphiques */
   height: auto; /* Conserve les proportions */
 }
 
@@ -84,12 +106,14 @@
   flex-direction: column;
   gap: 20px; /* Espace entre les graphiques */
   flex: 1; /* Les graphiques prennent toute la place disponible à gauche */
+  max-width: 600px;
 }
 
 /* Ajustement des graphiques */
 .charts > app-linechart-custom {
   width: 100%;
   height: auto;
+  max-width: 600px;
 }
 
 .text {
@@ -107,7 +131,6 @@
 
 .content-item {
   display: flex;
-  text-align: center;
   flex-wrap: wrap; /* Permet de s'adapter à différentes tailles d'écran */
   gap: 20px; /* Espace entre les conteneurs */
   justify-content: center; /* Centre les conteneurs dans la page */
@@ -116,9 +139,9 @@
 }
 
 .chart-box {
+  display: flex;
   flex-direction: column;
   align-items: center;
-  width: 90%;
   padding: 20px;
   border: 1px solid #ddd;
   border-radius: 8px;
