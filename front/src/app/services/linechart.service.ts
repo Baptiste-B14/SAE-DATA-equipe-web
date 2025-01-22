@@ -7,7 +7,7 @@ import {Observable, of, shareReplay, tap} from "rxjs";
 })
 export class LinechartService {
 
-  private apiUrl = 'http://localhost:5000';
+  private apiUrl = 'http://api.lliger.fr';
 
   constructor(private http: HttpClient) {}
 

@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class WordchartService {
 
-  private apiUrl = 'http://localhost:5000/analyses/wordchart';
+  private apiUrl = 'http://api.lliger.fr/analyses/wordchart';
 
   constructor(private http: HttpClient) {}
 

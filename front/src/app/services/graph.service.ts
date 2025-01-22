@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class GraphService {
-  private apiUrl = 'http://localhost:5000';
+  private apiUrl = 'http://api.lliger.fr';
 
   constructor(private http: HttpClient) {}
 

@@ -13,7 +13,7 @@ export interface SearchFilter {
   providedIn: 'root'
 })
 export class SearchService {
-  private apiUrl = 'http://localhost:5000';
+  private apiUrl = 'http://api.lliger.fr:5432';
 
   constructor(private http: HttpClient) {}
 

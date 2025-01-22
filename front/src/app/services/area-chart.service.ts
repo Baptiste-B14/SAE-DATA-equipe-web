@@ -7,7 +7,7 @@ import {Observable, of, shareReplay, tap} from "rxjs";
 })
 export class AreaChartService {
 
-  private apiUrl = 'http://localhost:5000';
+  private apiUrl = 'http://api.lliger.fr';
   private cache = new Map<string, any>();
 
   constructor(private http: HttpClient) {}
