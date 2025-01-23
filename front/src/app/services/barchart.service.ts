@@ -40,7 +40,6 @@ export class BarchartService {
 
           }
 
-
           default: {
             return [];
           }

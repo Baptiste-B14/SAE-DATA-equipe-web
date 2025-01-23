@@ -6,6 +6,7 @@ import { PiechartCustomSimpleComponent } from '../../../piechart-custom-simple/p
 import { BarchartCustomComponent } from '../../../barchart-custom/barchart-custom.component';
 import {LineChartComponent} from "../../../linechart-color/linechart-color.component";
 import {GroupedbarChartCustomComponent} from "../../../groupedbar-chart-custom/groupedbar-chart-custom.component";
+import {StackedbarChartCustomComponent} from "../../../stackedbar-chart-custom/stackedbar-chart-custom.component";
 
 @Component({
   selector: 'app-axe1',
@@ -18,6 +19,7 @@ import {GroupedbarChartCustomComponent} from "../../../groupedbar-chart-custom/g
     PiechartCustomSimpleComponent,
     LineChartComponent,
     GroupedbarChartCustomComponent,
+    StackedbarChartCustomComponent,
   ],
   templateUrl: './axe1.component.html',
   styleUrl: './axe1.component.scss'

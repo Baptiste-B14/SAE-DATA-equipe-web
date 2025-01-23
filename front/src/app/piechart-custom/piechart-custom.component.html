@@ -1,18 +1,48 @@
 
 <div class="piechart-container">
+  @if (route != 'author_by_country'){
+    <select (change)="onPeriodChange()" [(ngModel)]="selectedPeriod">
+      @for (period of Object.keys(periods); track period) {
+        <option [value]="period">{{ period }}</option>
+      }
+    </select>
+  }
 
-  <select (change)="onPeriodChange()" [(ngModel)]="selectedPeriod">
-    @for (period of Object.keys(periods); track period) {
-      <option [value]="period">{{ period }}</option>
+  @if(option){
+    <ngx-charts-pie-chart
+      [view]="view"
+      [results]="chartData"
+      [legend]="true"
+      [explodeSlices]="false"
+      [labels]="true"
+      [doughnut]="true"
+      [labelFormatting]="labelFormatting"
+      [tooltipDisabled]="true"
+      (activate)="onSliceHover($event)"
+      (deactivate)="onSliceHover(null)">
+    </ngx-charts-pie-chart>
+
+
+    @if (hoveredSlice){
+    <div class="tooltip-container">
+        <div class="custom-tooltip">
+          {{ hoveredSlice?.name }}: {{ hoveredSlice?.option }}
+        </div>
+      </div>
     }
-  </select>
-  <ngx-charts-pie-chart
-    [results]="chartData"
-    [labels]="true"
-    [legend]="true"
-    [view]="view"
-    legendTitle="Top des Collaborateurs par période"
-    [tooltipDisabled]="false">
 
-  </ngx-charts-pie-chart>
+  } @else {
+    <ngx-charts-pie-chart
+      [results]="chartData"
+      [labels]="true"
+      [legend]="true"
+      [view]="view"
+      legendTitle="Top des Collaborateurs par période"
+      [tooltipDisabled]="false">
+
+    </ngx-charts-pie-chart>
+
+  }
+
+
 </div>

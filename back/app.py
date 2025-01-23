@@ -194,6 +194,27 @@ def get_first_collab():
     return {"message": data}, 270
 
 
+@app.route('/author_by_country')
+def get_author_by_country():
+    file = open('SqlLocal/author_by_county.json')
+    data = json.load(file)
+    return {"message": data}, 270
+
+
+@app.route('/univ_by_publi')
+def get_univ_by_publi():
+    file = open('SqlLocal/Univ_by_publi.json')
+    data = json.load(file)
+    return {"message": data}, 270
+
+
+@app.route('/nb_publi_by_country_and_periode')
+def get_publi_country_period():
+    file = open('SqlLocal/nb_publi_by_country_and_periode.json')
+    data = json.load(file)
+    return {"message": data}, 270
+
+
 with open("cities_with_coordinates.json", "r", encoding="utf-8") as json_file:
     cities_data = json.load(json_file)
 

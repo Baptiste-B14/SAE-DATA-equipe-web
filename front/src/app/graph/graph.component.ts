@@ -87,7 +87,7 @@ export class ForceGraphComponent implements OnInit {
     this.changeRoute(this.route, this.node, this.period);
 
     if (this.svg) {
-      this.svg.selectAll('*').remove(); // Clear the old graph
+      this.svg.selectAll('*').remove();
     }
 
     this.graphService.getCollaboration(this.routeArgs).subscribe((data) => {
@@ -126,27 +126,29 @@ export class ForceGraphComponent implements OnInit {
         'link',
         d3
           .forceLink(data.message.links)
-          .id((d: any) => d.name)
+          .id((d: any) => {
+            return d.id
+          })
           .distance((link: any) => {
-            const sourceWeight = nodeDegrees.get(link.source.name) || 1;
-            const targetWeight = nodeDegrees.get(link.target.name) || 1;
+            const sourceWeight = nodeDegrees.get(link.source) || 1;
+            const targetWeight = nodeDegrees.get(link.target) || 1;
             return 100 / Math.sqrt(sourceWeight + targetWeight);
           })
       )
       .force(
         'charge',
         d3.forceManyBody().strength((d: any) => {
-          const weight = nodeDegrees.get(d.name) || 1;
+          const weight = nodeDegrees.get(d.id) || 1;
           return -50 * Math.sqrt(weight);
         })
       )
       .force('center', d3.forceCenter(0, 0))
       .force('x', d3.forceX(0).strength((d: any) => {
-        const weight = nodeDegrees.get(d.name) || 1;
+        const weight = nodeDegrees.get(d.id) || 1;
         return 0.1 + weight * 0.01;
       }))
       .force('y', d3.forceY(0).strength((d: any) => {
-        const weight = nodeDegrees.get(d.name) || 1;
+        const weight = nodeDegrees.get(d.id) || 1;
         return 0.1 + weight * 0.01;
       }));
 
@@ -168,14 +170,14 @@ export class ForceGraphComponent implements OnInit {
       .selectAll('circle')
       .data(data.message.nodes)
       .join('circle')
-      .attr('r', (d: any) => sizeScale(nodeDegrees.get(d.name) || 0))
+      .attr('r', (d: any) => sizeScale(nodeDegrees.get(d.id) || 0))
       .attr('fill', (d: any) =>
-        (nodeDegrees.get(d.name) || 0) === 0 ? 'red' : 'steelblue'
+        (nodeDegrees.get(d.id) || 0) === 0 ? 'red' : 'steelblue'
       )
       .call(this.drag(simulation));
 
     node.append('title').text(
-      (d: any) => `${d.name} (${nodeDegrees.get(d.name) || 0} links)`
+      (d: any) => `${d.name} (${nodeDegrees.get(d.id) || 0} links)`
     );
 
     const padding = 7;
@@ -208,8 +210,8 @@ export class ForceGraphComponent implements OnInit {
         .duration(200)
         .attr('r', (n: any) =>
           connectedNodes.has(n)
-            ? sizeScale(nodeDegrees.get(n.name) || 0) * 1.5
-            : sizeScale(nodeDegrees.get(n.name) || 0)
+            ? sizeScale(nodeDegrees.get(n.id) || 0) * 1.5
+            : sizeScale(nodeDegrees.get(n.id) || 0)
         )
         .attr('opacity', (n: any) => (connectedNodes.has(n) ? 1 : 0.3));
 
@@ -228,7 +230,7 @@ export class ForceGraphComponent implements OnInit {
       node
         .transition()
         .duration(200)
-        .attr('r', (d: any) => sizeScale(nodeDegrees.get(d.name) || 0))
+        .attr('r', (d: any) => sizeScale(nodeDegrees.get(d.id) || 0))
         .attr('opacity', 1);
 
       link

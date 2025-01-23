@@ -29,12 +29,22 @@ export class PiechartService {
           }));
       }
       case 'collab_by_categ': {
-        return rawData
+        return rawData.message
           .map((item: any) => ({
             name: item.Categorie,
             value: parseInt(item.nb_collaborations, 10)
           }))
           .sort((a: { value: number; }, b: { value: number; }) => b.value - a.value);  // Trier par ordre décroissant
+      }
+
+      case 'author_by_country': {
+        return rawData.message
+          .map((item: any) => ({
+            name: item.country,
+            value: item.percent,
+            option: item.nb_author
+
+          }))
       }
       default:{
         return rawData.message

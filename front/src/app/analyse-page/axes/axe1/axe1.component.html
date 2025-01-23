@@ -50,5 +50,28 @@
       </div>
     </div>
 
+
+    <div class="content-item">
+      <div class="chart-box">
+        <app-piechart-custom [route]="'author_by_country'" [option]="false"></app-piechart-custom>
+        <p>Petit texte expliquant ce graphique</p>
+      </div>
+    </div>
+
+    <div class="content-item">
+      <div class="chart-box">
+        <app-barchart-custom [route]="'univ_by_publi'"></app-barchart-custom>
+        <p>Petit texte expliquant ce graphique</p>
+      </div>
+    </div>
+
+
+    <div class="content-item">
+      <div class="chart-box">
+        <app-groupedbar-chart-custom [route]="'nb_publi_by_country_and_periode'"></app-groupedbar-chart-custom>
+        <p>Petit texte expliquant ce graphique</p>
+      </div>
+    </div>
+
   </div>
 </div>

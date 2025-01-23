@@ -47,6 +47,27 @@ export class GroupedbarService {
         }));
       }
 
+      case 'univ_by_publi': {
+        return rawData.message.map((item: any) => ({
+            name: item.Pays,
+            series: [
+              {
+                name: 'Avant',
+                  value: parseInt(item.nb_publications_collaboratives, 10) // Valeur des publications collaboratives
+              },
+              {
+                name: 'Pendant',
+                value: parseInt(item.pendan, 10) // Valeur des publications collaboratives
+              },
+              {
+                name: 'Après',
+                value: parseInt(item.nb_publications_collaboratives, 10) // Valeur des publications collaboratives
+              },
+              ]
+          }));
+
+      }
+
       default: {
         return [
           {

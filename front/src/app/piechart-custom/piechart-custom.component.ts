@@ -24,6 +24,7 @@ export class PiechartCustomComponent {
   @Input() route!: string;
   @Input() limit!: number;
   @Input() period! : string;
+  @Input() option!: boolean;
 
   routeArgs : string = "";
   selectedPeriod : string = this.periods['during'];
@@ -58,6 +59,30 @@ export class PiechartCustomComponent {
       }
     );
   }
+
+  hoveredSlice: { name: string; option: number } | null = null;
+
+  labelFormatting = (data: any): string => {
+    const slice = this.chartData.find(item => item.name === data.name);
+    return slice ? `${slice.value}` : '';
+  };
+
+  onSliceHover(slice: any | null): void {
+    console.log('Hovered slice:', slice); // Ajout pour déboguer
+    if (this.option) {
+      if (slice) {
+        const sliceData = this.chartData.find(item => item.name === slice.name);
+        if (sliceData) {
+          this.hoveredSlice = { name: slice.name, option: sliceData.option };
+        }
+      } else {
+        this.hoveredSlice = null;
+      }
+    }
+  }
+
+
+
 
   protected readonly Object = Object;
 
