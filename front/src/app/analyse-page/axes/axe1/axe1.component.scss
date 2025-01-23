@@ -14,19 +14,23 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
   gap: 10px;
-  height: fit-content;
   margin-bottom: 20px;
+  overflow: hidden;
 
   .chart-box {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 15px;
+    min-height: 500px;
+    height: auto;
 
     app-linechart-color {
       width: 100%;
+      height: 500px;
       margin: 0;
       padding: 0;
+      display: block;
 
       &:not(:last-child) {
         margin-bottom: 15px;
@@ -38,6 +42,7 @@
     width: 100%;
     text-align: center;
     margin-top: 10px;
+    padding-bottom: 10px;
     
     p {
       margin: 0;

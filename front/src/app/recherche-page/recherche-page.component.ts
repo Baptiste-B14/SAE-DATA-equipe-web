@@ -35,7 +35,13 @@ export class RecherchePageComponent implements OnInit {
       searchLines: this.fb.array([])
     });
     
-    this.addSearchLine();
+    // Initialiser avec une seule ligne de recherche
+    this.searchLines = [{
+      id: 1,
+      column: '',
+      operator: '',
+      value: ''
+    }];
     
     this.searchService.getTables().subscribe({
       next: (tables) => {
@@ -75,25 +81,8 @@ export class RecherchePageComponent implements OnInit {
     return this.formGroup.get('searchLines') as FormArray;
   }
 
-  addSearchLine() {
-    const newId = this.searchLines.length;
-    this.searchLines.push({
-      id: newId,
-      column: '',
-      operator: 'EQUALS',
-      value: ''
-    });
-  }
-
-  removeSearchLine(index: number) {
-    this.searchLines.splice(index, 1);
-  }
-
   updateSearchLine(index: number, data: any) {
-    this.searchLines[index] = {
-      ...this.searchLines[index],
-      ...data
-    };
+    this.searchLines[index] = { ...this.searchLines[index], ...data };
   }
 
   request() {

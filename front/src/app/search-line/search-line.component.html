@@ -63,14 +63,6 @@
       placeholder="Saisir une valeur...">
   
     <!-- Add/Remove Buttons -->
-    @if (isLast) {
-      <button 
-        class="add-button" 
-        (click)="addSearchLine()"
-        title="Add new search line">
-        +
-      </button>
-    }
     @if (!isFirst) {
       <button 
         class="remove-button" 

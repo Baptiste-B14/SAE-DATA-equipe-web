@@ -19,23 +19,19 @@
 
       <div class="search-lines">
         <app-search-line
-          *ngFor="let line of searchLines; let i = index"
-          [searchLineId]="line.id"
-          [column]="line.column"
-          [operator]="line.operator"
-          [value]="line.value"
+          [searchLineId]="searchLines[0].id"
+          [column]="searchLines[0].column"
+          [operator]="searchLines[0].operator"
+          [value]="searchLines[0].value"
           [selectedTable]="selectedTable"
           [columns]="availableColumns"
-          [isFirst]="i === 0"
-          [isLast]="i === searchLines.length - 1"
-          (onAdd)="addSearchLine()"
-          (onRemove)="removeSearchLine(i)"
-          (onUpdate)="updateSearchLine(i, $event)">
+          [isFirst]="true"
+          [isLast]="true"
+          (onUpdate)="updateSearchLine(0, $event)">
         </app-search-line>
       </div>
 
       <div class="search-actions">
-        <button (click)="addSearchLine()">Ajouter une ligne</button>
         <button 
           (click)="request()" 
           [disabled]="loading"
