@@ -1,19 +1,40 @@
 <!-- recherche-page.component.html -->
 <div class="container" id="page-recherche">
+    <div class="howto">
+      <p>
+        Afin de garantir la transparence de nos données, nous avons conçu un moteur de recherche connecté à notre base de données.<br><br>
+        Mode d'emploi :
+        <br>
+        - Sélectionnez la table et la colonne dans lesquelles vous souhaitez effectuer la recherche.<br>
+        - Définissez le filtre à appliquer et indiquez la valeur recherchée.
+        
+      </p>
+      <button (click)="showImage()" class="mcdShow">Découvrir le modèle conceptuel de données</button>
+  </div>
+
+  <!-- Modal pour l'image -->
+  <div class="modal" *ngIf="isImageVisible">
+    <div class="modal-content">
+      <button class="close-button" (click)="hideImage()">×</button>
+      <img src="../../assets/images/mcd.PNG" alt="Image affichée">
+    </div>
+  </div>
+
     <div id="search" #searchContainer>
       <!-- Table Selection -->
       <div class="table-selection">
-        <label for="table-select">Select Table:</label>
         <select 
           id="table-select" 
           [value]="selectedTable" 
           (change)="onTableChange($event)">
+          @if (!selectedTable) {
+            <option value="">Sélectionnez une table</option>
+          }
           @for (table of availableTables; track table) {
             <option [value]="table">{{table}}</option>
           }
         </select>
       </div>
-  
       <!-- Search Lines -->
       @for (line of searchLines; track line.id) {
         <app-search-line
@@ -35,15 +56,15 @@
         (click)="request()" 
         [disabled]="loading"
         class="submit-button">
-        {{ loading ? 'Searching...' : 'Search' }}
+        {{ loading ? 'Recherche en cours...' : 'Recherche' }}
       </button>
     </div>
   
     <!-- Results Section -->
      
     <div class="horizontal-bar"></div>
-    <h3>Résultats</h3>
-    <div id="results">
+    <h3 #resultsSection>Résultats</h3>
+    <div id="results" >
       <app-resultats-page-recherche [results]="searchResults"></app-resultats-page-recherche>
     </div>
   </div>

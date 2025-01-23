@@ -3,7 +3,6 @@
 back/Sqlite*
 tendances_mots_par_annees.json
 tendances_mots_par_annees_sans_2_occ.json
-tendances_mots_par_annees_top_500.json
 tendances_mots_par_annees_toutes_les_donnees.json
 tendances_mots_par_annees_toutes_les_donnees_sans_les_1_occ.json
 Result_1.csv

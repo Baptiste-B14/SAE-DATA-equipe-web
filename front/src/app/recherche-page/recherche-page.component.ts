@@ -1,5 +1,5 @@
 
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import {FormBuilder, FormGroup, FormArray, FormsModule} from '@angular/forms';
 import { ResultatsPageRechercheComponent } from '../resultats-page-recherche/resultats-page-recherche.component';
 import { SearchLineComponent } from '../search-line/search-line.component';
@@ -21,6 +21,9 @@ export class RecherchePageComponent implements OnInit {
   availableTables: string[] = ['Publication']; // Default value
   error: string = '';
   loading: boolean = false;
+  isImageVisible = false;
+  // Add a ViewChild reference to the results section
+  @ViewChild('resultsSection') resultsSection!: ElementRef;
 
   constructor(
     private fb: FormBuilder,
@@ -28,13 +31,13 @@ export class RecherchePageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.selectedTable = ''; // Set to empty initially
+  
     this.formGroup = this.fb.group({
       table: [this.selectedTable],
       searchLines: this.fb.array([])
     });
-
-    this.addSearchLine();
-
+  
     this.searchService.getTables().subscribe(
       tables => {
         this.availableTables = tables;
@@ -43,6 +46,21 @@ export class RecherchePageComponent implements OnInit {
         console.error('Error fetching tables:', error);
       }
     );
+    this.scrollToTop();
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Méthode pour afficher l'image
+  showImage() {
+    this.isImageVisible = true;
+  }
+
+  // Méthode pour cacher l'image
+  hideImage() {
+    this.isImageVisible = false;
   }
 
   get searchLinesArray() {
@@ -77,7 +95,10 @@ export class RecherchePageComponent implements OnInit {
   onTableChange(event: Event) {
     const select = event.target as HTMLSelectElement;
     this.selectedTable = select.value;
-
+  
+    // Remove the empty string option from availableTables
+    this.availableTables = this.availableTables.filter(table => table !== '');
+  
     // Reset all search lines when table changes
     this.searchLines = [];
     this.searchLinesArray.clear();
@@ -87,8 +108,6 @@ export class RecherchePageComponent implements OnInit {
   request() {
     this.loading = true;
     this.error = '';
-
-    console.log(this.selectedTable)
 
     const filters: SearchFilter[] = this.searchLines.map(line => ({
       column: line.column,
@@ -101,6 +120,11 @@ export class RecherchePageComponent implements OnInit {
       results => {
         this.searchResults = results;
         this.loading = false;
+
+        // Scroll to results section after search is complete
+        setTimeout(() => {
+          this.scrollToResults();
+        });
       },
       error => {
         console.error('Search error:', error);
@@ -108,6 +132,16 @@ export class RecherchePageComponent implements OnInit {
         this.loading = false;
       }
     );
+  }
+
+  // New method to scroll to results
+  scrollToResults() {
+    if (this.resultsSection) {
+      this.resultsSection.nativeElement.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start' 
+      });
+    }
   }
 }
 /*@Component({

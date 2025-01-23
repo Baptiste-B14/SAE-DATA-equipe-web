@@ -35,9 +35,9 @@
       (change)="updateColumn($event)"
       class="column-select">
       @if (columns.length === 0) {
-        <option value="">Loading columns...</option>
+        <option value="">Chargement des colonnes...</option>
       } @else {
-        <option value="">Select a column</option>
+        <option value="">Sélectionnez une colonne</option>
         @for (col of columns; track col + '_col') {
           <option [value]="col">{{col}}</option>
         }
@@ -59,7 +59,7 @@
       type="text"
       [value]="value"
       (input)="updateValue($event)"
-      placeholder="Value"
+      placeholder="Valeur"
       class="value-input">
   
     <!-- Control Buttons -->

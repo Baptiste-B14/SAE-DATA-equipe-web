@@ -1,10 +1,13 @@
 <div class="axis-page">
 
   <div class="content">
-    <!-- Premier graphique avec une description -->
-    <div class="content-item-bubble-chart">
-      <app-bubble-chart></app-bubble-chart>
-      <p>Petit texte expliquant ce graphique</p>
+
+    <!-- Troisième graphique avec texte en dessous -->
+    <div class="content-item">
+      <div class="chart-box">
+          <app-barchart-custom [route]="'top_collab'"  [period]="'during'" [legendTitle]="'Top des Collaborateurs'"></app-barchart-custom>
+        <p>Petit texte expliquant ce graphique</p>
+      </div>
     </div>
 
     <!-- Quatrième graphique avec texte à droite -->
@@ -28,23 +31,15 @@
 
     <div class="content-item">
       <div class="chart-box">
-    <app-barchart-custom  [route]="'first_collab'" [XLegend]="'Période'" [period]="'during'" [YLegend]="'Nombre de premières collaborations'" [legendTitle]="''" ></app-barchart-custom>
+    <app-barchart-custom  [route]="'first_collab'" [XLegend]="'Période'" [period]="'during'" [YLegend]="'Nombre de premières collaborations'" [legendTitle]="'Période'" [color]="false"></app-barchart-custom>
       <div class="col-md-6">
       </div>
       </div>
     </div>
 
-
     <div class="content-item">
       <div class="chart-box">
-        <app-piechart-custom [route]="'author_by_country'" [option]="false"></app-piechart-custom>
-        <p>Petit texte expliquant ce graphique</p>
-      </div>
-    </div>
-
-    <div class="content-item">
-      <div class="chart-box">
-        <app-barchart-custom [route]="'univ_by_publi'"></app-barchart-custom>
+        <app-linechart-custom [route]="'categ_in_time'" [XLegend]="'Années'" [YLegend]="'Nombre de publications'"></app-linechart-custom>
         <p>Petit texte expliquant ce graphique</p>
       </div>
     </div>
@@ -52,10 +47,19 @@
 
     <div class="content-item">
       <div class="chart-box">
-        <app-groupedbar-chart-custom [route]="'nb_publi_by_country_and_periode'"></app-groupedbar-chart-custom>
+        <app-piechart-custom [route]="'author_by_country'" [option]="true" [period]="'avant'" [legendTitle]="'Nombre d\'auteurs par pays'"></app-piechart-custom>
         <p>Petit texte expliquant ce graphique</p>
       </div>
     </div>
+
+    <div class="content-item">
+      <div class="chart-box">
+        <app-barchart-custom [route]="'univ_by_publi'" [color]="true" [XLegend]="'Universités'" [YLegend]="'Nombre de Publications'" [legendTitle]="''"></app-barchart-custom>
+        <p>Petit texte expliquant ce graphique</p>
+      </div>
+    </div>
+
+    
 
   </div>
 </div>

@@ -19,15 +19,16 @@ export class PiechartCustomComponent {
     'after': "after"
     };
 
-  view : [number, number] = [600, 400];
+  view : [number, number] = [800, 400];
   chartData: any[] = [];
   @Input() route!: string;
-  @Input() limit!: number;
   @Input() period! : string;
   @Input() option!: boolean;
+  @Input() legendTitle!: string;
 
   routeArgs : string = "";
   selectedPeriod : string = this.periods['during'];
+
 
 
   ngOnInit(): void {
@@ -42,7 +43,7 @@ export class PiechartCustomComponent {
 
 
   changeRoute(route : string, period: string){
-    this.routeArgs = route +"?period=" + period + "&limit=" + this.limit
+    this.routeArgs = route +"?period=" + period
   }
 
   onPeriodChange(): void {
@@ -60,26 +61,13 @@ export class PiechartCustomComponent {
     );
   }
 
-  hoveredSlice: { name: string; option: number } | null = null;
 
-  labelFormatting = (data: any): string => {
-    const slice = this.chartData.find(item => item.name === data.name);
-    return slice ? `${slice.value}` : '';
+  tooltipText = (data: any) => {
+    return `${data.data.name} (${data.value}%)`;
   };
 
-  onSliceHover(slice: any | null): void {
-    console.log('Hovered slice:', slice); // Ajout pour déboguer
-    if (this.option) {
-      if (slice) {
-        const sliceData = this.chartData.find(item => item.name === slice.name);
-        if (sliceData) {
-          this.hoveredSlice = { name: slice.name, option: sliceData.option };
-        }
-      } else {
-        this.hoveredSlice = null;
-      }
-    }
-  }
+
+
 
 
 
