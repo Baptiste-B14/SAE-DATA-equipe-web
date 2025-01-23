@@ -70,13 +70,48 @@
 
   .footer {
     display: flex;
-    justify-content: space-between; /* Aligne les boutons à gauche et à droite */
-    gap: 20px; /* Ajoute un espace constant entre les boutons */
+    justify-content: flex-end;
+    gap: 20px;
     margin-top: 20px;
+    padding: 20px;
+    background-color: #ded9ce;
+    border-radius: 8px;
+
+    &.axis-3 {
+      justify-content: flex-start;
+    }
+
+    button {
+      background: linear-gradient(135deg, #4A412A 0%, #635A40 100%);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      order: 2;
+
+      &:first-child {
+        order: 1;
+      }
+
+      &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &.axis-3 button {
+      order: unset;
+      &:first-child {
+        order: unset;
+      }
+    }
   }
 
   /* Ajout pour s'assurer que les boutons occupent leur espace même si l'un est masqué */
-  .footer button {
+  /*.footer button {
     min-width: 120px;
     padding: 10px 20px;
     font-size: 1em;
@@ -97,4 +132,4 @@
   .footer button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
-  }
+  }*/

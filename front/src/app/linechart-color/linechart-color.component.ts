@@ -10,11 +10,12 @@ import { LinechartService} from "../services/linechart.service";
   styleUrl: './linechart-color.component.scss'
 })
 
-export class LineChartComponent implements OnInit {
+export class LineChartComponent implements OnInit, OnChanges {
   chartData: any[] = [];
   @Input() route!: string;
   @Input() XLegend!: string;
-  @Input() YLegend! : string;
+  @Input() YLegend!: string;
+  @Input() height: number = 500;  // Valeur par défaut de 500
 
   constructor(private el: ElementRef, private linechartService: LinechartService) {}
   ngOnInit(): void {
@@ -32,12 +33,17 @@ export class LineChartComponent implements OnInit {
     );
   }
 
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['height'] && !changes['height'].firstChange) {
+      this.createChart();
+    }
+  }
 
   private createChart() {
     const element = this.el.nativeElement.querySelector('.chart-container');
 
     const width = element.offsetWidth || 928;
-    const height = 500;
+    const height = this.height;
     const marginTop = 20;
     const marginRight = 150; // Espace pour la légende
     const marginBottom = 60;
@@ -199,8 +205,4 @@ export class LineChartComponent implements OnInit {
         .on('mouseout', () => tooltip.style('visibility', 'hidden'));
     });
   }
-
-
-
-
 }

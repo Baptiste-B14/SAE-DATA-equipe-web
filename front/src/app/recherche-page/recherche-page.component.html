@@ -25,6 +25,7 @@
           [operator]="line.operator"
           [value]="line.value"
           [selectedTable]="selectedTable"
+          [columns]="availableColumns"
           [isFirst]="i === 0"
           [isLast]="i === searchLines.length - 1"
           (onAdd)="addSearchLine()"

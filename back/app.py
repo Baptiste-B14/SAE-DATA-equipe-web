@@ -1,29 +1,33 @@
 import flask
 import flask_cors
-from flask import request
+from flask import request, jsonify
 from neo4j_conn import execute_query
 import json, csv
-
-
 from dotenv import dotenv_values
-from flask import jsonify
-
 from db import close_db, query
-
 
 config = dotenv_values('.env')
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-# Configuration CORS plus permissive
+# Configuration CORS spécifique
 cors = flask_cors.CORS(app, resources={
     r"/*": {
-        "origins": ["http://localhost:4200"],
+        "origins": ["http://localhost:4200"],  # Origine spécifique de l'app Angular
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-        "allow_headers": ["Content-Type", "Authorization"]
+        "allow_headers": ["Content-Type", "Authorization"],
+        "supports_credentials": True
     }
 })
+
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', 'http://localhost:4200')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    response.headers.add('Access-Control-Allow-Credentials', 'true')
+    return response
 
 app.config['FLASK_RUN_HOST'] = '0.0.0.0'
 app.config['DB_HOST'] = config['DB_HOST']
@@ -55,12 +59,12 @@ def top_collab():
         answer =execute_query("MATCH(a:Person)-[r]->(p:Publication)<-[r2]-(b:Person) WHERE a <> b AND id(a) < id(b) AND p.year=" + str(year) + " RETURN a.person_name, count(r2) AS count ORDER BY count DESC LIMIT " + str(limit))
 
     data = json.load(file)
-    return {"message" : data}, 270
+    return jsonify({"message" : data}), 200
 
 @app.route('/execute')
 def execute():
     answer = execute_query(request.args.get('query', default="MATCH(n) RETURN COUNT(n), labels(n)", type=str))
-    return {'message' : answer}, 270
+    return jsonify({'message' : answer}), 200
 
 @app.route('/graph_collab', methods=['GET'])
 def graph_collab():
@@ -70,7 +74,7 @@ def graph_collab():
     for line in answer :
         nodes.append({'id': line['a.nom']})
         links.append({'source': line['a.nom'], 'target': line['b.nom'],})
-    return {"nodes" : nodes, "links": links}, 270
+    return jsonify({"nodes" : nodes, "links": links}), 200
 
 
 @app.route('/analyses/wordcloud/<year>')
@@ -117,14 +121,14 @@ def get_word_chart():
         "years": years,
         "data": {word: [data[year].get(word, 0) for year in years] for word in words_to_plot}
     }
-    return jsonify(results)
+    return jsonify(results), 200
 
 
 @app.route('/neo4j')
 def get_collaboration():
     with open('neo4jCollab.txt', 'r') as file:
         data = json.load(file)
-        return data
+        return jsonify(data), 200
 
 
 @app.route('/pub_in_time', methods=['GET'])
@@ -133,24 +137,23 @@ def get_publi_in_time():
         file = open('SqlLocal/Pub_in_time.json')
         data = json.load(file)
         file.close()
-        return jsonify(data), 200
+        return jsonify({"message": data}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
 
 @app.route('/collab_by_categ', methods=['GET'])
 def get_collab_by_categ():
-
     file = open('SqlLocal/Collab_by_categ.json')
     data = json.load(file)
-    return {"message" : data}, 270
+    return jsonify({"message": data}), 200
 
 
 @app.route('/collab_in_time', methods=['GET'])
 def get_collab_in_time():
     file = open('SqlLocal/Collab_in_time.json')
     data = json.load(file)
-    return {"message" : data}, 270
+    return jsonify({"message": data}), 200
 
 
 @app.route('/graph_commu', methods=['GET'])
@@ -198,7 +201,7 @@ def get_graph_collab():
             }
 
 
-        return jsonify({"message": combined_data}), 270
+        return jsonify({"message": combined_data}), 200
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
@@ -210,14 +213,14 @@ def get_graph_collab():
 def get_collab_seules_vs_collab():
     file = open('SqlLocal/Nb_collab_seules_vs_nb_collab_coll.json')
     data = json.load(file)
-    return {"message": data}, 270
+    return jsonify({"message": data}), 200
 
 
 @app.route('/page_in_time')
 def get_page_in_time():
     file = open('SqlLocal/Pages_in_time.json')
     data = json.load(file)
-    return {"message": data}, 270
+    return jsonify({"message": data}), 200
 
 
 @app.route('/first_collab', methods=['GET'])
@@ -225,7 +228,7 @@ def get_first_collab():
     period = request.args.get('period', default='none', type=str)
     file = open('SqlLocal/Nb_premiere_collab_in_periode.json')
     data = json.load(file)
-    return {"message": data}, 270
+    return jsonify({"message": data}), 200
 
 
 with open("cities_with_coordinates.json", "r", encoding="utf-8") as json_file:
@@ -242,19 +245,19 @@ def get_coordinates():
     country = flask.request.args.get('country', '').strip()
 
     if not city or not country:
-        return {"error": "Veuillez fournir 'city' et 'country' comme paramètres."}, 400
+        return jsonify({"error": "Veuillez fournir 'city' et 'country' comme paramètres."}), 400
 
     # Rechercher dans les données JSON locales
     for record in cities_data:
         if record['City'].lower() == city.lower() and record['Country'].lower() == country.lower():
-            return {
+            return jsonify({
                 "City": record['City'],
                 "Country": record['Country'],
                 "Latitude": record['Latitude'],
                 "Longitude": record['Longitude']
-            }, 200
+            }), 200
 
-    return {"error": f"Coordonnées non trouvées pour {city}, {country}."}, 404
+    return jsonify({"error": f"Coordonnées non trouvées pour {city}, {country}."}), 404
 
 
 #TEST POUR PAGE RECHERCHE
@@ -361,7 +364,7 @@ def dynamic_query():
         for row in results:
             data.append(dict(row))
 
-        return jsonify(data)
+        return jsonify(data), 200
 
     except Exception as e:
         print(f"Error in dynamic_query: {e}")
@@ -386,7 +389,7 @@ def get_tables():
             return jsonify({"error": "Failed to fetch tables"}), 500
 
         tables = [dict(row)['table_name'] for row in results]
-        return jsonify(tables)
+        return jsonify(tables), 200
 
     except Exception as e:
         print(f"Error fetching tables: {e}")
@@ -405,14 +408,14 @@ def get_columns(table_name):
         results = query(sql, params=(table_name,))
 
         if results is None:
-            return jsonify({"error": "Failed to fetch columns"}), 500
+            return jsonify({"message": None, "error": "Failed to fetch columns"}), 500
 
         columns = [dict(row)['column_name'] for row in results]
-        return jsonify(columns)
+        return jsonify({"message": columns}), 200
 
     except Exception as e:
         print(f"Error fetching columns: {e}")
-        return jsonify({"error": str(e)}), 500
+        return jsonify({"message": None, "error": str(e)}), 500
 
 def csv_to_json():
 
@@ -432,5 +435,5 @@ def csv_to_json():
 
 
 
-if __name__ =='__main__':
-    app.run(host='0.0.0.0', port=5001, debug=True)
+if __name__ == '__main__':
+    app.run(port=5001, debug=True)

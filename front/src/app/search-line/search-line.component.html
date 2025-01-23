@@ -31,13 +31,13 @@
 <div class="search-line">
     <!-- Column Selection Dropdown -->
     <select 
-      [value]="column"
-      (change)="updateColumn($event)"
+      [(ngModel)]="column"
+      (ngModelChange)="updateColumn($event)"
       class="column-select">
       @if (columns.length === 0) {
-        <option value="">Loading columns...</option>
+        <option value="">Chargement des colonnes...</option>
       } @else {
-        <option value="">Select a column</option>
+        <option value="">Sélectionner une colonne</option>
         @for (col of columns; track col + '_col') {
           <option [value]="col">{{col}}</option>
         }
@@ -46,8 +46,8 @@
   
     <!-- Operator Selection -->
     <select 
-      [value]="operator" 
-      (change)="changeOperator($event)"
+      [(ngModel)]="operator"
+      (ngModelChange)="changeOperator($event)"
       class="operator-select">
       @for (op of operators; track op + '_op') {
         <option [value]="op">{{op}}</option>
@@ -55,18 +55,28 @@
     </select>
   
     <!-- Value Input -->
-    <input
-      type="text"
-      [value]="value"
-      (input)="updateValue($event)"
-      placeholder="Value"
-      class="value-input">
+    <input 
+      type="text" 
+      [(ngModel)]="value"
+      (ngModelChange)="updateValue($event)"
+      class="value-input"
+      placeholder="Saisir une valeur...">
   
-    <!-- Control Buttons -->
+    <!-- Add/Remove Buttons -->
+    @if (isLast) {
+      <button 
+        class="add-button" 
+        (click)="addSearchLine()"
+        title="Add new search line">
+        +
+      </button>
+    }
     @if (!isFirst) {
-      <button (click)="removeSearchLine()" class="remove-button">Remove</button>
+      <button 
+        class="remove-button" 
+        (click)="removeSearchLine()"
+        title="Remove this search line">
+        -
+      </button>
     }
-    @if (!isLast) {
-      <button (click)="addSearchLine()" class="add-button">Add</button>
-    }
-  </div>
+</div>

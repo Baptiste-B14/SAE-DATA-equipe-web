@@ -1,31 +1,25 @@
 <div class="kpi-bloc">
-  <h2>Indicateurs clés de nos données</h2>
+  <h2>Statistiques</h2>
   <div class="kpi-container">
-    <ngx-charts-number-card (select)="onKpiSelect($event)"
-      [view]="[1000, 400]"
-      [results]="result"
-      [animations]="true"
-      [cardColor]="cardColor"
-      [bandColor]="cardColor"
-      [valueFormatting]="formatValue"
-      [labelFormatting]="truncateText"
-      >
-    </ngx-charts-number-card >
-  </div>
-
-  <div
-    class="modal"
-    [class.show]="isModalOpen"
-    (click)="closeKpiModal()"
-  >
-    <div
-      class="modal-content"
-      (click)="stopPropagation($event)"
-    >
-      <span class="close" (click)="closeKpiModal()">&times;</span>
-      <h2>{{ selectedKpi?.name }}</h2>
-      <p>{{ selectedKpi?.info }}</p>
+    <div class="kpi-card" *ngFor="let kpi of result" (click)="onKpiSelect(kpi)">
+      <div class="kpi-value">{{ kpi.displayValue | number }}</div>
+      <div class="kpi-label">{{ kpi.name }}</div>
     </div>
   </div>
+</div>
 
+<div
+  class="modal"
+  [class.show]="isModalOpen"
+  (click)="closeKpiModal()"
+>
+  <div
+    class="modal-content"
+    (click)="stopPropagation($event)"
+    *ngIf="selectedKpi"
+  >
+    <span class="close" (click)="closeKpiModal()">&times;</span>
+    <h2>{{ selectedKpi.name }}</h2>
+    <p>{{ selectedKpi.info }}</p>
+  </div>
 </div>

@@ -7,32 +7,33 @@
     - rajouter fragment visualisation ?
 -->
 <footer>
-    <div id="footerTitle">
-        <p>Pantone 448 C</p>
-    </div>
     <div class="footerSections">
-        <div class="footerColumn">
-        <h3>Pages</h3>
-        <ul>
-            <li><a routerLink="/">Home</a></li>
-            <li><a routerLink="/analyses/1">Nos Analyses</a></li>
-            <li><a routerLink="/presentation">Présentation</a></li>
-            <li><a routerLink="/recherche">Recherche</a></li>
-        </ul>
+        <div class="pantone-title">
+            <h2>Pantone 448 C</h2>
         </div>
-        <div class="footerColumn">
-        <h3>L'équipe</h3>
-        <ul>
-            <li><a routerLink="/team" fragment="visualisation">Equipe Visualisation</a></li>
-            <li><a routerLink="/team" fragment="deploiement">Equipe Deploiement</a></li>
-            <li><a routerLink="/team" fragment="extraction">Equipe Extraction</a></li>
-        </ul>
-        </div>
-        <div class="footerColumn">
-        <h3>Mentions légales</h3>
-        <ul>
-            <li><a routerLink="/legal">RGPD</a></li>
-        </ul>
+        <div class="columns-container">
+            <div class="footerColumn">
+                <h3>Pages</h3>
+                <ul>
+                    <li><a routerLink="/analyses/1">Nos Analyses</a></li>
+                    <li><a routerLink="/presentation">Présentation</a></li>
+                    <li><a routerLink="/recherche">Recherche</a></li>
+                </ul>
+            </div>
+            <div class="footerColumn">
+                <h3>L'équipe</h3>
+                <ul>
+                    <li><a routerLink="/team" fragment="visualisation">Equipe Visualisation</a></li>
+                    <li><a routerLink="/team" fragment="deploiement">Equipe Deploiement</a></li>
+                    <li><a routerLink="/team" fragment="extraction">Equipe Extraction</a></li>
+                </ul>
+            </div>
+            <div class="footerColumn">
+                <h3>Mentions légales</h3>
+                <ul>
+                    <li><a routerLink="/legal">RGPD</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </footer>

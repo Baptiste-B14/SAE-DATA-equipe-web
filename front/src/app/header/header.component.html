@@ -11,9 +11,9 @@
 <header id="main-header" [class.hidden]="isHidden">
     <nav>
       <a routerLink="/" routerLinkActive="active-link">Accueil</a>
-        <div class="dropdown-trigger" (mouseenter)="toggleDropdown()">
+        <div class="dropdown-trigger" (mouseenter)="openDropdown()" (mouseleave)="closeDropdown()">
             <a>Nos Analyses</a>
-            <ul class="dropdown-menu" [class.open]="isDropdownOpen" (mouseenter)="toggleDropdown()" (mouseleave)="toggleDropdown()">
+            <ul class="dropdown-menu" [class.open]="isDropdownOpen">
                 <li><a routerLink="/analyses/1" routerLinkActive="active-link">Publication</a></li>
                 <li><a routerLink="/analyses/2" routerLinkActive="active-link">Collaboration</a></li>
                 <li><a routerLink="/analyses/3" routerLinkActive="active-link">Affiliation</a></li>

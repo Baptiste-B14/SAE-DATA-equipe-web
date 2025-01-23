@@ -22,6 +22,7 @@ export class RecherchePageComponent implements OnInit {
   availableColumns: string[] = []; // Default value
   error: string = '';
   loading: boolean = false;
+  loadingColumns: boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -36,16 +37,38 @@ export class RecherchePageComponent implements OnInit {
     
     this.addSearchLine();
     
-    this.searchService.getTables().subscribe(
-      tables => {
+    this.searchService.getTables().subscribe({
+      next: (tables) => {
         this.availableTables = tables;
       },
-      error => {
+      error: (error) => {
         console.error('Error fetching tables:', error);
       }
-    );
+    });
     
     this.loadColumns(this.selectedTable);
+  }
+
+  onTableChange(event: any) {
+    const table = event.target.value;
+    this.selectedTable = table;
+    this.loadColumns(table);
+  }
+
+  loadColumns(table: string) {
+    if (!table || this.loadingColumns) return;
+
+    this.loadingColumns = true;
+    this.searchService.getTableColumns(table).subscribe({
+      next: (columns) => {
+        this.availableColumns = columns;
+        this.loadingColumns = false;
+      },
+      error: (error) => {
+        console.error('Error loading columns:', error);
+        this.loadingColumns = false;
+      }
+    });
   }
 
   get searchLinesArray() {
@@ -53,79 +76,48 @@ export class RecherchePageComponent implements OnInit {
   }
 
   addSearchLine() {
-    const searchLineGroup = this.fb.group({
-      column: [''],
-      operator: ['EQUALS'],
-      value: ['']
-    });
-  
-    this.searchLinesArray.push(searchLineGroup);
-    this.searchLines.push({ 
-      id: this.searchLines.length,
-      column: '', // by default
+    const newId = this.searchLines.length;
+    this.searchLines.push({
+      id: newId,
+      column: '',
       operator: 'EQUALS',
       value: ''
     });
   }
 
   removeSearchLine(index: number) {
-    this.searchLinesArray.removeAt(index);
     this.searchLines.splice(index, 1);
   }
 
   updateSearchLine(index: number, data: any) {
-    this.searchLines[index] = { ...this.searchLines[index], ...data };
-  }
-
-  onTableChange(event: Event) {
-    const select = event.target as HTMLSelectElement;
-    this.selectedTable = select.value;
-    
-    // Reset all search lines when table changes
-    this.searchLines = [];
-    this.searchLinesArray.clear();
-    this.addSearchLine(); // Add one default search line
-    
-    this.loadColumns(this.selectedTable);
-  }
-
-  loadColumns(tableName: string) {
-    this.searchService.getTableColumns(tableName).subscribe({
-      next: (columns) => {
-        this.availableColumns = columns;
-        if (columns.length > 0) {
-          this.searchLines[0].column = columns[0];
-        }
-      },
-      error: (error) => {
-        console.error('Erreur lors du chargement des colonnes:', error);
-      }
-    });
+    this.searchLines[index] = {
+      ...this.searchLines[index],
+      ...data
+    };
   }
 
   request() {
-    this.loading = true;
-    this.error = '';
-
-    console.log(this.selectedTable)
+    if (this.loading) return;
     
+    this.loading = true;
     const filters: SearchFilter[] = this.searchLines.map(line => ({
       column: line.column,
       operator: line.operator,
       value: line.value,
-      table : this.selectedTable
+      table: this.selectedTable
     }));
 
-    this.searchService.search(filters, this.selectedTable).subscribe(
-      results => {
+    this.searchService.search(filters, this.selectedTable).subscribe({
+      next: (results) => {
         this.searchResults = results;
         this.loading = false;
+        this.error = '';
       },
-      error => {
-        console.error('Search error:', error);
-        this.error = 'An error occurred while searching. Please try again.';
+      error: (error) => {
+        console.error('Error during search:', error);
+        this.error = 'Une erreur est survenue lors de la recherche.';
         this.loading = false;
       }
-    );
+    });
   }
 }

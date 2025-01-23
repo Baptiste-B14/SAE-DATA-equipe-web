@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, Observable, throwError } from 'rxjs';
+import { catchError, map, Observable, throwError, shareReplay } from 'rxjs';
 
-
+/**
+ * Interface for search filter
+ */
 export interface SearchFilter {
   column: string;
   operator: string;
@@ -14,6 +16,7 @@ export interface SearchFilter {
 })
 export class SearchService {
   private apiUrl = 'http://localhost:5001';
+  private columnsCache = new Map<string, Observable<string[]>>();
 
   constructor(private http: HttpClient) {}
 
@@ -30,7 +33,31 @@ export class SearchService {
   }
 
   getTableColumns(tableName: string): Observable<string[]> {
-    return this.http.get<string[]>(`${this.apiUrl}/columns/${tableName}`);
+    // Check cache first
+    if (this.columnsCache.has(tableName)) {
+      return this.columnsCache.get(tableName)!;
+    }
+
+    // Create new request and cache it
+    const request = this.http.get<any>(`${this.apiUrl}/columns/${tableName}`).pipe(
+      map(response => {
+        if (response.error) {
+          throw new Error(response.error);
+        }
+        return response.message;
+      }),
+      catchError(error => {
+        console.error('Error loading columns:', error);
+        // Remove failed request from cache
+        this.columnsCache.delete(tableName);
+        return throwError(() => error);
+      }),
+      // Cache the successful response
+      shareReplay(1)
+    );
+
+    this.columnsCache.set(tableName, request);
+    return request;
   }
 
   getTables(): Observable<string[]> {

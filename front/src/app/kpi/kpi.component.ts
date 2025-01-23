@@ -1,68 +1,76 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { NumberCardModule } from '@swimlane/ngx-charts';
+import { Component, OnInit, LOCALE_ID } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { GraphService } from '../graph.service';
-import { SingleData } from '../types';
+import { CounterAnimationService } from '../services/counter-animation.service';
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+
+registerLocaleData(localeFr, 'fr');
+
+interface KPI {
+  name: string;
+  value: number;
+  displayValue?: number;
+  info?: string;
+}
 
 @Component({
   selector: 'app-kpi',
   standalone: true,
-  imports: [NumberCardModule],
+  imports: [CommonModule],
   templateUrl: './kpi.component.html',
   styleUrls: ['./kpi.component.scss'],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr' }
+  ]
 })
 export class KPIComponent implements OnInit {
-  cardColor = "white";
+  result: KPI[] = [];
+  selectedKpi: KPI | null = null;
   isModalOpen = false;
-  selectedKpi: { name: string; value: number; info: string } | null = null;
 
-  result: SingleData = [];
-
-  kpiData = [
-    { name: 'Publications', value: 7578943, info: 'Nous avons dû faire face à plus de 7 millions de publications enregistrées dans DBLP' },
-    { name: 'Chercheurs', value: 4591275, info: 'Qu\'ils soient auteurs ou éditeurs, il existe 4 millions de chercheurs différents ayant contribué aux publications' },
-    { name: 'Universités', value: 94072, info: 'Il existe plus de 94 mille universités réparties dans le monde ayant hébergé des travaux de recherche' },
-    { name: 'Collaborations', value: 48308363, info: 'Une collaboration étant définie comme une association de deux personnes à un moment donné, plus de 48 millions de collaborations ont été enregistrées' },
-    { name: 'Personnes par publication en moyenne', value: 7, info: 'La recherche collaborative étant très fréquente, une publication est en moyenne réalisée par 7 personnes' },
-    { name: 'Publications par auteur en moyenne', value: 5, info: 'Avec 5 publications par auteur en moyenne, le domaine de la recherche s\'inscrit comme un milieu très actif' },
-    { name: 'Pages par publication en moyenne', value: 9, info: 'En dehors de la production élevée de publications, celles-ci sont également conséquentes avec 9 pages en moyenne' },
-    { name: 'Années de suivi', value: 88, info: 'Les données récoltées s\'étendent de 1936 à 2024, facilitant grandement le suivi temporel des activités des chercheurs' },
-
-  ];
-
-  constructor(private readonly graphService: GraphService) {}
+  constructor(
+    private graphService: GraphService,
+    private counterAnimation: CounterAnimationService
+  ) {}
 
   ngOnInit() {
-    this.printResult();
+    this.loadKPIs();
   }
 
-  truncateText(name: any) {
-    return name.label
+  loadKPIs() {
+    this.result = [
+      { name: 'Publications', value: 7578943, displayValue: 0, info: 'Nombre total de publications scientifiques dans notre base de données.' },
+      { name: 'Chercheurs', value: 4591275, displayValue: 0, info: 'Nombre total de chercheurs ayant contribué aux publications.' },
+      { name: 'Universités', value: 94072, displayValue: 0, info: 'Nombre d\'universités et institutions impliquées dans les recherches.' },
+      { name: 'Collaborations', value: 48308363, displayValue: 0, info: 'Nombre total de collaborations entre chercheurs.' },
+      { name: 'Personnes par publication en moyenne', value: 7, displayValue: 0, info: 'Moyenne du nombre d\'auteurs par publication.' },
+      { name: 'Publications par auteur en moyenne', value: 5, displayValue: 0, info: 'Moyenne du nombre de publications par auteur.' },
+      { name: 'Pages par publication en moyenne', value: 9, displayValue: 0, info: 'Nombre moyen de pages par publication.' },
+      { name: 'Années de suivi', value: 88, displayValue: 0, info: 'Période couverte par les données en années.' }
+    ];
+
+    // Lancer toutes les animations simultanément
+    this.result.forEach(kpi => this.animateValue(kpi));
   }
 
-  formatValue(data: any){
-    return data.value.toLocaleString('fr-FR'); // Utilise le format français (séparateur des milliers = espace)
+  animateValue(kpi: KPI) {
+    this.counterAnimation.animate(0, kpi.value, 1500, (value: number) => {
+      kpi.displayValue = value;
+    });
   }
 
-  private printResult() {
-    this.result = this.kpiData;
+  onKpiSelect(kpi: KPI) {
+    this.selectedKpi = kpi;
+    this.isModalOpen = true;
   }
-
-  onKpiSelect(kpi: { name: string }) {
-    const selected = this.kpiData.find((item) => item.name === kpi.name);
-    if (selected) {
-      this.selectedKpi = selected;
-      this.isModalOpen = true;
-    }
-  }
-  stopPropagation(event: Event) {
-    event.stopPropagation();
-  }
-
 
   closeKpiModal() {
     this.isModalOpen = false;
     this.selectedKpi = null;
   }
 
-  
+  stopPropagation(event: Event) {
+    event.stopPropagation();
+  }
 }

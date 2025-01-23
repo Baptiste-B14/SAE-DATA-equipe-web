@@ -1,79 +1,67 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable, of, shareReplay, tap} from "rxjs";
+import { HttpClient } from "@angular/common/http";
+import { Observable, of, shareReplay, tap } from "rxjs";
 
 @Injectable({
   providedIn: 'root'
 })
 export class LinechartService {
-
   private apiUrl = 'http://localhost:5001';
 
   constructor(private http: HttpClient) {}
 
-  getData(route : string){
-    console.log(`${this.apiUrl}/${route}`)
-    return this.http.get(`${this.apiUrl}/${route}`)
+  getData(route: string) {
+    console.log(`${this.apiUrl}/${route}`);
+    return this.http.get(`${this.apiUrl}/${route}`);
   }
 
   formatData(rawData: any, route: string): any[] {
-    switch (route){
-      case 'pub_in_time': {
-        return [
-          {
+    if (!rawData || !rawData.message) {
+      console.error('Données invalides reçues:', rawData);
+      return [];
+    }
+
+    try {
+      const data = rawData.message;
+      switch (route) {
+        case 'pub_in_time': {
+          return [{
             name: 'Publications',
-            series: rawData.message.map((item: any) => ({
+            series: data.map((item: any) => ({
               name: item.annee.toString(),
               value: parseInt(item.nb_publications, 10),
               periode: item.periode
             }))
-          }
-        ];
-      }
-      case 'collab_in_time': {
-        return [
-          {
+          }];
+        }
+        case 'collab_in_time': {
+          return [{
             name: 'Collaborations',
-            series: rawData.message.map((item: any) => ({
+            series: data.map((item: any) => ({
               name: item.annee.toString(),
               value: parseInt(item.nb_collaborations, 10),
               periode: item.periode
             }))
-          }
-        ];
-      }
-      case 'page_in_time': {
-        console.log([
-          {
-            name: 'Page',
-            series: rawData.message.map((item: any) => ({
+          }];
+        }
+        case 'page_in_time': {
+          return [{
+            name: 'Pages',
+            series: data.map((item: any) => ({
               name: item.annee.toString(),
-              value: item.moy_longueur_pages,
+              value: parseFloat(item.moy_longueur_pages),
+              periode: item.periode
             }))
-          }
-        ])
-          return [
-            {
-              name: 'Page',
-              series: rawData.message.map((item: any) => ({
-                name: item.annee.toString(),
-                value: item.moy_longueur_pages,
-              }))
-            }
-          ];
+          }];
+        }
+        default: {
+          console.error('Route non gérée:', route);
+          return [];
+        }
       }
-      default: {
-        return [
-          {
-            name: 'Publications',
-            series: rawData.message.map((item: any) => ({
-              name: item.annee,
-              value: parseInt(item.nb_publications, 10)
-            }))
-          }
-        ];
-      }
+    } catch (error) {
+      console.error('Erreur lors du formatage des données:', error);
+      return [];
     }
   }
-
 }

@@ -17,7 +17,7 @@
 
   </section>
 
-  <div class="footer">
+  <div class="footer" [class.axis-3]="axisId === 3">
     @if (axisId > 1) {
       <button (click)="goToAxis(- 1)">Vers l'Axe {{ axisId -1 }}</button>
     }

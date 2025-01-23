@@ -6,7 +6,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   standalone: true,
   imports: [RouterLink, RouterLinkActive],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
   isHidden = false; // Masquer/afficher le header
@@ -27,8 +27,11 @@ export class HeaderComponent {
     this.lastScroll = currentScroll;
   }
 
+  openDropdown() {
+    this.isDropdownOpen = true;
+  }
 
-    toggleDropdown() {
-        this.isDropdownOpen = !this.isDropdownOpen;
-    }
+  closeDropdown() {
+    this.isDropdownOpen = false;
+  }
 }

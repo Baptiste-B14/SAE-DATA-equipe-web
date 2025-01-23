@@ -20,7 +20,7 @@ import {GroupedbarChartCustomComponent} from "../../../groupedbar-chart-custom/g
     GroupedbarChartCustomComponent,
   ],
   templateUrl: './axe1.component.html',
-  styleUrl: './axe1.component.scss'
+  styleUrls: ['./axe1.component.scss']
 })
 export class Axe1Component {
 

@@ -1,17 +1,17 @@
-
-import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnChanges, SimpleChanges, OnDestroy, OnInit } from '@angular/core';
 import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { SearchService } from '../services/recherche.service';
+import { FormsModule } from '@angular/forms';
+import { Subject, debounceTime, distinctUntilChanged, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-search-line',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule],
   templateUrl: './search-line.component.html',
   styleUrls: ['./search-line.component.scss']
 })
-export class SearchLineComponent implements OnChanges {
+export class SearchLineComponent implements OnInit, OnChanges, OnDestroy {
   @Input() formGroup!: FormGroup;
   @Input() searchLineId!: number;
   @Input() isFirst: boolean = false;
@@ -20,12 +20,12 @@ export class SearchLineComponent implements OnChanges {
   @Input() operator: string = 'EQUALS';
   @Input() value: string = '';
   @Input() selectedTable: string = '';
+  @Input() columns: string[] = [];
 
   @Output() onAdd = new EventEmitter<void>();
   @Output() onRemove = new EventEmitter<number>();
   @Output() onUpdate = new EventEmitter<any>();
 
-  columns: string[] = [];
   operators = [
     'EQUALS',
     'LIKE',
@@ -35,48 +35,67 @@ export class SearchLineComponent implements OnChanges {
     'LTE'
   ] as const;
 
-  constructor(private searchService: SearchService) {}
+  private destroy$ = new Subject<void>();
+  private valueChanges$ = new Subject<string>();
+  private columnChanges$ = new Subject<string>();
+  private operatorChanges$ = new Subject<string>();
+
+  constructor() {}
+
+  ngOnInit() {
+    // Setup debounced value changes
+    this.valueChanges$.pipe(
+      takeUntil(this.destroy$),
+      debounceTime(300),
+      distinctUntilChanged()
+    ).subscribe(value => {
+      this.value = value;
+      this.emitUpdate();
+    });
+
+    // Setup debounced column changes
+    this.columnChanges$.pipe(
+      takeUntil(this.destroy$),
+      debounceTime(300),
+      distinctUntilChanged()
+    ).subscribe(column => {
+      this.column = column;
+      this.emitUpdate();
+    });
+
+    // Setup debounced operator changes
+    this.operatorChanges$.pipe(
+      takeUntil(this.destroy$),
+      debounceTime(300),
+      distinctUntilChanged()
+    ).subscribe(operator => {
+      this.operator = operator;
+      this.emitUpdate();
+    });
+  }
 
   ngOnChanges(changes: SimpleChanges) {
-    if (changes['selectedTable'] && this.selectedTable) {
-      this.loadColumns();
-      // Reset column when table changes
-      this.column = '';
+    if (changes['columns'] && this.columns.length > 0 && !this.column) {
+      this.column = this.columns[0];
       this.emitUpdate();
     }
   }
 
-  loadColumns() {
-    this.searchService.getTableColumns(this.selectedTable).subscribe(
-      columns => {
-        this.columns = columns;
-        if (columns.length > 0 && !this.column) {
-          this.column = columns[0];
-          this.emitUpdate();
-        }
-      },
-      error => {
-        console.error('Error loading columns:', error);
-      }
-    );
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
-  changeOperator(event: Event) {
-    const select = event.target as HTMLSelectElement;
-    this.operator = select.value;
-    this.emitUpdate();
+  changeOperator(newValue: string) {
+    this.operatorChanges$.next(newValue);
   }
 
-  updateColumn(event: Event) {
-    const select = event.target as HTMLSelectElement;
-    this.column = select.value;
-    this.emitUpdate();
+  updateColumn(newValue: string) {
+    this.columnChanges$.next(newValue);
   }
 
-  updateValue(event: Event) {
-    const input = event.target as HTMLInputElement;
-    this.value = input.value;
-    this.emitUpdate();
+  updateValue(newValue: string) {
+    this.valueChanges$.next(newValue);
   }
 
   private emitUpdate() {
@@ -95,73 +114,3 @@ export class SearchLineComponent implements OnChanges {
     this.onRemove.emit(this.searchLineId);
   }
 }
-/*import { Component, Input, ViewChild, ViewContainerRef, ComponentRef } from '@angular/core';
-import { RecherchePageComponent } from '../recherche-page/recherche-page.component';
-
-
-@Component({
-  selector: 'app-search-line',
-  standalone: true,
-  imports: [],
-  templateUrl: './search-line.component.html',
-  styleUrl: './search-line.component.scss'
-})
-export class SearchLineComponent {
-  @Input() searchLineId! : number;
-  public searchlines = RecherchePageComponent.searchlines
-
-  addNew(){   
-    this.searchlines.push(new SearchLineComponent);  
-  }
-
-  remove(){
-    if (this.searchLineId != 0) {
-      this.searchlines.splice(this.searchLineId, 1)
-    }
-  }
-
-  getSelectedOperator(){
-    let actualValue = document.getElementById('selected-operator-value-'+this.searchLineId) as HTMLInputElement;
-    console.log(actualValue.value);
-    
-    return actualValue.value; 
-  }
-
-  changeOperatorVisualization(value:string) {    
-    let actualValue = document.getElementById('selected-operator-value-'+this.searchLineId) as HTMLInputElement;
-    let actualValueVisu = document.getElementById('selected-operator-visualization-'+this.searchLineId);
-    if (actualValue && actualValueVisu) {
-      switch (value) {
-        case 'EQUALS':
-          actualValue.value = "EQUALS";
-          actualValueVisu.className = "dropdown-button fa-solid fa-equals"
-          break;
-        case 'LIKE':
-          actualValue.value = "LIKE";
-          actualValueVisu.className = "dropdown-button fa-solid fa-percent"
-          break;
-        case 'GT':
-          actualValue.value = "GT";
-          actualValueVisu.className = "dropdown-button fa-solid fa-greater-than"
-          break;
-        case 'LT':
-          actualValue.value = "LT";
-          actualValueVisu.className = "dropdown-button fa-solid fa-less-than"
-          break;
-        case 'GTE':
-          actualValue.value = "GTE";
-          actualValueVisu.className = "dropdown-button fa-solid fa-greater-than-equal"
-          break;
-        case 'LTE':
-          actualValue.value = "LTE";
-          actualValueVisu.className = "dropdown-button fa-solid fa-less-than-equal"
-          break;
-      
-        default:
-          break;
-      }
-    }else{
-      console.error("Pas d'objet input")
-    }
-  }
-}*/

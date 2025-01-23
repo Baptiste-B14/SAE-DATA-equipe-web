@@ -189,11 +189,13 @@
 }
 
 .search-container {
-  max-width: 1200px;
+  width: 95%;
+  max-width: 1400px;
   margin: 40px auto;
   padding: 0 20px;
 
   @include mobile {
+    width: 100%;
     padding: 0 15px;
     margin: 20px auto;
   }
