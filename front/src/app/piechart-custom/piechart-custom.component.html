@@ -10,26 +10,17 @@
 
   @if(option){
     <ngx-charts-pie-chart
+      [legendTitle]="legendTitle"
       [view]="view"
       [results]="chartData"
       [legend]="true"
       [explodeSlices]="false"
       [labels]="true"
-      [doughnut]="true"
-      [labelFormatting]="labelFormatting"
-      [tooltipDisabled]="true"
+      [tooltipText]="tooltipText"
       (activate)="onSliceHover($event)"
       (deactivate)="onSliceHover(null)">
     </ngx-charts-pie-chart>
 
-
-    @if (hoveredSlice){
-    <div class="tooltip-container">
-        <div class="custom-tooltip">
-          {{ hoveredSlice?.name }}: {{ hoveredSlice?.option }}
-        </div>
-      </div>
-    }
 
   } @else {
     <ngx-charts-pie-chart

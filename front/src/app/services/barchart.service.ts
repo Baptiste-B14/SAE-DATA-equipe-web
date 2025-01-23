@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class BarchartService {
-    private apiUrl = 'http://api.lliger.fr';
+    private apiUrl = 'http://localhost:5000';
 
     constructor(private http: HttpClient) {}
 
@@ -36,6 +36,17 @@ export class BarchartService {
               .map((item: any) => ({
                 name: item['a.person_name'],
                 value: parseInt(item['count'], 10),
+              }));
+
+          }
+
+          case 'univ_by_publi': {
+            return rawData.message
+              .map((item: any) => ({
+                name: item.university,
+                value: item.nb_publications,
+                pays: item.pays,
+                percent: item.percent_production
               }));
 
           }

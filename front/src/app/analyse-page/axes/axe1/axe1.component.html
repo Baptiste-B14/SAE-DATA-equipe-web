@@ -44,7 +44,7 @@
 
     <div class="content-item">
       <div class="chart-box">
-    <app-barchart-custom  [route]="'first_collab'" [XLegend]="'Période'" [period]="'during'" [YLegend]="'Nombre de premières collaborations'" [legendTitle]="''"></app-barchart-custom>
+    <app-barchart-custom  [route]="'first_collab'" [XLegend]="'Période'" [period]="'during'" [YLegend]="'Nombre de premières collaborations'" [legendTitle]="'Période'" [color]="false"></app-barchart-custom>
       <div class="col-md-6">
       </div>
       </div>
@@ -53,14 +53,14 @@
 
     <div class="content-item">
       <div class="chart-box">
-        <app-piechart-custom [route]="'author_by_country'" [option]="false"></app-piechart-custom>
+        <app-piechart-custom [route]="'author_by_country'" [option]="true" [period]="'avant'" [legendTitle]="'Nombre d\'auteurs par pays'"></app-piechart-custom>
         <p>Petit texte expliquant ce graphique</p>
       </div>
     </div>
 
     <div class="content-item">
       <div class="chart-box">
-        <app-barchart-custom [route]="'univ_by_publi'"></app-barchart-custom>
+        <app-barchart-custom [route]="'univ_by_publi'" [color]="true" [XLegend]="'Universités'" [YLegend]="'Nombre de Publications'" [legendTitle]="''"></app-barchart-custom>
         <p>Petit texte expliquant ce graphique</p>
       </div>
     </div>
