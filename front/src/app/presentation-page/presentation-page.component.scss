@@ -1,25 +1,95 @@
-#PresentationPage {
-    /*padding: 20px;
-    font-family : Arial, sans-serif; */
-    text-align: center;
-    
+:root {
+    --primary-color: #4A5043;  /* Pantone 448C */
+    --secondary-color: #6D7E6F;
+    --background-color: #F0F4F8;
+    --text-color: #2C3E50;
 }
-  
-.title { 
-    font-size: 2.5rem; 
-    font-weight: bold; 
-    text-align: center;
-    margin-bottom: 40px; 
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
 }
-  
-.PresentationDescription { 
-    background-color: #e0e0e0; 
-    padding: 20px; 
-    margin: 0 auto; 
-    width: 80%; 
-    border-radius: 8px; 
-    font-size: 1rem; 
-    text-align: left; 
-    color: #000; 
-    margin-bottom: 40px; 
+
+.project-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.page-title {
+    text-align: center;
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.project-description {
+    text-align: justify;
+}
+
+.project-description p {
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.project-description p::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    transform: rotate(45deg);
+}
+
+.download-section {
+    margin-top: 30px;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.download-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-link:hover {
+    background-color: var(--secondary-color);
+}
+
+.project-highlights {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    background-color: #f1f3f5;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.highlight {
+    text-align: center;
+    flex: 1;
+    margin: 0 10px;
+}
+
+.highlight-icon {
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 10px;
 }

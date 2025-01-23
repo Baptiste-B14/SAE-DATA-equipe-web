@@ -1,32 +1,63 @@
-#TeamPage {
-    /*padding: 20px;
-    font-family : Arial, sans-serif; */
-    text-align: center; 
+body {
+    background-color: #f0f2f5;
+    font-family: 'Arial', sans-serif;
 }
-  
-.title { 
-    font-size: 2.5rem; 
-    font-weight: bold; 
-    margin-bottom: 40px; 
+.team-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
 }
-  
-.teamSection { 
-    margin-bottom: 40px; 
+.page-title {
+    text-align: center;
+    color: #f0f2f5;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
 }
-  
-.teamTitle { 
-    font-size: 1.8rem; 
-    font-weight: bold; 
-    margin-bottom: 20px; 
+.team-section {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
-  
-.teamDescription { 
-    background-color: #e0e0e0; 
-    padding: 20px; 
-    margin: 0 auto; 
-    width: 80%; 
-    border-radius: 8px; 
-    font-size: 1rem; 
-    text-align: left; 
-    color: #000; 
+.team-section:hover {
+    transform: scale(1.02);
+}
+.team-header {
+    display: flex;
+    align-items: center;
+    background-color: #4a412a;
+    color: white;
+    padding: 15px 20px;
+}
+.team-icon {
+    font-size: 2em;
+    margin-right: 15px;
+    opacity: 0.8;
+}
+.team-title {
+    margin: 0;
+    font-size: 1.5em;
+}
+.team-description {
+    padding: 20px;
+    line-height: 1.7;
+    color: #34495e;
+}
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 20px;
+    background-color: #f1f3f5;
+}
+.member {
+    text-align: center;
+    padding: 10px;
+}
+.member-icon {
+    font-size: 2.5em;
+    color: #4a412a;
+    margin-bottom: 10px;
 }
