@@ -5,7 +5,7 @@
       <table>
         <thead>
           <tr>
-            @for (key of Object.keys(results[0]); track key) {
+            @for (key of getOrderedKeys(); track key) {
               <th>{{ key }}</th>
             }
           </tr>
@@ -13,7 +13,7 @@
         <tbody>
           @for (row of results; track row) {
             <tr>
-              @for (value of Object.values(row); track value) {
+              @for (value of getOrderedValues(row); track value) {
                 <td>{{ value }}</td>
               }
             </tr>
