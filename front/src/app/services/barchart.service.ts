@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class BarchartService {
-    private apiUrl = 'http://localhost:5000';
+    private apiUrl = 'http://api.lliger.fr';
 
     constructor(private http: HttpClient) {}
 
