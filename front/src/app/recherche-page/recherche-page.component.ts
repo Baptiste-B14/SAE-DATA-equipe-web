@@ -46,6 +46,11 @@ export class RecherchePageComponent implements OnInit {
         console.error('Error fetching tables:', error);
       }
     );
+    this.scrollToTop();
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   // Méthode pour afficher l'image

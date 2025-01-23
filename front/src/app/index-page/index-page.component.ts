@@ -24,15 +24,13 @@ export class IndexPageComponent {
       image: 'assets/images/Collaboration.jpeg',
       route: '/analyses/2',
     },
-    {
-      title: 'Axe des Thématiques',
-      description: 'Explication sommaire de ce que l’Axe 3 présente',
-      image: 'assets/images/Thematique.jpg',
-      route: '/analyses/3',
-    },
   ];
 
   currentIndex = 0;
+
+  ngOnInit() {
+    this.scrollToTop();
+  }
 
   // va a l'élément suivant ou précédent
   navigateCarousel(direction: 'prev' | 'next') {
@@ -53,5 +51,9 @@ export class IndexPageComponent {
   // Retourne le style transform basé sur currentIndex
   getTransformStyle(): string {
     return `translateX(-${this.currentIndex * 100}%)`;
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

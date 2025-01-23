@@ -48,6 +48,7 @@ export class AnalysePageComponent implements OnInit{
       this.axisId = +params['id']; // Convertit en entier
       this.axisData = this.axes.find(axis => axis.id === this.axisId);
     });
+    this.scrollToTop();
   }
 
   goToAxis(id: number) {
@@ -55,5 +56,9 @@ export class AnalysePageComponent implements OnInit{
       .then(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
       });
+  }
+
+  scrollToTop(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
