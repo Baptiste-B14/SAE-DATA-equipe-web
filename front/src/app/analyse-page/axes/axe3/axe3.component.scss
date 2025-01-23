@@ -1,8 +1,21 @@
 .axe3-container {
-  text-align: center;
-  border: black solid;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   
+  > div {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow: hidden;
 
+    :deep(svg) {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .axis-page {
@@ -25,6 +38,28 @@
         line-height: 1.4;
         font-weight: 600;
         text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    > * {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      overflow: hidden;
+
+      :deep(svg) {
+        max-width: 100%;
+        height: auto;
       }
     }
   }

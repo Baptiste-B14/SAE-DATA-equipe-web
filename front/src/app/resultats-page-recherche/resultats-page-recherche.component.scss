@@ -5,9 +5,9 @@ div {
   background: white;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  overflow-x: auto;  // Permet le défilement horizontal si nécessaire
-  max-height: calc(100vh - 300px);  // Hauteur maximale avec espace pour les autres éléments
-  overflow-y: auto;  // Permet le défilement vertical si nécessaire
+  overflow-x: auto;  // Défilement horizontal uniquement si nécessaire
+  max-height: calc(100vh - 300px);
+  overflow-y: auto;
 }
 
 /* Table générale */
@@ -15,23 +15,28 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  table-layout: auto; // Permet aux colonnes de s'adapter à leur contenu
   min-width: 800px;  // Largeur minimale pour éviter une compression excessive
 }
 
 /* En-tête du tableau */
 table thead th {
-  background-color: #E6E2D7;  // Couleur crème du footer
-  color: #333;  // Texte plus foncé pour un meilleur contraste
+  background-color: #E6E2D7;
+  color: #333;
   text-align: left;
   padding: 12px;
   font-size: 1rem;
   text-transform: capitalize;
+  white-space: nowrap; // Empêche le retour à la ligne dans les en-têtes
 }
 
 /* Bordure et alternance des lignes */
 table tbody td {
-  padding: 10px;
+  padding: 12px;
   border-bottom: 1px solid #ddd;
+  white-space: normal; // Permet le retour à la ligne dans les cellules
+  min-width: 100px; // Largeur minimale pour éviter une compression excessive
+  max-width: 300px; // Largeur maximale pour les colonnes
 }
 
 table tbody tr:nth-child(odd) {
