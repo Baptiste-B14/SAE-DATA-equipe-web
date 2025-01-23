@@ -208,6 +208,17 @@ def get_author_by_country():
     data = json.load(file)
     return {"message": data}, 270
 
+@app.route('/collab_local_internatio')
+def get_collab_local_internatio():
+    file = open('SqlLocal/collab_local_internatio.json')
+    data = json.load(file)
+    return {"message": data}, 270
+
+@app.route('/categ_in_time')
+def get_categ_in_time():
+    file = open('SqlLocal/categ_in_time.json')
+    data = json.load(file)
+    return {"message": data}, 270
 
 @app.route('/univ_by_publi')
 def get_univ_by_publi():
@@ -344,6 +355,9 @@ def dynamic_query():
         sql_query = f"SELECT * FROM \"{table_name}\""
         if where_clauses:
             sql_query += f" WHERE {' AND '.join(where_clauses)}"
+        sql_query += " LIMIT 100"
+
+        print(sql_query)
 
         # Utilisation de votre fonction query pour exécuter la requête
         results = query(sql_query, params=tuple(params))
@@ -413,12 +427,12 @@ def csv_to_json():
 
     try:
 
-        with open('./SqlLocal/nb_publi_by_country_and_periode.csv', mode='r', encoding='utf-8') as csv_file:
+        with open('./SqlLocal/categ_in_time.csv', mode='r', encoding='utf-8') as csv_file:
             csv_reader = csv.DictReader(csv_file)
 
             data = [row for row in csv_reader]
 
-        with open('./SqlLocal/nb_publi_by_country_and_periode.json', mode='w', encoding='utf-8') as json_file:
+        with open('./SqlLocal/categ_in_time.json', mode='w', encoding='utf-8') as json_file:
             json.dump(data, json_file, indent=4, ensure_ascii=False)
 
         print(f"Conversion réussie ! Fichier JSON enregistré")

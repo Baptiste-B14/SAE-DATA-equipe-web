@@ -12,7 +12,7 @@
     <nav>
       <a routerLink="/" routerLinkActive="active-link">Accueil</a>
       <a routerLink="/presentation" routerLinkActive="active-link">Présentation</a>
-        <div class="dropdown-trigger" (mouseenter)="toggleDropdown()">
+        <div class="dropdown-trigger" (mouseenter)="toggleDropdown()" (mouseleave)="toggleDropdown()">
             <a>Nos Analyses</a>
             <ul class="dropdown-menu" [class.open]="isDropdownOpen" (mouseenter)="toggleDropdown()" (mouseleave)="toggleDropdown()">
                 <li><a routerLink="/analyses/1" routerLinkActive="active-link">Tendances Générales</a></li>

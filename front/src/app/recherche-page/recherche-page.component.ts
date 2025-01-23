@@ -28,13 +28,13 @@ export class RecherchePageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.selectedTable = ''; // Set to empty initially
+  
     this.formGroup = this.fb.group({
       table: [this.selectedTable],
       searchLines: this.fb.array([])
     });
-
-    this.addSearchLine();
-
+  
     this.searchService.getTables().subscribe(
       tables => {
         this.availableTables = tables;
@@ -77,7 +77,10 @@ export class RecherchePageComponent implements OnInit {
   onTableChange(event: Event) {
     const select = event.target as HTMLSelectElement;
     this.selectedTable = select.value;
-
+  
+    // Remove the empty string option from availableTables
+    this.availableTables = this.availableTables.filter(table => table !== '');
+  
     // Reset all search lines when table changes
     this.searchLines = [];
     this.searchLinesArray.clear();

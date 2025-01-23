@@ -1,0 +1,352 @@
+[
+  {
+    "publication_year": 1990,
+    "collab_type": "International",
+    "collab_count": 14
+  },
+  {
+    "publication_year": 1990,
+    "collab_type": "Local",
+    "collab_count": 620
+  },
+  {
+    "publication_year": 1991,
+    "collab_type": "International",
+    "collab_count": 14
+  },
+  {
+    "publication_year": 1991,
+    "collab_type": "Local",
+    "collab_count": 740
+  },
+  {
+    "publication_year": 1992,
+    "collab_type": "International",
+    "collab_count": 21
+  },
+  {
+    "publication_year": 1992,
+    "collab_type": "Local",
+    "collab_count": 857
+  },
+  {
+    "publication_year": 1993,
+    "collab_type": "International",
+    "collab_count": 23
+  },
+  {
+    "publication_year": 1993,
+    "collab_type": "Local",
+    "collab_count": 1092
+  },
+  {
+    "publication_year": 1994,
+    "collab_type": "International",
+    "collab_count": 35
+  },
+  {
+    "publication_year": 1994,
+    "collab_type": "Local",
+    "collab_count": 1171
+  },
+  {
+    "publication_year": 1995,
+    "collab_type": "International",
+    "collab_count": 31
+  },
+  {
+    "publication_year": 1995,
+    "collab_type": "Local",
+    "collab_count": 1411
+  },
+  {
+    "publication_year": 1996,
+    "collab_type": "International",
+    "collab_count": 45
+  },
+  {
+    "publication_year": 1996,
+    "collab_type": "Local",
+    "collab_count": 1570
+  },
+  {
+    "publication_year": 1997,
+    "collab_type": "International",
+    "collab_count": 55
+  },
+  {
+    "publication_year": 1997,
+    "collab_type": "Local",
+    "collab_count": 1946
+  },
+  {
+    "publication_year": 1998,
+    "collab_type": "International",
+    "collab_count": 80
+  },
+  {
+    "publication_year": 1998,
+    "collab_type": "Local",
+    "collab_count": 2125
+  },
+  {
+    "publication_year": 1999,
+    "collab_type": "International",
+    "collab_count": 84
+  },
+  {
+    "publication_year": 1999,
+    "collab_type": "Local",
+    "collab_count": 2412
+  },
+  {
+    "publication_year": 2000,
+    "collab_type": "International",
+    "collab_count": 116
+  },
+  {
+    "publication_year": 2000,
+    "collab_type": "Local",
+    "collab_count": 2578
+  },
+  {
+    "publication_year": 2001,
+    "collab_type": "International",
+    "collab_count": 113
+  },
+  {
+    "publication_year": 2001,
+    "collab_type": "Local",
+    "collab_count": 2916
+  },
+  {
+    "publication_year": 2002,
+    "collab_type": "International",
+    "collab_count": 156
+  },
+  {
+    "publication_year": 2002,
+    "collab_type": "Local",
+    "collab_count": 3218
+  },
+  {
+    "publication_year": 2003,
+    "collab_type": "International",
+    "collab_count": 187
+  },
+  {
+    "publication_year": 2003,
+    "collab_type": "Local",
+    "collab_count": 4326
+  },
+  {
+    "publication_year": 2004,
+    "collab_type": "International",
+    "collab_count": 207
+  },
+  {
+    "publication_year": 2004,
+    "collab_type": "Local",
+    "collab_count": 5427
+  },
+  {
+    "publication_year": 2005,
+    "collab_type": "International",
+    "collab_count": 271
+  },
+  {
+    "publication_year": 2005,
+    "collab_type": "Local",
+    "collab_count": 6147
+  },
+  {
+    "publication_year": 2006,
+    "collab_type": "International",
+    "collab_count": 347
+  },
+  {
+    "publication_year": 2006,
+    "collab_type": "Local",
+    "collab_count": 7167
+  },
+  {
+    "publication_year": 2007,
+    "collab_type": "International",
+    "collab_count": 382
+  },
+  {
+    "publication_year": 2007,
+    "collab_type": "Local",
+    "collab_count": 7886
+  },
+  {
+    "publication_year": 2008,
+    "collab_type": "International",
+    "collab_count": 484
+  },
+  {
+    "publication_year": 2008,
+    "collab_type": "Local",
+    "collab_count": 8852
+  },
+  {
+    "publication_year": 2009,
+    "collab_type": "International",
+    "collab_count": 564
+  },
+  {
+    "publication_year": 2009,
+    "collab_type": "Local",
+    "collab_count": 9777
+  },
+  {
+    "publication_year": 2010,
+    "collab_type": "International",
+    "collab_count": 623
+  },
+  {
+    "publication_year": 2010,
+    "collab_type": "Local",
+    "collab_count": 11229
+  },
+  {
+    "publication_year": 2011,
+    "collab_type": "International",
+    "collab_count": 754
+  },
+  {
+    "publication_year": 2011,
+    "collab_type": "Local",
+    "collab_count": 11974
+  },
+  {
+    "publication_year": 2012,
+    "collab_type": "International",
+    "collab_count": 876
+  },
+  {
+    "publication_year": 2012,
+    "collab_type": "Local",
+    "collab_count": 12973
+  },
+  {
+    "publication_year": 2013,
+    "collab_type": "International",
+    "collab_count": 974
+  },
+  {
+    "publication_year": 2013,
+    "collab_type": "Local",
+    "collab_count": 13793
+  },
+  {
+    "publication_year": 2014,
+    "collab_type": "International",
+    "collab_count": 1087
+  },
+  {
+    "publication_year": 2014,
+    "collab_type": "Local",
+    "collab_count": 15021
+  },
+  {
+    "publication_year": 2015,
+    "collab_type": "International",
+    "collab_count": 1198
+  },
+  {
+    "publication_year": 2015,
+    "collab_type": "Local",
+    "collab_count": 15435
+  },
+  {
+    "publication_year": 2016,
+    "collab_type": "International",
+    "collab_count": 1545
+  },
+  {
+    "publication_year": 2016,
+    "collab_type": "Local",
+    "collab_count": 16755
+  },
+  {
+    "publication_year": 2017,
+    "collab_type": "International",
+    "collab_count": 1643
+  },
+  {
+    "publication_year": 2017,
+    "collab_type": "Local",
+    "collab_count": 17979
+  },
+  {
+    "publication_year": 2018,
+    "collab_type": "International",
+    "collab_count": 1960
+  },
+  {
+    "publication_year": 2018,
+    "collab_type": "Local",
+    "collab_count": 19398
+  },
+  {
+    "publication_year": 2019,
+    "collab_type": "International",
+    "collab_count": 2127
+  },
+  {
+    "publication_year": 2019,
+    "collab_type": "Local",
+    "collab_count": 21059
+  },
+  {
+    "publication_year": 2020,
+    "collab_type": "International",
+    "collab_count": 2598
+  },
+  {
+    "publication_year": 2020,
+    "collab_type": "Local",
+    "collab_count": 21928
+  },
+  {
+    "publication_year": 2021,
+    "collab_type": "International",
+    "collab_count": 2579
+  },
+  {
+    "publication_year": 2021,
+    "collab_type": "Local",
+    "collab_count": 22014
+  },
+  {
+    "publication_year": 2022,
+    "collab_type": "International",
+    "collab_count": 2522
+  },
+  {
+    "publication_year": 2022,
+    "collab_type": "Local",
+    "collab_count": 21692
+  },
+  {
+    "publication_year": 2023,
+    "collab_type": "International",
+    "collab_count": 2833
+  },
+  {
+    "publication_year": 2023,
+    "collab_type": "Local",
+    "collab_count": 22040
+  },
+  {
+    "publication_year": 2024,
+    "collab_type": "International",
+    "collab_count": 2715
+  },
+  {
+    "publication_year": 2024,
+    "collab_type": "Local",
+    "collab_count": 20770
+  }
+]

@@ -16,7 +16,7 @@ export class LinechartCustomComponent {
   @Input() route!: string;
   @Input() XLegend!: string;
   @Input() YLegend!: string;
-  view : [number, number] = [600, 400]
+  view : [number, number] = [800, 400]
 
 
   ngOnInit(): void {
