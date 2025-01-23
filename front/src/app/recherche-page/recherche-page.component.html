@@ -2,8 +2,11 @@
 <div class="container" id="page-recherche">
     <div class="howto">
       <p>
-        Afin de garantir une transparance sur nos données, nous avons faconné un moteur de recherche relié à notre base de donnée.<br><br>
-        Pour l'utiliser : il vous faut dans un premier temps spécifier la table et la colonne dans lesquelles vous désirez ressortir des données. Ensuite, vous devez spécifier le filtre à appliquer et la valeure recherchée.
+        Afin de garantir la transparence de nos données, nous avons conçu un moteur de recherche connecté à notre base de données.<br><br>
+        Mode d'emploi :
+        <br>
+        - Sélectionnez la table et la colonne dans lesquelles vous souhaitez effectuer la recherche.<br>
+        - Définissez le filtre à appliquer et indiquez la valeur recherchée.
         
       </p>
       <button (click)="showImage()" class="mcdShow">Découvrir le modèle conceptuel de données</button>
@@ -60,8 +63,8 @@
     <!-- Results Section -->
      
     <div class="horizontal-bar"></div>
-    <h3>Résultats</h3>
-    <div id="results">
+    <h3 #resultsSection>Résultats</h3>
+    <div id="results" >
       <app-resultats-page-recherche [results]="searchResults"></app-resultats-page-recherche>
     </div>
   </div>
