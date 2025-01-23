@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray } from '@angular/forms';
 import { ResultatsPageRechercheComponent } from '../resultats-page-recherche/resultats-page-recherche.component';
 import { SearchLineComponent } from '../search-line/search-line.component';
@@ -17,48 +17,61 @@ export class RecherchePageComponent implements OnInit {
   searchLines: any[] = [];
   formGroup!: FormGroup;
   searchResults: any[] = [];
-  selectedTable: string = ''; // Valeur vide par défaut
-  availableTables: string[] = []; // Liste vide par défaut
-  availableColumns: string[] = []; // Default value
+  selectedTable: string = '';
+  availableTables: string[] = [];
+  availableColumns: string[] = [];
   error: string = '';
   loading: boolean = false;
   loadingColumns: boolean = false;
 
   constructor(
     private fb: FormBuilder,
-    private searchService: SearchService
+    private searchService: SearchService,
+    private cdr: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
+    this.initializeForm();
+    this.loadTables();
+  }
+
+  private initializeForm() {
     this.formGroup = this.fb.group({
-      table: [this.selectedTable],
+      table: [''],
       searchLines: this.fb.array([])
     });
     
-    // Initialiser avec une seule ligne de recherche
     this.searchLines = [{
       id: 1,
       column: '',
       operator: '',
       value: ''
     }];
-    
+  }
+
+  private loadTables() {
     this.searchService.getTables().subscribe({
       next: (tables) => {
         this.availableTables = tables;
+        this.cdr.detectChanges();
       },
       error: (error) => {
         console.error('Error fetching tables:', error);
+        this.error = 'Erreur lors du chargement des tables.';
+        this.cdr.detectChanges();
       }
     });
-    
-    this.loadColumns(this.selectedTable);
   }
 
   onTableChange(event: any) {
     const table = event.target.value;
     this.selectedTable = table;
-    this.loadColumns(table);
+    if (table) {
+      this.loadColumns(table);
+    } else {
+      this.availableColumns = [];
+      this.cdr.detectChanges();
+    }
   }
 
   loadColumns(table: string) {
@@ -69,10 +82,13 @@ export class RecherchePageComponent implements OnInit {
       next: (columns) => {
         this.availableColumns = columns;
         this.loadingColumns = false;
+        this.cdr.detectChanges();
       },
       error: (error) => {
         console.error('Error loading columns:', error);
         this.loadingColumns = false;
+        this.error = 'Erreur lors du chargement des colonnes.';
+        this.cdr.detectChanges();
       }
     });
   }
@@ -83,29 +99,53 @@ export class RecherchePageComponent implements OnInit {
 
   updateSearchLine(index: number, data: any) {
     this.searchLines[index] = { ...this.searchLines[index], ...data };
+    this.cdr.detectChanges();
   }
 
   request() {
     if (this.loading) return;
     
+    if (!this.selectedTable) {
+      this.error = 'Veuillez sélectionner une table avant de lancer la recherche.';
+      this.cdr.detectChanges();
+      return;
+    }
+
+    const hasValidCriteria = this.searchLines.some(line => 
+      line.column && line.operator && line.value
+    );
+
+    if (!hasValidCriteria) {
+      this.error = 'Veuillez remplir au moins un critère de recherche complet (colonne, opérateur et valeur).';
+      this.cdr.detectChanges();
+      return;
+    }
+    
     this.loading = true;
-    const filters: SearchFilter[] = this.searchLines.map(line => ({
-      column: line.column,
-      operator: line.operator,
-      value: line.value,
-      table: this.selectedTable
-    }));
+    this.error = '';
+
+    const filters: SearchFilter[] = this.searchLines
+      .filter(line => line.column && line.operator && line.value)
+      .map(line => ({
+        column: line.column,
+        operator: line.operator,
+        value: line.value,
+        table: this.selectedTable
+      }));
 
     this.searchService.search(filters, this.selectedTable).subscribe({
       next: (results) => {
         this.searchResults = results;
         this.loading = false;
         this.error = '';
+        this.cdr.detectChanges();
       },
       error: (error) => {
         console.error('Error during search:', error);
-        this.error = 'Une erreur est survenue lors de la recherche.';
+        this.error = error.error?.message || 'Une erreur est survenue lors de la recherche. Veuillez vérifier vos critères.';
         this.loading = false;
+        this.searchResults = [];
+        this.cdr.detectChanges();
       }
     });
   }

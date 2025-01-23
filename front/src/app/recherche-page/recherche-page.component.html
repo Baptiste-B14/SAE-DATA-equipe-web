@@ -17,6 +17,10 @@
         </select>
       </div>
 
+      <div *ngIf="error" class="error-message">
+        {{ error }}
+      </div>
+
       <div class="search-lines">
         <app-search-line
           [searchLineId]="searchLines[0].id"
