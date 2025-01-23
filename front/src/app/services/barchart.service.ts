@@ -40,15 +40,6 @@ export class BarchartService {
 
           }
           case 'univ_by_publi': {
-
-            
-            return rawData.message.map((item: any) => ({
-              name: item.university,
-              value: item.nb_publications,
-            }))
-          }
-
-          case 'univ_by_publi': {
             return rawData.message
               .map((item: any) => ({
                 name: item.university,

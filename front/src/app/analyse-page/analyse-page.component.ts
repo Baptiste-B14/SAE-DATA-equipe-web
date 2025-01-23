@@ -31,18 +31,13 @@ export class AnalysePageComponent implements OnInit{
   axes = [
     {
       id: 1,
-      title: "Tendances Générale",
-      intro: "Intro texte explicatif pour l'Axe Publication",
+      title: "Tendances Générales",
+      intro: "Intro texte explicatif pour l'Axe Tendances Générales",
     },
     {
       id: 2,
       title: "Collaboration",
       intro: "Intro texte explicatif pour l'Axe Collaboration",
-    },
-    {
-      id: 3,
-      title: "Affiliation",
-      intro: "Intro texte explicatif pour l'Axe Affiliation",
     },
   ];
 
@@ -56,6 +51,9 @@ export class AnalysePageComponent implements OnInit{
   }
 
   goToAxis(id: number) {
-    this.router.navigate(['/analyses', this.axisId + id]);
+    this.router.navigate(['/analyses', this.axisId + id])
+      .then(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
   }
 }
