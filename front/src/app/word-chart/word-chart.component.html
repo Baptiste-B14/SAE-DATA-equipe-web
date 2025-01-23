@@ -19,16 +19,17 @@
 </div>
 
 
+<div>
+  <ngx-charts-line-chart
+    [results]="chartData"
+    [xAxis]="true"
+    [yAxis]="true"
+    [legend]="true"
+    [showXAxisLabel]="true"
+    [showYAxisLabel]="true"
+    [xAxisLabel]="'Année'"
+    [yAxisLabel]="'Fréquence'"
+  >
+  </ngx-charts-line-chart>
 
-<ngx-charts-line-chart
-  [results]="chartData"
-  [xAxis]="true"
-  [yAxis]="true"
-  [legend]="true"
-  [showXAxisLabel]="true"
-  [showYAxisLabel]="true"
-  [xAxisLabel]="'Année'"
-  [yAxisLabel]="'Fréquence'"
->
-</ngx-charts-line-chart>
-
+</div>

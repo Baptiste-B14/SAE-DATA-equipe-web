@@ -43,7 +43,7 @@ export const routes: Routes = [
         component: AdririenComponent,
       },
       {
-      path: 'loin',
+      path: 'pour_aller_plus_loin',
         component: PagePlusLoinComponent,
       }
 ];

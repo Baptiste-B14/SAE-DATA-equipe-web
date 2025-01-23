@@ -1,4 +1,4 @@
-import {ChangeDetectorRef, Component, ElementRef, Input, OnInit} from '@angular/core';
+import {AfterViewInit, ChangeDetectorRef, Component, ElementRef, Input, OnInit} from '@angular/core';
 import { BarChartModule, PieChartModule } from "@swimlane/ngx-charts";
 import { RouterLink } from "@angular/router";
 import { BarchartService } from "../services/barchart.service";
@@ -11,7 +11,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
   templateUrl: './barchart-custom.component.html',
   styleUrl: './barchart-custom.component.scss'
 })
-export class BarchartCustomComponent implements OnInit{
+export class BarchartCustomComponent implements AfterViewInit{
 
   constructor(private barchartService: BarchartService,  private cdr: ChangeDetectorRef ) {}
   chartData: any[] = [];
@@ -38,6 +38,11 @@ export class BarchartCustomComponent implements OnInit{
     this.fetchData(this.selectedPeriod);
 
   }
+  ngAfterViewInit() {
+    if(this.color) {
+      this.generateCountryColors();
+    }
+  }
 
   changeRoute(route: string, period: string): void {
     if (route != "first_collab"&& route != "univ_by_publi") {
@@ -57,6 +62,7 @@ export class BarchartCustomComponent implements OnInit{
       (data) => {
         this.chartData = this.barchartService.formatData(data, this.route);
         console.log('Formatted chart data:', this.chartData);
+
         if(this.color) {
           this.generateCountryColors();
         }

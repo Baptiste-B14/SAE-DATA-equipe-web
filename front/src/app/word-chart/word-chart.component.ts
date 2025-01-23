@@ -1,7 +1,7 @@
-import {ChangeDetectorRef, Component, Input, OnInit} from '@angular/core';
-import {LineChartModule} from "@swimlane/ngx-charts";
-import { WordchartService} from "../services/wordchart.service";
-import {FormArray, FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
+import { Component } from '@angular/core';
+import { LineChartModule } from "@swimlane/ngx-charts";
+import { WordchartService } from "../services/wordchart.service";
+import { FormArray, FormBuilder, FormGroup, ReactiveFormsModule } from "@angular/forms";
 
 @Component({
   selector: 'app-word-chart',
@@ -10,16 +10,9 @@ import {FormArray, FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/f
   templateUrl: './word-chart.component.html',
   styleUrl: './word-chart.component.scss'
 })
-export class WordChartComponent{
+export class WordChartComponent {
   chartData: any[] = [];
-  view: [number, number] = [700, 400];
-  colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA'],
-  };
-
-
-
-
+  view: [number, number] = [700, 400]; // Taille fixe du graphique
   form: FormGroup;
 
   constructor(private fb: FormBuilder, private wordchartService: WordchartService) {
@@ -49,7 +42,9 @@ export class WordChartComponent{
   }
 
   loadChartData(): void {
-    const wordsList = this.words.value.filter((word: string) => word.trim().toLowerCase() !== '');
+    const wordsList = this.words.value
+      .filter((word: string) => word.trim() !== '') // Retirer les mots vides
+      .map((word: string) => word.toLowerCase());  // Convertir en minuscule
 
     if (wordsList.length === 0) {
       alert('Veuillez entrer au moins un mot.');

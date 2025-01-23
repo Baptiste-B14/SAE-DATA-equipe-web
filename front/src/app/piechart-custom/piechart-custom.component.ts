@@ -61,22 +61,8 @@ export class PiechartCustomComponent {
     );
   }
 
-  hoveredSlice: { name: string; option: number } | null = null;
-
-
-
-  onSliceHover(slice: any): void {
-    console.log('Hovered slice:', slice);
-    console.log(slice.value.name)
-
-        const sliceData = this.chartData.find(item => item.name === slice.name);
-        if (sliceData) {
-          this.hoveredSlice = { name: slice.name, option: sliceData.option };
-        }
-  }
 
   tooltipText = (data: any) => {
-    console.log(data)
     return `${data.data.name} (${data.value}%)`;
   };
 
