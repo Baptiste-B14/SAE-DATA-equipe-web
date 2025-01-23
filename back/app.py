@@ -187,11 +187,13 @@ def get_page_in_time():
     data = json.load(file)
     return {"message": data}, 270
 
-@app.route('/author_by_country')
-def get_author_by_country():
-    file = open('SqlLocal/author_by_country.json')
+@app.route('/univ_by_publi')
+def get_Univ_by_publi():
+    file = open('SqlLocal/Univ_by_publi.json')
     data = json.load(file)
     return {"message": data}, 270
+
+
 
 
 @app.route('/first_collab', methods=['GET'])

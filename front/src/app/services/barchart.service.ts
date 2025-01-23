@@ -40,15 +40,12 @@ export class BarchartService {
               }));
 
           }
-          case 'author_by_country': {
+          case 'univ_by_publi': {
 
-            console.log(rawData.message.map((item: any) => ({
-              name: item.country,
-              value: item.nb_author,
-            })))
+            
             return rawData.message.map((item: any) => ({
-              name: item.country,
-              value: item.nb_author,
+              name: item.university,
+              value: item.nb_publications,
             }))
           }
 
