@@ -49,6 +49,7 @@
       [(ngModel)]="operator"
       (ngModelChange)="changeOperator($event)"
       class="operator-select">
+      <option value="">Opérateur</option>
       @for (op of operators; track op + '_op') {
         <option [value]="op">{{op}}</option>
       }

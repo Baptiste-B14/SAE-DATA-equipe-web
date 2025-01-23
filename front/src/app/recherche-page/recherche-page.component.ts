@@ -17,8 +17,8 @@ export class RecherchePageComponent implements OnInit {
   searchLines: any[] = [];
   formGroup!: FormGroup;
   searchResults: any[] = [];
-  selectedTable: string = 'Publication'; // Default table
-  availableTables: string[] = ['Publication']; // Default value
+  selectedTable: string = ''; // Valeur vide par défaut
+  availableTables: string[] = []; // Liste vide par défaut
   availableColumns: string[] = []; // Default value
   error: string = '';
   loading: boolean = false;

@@ -251,6 +251,29 @@
       }
     }
   }
+
+  .form-group.table-selection {
+    margin-bottom: 20px;
+    
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      background-color: white;
+      font-size: 1em;
+      color: #333;
+      
+      &:focus {
+        outline: none;
+        border-color: #4A412A;
+      }
+      
+      option {
+        padding: 10px;
+      }
+    }
+  }
 }
 
 .search-button {

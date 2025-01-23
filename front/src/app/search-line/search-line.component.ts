@@ -17,7 +17,7 @@ export class SearchLineComponent implements OnInit, OnChanges, OnDestroy {
   @Input() isFirst: boolean = false;
   @Input() isLast: boolean = false;
   @Input() column: string = '';
-  @Input() operator: string = 'EQUALS';
+  @Input() operator: string = ''; // Valeur vide par défaut
   @Input() value: string = '';
   @Input() selectedTable: string = '';
   @Input() columns: string[] = [];
