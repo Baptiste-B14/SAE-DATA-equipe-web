@@ -21,6 +21,7 @@ export class RecherchePageComponent implements OnInit {
   availableTables: string[] = ['Publication']; // Default value
   error: string = '';
   loading: boolean = false;
+  isImageVisible = false;
 
   constructor(
     private fb: FormBuilder,
@@ -28,13 +29,13 @@ export class RecherchePageComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.selectedTable = ''; // Set to empty initially
+  
     this.formGroup = this.fb.group({
       table: [this.selectedTable],
       searchLines: this.fb.array([])
     });
-
-    this.addSearchLine();
-
+  
     this.searchService.getTables().subscribe(
       tables => {
         this.availableTables = tables;
@@ -43,6 +44,16 @@ export class RecherchePageComponent implements OnInit {
         console.error('Error fetching tables:', error);
       }
     );
+  }
+
+  // Méthode pour afficher l'image
+  showImage() {
+    this.isImageVisible = true;
+  }
+
+  // Méthode pour cacher l'image
+  hideImage() {
+    this.isImageVisible = false;
   }
 
   get searchLinesArray() {
@@ -77,7 +88,10 @@ export class RecherchePageComponent implements OnInit {
   onTableChange(event: Event) {
     const select = event.target as HTMLSelectElement;
     this.selectedTable = select.value;
-
+  
+    // Remove the empty string option from availableTables
+    this.availableTables = this.availableTables.filter(table => table !== '');
+  
     // Reset all search lines when table changes
     this.searchLines = [];
     this.searchLinesArray.clear();
