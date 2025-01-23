@@ -15,13 +15,13 @@ export class IndexPageComponent {
     {
       title: 'Axe des Tendances Générales',
       description: 'Explication sommaire de ce que l’Axe 1 présente',
-      image: 'assets/images/Tendances_trois.png',
+      image: 'assets/images/AxeTendances.png',
       route: '/analyses/1',
     },
     {
       title: 'Axe des Collaborations',
       description: 'Explication sommaire de ce que l’Axe 2 présente',
-      image: 'assets/images/Collaboration.jpeg',
+      image: 'assets/images/AxeCollaboration.png',
       route: '/analyses/2',
     },
     {

@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #4A5043;  /* Pantone 448C */
-    --secondary-color: #6D7E6F;
-    --background-color: #F0F4F8;
-    --text-color: #2C3E50;
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --background-color: #f0f4f8;
+    --text-color: #34495e;
 }
 
 body {
@@ -25,7 +25,7 @@ body {
 .page-title {
     text-align: center;
     color: var(--primary-color);
-    border-bottom: 3px solid var(--primary-color);
+    border-bottom: 3px solid var(--secondary-color);
     padding-bottom: 15px;
     margin-bottom: 30px;
 }
@@ -47,7 +47,7 @@ body {
     top: 10px;
     width: 10px;
     height: 10px;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     transform: rotate(45deg);
 }
 
@@ -61,7 +61,7 @@ body {
 
 .download-link {
     display: inline-block;
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -70,7 +70,7 @@ body {
 }
 
 .download-link:hover {
-    background-color: var(--secondary-color);
+    background-color: #2980b9;
 }
 
 .project-highlights {
@@ -90,6 +90,6 @@ body {
 
 .highlight-icon {
     font-size: 3em;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 10px;
 }
