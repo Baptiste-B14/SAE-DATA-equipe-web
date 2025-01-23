@@ -21,6 +21,7 @@ export class RecherchePageComponent implements OnInit {
   availableTables: string[] = ['Publication']; // Default value
   error: string = '';
   loading: boolean = false;
+  isImageVisible = false;
 
   constructor(
     private fb: FormBuilder,
@@ -43,6 +44,16 @@ export class RecherchePageComponent implements OnInit {
         console.error('Error fetching tables:', error);
       }
     );
+  }
+
+  // Méthode pour afficher l'image
+  showImage() {
+    this.isImageVisible = true;
+  }
+
+  // Méthode pour cacher l'image
+  hideImage() {
+    this.isImageVisible = false;
   }
 
   get searchLinesArray() {
