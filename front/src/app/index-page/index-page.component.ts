@@ -27,7 +27,7 @@ export class IndexPageComponent {
     {
       title: 'Axe des Thématiques',
       description: 'Explication sommaire de ce que l’Axe 3 présente',
-      image: 'assets/images/gsp3_png.PNG',
+      image: 'assets/images/Thematique.jpg',
       route: '/analyses/3',
     },
   ];

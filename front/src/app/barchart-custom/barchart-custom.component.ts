@@ -40,7 +40,7 @@ export class BarchartCustomComponent implements OnInit{
   }
 
   changeRoute(route: string, period: string): void {
-    if (route != "first_collab") {
+    if (route != "first_collab"&& route != "univ_by_publi") {
       this.routeArgs = route + "?period=" + period;
     } else {
       this.routeArgs = route;
