@@ -31,7 +31,7 @@ export class AnalysePageComponent implements OnInit{
   axes = [
     {
       id: 1,
-      title: "Publication",
+      title: "Tendances Générale",
       intro: "Intro texte explicatif pour l'Axe Publication",
     },
     {
