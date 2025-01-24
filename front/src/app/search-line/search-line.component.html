@@ -33,7 +33,7 @@
     <select 
       [value]="column"
       (change)="updateColumn($event)"
-      class="column-select">
+      class="column-select dropdownSearch">
       @if (columns.length === 0) {
         <option value="">Chargement des colonnes...</option>
       } @else {
@@ -48,7 +48,7 @@
     <select 
       [value]="operator" 
       (change)="changeOperator($event)"
-      class="operator-select">
+      class="operator-select dropdownSearch">
       @for (op of operators; track op + '_op') {
         <option [value]="op">{{op}}</option>
       }
@@ -60,7 +60,7 @@
       [value]="value"
       (input)="updateValue($event)"
       placeholder="Valeur"
-      class="value-input">
+      class="value-input dropdownSearch">
   
     <!-- Control Buttons -->
     @if (!isFirst) {

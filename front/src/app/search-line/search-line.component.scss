@@ -21,6 +21,11 @@
 .dropdown {
     position: relative;
     display: inline-block;
+    
+  }
+
+  .dropdownSearch:focus{
+    border-color: #4A412A !important;
   }
 
   /* Bouton de la liste déroulante */
@@ -34,6 +39,10 @@
     cursor: pointer;
   }
 
+  .value-input{
+    border-color: #4A412A !important;
+  }
+  
   .searchline {
     display: flex;
     flex-direction: row;

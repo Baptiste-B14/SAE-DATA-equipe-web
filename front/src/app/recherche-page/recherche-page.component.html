@@ -1,15 +1,21 @@
 <!-- recherche-page.component.html -->
 <div class="container" id="page-recherche">
-    <div class="howto">
-      <p>
-        Afin de garantir la transparence de nos données, nous avons conçu un moteur de recherche connecté à notre base de données.<br><br>
-        Mode d'emploi :
-        <br>
-        - Sélectionnez la table et la colonne dans lesquelles vous souhaitez effectuer la recherche.<br>
-        - Définissez le filtre à appliquer et indiquez la valeur recherchée.
-        
-      </p>
-      <button (click)="showImage()" class="mcdShow">Découvrir le modèle conceptuel de données</button>
+  <section class="problematique">
+    <div class="problematique-container">
+      <h2>Recherche dans les données</h2>
+    </div>
+  </section>
+  <div class="howto">
+    <p>
+      Afin de garantir la transparence de nos données, nous avons conçu un moteur de recherche connecté à notre base de
+      données.<br><br>
+      Mode d'emploi :
+      <br>
+      - Sélectionnez la table et la colonne dans lesquelles vous souhaitez effectuer la recherche.<br>
+      - Définissez le filtre à appliquer et indiquez la valeur recherchée.
+
+    </p>
+    <button (click)="showImage()" class="mcdShow">Découvrir le modèle conceptuel de données</button>
   </div>
 
   <!-- Modal pour l'image -->
@@ -20,66 +26,43 @@
     </div>
   </div>
 
-    <div id="search" #searchContainer>
-      <!-- Table Selection -->
-      <div class="table-selection">
-        <select 
-          id="table-select" 
-          [value]="selectedTable" 
-          (change)="onTableChange($event)">
-          @if (!selectedTable) {
+  <div id="search" class="search-container">
+    <div class="search-form">
+      <div id="search" #searchContainer>
+        <!-- Table Selection -->
+        <div class="form-group table-selection">
+          <select id="table-select" [value]="selectedTable" (change)="onTableChange($event)" class="dropdown">
+            @if (!selectedTable) {
             <option value="">Sélectionnez une table</option>
-          }
-          @for (table of availableTables; track table) {
+            }
+            @for (table of availableTables; track table) {
             <option [value]="table">{{table}}</option>
-          }
-        </select>
-      </div>
-      <!-- Search Lines -->
-      @for (line of searchLines; track line.id) {
-        <app-search-line
-          [searchLineId]="line.id"
-          [column]="line.column"
-          [operator]="line.operator"
-          [value]="line.value"
-          [selectedTable]="selectedTable"
-          [isFirst]="$index === 0"
-          [isLast]="$index === searchLines.length - 1"
-          (onAdd)="addSearchLine()"
-          (onRemove)="removeSearchLine($index)"
-          (onUpdate)="updateSearchLine($index, $event)">
+            }
+          </select>
+        </div>
+        <!-- Search Lines -->
+        @for (line of searchLines; track line.id) {
+        <app-search-line [searchLineId]="line.id" [column]="line.column" [operator]="line.operator" [value]="line.value"
+          [selectedTable]="selectedTable" [isFirst]="$index === 0" [isLast]="$index === searchLines.length - 1"
+          (onAdd)="addSearchLine()" (onRemove)="removeSearchLine($index)" (onUpdate)="updateSearchLine($index, $event)">
         </app-search-line>
-      }
-  
-      <!-- Submit Button -->
-      <button 
-        (click)="request()" 
-        [disabled]="loading"
-        class="submit-button">
-        {{ loading ? 'Recherche en cours...' : 'Recherche' }}
-      </button>
-    </div>
-  
-    <!-- Results Section -->
-     
-    <div class="horizontal-bar"></div>
-    <h3 #resultsSection>Résultats</h3>
-    <div id="results" >
-      <app-resultats-page-recherche [results]="searchResults"></app-resultats-page-recherche>
+        }
+
+        <!-- Submit Button -->
+        <div class="search-actions">
+          <button (click)="request()" [disabled]="loading" class="submit-button">
+            {{ loading ? 'Recherche en cours...' : 'Recherche' }}
+          </button>
+        </div>
+      </div>
     </div>
   </div>
-<!--<div class="container" id="page-recherche">
-    <div id="search" #searchContainer>
-            @for(line of staticSearchlines; track $index){
-                <app-search-line [searchLineId]=$index></app-search-line>
-            }
-            <input (click)="request()" type="submit" value="submit">
-    </div>
-    <div class="horizontal-bar"></div>
-    <div id="results">
-        <h3>Résultats</h3>
-        <app-resultats-page-recherche></app-resultats-page-recherche>
-    </div>
-</div>-->
 
+  <!-- Results Section -->
 
+  <div class="horizontal-bar"></div>
+  <h3 #resultsSection>Résultats</h3>
+  <div id="results">
+    <app-resultats-page-recherche [results]="searchResults"></app-resultats-page-recherche>
+  </div>
+</div>
