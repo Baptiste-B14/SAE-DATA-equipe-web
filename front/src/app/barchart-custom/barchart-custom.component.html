@@ -1,13 +1,7 @@
 
 
 <div class="piechart-container">
-  @if (route == 'top_collab'){
-  <select (change)="onPeriodChange()" [(ngModel)]="selectedPeriod">
-    @for (period of Object.keys(periods); track period) {
-      <option [value]="period">{{ period }}</option>
-    }
-  </select>
-  }
+
   <div class="chart-wrapper">
     <ngx-charts-bar-vertical
       [results]="chartData"

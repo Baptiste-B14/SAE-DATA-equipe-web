@@ -1,6 +1,8 @@
 import { Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import * as d3 from 'd3';
 import { LinechartService} from "../services/linechart.service";
+import {DomEvent} from "leaflet";
+import getMousePosition = DomEvent.getMousePosition;
 
 @Component({
   selector: 'app-linechart-color',
@@ -32,7 +34,6 @@ export class LineChartComponent implements OnInit {
     );
   }
 
-
   private createChart() {
     const element = this.el.nativeElement.querySelector('.chart-container');
 
@@ -41,7 +42,7 @@ export class LineChartComponent implements OnInit {
     const marginTop = 20;
     const marginRight = 150; // Espace pour la légende
     const marginBottom = 60;
-    const marginLeft = 70;
+    const marginLeft = 90;
 
     const parseDate = d3.utcParse('%Y');
     const parsedData = this.chartData.flatMap(d =>
@@ -63,7 +64,6 @@ export class LineChartComponent implements OnInit {
 
         if (currentPeriodData.length > 0 && nextPeriodData.length > 0) {
           const lastPoint = currentPeriodData[currentPeriodData.length - 1];
-          const firstPointNext = nextPeriodData[0];
 
           return [
             ...currentPeriodData,
@@ -102,7 +102,7 @@ export class LineChartComponent implements OnInit {
       .style('max-width', '100%')
       .style('height', 'auto');
 
-    // Grille horizontale
+
     svg.append('g')
       .attr('class', 'grid grid-y')
       .attr('transform', `translate(${marginLeft},0)`)
@@ -116,7 +116,7 @@ export class LineChartComponent implements OnInit {
       .attr('stroke', '#e0e0e0')
       .attr('stroke-dasharray', '4,2'); // Style pointillé
 
-    // Grille verticale
+
     svg.append('g')
       .attr('class', 'grid grid-x')
       .attr('transform', `translate(0,${height - marginBottom})`)
@@ -130,7 +130,7 @@ export class LineChartComponent implements OnInit {
       .attr('stroke', '#e0e0e0')
       .attr('stroke-dasharray', '4,2');
 
-    // Axes
+
     svg.append('g')
       .attr('transform', `translate(0,${height - marginBottom})`)
       .call(
@@ -147,17 +147,16 @@ export class LineChartComponent implements OnInit {
       .attr('transform', `translate(${marginLeft},0)`)
       .call(d3.axisLeft(y));
 
-    // Légendes des axes
     svg.append('text')
       .attr('x', (width - marginLeft - marginRight) / 2 + marginLeft)
-      .attr('y', height - marginBottom + 40)
+      .attr('y', height - marginBottom + 45)
       .style('text-anchor', 'middle')
       .style('font-size', '14px')
       .text(this.XLegend);
 
     svg.append('text')
       .attr('x', -(height - marginTop - marginBottom) / 2 - marginTop)
-      .attr('y', marginLeft - 50)
+      .attr('y', marginLeft -65)
       .attr('transform', 'rotate(-90)')
       .style('text-anchor', 'middle')
       .style('font-size', '14px')
@@ -175,7 +174,27 @@ export class LineChartComponent implements OnInit {
 
     const groupedData = d3.group(connectedData, d => d.periode);
 
+    const legend = svg.append('g')
+      .attr('transform', `translate(${width - marginRight + 20}, ${marginTop})`);
+
+    let legendOffset = 0;
+
     groupedData.forEach((values, key) => {
+      legend.append('rect')
+        .attr('x', 0)
+        .attr('y', legendOffset)
+        .attr('width', 15)
+        .attr('height', 15)
+        .attr('fill', color(key as string));
+
+      legend.append('text')
+        .attr('x', 20)
+        .attr('y', legendOffset + 12)
+        .style('font-size', '12px')
+        .text(key);
+
+      legendOffset += 20;
+
       svg.append('path')
         .datum(values)
         .attr('fill', 'none')
@@ -190,17 +209,27 @@ export class LineChartComponent implements OnInit {
         .attr('cy', d => y(d.nb_collaborations))
         .attr('r', 5)
         .attr('fill', color(key as string))
-        .on('mouseover', (event, d) => {
-          tooltip.style('visibility', 'visible').text(`${d.annee}: ${d.nb_collaborations}`);
+        .style('pointer-events', 'all') // Assurez-vous que les événements souris fonctionnent
+        .on('mouseover', (event: MouseEvent, d) => {
+          const svgElement = event.currentTarget as SVGCircleElement;
+
+          const tooltipX = svgElement.cx.baseVal.value
+          const tooltipY = svgElement.cy.baseVal.value
+
+          tooltip
+            .style('visibility', 'visible')
+            .style('top', `${tooltipY +10}px`)
+            .style('left', `${tooltipX +10}px`)
+            .html(
+              `<strong>Année:</strong> ${d.annee}<br><strong>Valeur:</strong> ${d.nb_collaborations}`
+            );
         })
-        .on('mousemove', (event) => {
-          tooltip.style('top', `${event.pageY - 20}px`).style('left', `${event.pageX + 10}px`);
-        })
-        .on('mouseout', () => tooltip.style('visibility', 'hidden'));
+        .on('mouseout', () => {
+          tooltip.style('visibility', 'hidden');
+        });
+
+
     });
+
   }
-
-
-
-
 }

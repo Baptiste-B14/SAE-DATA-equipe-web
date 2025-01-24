@@ -1,4 +1,9 @@
 ::ng-deep .ngx-charts-outer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
   width: 100% !important;
 }
 
@@ -11,6 +16,3 @@
   width: 100% !important;
 }
 
-.linechart-container {
-  text-align: center;
-}
