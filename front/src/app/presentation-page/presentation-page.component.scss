@@ -137,3 +137,24 @@ ul li i {
     padding-left: 15px;
     margin: 30px;
 }
+
+.quote-right {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #555;
+    margin: 50px 0; /* Marge autour de la citation */
+    text-align: right; /* Aligne la citation à droite */
+    max-width: 65%; /* Limite la largeur de la citation */
+    margin-left: auto;
+    margin-right: 0; /* Décale la citation vers la droite */
+}
+
+/* Style du nom de l'auteur */
+.quote-right .author {
+    display: block; /* S'assure que le nom de l'auteur apparaît sur une nouvelle ligne */
+    font-weight: bold;
+    font-size: 1em;
+    color: #333;
+    text-align: right;
+    margin-top: 10px;
+}

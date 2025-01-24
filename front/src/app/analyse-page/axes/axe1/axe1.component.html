@@ -4,37 +4,109 @@
 
     <div class="content-item">
       <div class="chart-box">
-        <app-linechart-color [route]="'pub_in_time'" [XLegend]="'Années'" [YLegend]="'Publications scientifiques'"></app-linechart-color>
-      </div>
-      <div class="text">
-        <p>Explications des graphiques combinés.</p>
+        <div class="graph">
+          <h3 class="graph-title">Evolution du nombre de publication</h3>
+          <app-linechart-color [route]="'pub_in_time'" [XLegend]="'Années'" [YLegend]="'Publications scientifiques'"></app-linechart-color>
+          <div class="graph-explain">
+            <h3>Trois périodes se distinguent :</h3>
+            <ul>
+              <li><b>Pré-pandémie (2017-2019) :</b> 376 272 publications annuelles en moyenne</li>
+              <li><b>Période COVID (2020-2022) :</b> Pic à 458 791 publications annuelles</li>
+              <li><b>Post-COVID (2023-2024) :</b> Stabilisation à 497 006 publications annuelles</li>
+            </ul>
+            <h3>Principales observations :</h3>
+            <ul>
+              <li>Augmentation significative pendant la pandémie</li>
+              <li>Mobilisation scientifique exceptionnelle</li>
+              <li>Légère diminution post-COVID, mais niveau de publications supérieur à la période pré-pandémique</li>
+              <li>Diffusion accrue sur des plateformes collaboratives comme DBLP</li>
+            </ul>
+            <p>La pandémie a durablement transformé les dynamiques de publication scientifique, favorisant des modes de
+              diffusion plus rapides et collaboratifs.</p>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="content-item">
       <div class="chart-box">
-        <app-groupedbar-chart-custom [route]="'collab_seules_vs_collab'"></app-groupedbar-chart-custom>
+        <div class="graph">
+          <h3 class="graph-title">Evolution des publications collaboratives vs seules:</h3>
+          <app-groupedbar-chart-custom [route]="'collab_seules_vs_collab'"></app-groupedbar-chart-custom>
+          <div class="graph-explain">
+            <h3>Tendances principales :</h3>
+            <ul>
+              <li>Croissance constante des publications collaboratives</li>
+              <li>Part des collaborations : de 90% à plus de 95% des publications totales</li>
+              <li>Diminution significative des publications à auteur unique</li>
+            </ul>
+            <h3>Dynamiques par période :</h3>
+            <ul>
+              <li><b>Pré-pandémie (2017-2019)</b>
+                <ul>
+                  <li><i>Croissance linéaire et régulière</i></li>
+                  <li><i>Proportion stable de collaborations (environ 90%)</i></li>
+                  <li><i>Progression parallèle des publications totales et collaboratives</i></li>
+                </ul>
+              </li>
+              <li><b>Période COVID (2020-2022)</b>
+                <ul>
+                  <li><i>Augmentation modérée des publications</i></li>
+                  <li><i>Légère hausse de la proportion de collaborations</i></li>
+                  <li><i>Maintien des dynamiques de recherche collaborative</i></li>
+                </ul>
+              </li>
+              <li> <b>Post-COVID (2023-2024)</b>
+                <ul>
+                  <li><i>Pic historique de publications en 2023</i></li>
+                  <li><i>Stabilisation à un niveau élevé en 2024</i></li>
+                  <li><i>Plus de 95% des publications en collaboration</i></li>
+                </ul>
+              </li>
+            </ul>
+            <p>La pandémie a accéléré et renforcé les dynamiques de collaboration scientifique.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-item">
+      <div class="chart-box">
+        <div class="graph">
+          <h3 class="graph-title">Evolution du nombre de publication par catégorie</h3>
+          <app-linechart-custom [route]="'categ_in_time'" [XLegend]="'Années'" [YLegend]="'Nombre de publications'">
+          </app-linechart-custom>
+
+          <div class="graph-explain">
+            <p>La pandémie a significativement transformé les dynamiques de publication scientifique. Les articles et
+              publications de données ont connu une augmentation notable : les articles ont atteint un pic de 825 000
+              durant le COVID, contre 565 000 précédemment, et les publications de données sont passées de 700 à 4 900
+              en 2022. En revanche, certains formats ont décliné, notamment les incollections (de 7 900 à 3 500) et les
+              thèses de doctorat (baisse d'environ 1 000 par an depuis 2021).
+              Ces changements reflètent une adaptation durable de la communauté scientifique : émergence de formats plus
+              collaboratifs, privilégiant la diffusion rapide des résultats via des outils numériques, et maintien de
+              ces nouvelles pratiques post-pandémie. Les inproceedings illustrent particulièrement cette résilience,
+              restant stables malgré les perturbations.
+              La conclusion majeure est que le COVID-19 a accéléré une transition vers des modes de publication plus
+              agiles et connectés, transformant structurellement les pratiques de recherche.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-item">
+      <div class="chart-box">
+        <app-piechart-custom [route]="'author_by_country'" [option]="true" [period]="'avant'"
+          [legendTitle]="'Nombre d\'auteurs par pays'"></app-piechart-custom>
         <p>Petit texte expliquant ce graphique</p>
       </div>
     </div>
 
     <div class="content-item">
       <div class="chart-box">
-        <app-linechart-custom [route]="'categ_in_time'" [XLegend]="'Années'" [YLegend]="'Nombre de publications'"></app-linechart-custom>
-        <p>Petit texte expliquant ce graphique</p>
-      </div>
-    </div>
-
-    <div class="content-item">
-      <div class="chart-box">
-        <app-piechart-custom [route]="'author_by_country'" [option]="true" [period]="'avant'" [legendTitle]="'Nombre d\'auteurs par pays'"></app-piechart-custom>
-        <p>Petit texte expliquant ce graphique</p>
-      </div>
-    </div>
-
-    <div class="content-item">
-      <div class="chart-box">
-        <app-barchart-custom [route]="'univ_by_publi'" [color]="true" [XLegend]="'Universités'" [YLegend]="'Nombre de Publications'" [legendTitle]="''"></app-barchart-custom>
+        <app-barchart-custom [route]="'univ_by_publi'" [color]="true" [XLegend]="'Universités'"
+          [YLegend]="'Nombre de Publications'" [legendTitle]="''"></app-barchart-custom>
         <p>Petit texte expliquant ce graphique</p>
       </div>
     </div>

@@ -1,163 +1,70 @@
-/*
-  - l'intro et le titre de l'axe sont modifiés dans le scss de analyse-page
-*/
+/* Ajout de styles spécifiques pour les sections explicatives */
+.graph-explain {
+  text-align: justify;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+/* Titre pour les graphiques */
+.graph-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #2c2a26;
+  margin-bottom: 15px;
+  text-align: center;
+}
 
+/* Liste des phases avec styles améliorés */
+.graph-phases {
+  list-style-type: none;
+  padding: 0;
+  margin: 15px 0;
+}
+
+.graph-phases li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.graph-phases li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  font-size: 20px;
+  color: #2c2a26;
+  line-height: 1;
+}
+
+/* Adaptation pour le conteneur général */
 .content-item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-
   gap: 20px;
-}
-
-.content-item-bubble-chart{
-  align-items: center;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  background-color: #fff;
+  padding: 20px;
+  margin: 3%;
   border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
 }
 
 .content-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
-
-.axis-page {
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-  font-family: Arial, sans-serif;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  gap: 40px; /* Espace entre les graphiques */
-}
-
-.content-item.row-reverse {
-  flex-direction: row-reverse; /* Texte à droite du graphique */
-  justify-content: space-between;
-}
-
-.content-item > p {
-  max-width: 400px;
-  font-size: 1em;
-  line-height: 1.5em;
-  text-align: justify;
-}
-
-.content-item-bubble-chart > p {
-  max-width: 400px;
-  font-size: 1em;
-  line-height: 1.5em;
-  text-align: justify;
-}
-
-.content-item > app-linechart-custom,
-.content-item > app-piechart-custom,
-.content-item > app-barchart-custom {
-  flex: 1;
-  max-width: 600px; /* Limite la largeur des graphiques */
-  height: auto; /* Conserve les proportions */
-}
-
-.content-item.row-reverse > app-linechart-custom,
-.content-item.row-reverse > app-barchart-custom {
-  margin-left: 20px;
-}
-
-.content-item:not(.row-reverse) > p {
-  margin-top: 10px;
-}
-
-
-/* -- pour les rubriques avec plusieurs graphiques*/
-
-.content-item.grouped {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px; /* Espace entre les graphiques et le texte */
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.content-item.grouped:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-/* Conteneur des graphiques */
-.charts {
-  display: flex;
-  flex-direction: column;
-  gap: 20px; /* Espace entre les graphiques */
-  flex: 1; /* Les graphiques prennent toute la place disponible à gauche */
-  max-width: 600px;
-}
-
-/* Ajustement des graphiques */
-.charts > app-linechart-custom {
-  width: 100%;
-  height: auto;
-  max-width: 600px;
-}
-
-.text {
-  flex: 1; /* Le texte prend la même place que les graphiques */
-  max-width: 400px;
-}
-
-.text > p {
-  font-size: 1em;
-  line-height: 1.5em;
-  text-align: justify;
-  margin: 0;
-}
-
-
-.content-item {
-  display: flex;
-  flex-wrap: wrap; /* Permet de s'adapter à différentes tailles d'écran */
-  gap: 20px; /* Espace entre les conteneurs */
-  justify-content: center; /* Centre les conteneurs dans la page */
-  padding: 20px;
-  background-color: #f9f9f9; /* Arrière-plan pour le conteneur principal */
-}
-
-.chart-box {
+.graph{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  text-align: center; /* Centrage du texte descriptif */
-}
-
-.chart-box app-chart {
-  width: 100%;
-  margin-bottom: 15px;
-}
-
-.chart-description {
-  font-size: 14px;
-  color: #666;
-  line-height: 1.5;
-  margin-top: 10px;
-}
+   width: 100%;
+ }

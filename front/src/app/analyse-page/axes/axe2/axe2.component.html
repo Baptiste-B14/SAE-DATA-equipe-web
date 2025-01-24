@@ -3,31 +3,64 @@
 
     <div class="content-item">
       <div class="chart-box">
-          <app-graph [route]="'graph_commu'"></app-graph>
+          <div class="graph">
+            <h3 class="graph-title">Analyse des Réseaux Collaboratifs</h3>
+            <app-graph [route]="'graph_commu'"></app-graph>
+            <div class="graph-explain">
+              
+              <p>L'étude révèle trois phases de comportement collaboratif autour du COVID :</p>
+              <ul class="graph-phases">
+                  <li><strong>Fragmentation initiale :</strong> désorganisation des réseaux au début de la pandémie.</li>
+                  <li><strong>Collaborations circonstancielles :</strong> initiatives spécifiques en réponse aux défis immédiats.</li>
+                  <li><strong>Consolidation post-COVID :</strong> renforcement et réorganisation des partenariats scientifiques.</li>
+              </ul>
+              <p>
+                  Cette analyse, basée sur les réseaux les plus cohérents, montre comment la crise a à la fois fragilisé et stimulé de nouveaux réseaux scientifiques. 
+                  Cependant, les limites méthodologiques, telles qu'une faible couverture des affiliations, invitent à nuancer ces conclusions.
+              </p>
+          </div>
+          </div>
+          
       </div>
+  </div>
+  
+  
+
+  <div class="content-item">
+    <div class="chart-box">
+        <div class="graph">
+          <h3 class="graph-title">Croissance des collaborations internationales</h3>
+            <!-- Premier graphique : collaborations sur le temps -->
+            <app-linechart-color [route]="'collab_in_time'" [XLegend]="'Années'" [YLegend]="'Collaborations scientifiques'"></app-linechart-color>
+            <div class="graph-explain">
+                
+                <p>L'analyse révèle que les collaborations internationales ont significativement augmenté entre 1994 et 2024, principalement grâce au développement des technologies numériques. 
+                   La croissance s'est accélérée autour de 2002 avec l'adoption massive d'Internet, puis à nouveau vers 2016 avec l'amélioration des outils de visioconférence. 
+                   Contrairement à l'hypothèse initiale, la pandémie de Covid-19 n'a pas intensifié ces collaborations, mais les a temporairement ralenties, avant une stabilisation entre 2023 et 2024.</p>
+            </div>
+
+            <!-- Deuxième graphique : collaborations locales vs internationales -->
+            <h3 class="graph-title">Evolution des collaborations locales et internationales</h3>
+            <app-linechart-custom [route]="'collab_local_internatio'" [XLegend]="'Années'" [YLegend]="'Nombre de collaborations'"></app-linechart-custom>
+            <div class="graph-explain">
+                
+                <p>L'analyse révèle une dynamique intéressante pendant la pandémie : alors que les collaborations locales ont stagné et diminué (passant de 80 000 à un niveau inférieur en 2023), 
+                   les collaborations internationales ont significativement progressé, doublant presque pour atteindre près de 15 000 publications en 2024. 
+                   Cette tendance suggère un pivot de la communauté scientifique vers des partenariats internationaux plus larges, particulièrement dans le contexte post-COVID.</p>
+            </div>
+        </div>
     </div>
+</div>
 
     <div class="content-item">
       <div class="chart-box">
-        <app-linechart-custom [route]="'collab_local_internatio'" [XLegend]="'Années'" [YLegend]="'Nombre de collaborations'"></app-linechart-custom>
-        <p>Petit texte expliquant ce graphique</p>
-      </div>
-    </div>
-
-
-    <div class="content-item">
-      <div class="chart-box">
-        <app-linechart-color [route]="'collab_in_time'" [XLegend]="'Années'" [YLegend]="'Collaborations scientifiques'"></app-linechart-color>
-      </div>
-      <div class="text">
-        <p>Explications des graphiques combinés.</p>
-      </div>
-    </div>
-
-    <div class="content-item">
-      <div class="chart-box">
-        <app-barchart-custom  [route]="'first_collab'" [XLegend]="'Période'" [period]="'during'" [YLegend]="'Nombre de premières collaborations'" [legendTitle]="'Période'" [color]="false"></app-barchart-custom>
-        <div class="col-md-6">
+        <div class="graph">
+          <h3 class="graph-title">Evolution du nombre de premières collaborations avant, pendant et après le COVID</h3>
+          <app-barchart-custom  [route]="'first_collab'" [XLegend]="'Période'" [period]="'during'" [YLegend]="'Nombre de premières collaborations'" [legendTitle]="'Période'" [color]="false"></app-barchart-custom>
+          <div class="graph-explain">
+            
+            <p>L'analyse montre une augmentation constante des nouvelles collaborations, même pendant la pandémie. Le pic de 2023 reflète non seulement la résilience des chercheurs face aux contraintes sanitaires, mais aussi l'impact des outils numériques qui ont permis de maintenir et d'initier des collaborations. Le retour des événements présentiels et la capitalisation des données accumulées durant le COVID ont contribué à cette dynamique de croissance des premières collaborations scientifiques.</p>
+          </div>
         </div>
       </div>
     </div>
