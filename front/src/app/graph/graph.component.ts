@@ -35,6 +35,10 @@ export class ForceGraphComponent implements OnInit {
   @Input() node: string = this.selectedNodes;
 
 
+  totalNodes: number = 0;
+  isolatedNodes: number = 0;
+  totalLinks: number = 0;
+
 
 
   routeArgs: string = '';
@@ -57,6 +61,8 @@ export class ForceGraphComponent implements OnInit {
     this.period = this.selectedPeriod;
     this.updateGraph();
   }
+
+
 
   onNodeChange(): void {
 
@@ -83,6 +89,22 @@ export class ForceGraphComponent implements OnInit {
     return Object.keys(this.nodeslist);
   }
 
+  private updateCount(data: any): void {
+    this.totalNodes = data.message.nodes.length;
+    this.isolatedNodes = data.message.nodes.filter(
+      (node: any) =>
+        !data.message.links.some(
+          (link: any) => {
+            const sourceId = typeof link.source === 'object' ? link.source.id : link.source;
+            const targetId = typeof link.target === 'object' ? link.target.id : link.target;
+
+            return sourceId === node.id || targetId === node.id;
+          }
+        )
+    ).length;
+    this.totalLinks = data.message.links.length /2;
+  }
+
   private updateGraph(): void {
     this.changeRoute(this.route, this.node, this.period);
 
@@ -92,7 +114,9 @@ export class ForceGraphComponent implements OnInit {
 
     this.graphService.getCollaboration(this.routeArgs).subscribe((data) => {
       this.createForceGraph(data);
+      this.updateCount(data);
     });
+
   }
 
   private createForceGraph(data: any): void {

@@ -16,6 +16,7 @@ export class LinechartCustomComponent {
   @Input() route!: string;
   @Input() XLegend!: string;
   @Input() YLegend!: string;
+  @Input() title!: string;
   view : [number, number] = [800, 400]
 
 
