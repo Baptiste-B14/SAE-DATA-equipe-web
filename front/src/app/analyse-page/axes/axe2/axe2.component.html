@@ -13,6 +13,25 @@
         <p>Petit texte expliquant ce graphique</p>
       </div>
     </div>
+
+
+    <div class="content-item">
+      <div class="chart-box">
+        <app-linechart-color [route]="'collab_in_time'" [XLegend]="'Années'" [YLegend]="'Collaborations scientifiques'"></app-linechart-color>
+      </div>
+      <div class="text">
+        <p>Explications des graphiques combinés.</p>
+      </div>
+    </div>
+
+    <div class="content-item">
+      <div class="chart-box">
+        <app-barchart-custom  [route]="'first_collab'" [XLegend]="'Période'" [period]="'during'" [YLegend]="'Nombre de premières collaborations'" [legendTitle]="'Période'" [color]="false"></app-barchart-custom>
+        <div class="col-md-6">
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
 
