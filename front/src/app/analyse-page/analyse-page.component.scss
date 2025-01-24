@@ -9,8 +9,9 @@
   /* Titre principal */
   .axis-page h1 {
     text-align: center;
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    padding: 1%;
   }
 
   /* Texte d'introduction */
@@ -108,3 +109,14 @@
     cursor: not-allowed;
   }
 
+
+
+  .axis-title{
+    background-color: #4A412A;
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 2%;
+    font-family: "Roboto";
+  }

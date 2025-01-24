@@ -1,7 +1,6 @@
 <div id="topDiv"></div>
 <div class="axis-page">
-  <h1 class="axis-title">{{ axisData?.title }}</h1>
-  <p class="axis-intro">{{ axisData?.intro }}</p>
+  <h2 class="axis-title">{{ axisData?.title }}</h2>
 
   <section class="content">
 
@@ -20,10 +19,10 @@
 
   <div class="footer">
     @if (axisId > 1) {
-      <button (click)="goToAxis(- 1)" >Vers l'Axe Tendances Générales</button>
+      <button (click)="goToAxis(- 1)" >Vers les Tendances Générales</button>
     }
     @if (axisId < axes.length) {
-      <button (click)="goToAxis( 1)" >Vers l'Axe Collaborations</button>
+      <button (click)="goToAxis( 1)" >Vers les Collaborations</button>
     }
   </div>
 </div>

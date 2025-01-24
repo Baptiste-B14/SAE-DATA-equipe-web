@@ -5,11 +5,6 @@
     </div>
   </section>
 
-  <section class="kpiSection">
-    <app-kpi></app-kpi>
-
-  </section>
-
   <section class="presentationSection">
     <div class="presentationContainer">
       <h2>Presentation du projet</h2>
@@ -23,8 +18,15 @@
     </div>
   </section>
 
+  <section class="kpiSection">
+    <app-kpi></app-kpi>
+
+  </section>
+
+  
+
   <section class="axeSection">
-    <h2>Axes d’analyse</h2>
+    <h2>Pistes d'exploration</h2>
     <div class="carouselContainer">
       <!-- Control Buttons Prev -->
       <button class="carouselPrev fas fa-arrow-left" type="button" (click)="navigateCarousel('prev')">
@@ -38,7 +40,6 @@
           <img [src]="axis.image" class="carouselImg" [alt]="axis.title" [routerLink]="axis.route" />
           <div class="carouselText">
             <h5>{{ axis.title }}</h5>
-            <p class="carouselItemDescription">{{ axis.description }}</p>
           </div>
         </div>
         }

@@ -6,7 +6,8 @@
       <div class="chart-box">
         <div class="graph">
           <h3 class="graph-title">Evolution du nombre de publication</h3>
-          <app-linechart-color [route]="'pub_in_time'" [XLegend]="'Années'" [YLegend]="'Publications scientifiques'"></app-linechart-color>
+          <app-linechart-color [route]="'pub_in_time'" [XLegend]="'Années'" [YLegend]="'Publications scientifiques'">
+          </app-linechart-color>
           <div class="graph-explain">
             <h3>Trois périodes se distinguent :</h3>
             <ul>
@@ -99,15 +100,24 @@
       <div class="chart-box">
         <app-piechart-custom [route]="'author_by_country'" [option]="true" [period]="'avant'"
           [legendTitle]="'Nombre d\'auteurs par pays'"></app-piechart-custom>
-        <p>Petit texte expliquant ce graphique</p>
-      </div>
-    </div>
-
-    <div class="content-item">
-      <div class="chart-box">
-        <app-barchart-custom [route]="'univ_by_publi'" [color]="true" [XLegend]="'Universités'"
-          [YLegend]="'Nombre de Publications'" [legendTitle]="''"></app-barchart-custom>
-        <p>Petit texte expliquant ce graphique</p>
+        <div class="graph-explain">
+          <h3>La répartition des affiliations des auteurs révèle des tendances géographiques et économiques marquées :
+          </h3>
+          <ul>
+            <li><b>États-Unis</b> (23 %, 160 000 auteurs) : Leader mondial en recherche grâce à ses universités prestigieuses
+              (Harvard, MIT, Stanford), ses institutions majeures (NIH, NSF, NASA) et ses financements massifs, attirant
+              des chercheurs internationaux.</li>
+            <li><b>Europe occidentale </b>(10 % pour le Royaume-Uni et l’Allemagne, moins de 5 % pour d'autres pays comme la
+              France, l’Italie et l’Espagne) : Le Royaume-Uni s’appuie sur Oxford et Cambridge, l’Allemagne sur des
+              instituts renommés comme Max Planck, reflétant une tradition scientifique forte.</li>
+            <li><b>BRICS </b>: La Chine (8 %, 56 000 auteurs) progresse rapidement grâce à ses investissements en innovation.
+              L’Inde se développe grâce à ses centres d’excellence, et le Brésil domine en Amérique du Sud.</li>
+          </ul>
+          <p>
+            <b>Conclusion</b> : La recherche scientifique est concentrée autour des grandes puissances, avec des disparités
+            marquées entre les leaders (États-Unis, Europe occidentale, Chine) et le reste du monde.
+          </p>
+        </div>
       </div>
     </div>
 
