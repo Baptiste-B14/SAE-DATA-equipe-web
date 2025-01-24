@@ -34,9 +34,10 @@ export class BarchartCustomComponent implements AfterViewInit{
 
   countryColors: any[] = [];
   ngOnInit(): void {
-    this.changeRoute(this.route, this.period);
-    this.fetchData(this.selectedPeriod);
-
+    this.fetchData(this.selectedPeriod)
+    if (this.color) {
+      this.generateCountryColors();
+    }
   }
   ngAfterViewInit() {
     if(this.color) {
@@ -60,11 +61,20 @@ export class BarchartCustomComponent implements AfterViewInit{
     this.changeRoute(this.route, period);
     this.barchartService.getData(this.routeArgs).subscribe(
       (data) => {
-        this.chartData = this.barchartService.formatData(data, this.route);
+        console.log('Raw data from API:', data);
+
+        // Formater les données pour utiliser 'pays' comme 'name'
+        this.chartData = this.barchartService.formatData(data, this.route).map(item => ({
+          name: item.pays,  // Utilisez 'pays' pour synchroniser avec les couleurs
+          value: parseInt(item.value, 10) // Convertir la valeur en nombre si nécessaire
+        }));
+
         console.log('Formatted chart data:', this.chartData);
 
-        if(this.color) {
+        // Générer les couleurs basées sur les pays
+        if (this.color) {
           this.generateCountryColors();
+          console.log('Generated colors:', this.countryColors);
         }
       },
       (error) => {
@@ -72,6 +82,8 @@ export class BarchartCustomComponent implements AfterViewInit{
       }
     );
   }
+
+
 
   generateCountryColors(): void {
     const uniqueCountries = [...new Set(this.chartData.map(item => item.pays))];
@@ -82,15 +94,24 @@ export class BarchartCustomComponent implements AfterViewInit{
       '#8c564b', '#e377c2', '#7f7f7f', '#bcbd22', '#17becf'
     ];
 
-    this.countryColors = uniqueCountries.map((country, index) => ({
-      name: country,
-      value: colorPalette[index % colorPalette.length]
+    // Mappez chaque pays à une couleur
+    const countryColorMap = uniqueCountries.reduce((map, country, index) => {
+      map[country] = colorPalette[index % colorPalette.length];
+      return map;
+    }, {} as Record<string, string>);
+
+    console.log('Country to color mapping:', countryColorMap);
+
+    // Assignez les couleurs aux noms (name)
+    this.countryColors = this.chartData.map(item => ({
+      name: item.name, // Gardez 'name' comme clé utilisée dans chartData
+      value: countryColorMap[item.pays] // Utilisez la couleur basée sur 'pays'
     }));
 
     console.log('Generated colors:', this.countryColors);
     this.cdr.detectChanges();
-
   }
+
 
   protected readonly Object = Object;
 }

@@ -43,43 +43,42 @@ export class LinechartService {
         ];
       }
       case 'categ_in_time': {
-        // Group data by category
         const categoryGroups:any = {};
-        
+
         rawData.message.forEach((item: any) => {
           if (!categoryGroups[item.category]) {
             categoryGroups[item.category] = [];
           }
-          
+
           categoryGroups[item.category].push({
             name: item.year.toString(),
             value: parseInt(item.nb_publications, 10),
             periode: item.period
           });
         });
-      
-        // Convert to multi-series format
+
+
         return Object.keys(categoryGroups).map(category => ({
           name: category,
           series: categoryGroups[category]
         }));
       }
       case 'collab_local_internatio': {
-        // Group data by category
+
         const categoryGroups:any = {};
-        
+
         rawData.message.forEach((item: any) => {
           if (!categoryGroups[item.collab_type]) {
             categoryGroups[item.collab_type] = [];
           }
-          
+
           categoryGroups[item.collab_type].push({
             name: item.publication_year.toString(),
             value: parseInt(item.collab_count, 10),
             periode: item.period
           });
         });
-      
+
         // Convert to multi-series format
         return Object.keys(categoryGroups).map(collab_type => ({
           name: collab_type,

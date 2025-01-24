@@ -88,3 +88,26 @@ input[type="text"]:focus {
   box-shadow: 0 0 5px rgba(72, 239, 128, 0.7); /* Effet lumineux */
 }
 
+
+
+::ng-deep ngx-charts-legend-label {
+  white-space: normal;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+::ng-deep ngx-charts-legend {
+  margin: auto 0;
+  width: auto;
+  max-width: 200px;
+}
+
+::ng-deep ngx-charts-legend-label {
+  white-space: nowrap; /* Empêche le retour à la ligne */
+  overflow: hidden; /* Cache le contenu débordant */
+  text-overflow: ellipsis; /* Ajoute des points de suspension */
+  max-width: 150px; /* Ajustez la largeur maximale */
+}
+
